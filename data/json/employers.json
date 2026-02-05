@@ -1,0 +1,477 @@
+[
+  {
+    "employer_id": "EMP-A2B12586",
+    "name": "Acme Corporation",
+    "tax_id": "96-2458591",
+    "industry": "Technology",
+    "size_category": "small",
+    "employee_count": 85,
+    "address": {
+      "line1": "1924 Oak Ave",
+      "line2": "",
+      "city": "Raleigh",
+      "state": "NC",
+      "zip": "27645"
+    },
+    "phone": "(632) 232-1488",
+    "effective_date": "2018-01-01",
+    "status": "Active",
+    "account_manager": "David Brown"
+  },
+  {
+    "employer_id": "EMP-712A6693",
+    "name": "GlobalTech Industries",
+    "tax_id": "67-5667265",
+    "industry": "Manufacturing",
+    "size_category": "medium",
+    "employee_count": 103,
+    "address": {
+      "line1": "9295 Sycamore Ave",
+      "line2": "Apt 719",
+      "city": "Miami",
+      "state": "FL",
+      "zip": "33193"
+    },
+    "phone": "(977) 363-7924",
+    "effective_date": "2020-01-01",
+    "status": "Active",
+    "account_manager": "Sharon Baker"
+  },
+  {
+    "employer_id": "EMP-82A6A329",
+    "name": "Meridian Healthcare Systems",
+    "tax_id": "15-8707870",
+    "industry": "Healthcare",
+    "size_category": "large",
+    "employee_count": 4892,
+    "address": {
+      "line1": "1774 Pine Rd",
+      "line2": "",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28222"
+    },
+    "phone": "(327) 587-2291",
+    "effective_date": "2022-01-01",
+    "status": "Active",
+    "account_manager": "Kenneth Campbell"
+  },
+  {
+    "employer_id": "EMP-6D5C2D0C",
+    "name": "Pinnacle Financial Group",
+    "tax_id": "20-4905582",
+    "industry": "Financial Services",
+    "size_category": "large",
+    "employee_count": 1327,
+    "address": {
+      "line1": "9559 Sycamore Ave",
+      "line2": "",
+      "city": "Miami",
+      "state": "FL",
+      "zip": "33118"
+    },
+    "phone": "(589) 484-8428",
+    "effective_date": "2023-01-01",
+    "status": "Active",
+    "account_manager": "Michelle Mitchell"
+  },
+  {
+    "employer_id": "EMP-F652468B",
+    "name": "Summit Manufacturing Co",
+    "tax_id": "78-5107245",
+    "industry": "Construction",
+    "size_category": "medium",
+    "employee_count": 183,
+    "address": {
+      "line1": "5920 Hickory Ln",
+      "line2": "",
+      "city": "Tampa",
+      "state": "FL",
+      "zip": "33644"
+    },
+    "phone": "(673) 588-5422",
+    "effective_date": "2023-01-01",
+    "status": "Active",
+    "account_manager": "Laura Adams"
+  },
+  {
+    "employer_id": "EMP-06437E66",
+    "name": "Horizon Media Group",
+    "tax_id": "82-6279418",
+    "industry": "Media",
+    "size_category": "medium",
+    "employee_count": 208,
+    "address": {
+      "line1": "1016 Poplar St",
+      "line2": "",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90050"
+    },
+    "phone": "(871) 711-7482",
+    "effective_date": "2023-01-01",
+    "status": "Active",
+    "account_manager": "Shirley Moore"
+  },
+  {
+    "employer_id": "EMP-C21CF936",
+    "name": "Cascade Energy Solutions",
+    "tax_id": "38-3320821",
+    "industry": "Energy",
+    "size_category": "large",
+    "employee_count": 4674,
+    "address": {
+      "line1": "4140 Cypress Rd",
+      "line2": "Apt 439",
+      "city": "Raleigh",
+      "state": "NC",
+      "zip": "27684"
+    },
+    "phone": "(705) 293-1771",
+    "effective_date": "2024-01-01",
+    "status": "Active",
+    "account_manager": "Kenneth Lee"
+  },
+  {
+    "employer_id": "EMP-1F3D4A21",
+    "name": "Sterling Logistics Inc",
+    "tax_id": "80-1192619",
+    "industry": "Logistics",
+    "size_category": "large",
+    "employee_count": 1438,
+    "address": {
+      "line1": "7016 Elm St",
+      "line2": "Suite 579",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28258"
+    },
+    "phone": "(898) 749-5371",
+    "effective_date": "2024-01-01",
+    "status": "Active",
+    "account_manager": "Sandra Nguyen"
+  },
+  {
+    "employer_id": "EMP-ADBBA4AC",
+    "name": "Vanguard Retail Corp",
+    "tax_id": "74-2785277",
+    "industry": "Retail",
+    "size_category": "medium",
+    "employee_count": 420,
+    "address": {
+      "line1": "7223 Spruce Ter",
+      "line2": "",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94110"
+    },
+    "phone": "(505) 854-9317",
+    "effective_date": "2022-01-01",
+    "status": "Active",
+    "account_manager": "Catherine Lee"
+  },
+  {
+    "employer_id": "EMP-C562B04C",
+    "name": "Apex Construction LLC",
+    "tax_id": "49-5017343",
+    "industry": "Aerospace",
+    "size_category": "large",
+    "employee_count": 974,
+    "address": {
+      "line1": "8937 Main St",
+      "line2": "",
+      "city": "Atlanta",
+      "state": "GA",
+      "zip": "30351"
+    },
+    "phone": "(446) 780-2290",
+    "effective_date": "2018-01-01",
+    "status": "Active",
+    "account_manager": "Frank Rodriguez"
+  },
+  {
+    "employer_id": "EMP-7BA695B3",
+    "name": "Quantum Software Solutions",
+    "tax_id": "77-8099076",
+    "industry": "Hospitality",
+    "size_category": "large",
+    "employee_count": 2235,
+    "address": {
+      "line1": "8827 Birch Way",
+      "line2": "",
+      "city": "Phoenix",
+      "state": "AZ",
+      "zip": "85094"
+    },
+    "phone": "(752) 973-4295",
+    "effective_date": "2023-01-01",
+    "status": "Active",
+    "account_manager": "Ronald Mitchell"
+  },
+  {
+    "employer_id": "EMP-DBD29718",
+    "name": "Heritage Foods International",
+    "tax_id": "85-4860684",
+    "industry": "Consulting",
+    "size_category": "small",
+    "employee_count": 85,
+    "address": {
+      "line1": "7277 Hill St",
+      "line2": "",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77041"
+    },
+    "phone": "(425) 207-2163",
+    "effective_date": "2023-01-01",
+    "status": "Active",
+    "account_manager": "Cynthia Rodriguez"
+  },
+  {
+    "employer_id": "EMP-4129A363",
+    "name": "Titan Aerospace Engineering",
+    "tax_id": "79-3219824",
+    "industry": "Transportation",
+    "size_category": "medium",
+    "employee_count": 470,
+    "address": {
+      "line1": "614 Lincoln Blvd",
+      "line2": "Apt 244",
+      "city": "Chicago",
+      "state": "IL",
+      "zip": "60675"
+    },
+    "phone": "(784) 790-8744",
+    "effective_date": "2019-01-01",
+    "status": "Active",
+    "account_manager": "Gregory Evans"
+  },
+  {
+    "employer_id": "EMP-8EDD567A",
+    "name": "Coastal Hospitality Group",
+    "tax_id": "69-1908841",
+    "industry": "Education",
+    "size_category": "enterprise",
+    "employee_count": 49129,
+    "address": {
+      "line1": "3219 Walnut Blvd",
+      "line2": "Apt 442",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77094"
+    },
+    "phone": "(869) 861-2612",
+    "effective_date": "2018-01-01",
+    "status": "Active",
+    "account_manager": "Debra Wilson"
+  },
+  {
+    "employer_id": "EMP-E221F7C8",
+    "name": "Redwood Consulting Partners",
+    "tax_id": "45-8761611",
+    "industry": "Security",
+    "size_category": "medium",
+    "employee_count": 227,
+    "address": {
+      "line1": "4173 Sycamore Ave",
+      "line2": "Apt 460",
+      "city": "San Antonio",
+      "state": "TX",
+      "zip": "78278"
+    },
+    "phone": "(277) 653-2604",
+    "effective_date": "2018-01-01",
+    "status": "Active",
+    "account_manager": "Christopher Johnson"
+  },
+  {
+    "employer_id": "EMP-0D7C111A",
+    "name": "Atlas Transportation Co",
+    "tax_id": "17-3762152",
+    "industry": "Telecommunications",
+    "size_category": "enterprise",
+    "employee_count": 29836,
+    "address": {
+      "line1": "1628 Magnolia Blvd",
+      "line2": "",
+      "city": "Philadelphia",
+      "state": "PA",
+      "zip": "19162"
+    },
+    "phone": "(202) 599-5345",
+    "effective_date": "2024-01-01",
+    "status": "Active",
+    "account_manager": "Pamela Diaz"
+  },
+  {
+    "employer_id": "EMP-029CD8A5",
+    "name": "Beacon Education Foundation",
+    "tax_id": "50-1959074",
+    "industry": "Agriculture",
+    "size_category": "small",
+    "employee_count": 16,
+    "address": {
+      "line1": "9205 Highland Ave",
+      "line2": "",
+      "city": "Phoenix",
+      "state": "AZ",
+      "zip": "85034"
+    },
+    "phone": "(798) 688-9238",
+    "effective_date": "2024-01-01",
+    "status": "Active",
+    "account_manager": "Jessica Rogers"
+  },
+  {
+    "employer_id": "EMP-5E36E698",
+    "name": "Ironclad Security Services",
+    "tax_id": "25-5130808",
+    "industry": "Public Sector",
+    "size_category": "enterprise",
+    "employee_count": 42940,
+    "address": {
+      "line1": "1412 Willow Dr",
+      "line2": "",
+      "city": "Chicago",
+      "state": "IL",
+      "zip": "60686"
+    },
+    "phone": "(808) 240-2343",
+    "effective_date": "2021-01-01",
+    "status": "Active",
+    "account_manager": "Matthew Gutierrez"
+  },
+  {
+    "employer_id": "EMP-32C946FC",
+    "name": "Sapphire Telecommunications",
+    "tax_id": "60-3195773",
+    "industry": "Environmental Services",
+    "size_category": "large",
+    "employee_count": 2957,
+    "address": {
+      "line1": "5283 Cypress Rd",
+      "line2": "",
+      "city": "San Antonio",
+      "state": "TX",
+      "zip": "78295"
+    },
+    "phone": "(668) 523-2188",
+    "effective_date": "2018-01-01",
+    "status": "Active",
+    "account_manager": "Matthew Gonzalez"
+  },
+  {
+    "employer_id": "EMP-0CB04780",
+    "name": "Prairie Agricultural Corp",
+    "tax_id": "57-5781295",
+    "industry": "Mining",
+    "size_category": "medium",
+    "employee_count": 180,
+    "address": {
+      "line1": "1300 Hickory Ln",
+      "line2": "",
+      "city": "Denver",
+      "state": "CO",
+      "zip": "80243"
+    },
+    "phone": "(648) 756-5956",
+    "effective_date": "2022-01-01",
+    "status": "Terminated",
+    "account_manager": "Gregory Ortiz"
+  },
+  {
+    "employer_id": "EMP-143C232D",
+    "name": "Metro Transit Authority",
+    "tax_id": "24-2795765",
+    "industry": "Insurance",
+    "size_category": "large",
+    "employee_count": 1773,
+    "address": {
+      "line1": "228 Juniper Pl",
+      "line2": "",
+      "city": "Tampa",
+      "state": "FL",
+      "zip": "33623"
+    },
+    "phone": "(478) 488-4450",
+    "effective_date": "2023-01-01",
+    "status": "Active",
+    "account_manager": "Jason King"
+  },
+  {
+    "employer_id": "EMP-C0F92299",
+    "name": "Evergreen Environmental Services",
+    "tax_id": "15-1059486",
+    "industry": "Marine",
+    "size_category": "large",
+    "employee_count": 3232,
+    "address": {
+      "line1": "8380 Highland Ave",
+      "line2": "Apt 95",
+      "city": "Dallas",
+      "state": "TX",
+      "zip": "75216"
+    },
+    "phone": "(989) 333-5291",
+    "effective_date": "2019-01-01",
+    "status": "Active",
+    "account_manager": "Charles Diaz"
+  },
+  {
+    "employer_id": "EMP-FA89C4F0",
+    "name": "Diamond Mining Operations",
+    "tax_id": "57-3484601",
+    "industry": "Pharmaceutical",
+    "size_category": "small",
+    "employee_count": 65,
+    "address": {
+      "line1": "9289 Main St",
+      "line2": "",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77019"
+    },
+    "phone": "(330) 242-6050",
+    "effective_date": "2020-01-01",
+    "status": "Active",
+    "account_manager": "Samuel Garcia"
+  },
+  {
+    "employer_id": "EMP-CDAEA330",
+    "name": "Liberty Insurance Brokers",
+    "tax_id": "89-3592974",
+    "industry": "Legal Services",
+    "size_category": "enterprise",
+    "employee_count": 20514,
+    "address": {
+      "line1": "5962 Hickory Ln",
+      "line2": "",
+      "city": "Tampa",
+      "state": "FL",
+      "zip": "33641"
+    },
+    "phone": "(366) 381-7755",
+    "effective_date": "2018-01-01",
+    "status": "Active",
+    "account_manager": "Kyle Nelson"
+  },
+  {
+    "employer_id": "EMP-BEA02DE5",
+    "name": "Pacific Marine Industries",
+    "tax_id": "14-8896868",
+    "industry": "Real Estate",
+    "size_category": "enterprise",
+    "employee_count": 19577,
+    "address": {
+      "line1": "6845 Magnolia Blvd",
+      "line2": "",
+      "city": "Dallas",
+      "state": "TX",
+      "zip": "75230"
+    },
+    "phone": "(404) 671-6728",
+    "effective_date": "2020-01-01",
+    "status": "Active",
+    "account_manager": "Aaron Robinson"
+  }
+]

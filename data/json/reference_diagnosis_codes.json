@@ -1,0 +1,137 @@
+[
+  {
+    "code": "J06.9",
+    "description": "Acute upper respiratory infection, unspecified",
+    "category": "Respiratory"
+  },
+  {
+    "code": "J20.9",
+    "description": "Acute bronchitis, unspecified",
+    "category": "Respiratory"
+  },
+  {
+    "code": "J45.909",
+    "description": "Unspecified asthma, uncomplicated",
+    "category": "Respiratory"
+  },
+  {
+    "code": "E11.9",
+    "description": "Type 2 diabetes mellitus without complications",
+    "category": "Endocrine"
+  },
+  {
+    "code": "E11.65",
+    "description": "Type 2 diabetes mellitus with hyperglycemia",
+    "category": "Endocrine"
+  },
+  {
+    "code": "E78.5",
+    "description": "Hyperlipidemia, unspecified",
+    "category": "Endocrine"
+  },
+  {
+    "code": "I10",
+    "description": "Essential (primary) hypertension",
+    "category": "Cardiovascular"
+  },
+  {
+    "code": "I25.10",
+    "description": "Atherosclerotic heart disease of native coronary artery",
+    "category": "Cardiovascular"
+  },
+  {
+    "code": "I48.91",
+    "description": "Unspecified atrial fibrillation",
+    "category": "Cardiovascular"
+  },
+  {
+    "code": "M54.5",
+    "description": "Low back pain",
+    "category": "Musculoskeletal"
+  },
+  {
+    "code": "M79.3",
+    "description": "Panniculitis, unspecified",
+    "category": "Musculoskeletal"
+  },
+  {
+    "code": "M17.11",
+    "description": "Primary osteoarthritis, right knee",
+    "category": "Musculoskeletal"
+  },
+  {
+    "code": "K21.0",
+    "description": "Gastro-esophageal reflux disease with esophagitis",
+    "category": "Digestive"
+  },
+  {
+    "code": "K58.9",
+    "description": "Irritable bowel syndrome without diarrhea",
+    "category": "Digestive"
+  },
+  {
+    "code": "F32.1",
+    "description": "Major depressive disorder, single episode, moderate",
+    "category": "Mental Health"
+  },
+  {
+    "code": "F41.1",
+    "description": "Generalized anxiety disorder",
+    "category": "Mental Health"
+  },
+  {
+    "code": "G43.909",
+    "description": "Migraine, unspecified, not intractable",
+    "category": "Neurological"
+  },
+  {
+    "code": "N39.0",
+    "description": "Urinary tract infection, site not specified",
+    "category": "Genitourinary"
+  },
+  {
+    "code": "L30.9",
+    "description": "Dermatitis, unspecified",
+    "category": "Dermatological"
+  },
+  {
+    "code": "R10.9",
+    "description": "Unspecified abdominal pain",
+    "category": "Symptoms"
+  },
+  {
+    "code": "R05.9",
+    "description": "Cough, unspecified",
+    "category": "Symptoms"
+  },
+  {
+    "code": "Z00.00",
+    "description": "Encounter for general adult medical examination",
+    "category": "Preventive"
+  },
+  {
+    "code": "Z12.31",
+    "description": "Encounter for screening mammogram",
+    "category": "Preventive"
+  },
+  {
+    "code": "Z23",
+    "description": "Encounter for immunization",
+    "category": "Preventive"
+  },
+  {
+    "code": "S82.001A",
+    "description": "Unspecified fracture of right patella, initial encounter",
+    "category": "Injury"
+  },
+  {
+    "code": "S93.401A",
+    "description": "Sprain of unspecified ligament of right ankle, initial",
+    "category": "Injury"
+  },
+  {
+    "code": "T78.40XA",
+    "description": "Allergy, unspecified, initial encounter",
+    "category": "Allergy"
+  }
+]

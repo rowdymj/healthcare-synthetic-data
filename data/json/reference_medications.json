@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Metformin 500mg",
+    "ndc": "00093-7212-01",
+    "category": "Diabetes",
+    "avg_cost": 15,
+    "days_supply": 30
+  },
+  {
+    "name": "Metformin 1000mg",
+    "ndc": "00093-7214-01",
+    "category": "Diabetes",
+    "avg_cost": 20,
+    "days_supply": 30
+  },
+  {
+    "name": "Lisinopril 10mg",
+    "ndc": "00093-1044-01",
+    "category": "Cardiovascular",
+    "avg_cost": 12,
+    "days_supply": 30
+  },
+  {
+    "name": "Lisinopril 20mg",
+    "ndc": "00093-1045-01",
+    "category": "Cardiovascular",
+    "avg_cost": 15,
+    "days_supply": 30
+  },
+  {
+    "name": "Amlodipine 5mg",
+    "ndc": "00093-3171-01",
+    "category": "Cardiovascular",
+    "avg_cost": 14,
+    "days_supply": 30
+  },
+  {
+    "name": "Atorvastatin 20mg",
+    "ndc": "00093-5057-01",
+    "category": "Cardiovascular",
+    "avg_cost": 18,
+    "days_supply": 30
+  },
+  {
+    "name": "Atorvastatin 40mg",
+    "ndc": "00093-5058-01",
+    "category": "Cardiovascular",
+    "avg_cost": 22,
+    "days_supply": 30
+  },
+  {
+    "name": "Omeprazole 20mg",
+    "ndc": "00093-5282-01",
+    "category": "GI",
+    "avg_cost": 16,
+    "days_supply": 30
+  },
+  {
+    "name": "Sertraline 50mg",
+    "ndc": "00093-7235-01",
+    "category": "Mental Health",
+    "avg_cost": 14,
+    "days_supply": 30
+  },
+  {
+    "name": "Sertraline 100mg",
+    "ndc": "00093-7236-01",
+    "category": "Mental Health",
+    "avg_cost": 18,
+    "days_supply": 30
+  },
+  {
+    "name": "Escitalopram 10mg",
+    "ndc": "00093-5851-01",
+    "category": "Mental Health",
+    "avg_cost": 20,
+    "days_supply": 30
+  },
+  {
+    "name": "Albuterol Inhaler",
+    "ndc": "00093-3174-01",
+    "category": "Respiratory",
+    "avg_cost": 55,
+    "days_supply": 30
+  },
+  {
+    "name": "Fluticasone Nasal Spray",
+    "ndc": "00093-8122-01",
+    "category": "Respiratory",
+    "avg_cost": 28,
+    "days_supply": 30
+  },
+  {
+    "name": "Amoxicillin 500mg",
+    "ndc": "00093-4150-01",
+    "category": "Antibiotic",
+    "avg_cost": 12,
+    "days_supply": 10
+  },
+  {
+    "name": "Azithromycin 250mg",
+    "ndc": "00093-7169-01",
+    "category": "Antibiotic",
+    "avg_cost": 18,
+    "days_supply": 5
+  },
+  {
+    "name": "Ibuprofen 800mg",
+    "ndc": "00093-6615-01",
+    "category": "Pain",
+    "avg_cost": 10,
+    "days_supply": 30
+  },
+  {
+    "name": "Gabapentin 300mg",
+    "ndc": "00093-3159-01",
+    "category": "Pain/Neuro",
+    "avg_cost": 16,
+    "days_supply": 30
+  },
+  {
+    "name": "Levothyroxine 50mcg",
+    "ndc": "00093-5552-01",
+    "category": "Thyroid",
+    "avg_cost": 14,
+    "days_supply": 30
+  },
+  {
+    "name": "Prednisone 10mg",
+    "ndc": "00093-6340-01",
+    "category": "Anti-inflammatory",
+    "avg_cost": 8,
+    "days_supply": 14
+  },
+  {
+    "name": "Montelukast 10mg",
+    "ndc": "00093-7390-01",
+    "category": "Respiratory",
+    "avg_cost": 22,
+    "days_supply": 30
+  },
+  {
+    "name": "Insulin Glargine 100u/mL",
+    "ndc": "00088-2220-33",
+    "category": "Diabetes",
+    "avg_cost": 285,
+    "days_supply": 30
+  },
+  {
+    "name": "Ozempic 1mg/dose",
+    "ndc": "00169-4132-12",
+    "category": "Diabetes",
+    "avg_cost": 935,
+    "days_supply": 28
+  },
+  {
+    "name": "Humira 40mg",
+    "ndc": "00074-4339-02",
+    "category": "Autoimmune",
+    "avg_cost": 5800,
+    "days_supply": 28
+  },
+  {
+    "name": "Eliquis 5mg",
+    "ndc": "00003-0894-21",
+    "category": "Cardiovascular",
+    "avg_cost": 520,
+    "days_supply": 30
+  }
+]

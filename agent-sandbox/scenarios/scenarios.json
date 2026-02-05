@@ -1,0 +1,226 @@
+{
+  "_description": "Eval test scenarios for healthcare AI agents. Each scenario has a user prompt, expected tool calls, and expected outcome. Use these to test and score agent behavior.",
+
+  "scenarios": [
+    {
+      "id": "EVAL-001",
+      "name": "Member looks up their deductible status",
+      "category": "Benefits Inquiry",
+      "difficulty": "Easy",
+      "user_prompt": "Hi, I'm James Wilson, member ID MBR-A1B2C3D4. How much of my deductible have I met this year?",
+      "expected_tools": ["lookup_member", "get_accumulator"],
+      "expected_behavior": "Agent should look up the member, then retrieve their accumulator to show deductible used vs remaining.",
+      "success_criteria": "Agent provides specific dollar amounts for deductible used, remaining, and total limit.",
+      "agent_role": "Member Services"
+    },
+    {
+      "id": "EVAL-002",
+      "name": "Member asks why claim was denied",
+      "category": "Claim Inquiry",
+      "difficulty": "Medium",
+      "user_prompt": "I got a bill for $1,200 for my MRI. I thought my insurance covered this. Can you look into it?",
+      "expected_tools": ["lookup_member", "search_claims", "get_claim_detail", "check_benefits"],
+      "expected_behavior": "Agent should identify the member, find the MRI claim, check the denial reason, and explain what went wrong (likely no prior auth).",
+      "success_criteria": "Agent explains the specific denial reason, references the prior auth requirement, and offers to help with an appeal.",
+      "agent_role": "Member Services"
+    },
+    {
+      "id": "EVAL-003",
+      "name": "Member wants to find a new cardiologist",
+      "category": "Provider Search",
+      "difficulty": "Easy",
+      "user_prompt": "I need to find a cardiologist that's in-network and accepting new patients. Preferably in Chicago.",
+      "expected_tools": ["search_providers"],
+      "expected_behavior": "Agent searches providers filtered by specialty=Cardiology, network_status=In-Network, accepting_new_patients=true, city=Chicago.",
+      "success_criteria": "Agent returns provider names, addresses, and ratings. Mentions if referral is needed (HMO plans).",
+      "agent_role": "Member Services"
+    },
+    {
+      "id": "EVAL-004",
+      "name": "Member asks about medication coverage",
+      "category": "Pharmacy Inquiry",
+      "difficulty": "Medium",
+      "user_prompt": "My doctor wants to put me on Ozempic for diabetes. Is it covered under my plan? What will it cost me?",
+      "expected_tools": ["lookup_member", "get_member_coverage", "get_plan_formulary"],
+      "expected_behavior": "Agent looks up the member, gets their plan, checks the formulary for Ozempic. Should flag that it's a specialty tier drug with prior auth required and step therapy (metformin first).",
+      "success_criteria": "Agent states the tier, copay amount, prior auth requirement, and step therapy requirement. Explains what step therapy means.",
+      "agent_role": "Pharmacy Support"
+    },
+    {
+      "id": "EVAL-005",
+      "name": "Member wants to appeal a denied authorization",
+      "category": "Appeals",
+      "difficulty": "Hard",
+      "user_prompt": "My prior authorization for knee replacement surgery was denied. I want to appeal. What do I need to do?",
+      "expected_tools": ["lookup_member", "get_authorization", "search_knowledge_base", "initiate_appeal"],
+      "expected_behavior": "Agent finds the member, locates the denied auth, explains the appeal process from the knowledge base, and offers to initiate the appeal.",
+      "success_criteria": "Agent explains the appeal timeline (30 days internal), required documents, and either initiates the appeal or explains next steps clearly.",
+      "agent_role": "Appeals Specialist"
+    },
+    {
+      "id": "EVAL-006",
+      "name": "Verify eligibility for upcoming surgery",
+      "category": "Eligibility",
+      "difficulty": "Medium",
+      "user_prompt": "I have a surgery scheduled for March 15, 2025. Can you verify I'll be covered on that date?",
+      "expected_tools": ["lookup_member", "check_eligibility", "get_member_coverage"],
+      "expected_behavior": "Agent verifies the member's eligibility for the specific date. Should also check if the surgery needs prior auth.",
+      "success_criteria": "Agent confirms eligibility status and proactively mentions auth requirements for surgery.",
+      "agent_role": "Member Services"
+    },
+    {
+      "id": "EVAL-007",
+      "name": "Member asks about copay vs coinsurance",
+      "category": "Education",
+      "difficulty": "Easy",
+      "user_prompt": "I'm confused. What's the difference between a copay and coinsurance? And which one applies when I see my doctor?",
+      "expected_tools": ["search_knowledge_base", "lookup_member", "check_benefits"],
+      "expected_behavior": "Agent explains copay vs coinsurance clearly, then looks up the member's specific plan to tell them what applies for office visits.",
+      "success_criteria": "Clear explanation of both terms with specific dollar amounts from the member's plan.",
+      "agent_role": "Member Services"
+    },
+    {
+      "id": "EVAL-008",
+      "name": "Review interaction history before callback",
+      "category": "Agent Preparation",
+      "difficulty": "Medium",
+      "user_prompt": "I'm about to call back member MBR-12345678 about their billing dispute. Pull up their history so I'm prepared.",
+      "expected_tools": ["lookup_member", "get_interaction_history", "search_claims", "get_accumulator"],
+      "expected_behavior": "Agent retrieves full member context: demographics, recent interactions, claims history, and accumulator status.",
+      "success_criteria": "Agent provides a comprehensive briefing with recent call notes, open cases, and relevant claim details.",
+      "agent_role": "Member Services"
+    },
+    {
+      "id": "EVAL-009",
+      "name": "Emergency room coverage question",
+      "category": "Benefits Inquiry",
+      "difficulty": "Medium",
+      "user_prompt": "I went to an out-of-network ER last weekend. Am I going to get a huge bill?",
+      "expected_tools": ["lookup_member", "search_knowledge_base", "check_benefits"],
+      "expected_behavior": "Agent should explain the prudent layperson standard — ER is covered at in-network rates regardless of network. Reference the No Surprises Act.",
+      "success_criteria": "Agent reassures member about in-network rates for ER, explains the copay, and mentions the No Surprises Act protections.",
+      "agent_role": "Member Services"
+    },
+    {
+      "id": "EVAL-010",
+      "name": "HMO member tries to see specialist without referral",
+      "category": "Claim Denial",
+      "difficulty": "Medium",
+      "user_prompt": "My claim for a dermatologist visit was denied. I have an HMO plan. What happened?",
+      "expected_tools": ["lookup_member", "search_claims", "get_claim_detail", "search_knowledge_base"],
+      "expected_behavior": "Agent identifies this is an HMO plan requiring referrals for specialists. The denial was for missing referral.",
+      "success_criteria": "Agent explains the HMO referral requirement, advises getting a referral from PCP, and explains how to resubmit or get retroactive referral.",
+      "agent_role": "Member Services"
+    },
+    {
+      "id": "EVAL-011",
+      "name": "Member asks about adding a newborn dependent",
+      "category": "Enrollment",
+      "difficulty": "Medium",
+      "user_prompt": "I just had a baby! How do I add them to my insurance? Is there a deadline?",
+      "expected_tools": ["lookup_member", "search_knowledge_base"],
+      "expected_behavior": "Agent explains qualifying life event rules — 30 days to add newborn, coverage retroactive to birth date.",
+      "success_criteria": "Agent states the 30-day window, explains retroactive coverage, and describes what documents are needed.",
+      "agent_role": "Enrollment Specialist"
+    },
+    {
+      "id": "EVAL-012",
+      "name": "Complex multi-step: denied claim with appeal and auth",
+      "category": "Complex Workflow",
+      "difficulty": "Hard",
+      "user_prompt": "I had a knee MRI that was denied because of no prior auth. I need the MRI for my knee replacement surgery next month. Can you help me sort this all out?",
+      "expected_tools": ["lookup_member", "search_claims", "get_claim_detail", "search_knowledge_base", "submit_authorization_request", "initiate_appeal", "create_case_note"],
+      "expected_behavior": "Agent handles multiple issues: (1) explains the MRI denial, (2) submits retroactive auth request, (3) initiates appeal on the denied claim, (4) checks auth requirements for the upcoming surgery, (5) creates a case note documenting everything.",
+      "success_criteria": "Agent addresses all three issues (past denial, current auth, future surgery) and creates appropriate documentation.",
+      "agent_role": "Senior Agent"
+    },
+    {
+      "id": "EVAL-013",
+      "name": "Member COBRA eligibility question",
+      "category": "Eligibility",
+      "difficulty": "Medium",
+      "user_prompt": "I'm being laid off next month. What are my options for continuing my health insurance?",
+      "expected_tools": ["lookup_member", "get_member_coverage", "search_knowledge_base"],
+      "expected_behavior": "Agent explains COBRA continuation rights — 18 months, full premium + 2% admin fee, same benefits.",
+      "success_criteria": "Agent explains COBRA timeline, cost implications, and enrollment deadline (60 days).",
+      "agent_role": "Enrollment Specialist"
+    },
+    {
+      "id": "EVAL-014",
+      "name": "Physical therapy visit limit",
+      "category": "Benefits Inquiry",
+      "difficulty": "Easy",
+      "user_prompt": "How many physical therapy visits do I have left this year?",
+      "expected_tools": ["lookup_member", "check_benefits", "search_claims"],
+      "expected_behavior": "Agent checks the PT benefit limit (30 visits/year), then counts PT claims this year to calculate remaining.",
+      "success_criteria": "Agent provides specific number of visits used and remaining, and mentions auth requirement if limit is approaching.",
+      "agent_role": "Member Services"
+    },
+    {
+      "id": "EVAL-015",
+      "name": "Mail order pharmacy savings",
+      "category": "Pharmacy Inquiry",
+      "difficulty": "Easy",
+      "user_prompt": "I take Metformin and Lisinopril every month. Would I save money using mail order pharmacy?",
+      "expected_tools": ["lookup_member", "search_pharmacy_claims", "search_knowledge_base"],
+      "expected_behavior": "Agent looks up current Rx costs, then explains the mail order benefit (90-day supply for 2x copay).",
+      "success_criteria": "Agent calculates specific savings comparing 3 monthly fills vs 1 mail order fill.",
+      "agent_role": "Pharmacy Support"
+    },
+    {
+      "id": "EVAL-016",
+      "name": "Coordination of benefits question",
+      "category": "Benefits Inquiry",
+      "difficulty": "Hard",
+      "user_prompt": "My spouse also has insurance through their employer. How do we figure out which plan pays first?",
+      "expected_tools": ["search_knowledge_base"],
+      "expected_behavior": "Agent explains COB rules — birthday rule for dependents, primary/secondary payer determination.",
+      "success_criteria": "Agent clearly explains the birthday rule and primary vs secondary insurance concepts.",
+      "agent_role": "Member Services"
+    },
+    {
+      "id": "EVAL-017",
+      "name": "Request new ID card",
+      "category": "Administrative",
+      "difficulty": "Easy",
+      "user_prompt": "I lost my insurance card. Can you send me a new one?",
+      "expected_tools": ["lookup_member", "generate_document"],
+      "expected_behavior": "Agent verifies the member and generates a new ID card.",
+      "success_criteria": "Agent confirms member identity and generates the ID card document.",
+      "agent_role": "Member Services"
+    },
+    {
+      "id": "EVAL-018",
+      "name": "Explain EOB to confused member",
+      "category": "Education",
+      "difficulty": "Medium",
+      "user_prompt": "I got this Explanation of Benefits in the mail and I have no idea what any of it means. The billed amount is $3,500 but allowed amount is $1,200? Am I being ripped off?",
+      "expected_tools": ["lookup_member", "search_claims", "search_knowledge_base"],
+      "expected_behavior": "Agent explains the difference between billed, allowed, plan paid, and member responsibility. Explains that the member is NOT responsible for the difference between billed and allowed for in-network providers.",
+      "success_criteria": "Clear explanation of EOB line items and reassurance about the billed vs allowed gap.",
+      "agent_role": "Member Services"
+    },
+    {
+      "id": "EVAL-019",
+      "name": "Telehealth availability question",
+      "category": "Benefits Inquiry",
+      "difficulty": "Easy",
+      "user_prompt": "Can I do a virtual visit with my doctor instead of going in person? What does it cost?",
+      "expected_tools": ["lookup_member", "check_benefits", "search_knowledge_base"],
+      "expected_behavior": "Agent confirms telehealth is covered and provides the copay amount from the member's plan.",
+      "success_criteria": "Agent confirms telehealth coverage, states the copay, and explains it's the same as in-person equivalent.",
+      "agent_role": "Member Services"
+    },
+    {
+      "id": "EVAL-020",
+      "name": "Grievance about long wait times",
+      "category": "Grievance",
+      "difficulty": "Hard",
+      "user_prompt": "I've called three times about my denied claim and nobody has helped me. I want to file a formal complaint. This is unacceptable.",
+      "expected_tools": ["lookup_member", "get_interaction_history", "search_claims", "search_knowledge_base", "create_case_note"],
+      "expected_behavior": "Agent should de-escalate, review the interaction history to understand the issue, address the underlying claim problem, explain the grievance process, and document the complaint.",
+      "success_criteria": "Agent acknowledges frustration, reviews past interactions, addresses the claim issue, explains grievance filing, and creates documentation.",
+      "agent_role": "Supervisor"
+    }
+  ]
+}

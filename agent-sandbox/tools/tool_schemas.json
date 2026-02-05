@@ -1,0 +1,567 @@
+{
+  "_description": "Tool/function schemas for healthcare AI agents. Provided in both Anthropic and OpenAI formats. These define what agents CAN DO with the synthetic dataset.",
+
+  "anthropic_tools": [
+    {
+      "name": "lookup_member",
+      "description": "Look up a member by ID, name, or subscriber ID. Returns demographics, plan enrollment, PCP, and chronic conditions.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "member_id": { "type": "string", "description": "Member ID (e.g. MBR-A1B2C3D4)" },
+          "subscriber_id": { "type": "string", "description": "Subscriber ID (e.g. SUB123456789)" },
+          "first_name": { "type": "string", "description": "First name for search" },
+          "last_name": { "type": "string", "description": "Last name for search" },
+          "date_of_birth": { "type": "string", "description": "DOB in YYYY-MM-DD format" }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "get_member_coverage",
+      "description": "Get a member's current coverage details including plan, benefits, deductible status, and out-of-pocket accumulator.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "member_id": { "type": "string", "description": "Member ID" }
+        },
+        "required": ["member_id"]
+      }
+    },
+    {
+      "name": "get_member_dependents",
+      "description": "List all dependents (spouse, children) enrolled under a subscriber.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "member_id": { "type": "string", "description": "Primary subscriber member ID" }
+        },
+        "required": ["member_id"]
+      }
+    },
+    {
+      "name": "search_claims",
+      "description": "Search medical claims by member, date range, status, provider, or diagnosis. Returns claim summaries with billed/paid amounts.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "member_id": { "type": "string", "description": "Filter by member ID" },
+          "claim_status": { "type": "string", "enum": ["Paid", "Denied", "Pending", "Adjusted", "Appealed"], "description": "Filter by claim status" },
+          "date_from": { "type": "string", "description": "Service date start (YYYY-MM-DD)" },
+          "date_to": { "type": "string", "description": "Service date end (YYYY-MM-DD)" },
+          "provider_id": { "type": "string", "description": "Filter by provider ID" },
+          "diagnosis_code": { "type": "string", "description": "Filter by ICD-10 code" },
+          "min_amount": { "type": "number", "description": "Minimum billed amount" },
+          "limit": { "type": "integer", "description": "Max results to return (default 20)" }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "get_claim_detail",
+      "description": "Get full claim detail including all claim lines, diagnosis, procedure codes, billed/allowed/paid amounts, and denial reason if applicable.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "claim_id": { "type": "string", "description": "Claim ID (e.g. CLM-A1B2C3D4)" }
+        },
+        "required": ["claim_id"]
+      }
+    },
+    {
+      "name": "search_pharmacy_claims",
+      "description": "Search pharmacy/prescription claims by member, medication, date range, or formulary status.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "member_id": { "type": "string", "description": "Filter by member ID" },
+          "medication_name": { "type": "string", "description": "Medication name (partial match)" },
+          "medication_category": { "type": "string", "description": "Drug category (e.g. Diabetes, Cardiovascular)" },
+          "date_from": { "type": "string", "description": "Fill date start (YYYY-MM-DD)" },
+          "date_to": { "type": "string", "description": "Fill date end (YYYY-MM-DD)" },
+          "formulary_status": { "type": "string", "enum": ["Preferred", "Non-Preferred", "Specialty"], "description": "Formulary tier" },
+          "limit": { "type": "integer", "description": "Max results (default 20)" }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "check_benefits",
+      "description": "Check what benefits a member's plan covers for a specific service category. Returns copay, coinsurance, auth requirements, and limits.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "plan_id": { "type": "string", "description": "Plan ID" },
+          "service_category": { "type": "string", "description": "Service category (e.g. 'Primary Care Visit', 'Emergency Room', 'Physical Therapy', 'Prescription Drugs - Generic')" }
+        },
+        "required": ["plan_id", "service_category"]
+      }
+    },
+    {
+      "name": "get_accumulator",
+      "description": "Get a member's current deductible and out-of-pocket accumulator status for the plan year.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "member_id": { "type": "string", "description": "Member ID" }
+        },
+        "required": ["member_id"]
+      }
+    },
+    {
+      "name": "search_providers",
+      "description": "Search for healthcare providers by specialty, name, network status, or location.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "specialty": { "type": "string", "description": "Provider specialty (e.g. Cardiology, Family Medicine)" },
+          "name": { "type": "string", "description": "Provider name (partial match)" },
+          "network_status": { "type": "string", "enum": ["In-Network", "Out-of-Network"], "description": "Network status filter" },
+          "accepting_new_patients": { "type": "boolean", "description": "Only show providers accepting new patients" },
+          "city": { "type": "string", "description": "City filter" },
+          "state": { "type": "string", "description": "State code filter" },
+          "limit": { "type": "integer", "description": "Max results (default 20)" }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "get_authorization",
+      "description": "Look up a prior authorization by ID or search by member. Returns status, approved units, expiration, and denial reason if applicable.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "auth_id": { "type": "string", "description": "Authorization ID" },
+          "member_id": { "type": "string", "description": "Search by member ID" }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "submit_authorization_request",
+      "description": "Submit a new prior authorization request for a service.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "member_id": { "type": "string", "description": "Member ID" },
+          "provider_id": { "type": "string", "description": "Requesting provider ID" },
+          "service_description": { "type": "string", "description": "Description of the requested service" },
+          "procedure_code": { "type": "string", "description": "CPT/HCPCS code" },
+          "diagnosis_code": { "type": "string", "description": "Supporting ICD-10 diagnosis code" },
+          "urgency": { "type": "string", "enum": ["Standard", "Urgent", "Emergency"], "description": "Request urgency" },
+          "clinical_notes": { "type": "string", "description": "Supporting clinical rationale" }
+        },
+        "required": ["member_id", "provider_id", "service_description", "procedure_code", "diagnosis_code"]
+      }
+    },
+    {
+      "name": "get_interaction_history",
+      "description": "Get a member's interaction history including call logs, secure messages, and case notes.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "member_id": { "type": "string", "description": "Member ID" },
+          "interaction_type": { "type": "string", "enum": ["calls", "messages", "case_notes", "all"], "description": "Type of interactions to retrieve (default: all)" },
+          "date_from": { "type": "string", "description": "Start date (YYYY-MM-DD)" },
+          "date_to": { "type": "string", "description": "End date (YYYY-MM-DD)" },
+          "limit": { "type": "integer", "description": "Max results (default 20)" }
+        },
+        "required": ["member_id"]
+      }
+    },
+    {
+      "name": "create_case_note",
+      "description": "Create a new case note for a member interaction.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "member_id": { "type": "string", "description": "Member ID" },
+          "category": { "type": "string", "enum": ["Clinical Review", "Billing", "Enrollment", "Grievance", "Appeal", "Care Coordination", "Utilization Management"], "description": "Note category" },
+          "content": { "type": "string", "description": "Note content" },
+          "related_claim_id": { "type": "string", "description": "Related claim ID if applicable" },
+          "related_auth_id": { "type": "string", "description": "Related auth ID if applicable" },
+          "follow_up_required": { "type": "boolean", "description": "Whether follow-up is needed" },
+          "follow_up_date": { "type": "string", "description": "Follow-up date if required (YYYY-MM-DD)" }
+        },
+        "required": ["member_id", "category", "content"]
+      }
+    },
+    {
+      "name": "search_knowledge_base",
+      "description": "Search the knowledge base for plan policies, coverage guidelines, FAQs, or formulary information. Use this when answering member questions about how their plan works.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string", "description": "Natural language search query" },
+          "section": { "type": "string", "enum": ["plan_policies", "coverage_guidelines", "member_faq", "provider_policies", "formulary_guidelines", "appeals_and_grievances", "all"], "description": "Knowledge base section to search (default: all)" },
+          "keywords": { "type": "array", "items": { "type": "string" }, "description": "Keyword filters" }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "check_eligibility",
+      "description": "Verify a member's eligibility status for a specific date of service.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "member_id": { "type": "string", "description": "Member ID" },
+          "date_of_service": { "type": "string", "description": "Date to check eligibility for (YYYY-MM-DD)" }
+        },
+        "required": ["member_id", "date_of_service"]
+      }
+    },
+    {
+      "name": "initiate_appeal",
+      "description": "Initiate an appeal for a denied claim or authorization.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "member_id": { "type": "string", "description": "Member ID" },
+          "claim_id": { "type": "string", "description": "Denied claim ID (if claim appeal)" },
+          "auth_id": { "type": "string", "description": "Denied auth ID (if auth appeal)" },
+          "appeal_reason": { "type": "string", "description": "Reason for the appeal" },
+          "supporting_documentation": { "type": "string", "description": "Description of supporting documents" },
+          "expedited": { "type": "boolean", "description": "Request expedited review (medical urgency)" }
+        },
+        "required": ["member_id", "appeal_reason"]
+      }
+    },
+    {
+      "name": "generate_document",
+      "description": "Generate a member-facing document such as an EOB, denial letter, auth approval letter, or ID card.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "document_type": { "type": "string", "enum": ["EOB", "denial_letter", "auth_approval_letter", "auth_denial_letter", "id_card", "welcome_letter", "appeal_acknowledgment"], "description": "Type of document to generate" },
+          "member_id": { "type": "string", "description": "Member ID" },
+          "claim_id": { "type": "string", "description": "Related claim ID (for EOB, denial letter)" },
+          "auth_id": { "type": "string", "description": "Related auth ID (for auth letters)" }
+        },
+        "required": ["document_type", "member_id"]
+      }
+    },
+    {
+      "name": "get_plan_formulary",
+      "description": "Look up formulary status, tier, and coverage details for a specific medication under a member's plan.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "plan_id": { "type": "string", "description": "Plan ID" },
+          "medication_name": { "type": "string", "description": "Medication name (partial match)" },
+          "ndc": { "type": "string", "description": "National Drug Code" }
+        },
+        "required": ["plan_id"]
+      }
+    }
+  ],
+
+  "openai_tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "lookup_member",
+        "description": "Look up a member by ID, name, or subscriber ID. Returns demographics, plan enrollment, PCP, and chronic conditions.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "member_id": { "type": "string", "description": "Member ID (e.g. MBR-A1B2C3D4)" },
+            "subscriber_id": { "type": "string", "description": "Subscriber ID (e.g. SUB123456789)" },
+            "first_name": { "type": "string", "description": "First name for search" },
+            "last_name": { "type": "string", "description": "Last name for search" },
+            "date_of_birth": { "type": "string", "description": "DOB in YYYY-MM-DD format" }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_member_coverage",
+        "description": "Get a member's current coverage details including plan, benefits, deductible status, and out-of-pocket accumulator.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "member_id": { "type": "string", "description": "Member ID" }
+          },
+          "required": ["member_id"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_member_dependents",
+        "description": "List all dependents (spouse, children) enrolled under a subscriber.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "member_id": { "type": "string", "description": "Primary subscriber member ID" }
+          },
+          "required": ["member_id"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "search_claims",
+        "description": "Search medical claims by member, date range, status, provider, or diagnosis.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "member_id": { "type": "string", "description": "Filter by member ID" },
+            "claim_status": { "type": "string", "enum": ["Paid", "Denied", "Pending", "Adjusted", "Appealed"], "description": "Filter by claim status" },
+            "date_from": { "type": "string", "description": "Service date start (YYYY-MM-DD)" },
+            "date_to": { "type": "string", "description": "Service date end (YYYY-MM-DD)" },
+            "provider_id": { "type": "string", "description": "Filter by provider ID" },
+            "diagnosis_code": { "type": "string", "description": "Filter by ICD-10 code" },
+            "min_amount": { "type": "number", "description": "Minimum billed amount" },
+            "limit": { "type": "integer", "description": "Max results (default 20)" }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_claim_detail",
+        "description": "Get full claim detail including all claim lines, diagnosis, procedure codes, billed/allowed/paid amounts, and denial reason.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "claim_id": { "type": "string", "description": "Claim ID" }
+          },
+          "required": ["claim_id"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "search_pharmacy_claims",
+        "description": "Search pharmacy/prescription claims by member, medication, date range, or formulary status.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "member_id": { "type": "string", "description": "Filter by member ID" },
+            "medication_name": { "type": "string", "description": "Medication name (partial match)" },
+            "medication_category": { "type": "string", "description": "Drug category" },
+            "date_from": { "type": "string", "description": "Fill date start (YYYY-MM-DD)" },
+            "date_to": { "type": "string", "description": "Fill date end (YYYY-MM-DD)" },
+            "formulary_status": { "type": "string", "enum": ["Preferred", "Non-Preferred", "Specialty"] },
+            "limit": { "type": "integer", "description": "Max results (default 20)" }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "check_benefits",
+        "description": "Check what benefits a member's plan covers for a specific service category.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "plan_id": { "type": "string", "description": "Plan ID" },
+            "service_category": { "type": "string", "description": "Service category" }
+          },
+          "required": ["plan_id", "service_category"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_accumulator",
+        "description": "Get a member's current deductible and out-of-pocket accumulator status.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "member_id": { "type": "string", "description": "Member ID" }
+          },
+          "required": ["member_id"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "search_providers",
+        "description": "Search for healthcare providers by specialty, name, network status, or location.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "specialty": { "type": "string", "description": "Provider specialty" },
+            "name": { "type": "string", "description": "Provider name (partial match)" },
+            "network_status": { "type": "string", "enum": ["In-Network", "Out-of-Network"] },
+            "accepting_new_patients": { "type": "boolean" },
+            "city": { "type": "string" },
+            "state": { "type": "string" },
+            "limit": { "type": "integer", "description": "Max results (default 20)" }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_authorization",
+        "description": "Look up a prior authorization by ID or search by member.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "auth_id": { "type": "string", "description": "Authorization ID" },
+            "member_id": { "type": "string", "description": "Search by member ID" }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "submit_authorization_request",
+        "description": "Submit a new prior authorization request for a service.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "member_id": { "type": "string", "description": "Member ID" },
+            "provider_id": { "type": "string", "description": "Requesting provider ID" },
+            "service_description": { "type": "string", "description": "Description of the requested service" },
+            "procedure_code": { "type": "string", "description": "CPT/HCPCS code" },
+            "diagnosis_code": { "type": "string", "description": "Supporting ICD-10 diagnosis code" },
+            "urgency": { "type": "string", "enum": ["Standard", "Urgent", "Emergency"] },
+            "clinical_notes": { "type": "string", "description": "Supporting clinical rationale" }
+          },
+          "required": ["member_id", "provider_id", "service_description", "procedure_code", "diagnosis_code"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_interaction_history",
+        "description": "Get a member's interaction history including call logs, secure messages, and case notes.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "member_id": { "type": "string", "description": "Member ID" },
+            "interaction_type": { "type": "string", "enum": ["calls", "messages", "case_notes", "all"] },
+            "date_from": { "type": "string" },
+            "date_to": { "type": "string" },
+            "limit": { "type": "integer", "description": "Max results (default 20)" }
+          },
+          "required": ["member_id"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "create_case_note",
+        "description": "Create a new case note for a member interaction.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "member_id": { "type": "string" },
+            "category": { "type": "string", "enum": ["Clinical Review", "Billing", "Enrollment", "Grievance", "Appeal", "Care Coordination", "Utilization Management"] },
+            "content": { "type": "string" },
+            "related_claim_id": { "type": "string" },
+            "related_auth_id": { "type": "string" },
+            "follow_up_required": { "type": "boolean" },
+            "follow_up_date": { "type": "string" }
+          },
+          "required": ["member_id", "category", "content"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "search_knowledge_base",
+        "description": "Search the knowledge base for plan policies, coverage guidelines, FAQs, or formulary information.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": { "type": "string", "description": "Natural language search query" },
+            "section": { "type": "string", "enum": ["plan_policies", "coverage_guidelines", "member_faq", "provider_policies", "formulary_guidelines", "appeals_and_grievances", "all"] },
+            "keywords": { "type": "array", "items": { "type": "string" } }
+          },
+          "required": ["query"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "check_eligibility",
+        "description": "Verify a member's eligibility status for a specific date of service.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "member_id": { "type": "string" },
+            "date_of_service": { "type": "string", "description": "YYYY-MM-DD" }
+          },
+          "required": ["member_id", "date_of_service"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "initiate_appeal",
+        "description": "Initiate an appeal for a denied claim or authorization.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "member_id": { "type": "string" },
+            "claim_id": { "type": "string" },
+            "auth_id": { "type": "string" },
+            "appeal_reason": { "type": "string" },
+            "supporting_documentation": { "type": "string" },
+            "expedited": { "type": "boolean" }
+          },
+          "required": ["member_id", "appeal_reason"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "generate_document",
+        "description": "Generate a member-facing document such as an EOB, denial letter, auth letter, or ID card.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "document_type": { "type": "string", "enum": ["EOB", "denial_letter", "auth_approval_letter", "auth_denial_letter", "id_card", "welcome_letter", "appeal_acknowledgment"] },
+            "member_id": { "type": "string" },
+            "claim_id": { "type": "string" },
+            "auth_id": { "type": "string" }
+          },
+          "required": ["document_type", "member_id"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "get_plan_formulary",
+        "description": "Look up formulary status, tier, and coverage details for a specific medication under a member's plan.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "plan_id": { "type": "string" },
+            "medication_name": { "type": "string" },
+            "ndc": { "type": "string" }
+          },
+          "required": ["plan_id"]
+        }
+      }
+    }
+  ]
+}

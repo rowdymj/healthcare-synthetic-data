@@ -1,0 +1,30 @@
+[
+  {
+    "code": "11",
+    "description": "Office"
+  },
+  {
+    "code": "20",
+    "description": "Urgent Care Facility"
+  },
+  {
+    "code": "21",
+    "description": "Inpatient Hospital"
+  },
+  {
+    "code": "22",
+    "description": "Outpatient Hospital"
+  },
+  {
+    "code": "23",
+    "description": "Emergency Room"
+  },
+  {
+    "code": "31",
+    "description": "Skilled Nursing Facility"
+  },
+  {
+    "code": "81",
+    "description": "Independent Laboratory"
+  }
+]

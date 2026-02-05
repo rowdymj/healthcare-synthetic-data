@@ -1,0 +1,1988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthcare Agent Sandbox — Data Platform</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --surface2: #232733;
+    --border: #2e3347;
+    --text: #e4e7f1;
+    --text2: #8b90a5;
+    --accent: #6366f1;
+    --accent2: #818cf8;
+    --green: #34d399;
+    --amber: #fbbf24;
+    --red: #f87171;
+    --teal: #2dd4bf;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+  /* Nav */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(15,17,23,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  nav .inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  nav .logo { font-weight: 700; font-size: 15px; color: var(--text); display: flex; align-items: center; gap: 8px; }
+  nav .logo span { background: var(--accent); color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+  nav ul { list-style: none; display: flex; gap: 24px; }
+  nav a { color: var(--text2); text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.2s; }
+  nav a:hover { color: var(--text); }
+
+  /* Hero */
+  .hero { padding: 120px 24px 80px; text-align: center; max-width: 800px; margin: 0 auto; }
+  .hero h1 { font-size: 42px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; background: linear-gradient(135deg, var(--text) 0%, var(--accent2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero p { font-size: 18px; color: var(--text2); max-width: 600px; margin: 0 auto 32px; }
+  .hero-stats { display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
+  .hero-stat { text-align: center; }
+  .hero-stat .num { font-size: 32px; font-weight: 800; color: var(--accent2); }
+  .hero-stat .label { font-size: 12px; color: var(--text2); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+
+  /* Sections */
+  section { max-width: 1200px; margin: 0 auto; padding: 80px 24px; }
+  section h2 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  section .subtitle { color: var(--text2); font-size: 16px; margin-bottom: 40px; }
+  .section-divider { border: none; border-top: 1px solid var(--border); max-width: 1200px; margin: 0 auto; }
+
+  /* Expandable cards */
+  .expandable-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; cursor: pointer; transition: border-color 0.2s; }
+  .expandable-card:hover { border-color: var(--accent); }
+  .expandable-card.expanded { border-color: var(--accent); }
+  .card-header { padding: 20px 24px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+  .card-header h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+  .card-header p { font-size: 13px; color: var(--text2); }
+  .card-header .count { font-size: 24px; font-weight: 800; color: var(--accent2); margin-bottom: 4px; }
+  .expand-icon { font-size: 20px; color: var(--text2); font-weight: 300; flex-shrink: 0; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 6px; background: var(--surface2); transition: transform 0.2s, background 0.2s; }
+  .expanded .expand-icon { transform: rotate(45deg); background: var(--accent); color: white; }
+  .card-detail { display: none; padding: 0 24px 20px; border-top: 1px solid var(--border); margin-top: 0; }
+  .expanded .card-detail { display: block; padding-top: 16px; }
+
+  /* Data cards grid */
+  .data-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+
+  /* Field tags */
+  .field-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .field-tag { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 11px; background: var(--surface2); color: var(--teal); padding: 3px 10px; border-radius: 4px; border: 1px solid var(--border); }
+
+  /* Entity table */
+  .entity-table { width: 100%; border-collapse: collapse; }
+  .entity-table th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text2); padding: 12px 16px; border-bottom: 1px solid var(--border); }
+  .entity-table td { padding: 14px 16px; border-bottom: 1px solid var(--border); font-size: 14px; }
+  .entity-table tr:hover { background: var(--surface); }
+  .entity-table .mono { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 13px; color: var(--teal); }
+
+  /* Badges */
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 100px; font-size: 11px; font-weight: 600; }
+  .badge-purple { background: rgba(99,102,241,0.15); color: var(--accent2); }
+  .badge-green { background: rgba(52,211,153,0.15); color: var(--green); }
+  .badge-amber { background: rgba(251,191,36,0.15); color: var(--amber); }
+
+  /* API section */
+  .api-grid { display: grid; grid-template-columns: 1fr; gap: 8px; }
+  .api-expand .card-header { padding: 14px 20px; }
+  .method { font-family: 'SF Mono', monospace; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px; flex-shrink: 0; }
+  .method-get { background: rgba(52,211,153,0.15); color: var(--green); }
+  .method-post { background: rgba(99,102,241,0.15); color: var(--accent2); }
+  .path { font-family: 'SF Mono', monospace; font-size: 13px; color: var(--text); }
+  .desc { font-size: 12px; color: var(--text2); margin-top: 2px; }
+  .example-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text2); font-weight: 600; margin-bottom: 6px; }
+  .example-code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 12px; background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 12px 16px; color: var(--teal); overflow-x: auto; word-break: break-all; white-space: pre-wrap; }
+
+  /* Tool section */
+  .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 12px; }
+  .tool-expand .card-header .name { font-family: 'SF Mono', monospace; font-size: 14px; color: var(--teal); font-weight: 600; margin-bottom: 4px; }
+  .tool-expand .card-header .desc { font-size: 13px; color: var(--text2); }
+  .param-header { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text2); font-weight: 600; margin-bottom: 10px; }
+  .param-row { padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .param-row:last-child { border-bottom: none; }
+  .param-name { font-family: 'SF Mono', monospace; font-size: 13px; color: var(--teal); }
+  .param-type { font-size: 11px; color: var(--text2); margin-left: 8px; }
+  .param-desc { font-size: 12px; color: var(--text2); margin-top: 2px; }
+  .req { font-size: 10px; background: rgba(248,113,113,0.15); color: var(--red); padding: 1px 6px; border-radius: 3px; margin-left: 6px; }
+
+  /* Rules */
+  .rules-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+  .rule-item { padding: 12px 0; border-bottom: 1px solid var(--border); }
+  .rule-item:last-child { border-bottom: none; }
+  .rule-id { font-family: 'SF Mono', monospace; font-size: 11px; color: var(--accent2); font-weight: 600; }
+  .rule-name { font-size: 14px; font-weight: 600; margin: 2px 0 4px; }
+  .rule-desc { font-size: 13px; color: var(--text2); margin-bottom: 6px; }
+  .rule-meta { font-size: 12px; color: var(--text2); margin-top: 4px; padding-left: 12px; border-left: 2px solid var(--border); }
+
+  /* Scenarios */
+  .scenario-grid { display: grid; gap: 10px; }
+  .scenario-expand .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+  .scenario-expand .name { font-weight: 600; font-size: 15px; }
+  .diff { font-size: 11px; font-weight: 600; padding: 2px 10px; border-radius: 100px; }
+  .diff-easy { background: rgba(52,211,153,0.15); color: var(--green); }
+  .diff-medium { background: rgba(251,191,36,0.15); color: var(--amber); }
+  .diff-hard { background: rgba(248,113,113,0.15); color: var(--red); }
+  .scenario-expand .prompt { font-size: 13px; color: var(--text2); font-style: italic; margin-bottom: 8px; }
+  .scenario-expand .tools { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tool-tag { font-family: 'SF Mono', monospace; font-size: 11px; background: rgba(99,102,241,0.1); color: var(--accent2); padding: 2px 8px; border-radius: 4px; }
+  .scenario-detail-row { font-size: 13px; color: var(--text2); padding: 6px 0; border-bottom: 1px solid var(--border); }
+  .scenario-detail-row:last-child { border-bottom: none; }
+  .scenario-detail-row strong { color: var(--text); }
+
+  /* Code block */
+  .code-block { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 13px; line-height: 1.7; overflow-x: auto; margin: 16px 0; }
+  .code-block .comment { color: #6b7280; }
+  .code-block .string { color: var(--green); }
+
+  /* Architecture */
+  .arch-tree { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 32px; font-family: 'SF Mono', monospace; font-size: 13px; line-height: 1.8; white-space: pre; overflow-x: auto; }
+  .arch-tree .folder { color: var(--amber); }
+  .arch-tree .file { color: var(--text2); }
+  .arch-tree .highlight { color: var(--teal); }
+
+  /* Quick start steps */
+  .steps { display: grid; gap: 12px; counter-reset: step; }
+  .step { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 24px; padding-left: 72px; position: relative; counter-increment: step; }
+  .step::before { content: counter(step); position: absolute; left: 24px; top: 24px; width: 32px; height: 32px; background: var(--accent); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+  .step h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .step p { font-size: 13px; color: var(--text2); }
+  .step code { font-family: 'SF Mono', monospace; background: var(--surface2); padding: 2px 8px; border-radius: 4px; font-size: 12px; color: var(--teal); }
+
+  /* Compact steps inside the two-path comparison */
+  .compact-step { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 14px 14px 14px 48px; position: relative; counter-increment: step; }
+  .compact-step::before { content: counter(step); position: absolute; left: 10px; top: 14px; width: 28px; height: 28px; background: var(--accent); color: white; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px; }
+  .compact-step h4 { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+  .compact-step p { font-size: 12px; color: var(--text2); }
+  .compact-step code { font-family: 'SF Mono', monospace; background: var(--bg); padding: 2px 6px; border-radius: 4px; font-size: 11px; color: var(--teal); }
+
+  /* Footer */
+  footer { max-width: 1200px; margin: 0 auto; padding: 40px 24px; border-top: 1px solid var(--border); text-align: center; color: var(--text2); font-size: 13px; }
+
+  /* Click hint */
+  .click-hint { font-size: 12px; color: var(--text2); margin-top: 8px; font-style: italic; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <div class="logo">Healthcare Agent Sandbox <span>v1.0</span></div>
+    <ul>
+      <li><a href="#data">Data</a></li>
+      <li><a href="#model">Model</a></li>
+      <li><a href="#api">API</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#rules">Rules</a></li>
+      <li><a href="#scenarios">Scenarios</a></li>
+      <li><a href="#quickstart">Quick Start</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>A complete synthetic health insurance platform for building agents</h1>
+  <p>4,297 covered lives. 13,841 claims. 18 agent tools. 20 eval scenarios. Everything you need to prototype experience-in.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num">4,297</div><div class="label">Covered Lives</div></div>
+    <div class="hero-stat"><div class="num">$63.3M</div><div class="label">Claims Billed</div></div>
+    <div class="hero-stat"><div class="num">18</div><div class="label">Agent Tools</div></div>
+    <div class="hero-stat"><div class="num">20</div><div class="label">Eval Scenarios</div></div>
+    <div class="hero-stat"><div class="num">31</div><div class="label">Business Rules</div></div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- DATASET -->
+<section id="data">
+  <h2>What's in the dataset</h2>
+  <p class="subtitle">Realistic, interconnected healthcare data across every domain. Click any card to see its fields.</p>
+  <div class="data-grid">
+<div class="expandable-card data-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="count">25</div><h3>Employers</h3><p>Organizations across tech, manufacturing, healthcare, finance, and more.</p></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Key fields</div>
+    <div class="field-tags"><span class="field-tag">employer_id</span><span class="field-tag">name</span><span class="field-tag">industry</span><span class="field-tag">size</span><span class="field-tag">state</span><span class="field-tag">contract_start_date</span><span class="field-tag">contract_end_date</span></div>
+  </div>
+</div>
+<div class="expandable-card data-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="count">50</div><h3>Benefit Plans</h3><p>HMO, PPO, EPO, HDHP, POS across Bronze/Silver/Gold/Platinum tiers.</p></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Key fields</div>
+    <div class="field-tags"><span class="field-tag">plan_id</span><span class="field-tag">employer_id</span><span class="field-tag">plan_name</span><span class="field-tag">plan_type</span><span class="field-tag">metal_tier</span><span class="field-tag">deductible_individual</span><span class="field-tag">deductible_family</span><span class="field-tag">oop_max_individual</span><span class="field-tag">oop_max_family</span><span class="field-tag">monthly_premium</span></div>
+  </div>
+</div>
+<div class="expandable-card data-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="count">900</div><h3>Benefit Line Items</h3><p>18 service categories per plan — copay, coinsurance, auth, referral, limits.</p></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Key fields</div>
+    <div class="field-tags"><span class="field-tag">benefit_id</span><span class="field-tag">plan_id</span><span class="field-tag">service_category</span><span class="field-tag">copay</span><span class="field-tag">coinsurance</span><span class="field-tag">requires_auth</span><span class="field-tag">requires_referral</span><span class="field-tag">annual_visit_limit</span></div>
+  </div>
+</div>
+<div class="expandable-card data-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="count">300</div><h3>Providers</h3><p>Doctors, facilities, labs. NPI, specialty, network, languages, ratings.</p></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Key fields</div>
+    <div class="field-tags"><span class="field-tag">provider_id</span><span class="field-tag">npi</span><span class="field-tag">name</span><span class="field-tag">specialty</span><span class="field-tag">provider_type</span><span class="field-tag">network_status</span><span class="field-tag">accepting_new_patients</span><span class="field-tag">languages</span><span class="field-tag">rating</span></div>
+  </div>
+</div>
+<div class="expandable-card data-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="count">2,000</div><h3>Members</h3><p>Primary subscribers with demographics, chronic conditions, PCP, coverage.</p></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Key fields</div>
+    <div class="field-tags"><span class="field-tag">member_id</span><span class="field-tag">subscriber_id</span><span class="field-tag">employer_id</span><span class="field-tag">plan_id</span><span class="field-tag">first_name</span><span class="field-tag">last_name</span><span class="field-tag">date_of_birth</span><span class="field-tag">gender</span><span class="field-tag">coverage_type</span><span class="field-tag">pcp_provider_id</span><span class="field-tag">chronic_conditions</span><span class="field-tag">status</span></div>
+  </div>
+</div>
+<div class="expandable-card data-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="count">2,297</div><h3>Dependents</h3><p>Spouses and children tied to subscribers.</p></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Key fields</div>
+    <div class="field-tags"><span class="field-tag">dependent_id</span><span class="field-tag">subscriber_id</span><span class="field-tag">plan_id</span><span class="field-tag">first_name</span><span class="field-tag">last_name</span><span class="field-tag">relationship</span><span class="field-tag">date_of_birth</span><span class="field-tag">gender</span></div>
+  </div>
+</div>
+<div class="expandable-card data-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="count">13,841</div><h3>Medical Claims</h3><p>Claims with ICD-10, CPT, billed/allowed/paid, denial reasons.</p></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Key fields</div>
+    <div class="field-tags"><span class="field-tag">claim_id</span><span class="field-tag">member_id</span><span class="field-tag">provider_id</span><span class="field-tag">plan_id</span><span class="field-tag">claim_type</span><span class="field-tag">date_of_service</span><span class="field-tag">diagnosis_codes</span><span class="field-tag">claim_status</span><span class="field-tag">billed_amount</span><span class="field-tag">allowed_amount</span><span class="field-tag">paid_amount</span><span class="field-tag">member_responsibility</span></div>
+  </div>
+</div>
+<div class="expandable-card data-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="count">24,206</div><h3>Claim Lines</h3><p>Service lines within claims — procedures, modifiers, units, financials.</p></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Key fields</div>
+    <div class="field-tags"><span class="field-tag">claim_line_id</span><span class="field-tag">claim_id</span><span class="field-tag">line_number</span><span class="field-tag">procedure_code</span><span class="field-tag">modifier</span><span class="field-tag">units</span><span class="field-tag">place_of_service</span><span class="field-tag">billed_amount</span><span class="field-tag">allowed_amount</span><span class="field-tag">paid_amount</span></div>
+  </div>
+</div>
+<div class="expandable-card data-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="count">7,055</div><h3>Pharmacy Claims</h3><p>Rx fills with NDC, formulary status, days supply, cost breakdowns.</p></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Key fields</div>
+    <div class="field-tags"><span class="field-tag">rx_claim_id</span><span class="field-tag">member_id</span><span class="field-tag">plan_id</span><span class="field-tag">medication_name</span><span class="field-tag">ndc_code</span><span class="field-tag">generic_name</span><span class="field-tag">drug_category</span><span class="field-tag">formulary_tier</span><span class="field-tag">days_supply</span><span class="field-tag">quantity</span><span class="field-tag">total_cost</span><span class="field-tag">plan_paid</span><span class="field-tag">member_paid</span></div>
+  </div>
+</div>
+<div class="expandable-card data-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="count">567</div><h3>Authorizations</h3><p>Prior auth records with approval/denial, clinical notes, expiration.</p></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Key fields</div>
+    <div class="field-tags"><span class="field-tag">auth_id</span><span class="field-tag">member_id</span><span class="field-tag">provider_id</span><span class="field-tag">plan_id</span><span class="field-tag">service_description</span><span class="field-tag">procedure_code</span><span class="field-tag">diagnosis_code</span><span class="field-tag">status</span><span class="field-tag">decision_date</span><span class="field-tag">expiration_date</span><span class="field-tag">denial_reason</span></div>
+  </div>
+</div>
+<div class="expandable-card data-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="count">2,000</div><h3>Accumulators</h3><p>Per-member deductible and out-of-pocket tracking.</p></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Key fields</div>
+    <div class="field-tags"><span class="field-tag">accumulator_id</span><span class="field-tag">member_id</span><span class="field-tag">plan_id</span><span class="field-tag">plan_year</span><span class="field-tag">individual_deductible_used</span><span class="field-tag">individual_deductible_max</span><span class="field-tag">individual_oop_used</span><span class="field-tag">individual_oop_max</span></div>
+  </div>
+</div>
+<div class="expandable-card data-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="count">6,500</div><h3>Interaction History</h3><p>3,000 call logs, 2,000 secure messages, 1,500 case notes.</p></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Key fields</div>
+    <div class="field-tags"><span class="field-tag">Call logs (member_id, call_type, reason, duration, resolution)</span><span class="field-tag">Secure messages (member_id, subject, body, direction)</span><span class="field-tag">Case notes (member_id, category, content, follow_up_required)</span></div>
+  </div>
+</div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- DATA MODEL -->
+<section id="model">
+  <h2>Data model</h2>
+  <p class="subtitle">Every entity, its record count, format, and what it connects to.</p>
+  <div style="overflow-x:auto">
+    <table class="entity-table">
+      <thead>
+        <tr><th>Entity</th><th>Records</th><th>File</th><th>Key Relationships</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Employers</strong></td><td>25</td><td class="mono">employers.json</td><td>&#8592; Plans, &#8592; Members</td></tr>
+        <tr><td><strong>Plans</strong></td><td>50</td><td class="mono">plans.json</td><td>&#8594; Employer, &#8592; Benefits, &#8592; Members</td></tr>
+        <tr><td><strong>Benefits</strong></td><td>900</td><td class="mono">benefits.json</td><td>&#8594; Plan</td></tr>
+        <tr><td><strong>Providers</strong></td><td>300</td><td class="mono">providers.json</td><td>&#8592; Claims, &#8592; Authorizations</td></tr>
+        <tr><td><strong>Members</strong></td><td>2,000</td><td class="mono">members.json</td><td>&#8594; Employer, &#8594; Plan, &#8594; PCP, &#8592; Dependents, &#8592; Claims</td></tr>
+        <tr><td><strong>Dependents</strong></td><td>2,297</td><td class="mono">dependents.json</td><td>&#8594; Subscriber (Member), &#8594; Plan</td></tr>
+        <tr><td><strong>Eligibility</strong></td><td>4,297</td><td class="mono">eligibility.json</td><td>&#8594; Member, &#8594; Plan</td></tr>
+        <tr><td><strong>Medical Claims</strong></td><td>13,841</td><td class="mono">medical_claims.json</td><td>&#8594; Member, &#8594; Provider, &#8594; Plan, &#8592; Claim Lines</td></tr>
+        <tr><td><strong>Claim Lines</strong></td><td>24,206</td><td class="mono">claim_lines.json</td><td>&#8594; Claim</td></tr>
+        <tr><td><strong>Pharmacy Claims</strong></td><td>7,055</td><td class="mono">pharmacy_claims.json</td><td>&#8594; Member, &#8594; Plan</td></tr>
+        <tr><td><strong>Authorizations</strong></td><td>567</td><td class="mono">authorizations.json</td><td>&#8594; Member, &#8594; Provider, &#8594; Plan</td></tr>
+        <tr><td><strong>Accumulators</strong></td><td>2,000</td><td class="mono">accumulators.json</td><td>&#8594; Member, &#8594; Plan</td></tr>
+        <tr><td><strong>Call Logs</strong></td><td>3,000</td><td class="mono">call_logs.json</td><td>&#8594; Member, &#8594; Claim, &#8594; Agent</td></tr>
+        <tr><td><strong>Secure Messages</strong></td><td>2,000</td><td class="mono">secure_messages.json</td><td>&#8594; Member, &#8594; Claim</td></tr>
+        <tr><td><strong>Case Notes</strong></td><td>1,500</td><td class="mono">case_notes.json</td><td>&#8594; Member, &#8594; Claim, &#8594; Auth</td></tr>
+        <tr><td><strong>Agents</strong></td><td>20</td><td class="mono">agents.json</td><td>&#8592; Call Logs</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- API ENDPOINTS -->
+<section id="api">
+  <h2>API endpoints</h2>
+  <p class="subtitle">A running REST API. Click any endpoint to see example request and response.</p>
+  <div class="api-grid">
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/members</div><div class="desc">Search members by name, ID, or DOB</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl &#x27;http://localhost:8000/api/members?last_name=Cruz&#x27;</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;results&quot;: [{&quot;member_id&quot;: &quot;MBR-B5906016&quot;, &quot;first_name&quot;: &quot;Frank&quot;, &quot;last_name&quot;: &quot;Cruz&quot;, ...}], &quot;total&quot;: 1}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/members/{id}</div><div class="desc">Get a single member profile</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl http://localhost:8000/api/members/MBR-B5906016</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;member_id&quot;: &quot;MBR-B5906016&quot;, &quot;first_name&quot;: &quot;Frank&quot;, &quot;last_name&quot;: &quot;Cruz&quot;, &quot;plan_id&quot;: &quot;PLN-AAF39C04&quot;, &quot;chronic_conditions&quot;: [&quot;hypertension&quot;], ...}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/members/{id}/coverage</div><div class="desc">Plan, benefits, deductible status</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl http://localhost:8000/api/members/MBR-B5906016/coverage</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;member&quot;: {...}, &quot;plan&quot;: {...}, &quot;benefits&quot;: [...], &quot;accumulator&quot;: {...}}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/members/{id}/dependents</div><div class="desc">Spouse and children on the plan</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl http://localhost:8000/api/members/MBR-B5906016/dependents</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;member_id&quot;: &quot;MBR-B5906016&quot;, &quot;dependents&quot;: [...], &quot;total&quot;: 2}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/members/{id}/accumulator</div><div class="desc">Deductible and OOP tracking</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl http://localhost:8000/api/members/MBR-B5906016/accumulator</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;member_id&quot;: &quot;...&quot;, &quot;individual_deductible_used&quot;: 1250.00, &quot;individual_deductible_max&quot;: 3000.00, ...}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/members/{id}/eligibility</div><div class="desc">Verify coverage on a date</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl http://localhost:8000/api/members/MBR-B5906016/eligibility</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;member_id&quot;: &quot;...&quot;, &quot;eligibility_records&quot;: [...]}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/members/{id}/interactions</div><div class="desc">Calls, messages, case notes</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl http://localhost:8000/api/members/MBR-B5906016/interactions</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;call_logs&quot;: [...], &quot;secure_messages&quot;: [...], &quot;case_notes&quot;: [...]}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/claims</div><div class="desc">Search claims by status, date, provider</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl &#x27;http://localhost:8000/api/claims?member_id=MBR-B5906016&amp;limit=5&#x27;</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;results&quot;: [{...}], &quot;total&quot;: 12}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/claims/{id}</div><div class="desc">Full claim detail with line items</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl http://localhost:8000/api/claims/CLM-487B442D</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;claim_id&quot;: &quot;CLM-487B442D&quot;, &quot;claim_lines&quot;: [...], &quot;diagnosis_codes&quot;: [...], ...}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/pharmacy-claims</div><div class="desc">Search Rx claims by medication or member</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl &#x27;http://localhost:8000/api/pharmacy-claims?member_id=MBR-B5906016&#x27;</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;results&quot;: [{...}], &quot;total&quot;: 4}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/formulary/{plan_id}</div><div class="desc">Drug coverage, tier, and copay</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl http://localhost:8000/api/formulary/PLN-AAF39C04</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;plan_id&quot;: &quot;...&quot;, &quot;medications&quot;: [...]}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/providers</div><div class="desc">Search by specialty, location, network</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl &#x27;http://localhost:8000/api/providers?specialty=Cardiology&amp;limit=3&#x27;</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;results&quot;: [{...}], &quot;total&quot;: 15}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/plans</div><div class="desc">All benefit plans</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl http://localhost:8000/api/plans</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">[{&quot;plan_id&quot;: &quot;PLN-AAF39C04&quot;, &quot;plan_name&quot;: &quot;...&quot;, &quot;plan_type&quot;: &quot;PPO&quot;, ...}]</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/plans/{id}/benefits</div><div class="desc">What does the plan cover?</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl http://localhost:8000/api/plans/PLN-AAF39C04/benefits</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">[{&quot;service_category&quot;: &quot;preventive_care&quot;, &quot;copay&quot;: 0, ...}]</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/authorizations</div><div class="desc">Prior auth lookup</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl &#x27;http://localhost:8000/api/authorizations?member_id=MBR-B5906016&#x27;</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;results&quot;: [{...}], &quot;total&quot;: 1}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/knowledge-base</div><div class="desc">Search policies, FAQs, guidelines</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl &#x27;http://localhost:8000/api/knowledge-base?query=deductible&#x27;</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;results&quot;: [{...}], &quot;total&quot;: 5}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/employers</div><div class="desc">All employer organizations</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl http://localhost:8000/api/employers</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">[{&quot;employer_id&quot;: &quot;EMP-...&quot;, &quot;name&quot;: &quot;...&quot;, ...}]</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-get">GET</span>
+      <div><div class="path">/api/stats</div><div class="desc">Platform-wide statistics</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl http://localhost:8000/api/stats</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;members&quot;: 2000, &quot;claims&quot;: 13841, &quot;providers&quot;: 300, ...}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-post">POST</span>
+      <div><div class="path">/api/authorizations</div><div class="desc">Submit a prior auth request</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl -X POST http://localhost:8000/api/authorizations -H &quot;Content-Type: application/json&quot; -d &#x27;{&quot;member_id&quot;:&quot;...&quot;,&quot;provider_id&quot;:&quot;...&quot;,&quot;procedure_code&quot;:&quot;27447&quot;,&quot;diagnosis_code&quot;:&quot;M17.11&quot;}&#x27;</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;auth_id&quot;: &quot;AUTH-NEW-...&quot;, &quot;status&quot;: &quot;Pending&quot;, ...}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-post">POST</span>
+      <div><div class="path">/api/appeals</div><div class="desc">Initiate a claim or auth appeal</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl -X POST http://localhost:8000/api/appeals -H &quot;Content-Type: application/json&quot; -d &#x27;{&quot;member_id&quot;:&quot;...&quot;,&quot;type&quot;:&quot;claim&quot;,&quot;reference_id&quot;:&quot;CLM-...&quot;}&#x27;</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;appeal_id&quot;: &quot;APL-...&quot;, &quot;status&quot;: &quot;Received&quot;, ...}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-post">POST</span>
+      <div><div class="path">/api/case-notes</div><div class="desc">Create a case note</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl -X POST http://localhost:8000/api/case-notes -H &quot;Content-Type: application/json&quot; -d &#x27;{&quot;member_id&quot;:&quot;...&quot;,&quot;category&quot;:&quot;Benefits&quot;,&quot;content&quot;:&quot;...&quot;}&#x27;</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;note_id&quot;: &quot;CN-...&quot;, &quot;created_at&quot;: &quot;...&quot;, ...}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-post">POST</span>
+      <div><div class="path">/api/documents</div><div class="desc">Generate EOB, denial letter, ID card</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl -X POST http://localhost:8000/api/documents -H &quot;Content-Type: application/json&quot; -d &#x27;{&quot;template_name&quot;:&quot;eob&quot;,&quot;variables&quot;:{...}}&#x27;</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;document&quot;: &quot;rendered template text...&quot;, &quot;template&quot;: &quot;eob&quot;}</div>
+  </div>
+</div>
+<div class="expandable-card api-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="display:flex;align-items:flex-start;gap:12px;flex:1">
+      <span class="method method-post">POST</span>
+      <div><div class="path">/tool</div><div class="desc">Execute any agent tool by name</div></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="example-label">Example request</div>
+    <div class="example-code">curl -X POST http://localhost:8000/tool -H &quot;Content-Type: application/json&quot; -d &#x27;{&quot;tool_name&quot;:&quot;lookup_member&quot;,&quot;params&quot;:{&quot;member_id&quot;:&quot;MBR-B5906016&quot;}}&#x27;</div>
+    <div class="example-label" style="margin-top:12px">Example response</div>
+    <div class="example-code">{&quot;results&quot;: [{&quot;member_id&quot;: &quot;MBR-B5906016&quot;, ...}]}</div>
+  </div>
+</div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- AGENT TOOLS -->
+<section id="tools">
+  <h2>18 agent tools</h2>
+  <p class="subtitle">Function calling schemas for Claude and OpenAI. Click any tool to see its parameters.</p>
+  <div class="tool-grid">
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">lookup_member</div><div class="desc">Look up a member by ID, name, or subscriber ID. Returns demographics, plan enrollment, PCP, and chronic conditions.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">member_id</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Member ID (e.g. MBR-A1B2C3D4)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">subscriber_id</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Subscriber ID (e.g. SUB123456789)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">first_name</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">First name for search</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">last_name</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Last name for search</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">date_of_birth</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">DOB in YYYY-MM-DD format</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">get_member_coverage</div><div class="desc">Get a member&#x27;s current coverage details including plan, benefits, deductible status, and out-of-pocket accumulator.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">member_id</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Member ID</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">get_member_dependents</div><div class="desc">List all dependents (spouse, children) enrolled under a subscriber.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">member_id</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Primary subscriber member ID</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">search_claims</div><div class="desc">Search medical claims by member, date range, status, provider, or diagnosis. Returns claim summaries with billed/paid amounts.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">member_id</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Filter by member ID</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">claim_status</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Filter by claim status</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">date_from</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Service date start (YYYY-MM-DD)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">date_to</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Service date end (YYYY-MM-DD)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">provider_id</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Filter by provider ID</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">diagnosis_code</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Filter by ICD-10 code</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">min_amount</code>
+      <span class="param-type">number</span>
+      <div class="param-desc">Minimum billed amount</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">limit</code>
+      <span class="param-type">integer</span>
+      <div class="param-desc">Max results to return (default 20)</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">get_claim_detail</div><div class="desc">Get full claim detail including all claim lines, diagnosis, procedure codes, billed/allowed/paid amounts, and denial reason if applicable.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">claim_id</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Claim ID (e.g. CLM-A1B2C3D4)</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">search_pharmacy_claims</div><div class="desc">Search pharmacy/prescription claims by member, medication, date range, or formulary status.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">member_id</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Filter by member ID</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">medication_name</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Medication name (partial match)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">medication_category</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Drug category (e.g. Diabetes, Cardiovascular)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">date_from</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Fill date start (YYYY-MM-DD)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">date_to</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Fill date end (YYYY-MM-DD)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">formulary_status</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Formulary tier</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">limit</code>
+      <span class="param-type">integer</span>
+      <div class="param-desc">Max results (default 20)</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">check_benefits</div><div class="desc">Check what benefits a member&#x27;s plan covers for a specific service category. Returns copay, coinsurance, auth requirements, and limits.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">plan_id</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Plan ID</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">service_category</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Service category (e.g. &#x27;Primary Care Visit&#x27;, &#x27;Emergency Room&#x27;, &#x27;Physical Therapy&#x27;, &#x27;Prescription Drugs - Generic&#x27;)</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">get_accumulator</div><div class="desc">Get a member&#x27;s current deductible and out-of-pocket accumulator status for the plan year.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">member_id</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Member ID</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">search_providers</div><div class="desc">Search for healthcare providers by specialty, name, network status, or location.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">specialty</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Provider specialty (e.g. Cardiology, Family Medicine)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">name</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Provider name (partial match)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">network_status</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Network status filter</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">accepting_new_patients</code>
+      <span class="param-type">boolean</span>
+      <div class="param-desc">Only show providers accepting new patients</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">city</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">City filter</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">state</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">State code filter</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">limit</code>
+      <span class="param-type">integer</span>
+      <div class="param-desc">Max results (default 20)</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">get_authorization</div><div class="desc">Look up a prior authorization by ID or search by member. Returns status, approved units, expiration, and denial reason if applicable.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">auth_id</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Authorization ID</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">member_id</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Search by member ID</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">submit_authorization_request</div><div class="desc">Submit a new prior authorization request for a service.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">member_id</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Member ID</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">provider_id</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Requesting provider ID</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">service_description</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Description of the requested service</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">procedure_code</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">CPT/HCPCS code</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">diagnosis_code</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Supporting ICD-10 diagnosis code</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">urgency</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Request urgency</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">clinical_notes</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Supporting clinical rationale</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">get_interaction_history</div><div class="desc">Get a member&#x27;s interaction history including call logs, secure messages, and case notes.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">member_id</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Member ID</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">interaction_type</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Type of interactions to retrieve (default: all)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">date_from</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Start date (YYYY-MM-DD)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">date_to</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">End date (YYYY-MM-DD)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">limit</code>
+      <span class="param-type">integer</span>
+      <div class="param-desc">Max results (default 20)</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">create_case_note</div><div class="desc">Create a new case note for a member interaction.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">member_id</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Member ID</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">category</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Note category</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">content</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Note content</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">related_claim_id</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Related claim ID if applicable</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">related_auth_id</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Related auth ID if applicable</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">follow_up_required</code>
+      <span class="param-type">boolean</span>
+      <div class="param-desc">Whether follow-up is needed</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">follow_up_date</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Follow-up date if required (YYYY-MM-DD)</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">search_knowledge_base</div><div class="desc">Search the knowledge base for plan policies, coverage guidelines, FAQs, or formulary information. Use this when answering member questions about how their plan works.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">query</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Natural language search query</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">section</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Knowledge base section to search (default: all)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">keywords</code>
+      <span class="param-type">array</span>
+      <div class="param-desc">Keyword filters</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">check_eligibility</div><div class="desc">Verify a member&#x27;s eligibility status for a specific date of service.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">member_id</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Member ID</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">date_of_service</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Date to check eligibility for (YYYY-MM-DD)</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">initiate_appeal</div><div class="desc">Initiate an appeal for a denied claim or authorization.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">member_id</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Member ID</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">claim_id</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Denied claim ID (if claim appeal)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">auth_id</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Denied auth ID (if auth appeal)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">appeal_reason</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Reason for the appeal</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">supporting_documentation</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Description of supporting documents</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">expedited</code>
+      <span class="param-type">boolean</span>
+      <div class="param-desc">Request expedited review (medical urgency)</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">generate_document</div><div class="desc">Generate a member-facing document such as an EOB, denial letter, auth approval letter, or ID card.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">document_type</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Type of document to generate</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">member_id</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Member ID</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">claim_id</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Related claim ID (for EOB, denial letter)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">auth_id</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Related auth ID (for auth letters)</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card tool-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><div class="name">get_plan_formulary</div><div class="desc">Look up formulary status, tier, and coverage details for a specific medication under a member&#x27;s plan.</div></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="param-header">Parameters</div>
+    <div class="param-row">
+      <code class="param-name">plan_id</code>
+      <span class="param-type">string</span> <span class="req">required</span>
+      <div class="param-desc">Plan ID</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">medication_name</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Medication name (partial match)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">ndc</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">National Drug Code</div>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <div style="margin-top: 32px;">
+    <p style="font-size: 14px; font-weight: 600; margin-bottom: 12px;">The <code style="color:var(--teal)">POST /tool</code> endpoint:</p>
+    <div class="code-block">
+<span class="comment">// Your agent framework calls this:</span>
+POST /tool
+{
+  <span class="string">"tool_name"</span>: <span class="string">"search_claims"</span>,
+  <span class="string">"params"</span>: {
+    <span class="string">"member_id"</span>: <span class="string">"MBR-B5906016"</span>,
+    <span class="string">"claim_status"</span>: <span class="string">"Denied"</span>
+  }
+}
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- BUSINESS RULES -->
+<section id="rules">
+  <h2>31 business rules</h2>
+  <p class="subtitle">The healthcare logic agents need to make decisions. Click any category to see all rules.</p>
+  <div class="rules-grid">
+<div class="expandable-card" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><h3>Coverage Rules <span class="badge badge-green">10 rules</span></h3><p>When is something covered? Preventive care, ER standards, referrals, OOP caps, parity.</p></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="rule-item">
+      <div class="rule-id">COV-001</div>
+      <div class="rule-name">Preventive Care - Zero Cost Share</div>
+      <div class="rule-desc">All ACA-compliant preventive services are covered at 100% with no member cost sharing when performed by an in-network provider.</div>
+      <div class="rule-meta"><strong>If:</strong> service_category == &#x27;Preventive Care&#x27; AND provider.network_status == &#x27;In-Network&#x27;</div>
+      <div class="rule-meta"><strong>Then:</strong> member_cost_share = 0, deductible_applies = false</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">COV-002</div>
+      <div class="rule-name">Emergency Room - Prudent Layperson Standard</div>
+      <div class="rule-desc">Emergency services are covered at in-network rates regardless of whether the provider is in-network, based on the prudent layperson standard.</div>
+      <div class="rule-meta"><strong>If:</strong> place_of_service == &#x27;23&#x27; OR claim_type == &#x27;Emergency&#x27;</div>
+      <div class="rule-meta"><strong>Then:</strong> apply_in_network_rates = true, regardless_of_network_status = true</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">COV-003</div>
+      <div class="rule-name">HMO Referral Requirement</div>
+      <div class="rule-desc">HMO members must obtain a referral from their PCP before seeing a specialist. Services without referral are denied.</div>
+      <div class="rule-meta"><strong>If:</strong> plan_type == &#x27;HMO&#x27; AND service_category == &#x27;Specialist Visit&#x27; AND referral_on_file == false</div>
+      <div class="rule-meta"><strong>Then:</strong> deny_claim, denial_reason = &#x27;Referral not obtained&#x27;</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">COV-004</div>
+      <div class="rule-name">Out-of-Network - PPO Reduced Coverage</div>
+      <div class="rule-desc">PPO plans cover out-of-network services at reduced coinsurance. Member is responsible for balance billing.</div>
+      <div class="rule-meta"><strong>If:</strong> plan_type == &#x27;PPO&#x27; AND provider.network_status == &#x27;Out-of-Network&#x27;</div>
+      <div class="rule-meta"><strong>Then:</strong> coinsurance = plan.coinsurance_out_of_network, balance_billing_applies = true</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">COV-005</div>
+      <div class="rule-name">Out-of-Network - EPO/HMO Denial</div>
+      <div class="rule-desc">EPO and HMO plans do not cover out-of-network services except emergencies.</div>
+      <div class="rule-meta"><strong>If:</strong> (plan_type == &#x27;EPO&#x27; OR plan_type == &#x27;HMO&#x27;) AND provider.network_status == &#x27;Out-of-Network&#x27; AND NOT emergency</div>
+      <div class="rule-meta"><strong>Then:</strong> deny_claim, denial_reason = &#x27;Out of network provider&#x27;</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">COV-006</div>
+      <div class="rule-name">Deductible Must Be Met Before Coinsurance</div>
+      <div class="rule-desc">For non-preventive services, the member must meet their annual deductible before the plan begins paying coinsurance.</div>
+      <div class="rule-meta"><strong>If:</strong> service_category != &#x27;Preventive Care&#x27; AND benefit.deductible_applies == &#x27;After deductible&#x27;</div>
+      <div class="rule-meta"><strong>Then:</strong> if accumulator.deductible_remaining &gt; 0: member_pays_full_allowed, else: apply_coinsurance</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">COV-007</div>
+      <div class="rule-name">Out-of-Pocket Maximum Cap</div>
+      <div class="rule-desc">Once a member reaches their annual OOP maximum, the plan pays 100% of covered services for the remainder of the plan year.</div>
+      <div class="rule-meta"><strong>If:</strong> accumulator.oop_remaining &lt;= 0</div>
+      <div class="rule-meta"><strong>Then:</strong> member_cost_share = 0, plan_pays = 100%</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">COV-008</div>
+      <div class="rule-name">Physical Therapy Visit Limit</div>
+      <div class="rule-desc">Physical therapy is limited to 30 visits per plan year. Additional visits require prior authorization and clinical review.</div>
+      <div class="rule-meta"><strong>If:</strong> service_category == &#x27;Physical Therapy&#x27; AND visits_this_year &gt; 30</div>
+      <div class="rule-meta"><strong>Then:</strong> require_prior_auth, if no auth: deny_claim, denial_reason = &#x27;Exceeds benefit maximum&#x27;</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">COV-009</div>
+      <div class="rule-name">Telehealth Parity</div>
+      <div class="rule-desc">Telehealth visits are covered at the same rate as in-person visits for the same service category.</div>
+      <div class="rule-meta"><strong>If:</strong> service_modality == &#x27;Telehealth&#x27;</div>
+      <div class="rule-meta"><strong>Then:</strong> apply_same_cost_share_as_in_person_equivalent</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">COV-010</div>
+      <div class="rule-name">Mental Health Parity</div>
+      <div class="rule-desc">Mental health and substance use disorder services must be covered at parity with medical/surgical benefits.</div>
+      <div class="rule-meta"><strong>If:</strong> service_category IN (&#x27;Mental Health Outpatient&#x27;, &#x27;Mental Health Inpatient&#x27;)</div>
+      <div class="rule-meta"><strong>Then:</strong> cost_share_must_equal_medical_surgical_equivalent, no_separate_limits</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><h3>Authorization Rules <span class="badge badge-amber">6 rules</span></h3><p>What needs prior auth? Inpatient, imaging, surgery, specialty drugs, DME, therapy.</p></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="rule-item">
+      <div class="rule-id">AUTH-001</div>
+      <div class="rule-name">Inpatient Admission Requires Auth</div>
+      <div class="rule-desc">All non-emergency inpatient hospital admissions require prior authorization. Emergency admissions require notification within 48 hours.</div>
+      <div class="rule-meta"><strong>If:</strong> place_of_service == &#x27;21&#x27; AND NOT emergency</div>
+      <div class="rule-meta"><strong>Services:</strong> Inpatient Hospital</div>
+      <div class="rule-meta"><strong>Turnaround:</strong> Standard: 5 business days, Urgent: 24 hours, Emergency: 48 hours post-admission</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">AUTH-002</div>
+      <div class="rule-name">Advanced Imaging Auth</div>
+      <div class="rule-desc">MRI, CT, and PET scans require prior authorization. X-rays and ultrasounds do not.</div>
+      <div class="rule-meta"><strong>If:</strong> procedure_code IN MRI/CT/PET code ranges</div>
+      <div class="rule-meta"><strong>Services:</strong> MRI, CT Scan, PET Scan</div>
+      <div class="rule-meta"><strong>Turnaround:</strong> Standard: 5 business days, Urgent: 24 hours</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">AUTH-003</div>
+      <div class="rule-name">Surgical Prior Auth</div>
+      <div class="rule-desc">Elective surgeries require prior authorization with clinical documentation supporting medical necessity.</div>
+      <div class="rule-meta"><strong>If:</strong> procedure_code IN surgical range AND NOT emergency</div>
+      <div class="rule-meta"><strong>Services:</strong> Outpatient Surgery, Inpatient Surgery</div>
+      <div class="rule-meta"><strong>Turnaround:</strong> Standard: 10 business days, Urgent: 24 hours</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">AUTH-004</div>
+      <div class="rule-name">Specialty Drug Auth</div>
+      <div class="rule-desc">Tier 4 specialty medications require prior authorization with diagnosis confirmation and step therapy documentation.</div>
+      <div class="rule-meta"><strong>If:</strong> medication.formulary_status == &#x27;Specialty&#x27; OR medication.avg_cost &gt; 500</div>
+      <div class="rule-meta"><strong>Services:</strong> Specialty Pharmacy</div>
+      <div class="rule-meta"><strong>Turnaround:</strong> Standard: 72 hours, Urgent: 24 hours</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">AUTH-005</div>
+      <div class="rule-name">DME Prior Auth</div>
+      <div class="rule-desc">Durable medical equipment over $500 requires prior authorization.</div>
+      <div class="rule-meta"><strong>If:</strong> service_category == &#x27;DME&#x27; AND estimated_cost &gt; 500</div>
+      <div class="rule-meta"><strong>Services:</strong> Durable Medical Equipment</div>
+      <div class="rule-meta"><strong>Turnaround:</strong> Standard: 5 business days</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">AUTH-006</div>
+      <div class="rule-name">Extended Therapy Auth</div>
+      <div class="rule-desc">Physical, occupational, or speech therapy beyond initial visit allotment requires authorization with progress notes.</div>
+      <div class="rule-meta"><strong>If:</strong> therapy_visits_used &gt;= plan.therapy_visit_limit</div>
+      <div class="rule-meta"><strong>Services:</strong> Physical Therapy, Occupational Therapy, Speech Therapy</div>
+      <div class="rule-meta"><strong>Turnaround:</strong> Standard: 5 business days</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><h3>Adjudication Rules <span class="badge badge-purple">10 rules</span></h3><p>How claims get processed. 10-step pipeline from eligibility through payment or denial.</p></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="rule-item">
+      <div class="rule-id">ADJ-001</div>
+      <div class="rule-name">Eligibility Check</div>
+      <div class="rule-desc">Verify member was eligible on the date of service. If not eligible, deny the claim.</div>
+      <div class="rule-meta"><strong>If:</strong> member.eligibility_status(claim.service_date) != &#x27;Active&#x27;</div>
+      <div class="rule-meta"><strong>Then:</strong> deny_claim</div>
+      <div class="rule-meta"><strong>Denial:</strong> Member not eligible on date of service</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">ADJ-002</div>
+      <div class="rule-name">Duplicate Check</div>
+      <div class="rule-desc">Check for duplicate claims (same member, same provider, same service date, same procedure code).</div>
+      <div class="rule-meta"><strong>If:</strong> EXISTS claim WHERE member_id = this.member_id AND provider_id = this.provider_id AND service_date = this.service_date AND procedure_code = this.procedure_code AND claim_id != this.claim_id</div>
+      <div class="rule-meta"><strong>Then:</strong> deny_claim</div>
+      <div class="rule-meta"><strong>Denial:</strong> Duplicate claim</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">ADJ-003</div>
+      <div class="rule-name">Timely Filing Check</div>
+      <div class="rule-desc">Claims must be submitted within 365 days of the date of service (180 days for out-of-network).</div>
+      <div class="rule-meta"><strong>If:</strong> days_between(claim.service_date, claim.received_date) &gt; filing_limit</div>
+      <div class="rule-meta"><strong>Then:</strong> deny_claim</div>
+      <div class="rule-meta"><strong>Denial:</strong> Timely filing limit exceeded</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">ADJ-004</div>
+      <div class="rule-name">Prior Auth Verification</div>
+      <div class="rule-desc">If the service requires prior authorization, verify an approved auth exists on file.</div>
+      <div class="rule-meta"><strong>If:</strong> service_requires_auth == true AND NOT EXISTS approved_auth FOR this service</div>
+      <div class="rule-meta"><strong>Then:</strong> deny_claim</div>
+      <div class="rule-meta"><strong>Denial:</strong> Pre-authorization not obtained</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">ADJ-005</div>
+      <div class="rule-name">Network Status Pricing</div>
+      <div class="rule-desc">Apply contracted rate for in-network, usual/customary rate for out-of-network.</div>
+      <div class="rule-meta"><strong>If:</strong> always</div>
+      <div class="rule-meta"><strong>Then:</strong> if in_network: allowed = contracted_rate, else: allowed = min(billed, usual_customary_rate)</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">ADJ-006</div>
+      <div class="rule-name">Apply Deductible</div>
+      <div class="rule-desc">Apply remaining deductible to the allowed amount before calculating coinsurance.</div>
+      <div class="rule-meta"><strong>If:</strong> benefit.deductible_applies == true AND accumulator.deductible_remaining &gt; 0</div>
+      <div class="rule-meta"><strong>Then:</strong> deductible_applied = min(allowed_amount, accumulator.deductible_remaining), update_accumulator</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">ADJ-007</div>
+      <div class="rule-name">Apply Copay or Coinsurance</div>
+      <div class="rule-desc">After deductible, apply the appropriate copay (flat fee) or coinsurance (percentage) based on the benefit schedule.</div>
+      <div class="rule-meta"><strong>If:</strong> always (after deductible)</div>
+      <div class="rule-meta"><strong>Then:</strong> if benefit.cost_sharing_type == &#x27;Copay&#x27;: member_resp = copay_amount, else: member_resp = allowed * (1 - coinsurance_pct)</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">ADJ-008</div>
+      <div class="rule-name">OOP Maximum Check</div>
+      <div class="rule-desc">If member has reached their OOP maximum, the plan pays 100%.</div>
+      <div class="rule-meta"><strong>If:</strong> accumulator.oop_remaining &lt;= 0</div>
+      <div class="rule-meta"><strong>Then:</strong> member_responsibility = 0, plan_pays = allowed_amount</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">ADJ-009</div>
+      <div class="rule-name">COB - Coordination of Benefits</div>
+      <div class="rule-desc">If member has other insurance, determine primary/secondary payer and adjust payment accordingly.</div>
+      <div class="rule-meta"><strong>If:</strong> member.has_other_insurance == true</div>
+      <div class="rule-meta"><strong>Then:</strong> apply_birthday_rule_or_employment_rule, adjust_payment_as_secondary</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">ADJ-010</div>
+      <div class="rule-name">Generate Payment or Denial</div>
+      <div class="rule-desc">Final step: generate payment to provider or denial notice to member.</div>
+      <div class="rule-meta"><strong>If:</strong> always</div>
+      <div class="rule-meta"><strong>Then:</strong> if plan_paid &gt; 0: status = &#x27;Paid&#x27;, generate_eob, else: status = &#x27;Denied&#x27;, generate_denial_notice</div>
+    </div>
+  </div>
+</div>
+<div class="expandable-card" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div><h3>Pharmacy Rules <span class="badge badge-amber">5 rules</span></h3><p>Generic substitution, step therapy, quantity limits, specialty pharmacy, mail order.</p></div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="rule-item">
+      <div class="rule-id">RX-001</div>
+      <div class="rule-name">Generic Substitution</div>
+      <div class="rule-desc">When a generic equivalent is available, the generic must be dispensed unless the prescriber specifies DAW (Dispense As Written).</div>
+      <div class="rule-meta"><strong>If:</strong> generic_available == true AND daw_code == &#x27;0&#x27;</div>
+      <div class="rule-meta"><strong>Then:</strong> substitute_generic, apply_generic_copay</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">RX-002</div>
+      <div class="rule-name">Step Therapy - Diabetes</div>
+      <div class="rule-desc">GLP-1 agonists (Ozempic, Trulicity) require trial of metformin first. Must show 90-day metformin claim history.</div>
+      <div class="rule-meta"><strong>If:</strong> medication.category == &#x27;GLP-1&#x27; AND NOT EXISTS metformin_claim_last_90_days</div>
+      <div class="rule-meta"><strong>Then:</strong> deny_claim, denial_reason = &#x27;Step therapy requirement not met&#x27;</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">RX-003</div>
+      <div class="rule-name">Quantity Limits</div>
+      <div class="rule-desc">Controlled substances and high-cost medications have quantity limits per fill.</div>
+      <div class="rule-meta"><strong>If:</strong> medication.has_quantity_limit == true AND quantity &gt; max_quantity</div>
+      <div class="rule-meta"><strong>Then:</strong> deny_excess_quantity, fill_up_to_limit</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">RX-004</div>
+      <div class="rule-name">Specialty Pharmacy Mandate</div>
+      <div class="rule-desc">Specialty medications must be filled through a designated specialty pharmacy.</div>
+      <div class="rule-meta"><strong>If:</strong> medication.formulary_status == &#x27;Specialty&#x27; AND pharmacy NOT IN designated_specialty_pharmacies</div>
+      <div class="rule-meta"><strong>Then:</strong> deny_claim, denial_reason = &#x27;Must use specialty pharmacy&#x27;</div>
+    </div>
+    <div class="rule-item">
+      <div class="rule-id">RX-005</div>
+      <div class="rule-name">Mail Order Discount</div>
+      <div class="rule-desc">90-day supply via mail order pharmacy receives a cost discount (typically 2x copay for 3x supply).</div>
+      <div class="rule-meta"><strong>If:</strong> pharmacy.type == &#x27;Mail Order&#x27; AND days_supply == 90</div>
+      <div class="rule-meta"><strong>Then:</strong> copay = 2 * standard_30_day_copay</div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- EVAL SCENARIOS -->
+<section id="scenarios">
+  <h2>20 eval scenarios</h2>
+  <p class="subtitle">Test cases with user prompts, expected tool calls, and success criteria. Click to expand.</p>
+  <div class="scenario-grid">
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Member looks up their deductible status</span><span class="diff diff-easy">Easy</span></div>
+      <div class="prompt">Hi, I&#x27;m James Wilson, member ID MBR-A1B2C3D4. How much of my deductible have I met this year?</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">get_accumulator</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Benefits Inquiry</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent should look up the member, then retrieve their accumulator to show deductible used vs remaining.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent provides specific dollar amounts for deductible used, remaining, and total limit.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Member Services</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Member asks why claim was denied</span><span class="diff diff-medium">Medium</span></div>
+      <div class="prompt">I got a bill for $1,200 for my MRI. I thought my insurance covered this. Can you look into it?</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">search_claims</span><span class="tool-tag">get_claim_detail</span><span class="tool-tag">check_benefits</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Claim Inquiry</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent should identify the member, find the MRI claim, check the denial reason, and explain what went wrong (likely no prior auth).</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent explains the specific denial reason, references the prior auth requirement, and offers to help with an appeal.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Member Services</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Member wants to find a new cardiologist</span><span class="diff diff-easy">Easy</span></div>
+      <div class="prompt">I need to find a cardiologist that&#x27;s in-network and accepting new patients. Preferably in Chicago.</div>
+      <div class="tools"><span class="tool-tag">search_providers</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Provider Search</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent searches providers filtered by specialty=Cardiology, network_status=In-Network, accepting_new_patients=true, city=Chicago.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent returns provider names, addresses, and ratings. Mentions if referral is needed (HMO plans).</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Member Services</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Member asks about medication coverage</span><span class="diff diff-medium">Medium</span></div>
+      <div class="prompt">My doctor wants to put me on Ozempic for diabetes. Is it covered under my plan? What will it cost me?</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">get_member_coverage</span><span class="tool-tag">get_plan_formulary</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Pharmacy Inquiry</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent looks up the member, gets their plan, checks the formulary for Ozempic. Should flag that it&#x27;s a specialty tier drug with prior auth required and step therapy (metformin first).</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent states the tier, copay amount, prior auth requirement, and step therapy requirement. Explains what step therapy means.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Pharmacy Support</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Member wants to appeal a denied authorization</span><span class="diff diff-hard">Hard</span></div>
+      <div class="prompt">My prior authorization for knee replacement surgery was denied. I want to appeal. What do I need to do?</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">get_authorization</span><span class="tool-tag">search_knowledge_base</span><span class="tool-tag">initiate_appeal</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Appeals</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent finds the member, locates the denied auth, explains the appeal process from the knowledge base, and offers to initiate the appeal.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent explains the appeal timeline (30 days internal), required documents, and either initiates the appeal or explains next steps clearly.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Appeals Specialist</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Verify eligibility for upcoming surgery</span><span class="diff diff-medium">Medium</span></div>
+      <div class="prompt">I have a surgery scheduled for March 15, 2025. Can you verify I&#x27;ll be covered on that date?</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">check_eligibility</span><span class="tool-tag">get_member_coverage</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Eligibility</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent verifies the member&#x27;s eligibility for the specific date. Should also check if the surgery needs prior auth.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent confirms eligibility status and proactively mentions auth requirements for surgery.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Member Services</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Member asks about copay vs coinsurance</span><span class="diff diff-easy">Easy</span></div>
+      <div class="prompt">I&#x27;m confused. What&#x27;s the difference between a copay and coinsurance? And which one applies when I see my doctor?</div>
+      <div class="tools"><span class="tool-tag">search_knowledge_base</span><span class="tool-tag">lookup_member</span><span class="tool-tag">check_benefits</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Education</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent explains copay vs coinsurance clearly, then looks up the member&#x27;s specific plan to tell them what applies for office visits.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Clear explanation of both terms with specific dollar amounts from the member&#x27;s plan.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Member Services</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Review interaction history before callback</span><span class="diff diff-medium">Medium</span></div>
+      <div class="prompt">I&#x27;m about to call back member MBR-12345678 about their billing dispute. Pull up their history so I&#x27;m prepared.</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">get_interaction_history</span><span class="tool-tag">search_claims</span><span class="tool-tag">get_accumulator</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Agent Preparation</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent retrieves full member context: demographics, recent interactions, claims history, and accumulator status.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent provides a comprehensive briefing with recent call notes, open cases, and relevant claim details.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Member Services</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Emergency room coverage question</span><span class="diff diff-medium">Medium</span></div>
+      <div class="prompt">I went to an out-of-network ER last weekend. Am I going to get a huge bill?</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">search_knowledge_base</span><span class="tool-tag">check_benefits</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Benefits Inquiry</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent should explain the prudent layperson standard — ER is covered at in-network rates regardless of network. Reference the No Surprises Act.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent reassures member about in-network rates for ER, explains the copay, and mentions the No Surprises Act protections.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Member Services</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">HMO member tries to see specialist without referral</span><span class="diff diff-medium">Medium</span></div>
+      <div class="prompt">My claim for a dermatologist visit was denied. I have an HMO plan. What happened?</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">search_claims</span><span class="tool-tag">get_claim_detail</span><span class="tool-tag">search_knowledge_base</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Claim Denial</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent identifies this is an HMO plan requiring referrals for specialists. The denial was for missing referral.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent explains the HMO referral requirement, advises getting a referral from PCP, and explains how to resubmit or get retroactive referral.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Member Services</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Member asks about adding a newborn dependent</span><span class="diff diff-medium">Medium</span></div>
+      <div class="prompt">I just had a baby! How do I add them to my insurance? Is there a deadline?</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">search_knowledge_base</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Enrollment</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent explains qualifying life event rules — 30 days to add newborn, coverage retroactive to birth date.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent states the 30-day window, explains retroactive coverage, and describes what documents are needed.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Enrollment Specialist</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Complex multi-step: denied claim with appeal and auth</span><span class="diff diff-hard">Hard</span></div>
+      <div class="prompt">I had a knee MRI that was denied because of no prior auth. I need the MRI for my knee replacement surgery next month. Can you help me sort this all out?</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">search_claims</span><span class="tool-tag">get_claim_detail</span><span class="tool-tag">search_knowledge_base</span><span class="tool-tag">submit_authorization_request</span><span class="tool-tag">initiate_appeal</span><span class="tool-tag">create_case_note</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Complex Workflow</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent handles multiple issues: (1) explains the MRI denial, (2) submits retroactive auth request, (3) initiates appeal on the denied claim, (4) checks auth requirements for the upcoming surgery, (5) creates a case note documenting everything.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent addresses all three issues (past denial, current auth, future surgery) and creates appropriate documentation.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Senior Agent</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Member COBRA eligibility question</span><span class="diff diff-medium">Medium</span></div>
+      <div class="prompt">I&#x27;m being laid off next month. What are my options for continuing my health insurance?</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">get_member_coverage</span><span class="tool-tag">search_knowledge_base</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Eligibility</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent explains COBRA continuation rights — 18 months, full premium + 2% admin fee, same benefits.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent explains COBRA timeline, cost implications, and enrollment deadline (60 days).</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Enrollment Specialist</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Physical therapy visit limit</span><span class="diff diff-easy">Easy</span></div>
+      <div class="prompt">How many physical therapy visits do I have left this year?</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">check_benefits</span><span class="tool-tag">search_claims</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Benefits Inquiry</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent checks the PT benefit limit (30 visits/year), then counts PT claims this year to calculate remaining.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent provides specific number of visits used and remaining, and mentions auth requirement if limit is approaching.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Member Services</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Mail order pharmacy savings</span><span class="diff diff-easy">Easy</span></div>
+      <div class="prompt">I take Metformin and Lisinopril every month. Would I save money using mail order pharmacy?</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">search_pharmacy_claims</span><span class="tool-tag">search_knowledge_base</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Pharmacy Inquiry</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent looks up current Rx costs, then explains the mail order benefit (90-day supply for 2x copay).</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent calculates specific savings comparing 3 monthly fills vs 1 mail order fill.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Pharmacy Support</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Coordination of benefits question</span><span class="diff diff-hard">Hard</span></div>
+      <div class="prompt">My spouse also has insurance through their employer. How do we figure out which plan pays first?</div>
+      <div class="tools"><span class="tool-tag">search_knowledge_base</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Benefits Inquiry</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent explains COB rules — birthday rule for dependents, primary/secondary payer determination.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent clearly explains the birthday rule and primary vs secondary insurance concepts.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Member Services</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Request new ID card</span><span class="diff diff-easy">Easy</span></div>
+      <div class="prompt">I lost my insurance card. Can you send me a new one?</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">generate_document</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Administrative</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent verifies the member and generates a new ID card.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent confirms member identity and generates the ID card document.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Member Services</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Explain EOB to confused member</span><span class="diff diff-medium">Medium</span></div>
+      <div class="prompt">I got this Explanation of Benefits in the mail and I have no idea what any of it means. The billed amount is $3,500 but allowed amount is $1,200? Am I being ripped off?</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">search_claims</span><span class="tool-tag">search_knowledge_base</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Education</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent explains the difference between billed, allowed, plan paid, and member responsibility. Explains that the member is NOT responsible for the difference between billed and allowed for in-network providers.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Clear explanation of EOB line items and reassurance about the billed vs allowed gap.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Member Services</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Telehealth availability question</span><span class="diff diff-easy">Easy</span></div>
+      <div class="prompt">Can I do a virtual visit with my doctor instead of going in person? What does it cost?</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">check_benefits</span><span class="tool-tag">search_knowledge_base</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Benefits Inquiry</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent confirms telehealth is covered and provides the copay amount from the member&#x27;s plan.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent confirms telehealth coverage, states the copay, and explains it&#x27;s the same as in-person equivalent.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Member Services</div>
+  </div>
+</div>
+<div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
+  <div class="card-header">
+    <div style="flex:1">
+      <div class="top"><span class="name">Grievance about long wait times</span><span class="diff diff-hard">Hard</span></div>
+      <div class="prompt">I&#x27;ve called three times about my denied claim and nobody has helped me. I want to file a formal complaint. This is unacceptable.</div>
+      <div class="tools"><span class="tool-tag">lookup_member</span><span class="tool-tag">get_interaction_history</span><span class="tool-tag">search_claims</span><span class="tool-tag">search_knowledge_base</span><span class="tool-tag">create_case_note</span></div>
+    </div>
+    <span class="expand-icon">+</span>
+  </div>
+  <div class="card-detail">
+    <div class="scenario-detail-row"><strong>Category:</strong> Grievance</div>
+    <div class="scenario-detail-row"><strong>Expected behavior:</strong> Agent should de-escalate, review the interaction history to understand the issue, address the underlying claim problem, explain the grievance process, and document the complaint.</div>
+    <div class="scenario-detail-row"><strong>Success criteria:</strong> Agent acknowledges frustration, reviews past interactions, addresses the claim issue, explains grievance filing, and creates documentation.</div>
+    <div class="scenario-detail-row"><strong>Agent role:</strong> Supervisor</div>
+  </div>
+</div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ARCHITECTURE -->
+<section>
+  <h2>Project structure</h2>
+  <p class="subtitle">Everything in one folder. Data, API, agent config, evals, and docs.</p>
+  <div class="arch-tree"><span class="folder">healthcare-synthetic-data/</span>
+&#9500;&#9472;&#9472; <span class="folder">data/</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="folder">json/</span>                      <span class="file">&#8592; 21 JSON files, ~33 MB</span>
+&#9474;   &#9492;&#9472;&#9472; <span class="folder">csv/</span>                       <span class="file">&#8592; 15 CSV files, ~9 MB</span>
+&#9474;
+&#9500;&#9472;&#9472; <span class="folder">agent-sandbox/</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="highlight">server.py</span>                  <span class="file">&#8592; FastAPI server (start here)</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="highlight">api_server.py</span>              <span class="file">&#8592; Query layer (18 tools implemented)</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="highlight">mcp_server.py</span>              <span class="file">&#8592; MCP server (Claude Desktop / Cursor)</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="highlight">requirements.txt</span>           <span class="file">&#8592; pip install -r requirements.txt</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="folder">tools/</span>
+&#9474;   &#9474;   &#9492;&#9472;&#9472; <span class="highlight">tool_schemas.json</span>      <span class="file">&#8592; Anthropic + OpenAI function schemas</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="folder">rules/</span>
+&#9474;   &#9474;   &#9492;&#9472;&#9472; <span class="highlight">business_rules.json</span>    <span class="file">&#8592; 31 coverage/auth/adjudication rules</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="folder">knowledge-base/</span>
+&#9474;   &#9474;   &#9492;&#9472;&#9472; <span class="highlight">knowledge_base.json</span>    <span class="file">&#8592; Policies, FAQs, clinical guidelines</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="folder">scenarios/</span>
+&#9474;   &#9474;   &#9492;&#9472;&#9472; <span class="highlight">scenarios.json</span>         <span class="file">&#8592; 20 eval test cases</span>
+&#9474;   &#9492;&#9472;&#9472; <span class="folder">templates/</span>
+&#9474;       &#9492;&#9472;&#9472; <span class="highlight">document_templates.json</span> <span class="file">&#8592; EOB, denial letter, ID card, etc.</span>
+&#9474;
+&#9500;&#9472;&#9472; <span class="folder">generator/</span>
+&#9474;   &#9500;&#9472;&#9472; generate.py                <span class="file">&#8592; Core data generator</span>
+&#9474;   &#9492;&#9472;&#9472; generate_interactions.py   <span class="file">&#8592; Interaction history generator</span>
+&#9474;
+&#9500;&#9472;&#9472; <span class="folder">docs/</span>
+&#9474;   &#9492;&#9472;&#9472; DATA-SPECIFICATION.md      <span class="file">&#8592; Full engineering spec</span>
+&#9474;
+&#9500;&#9472;&#9472; <span class="highlight">README.md</span>                      <span class="file">&#8592; Start here</span>
+&#9492;&#9472;&#9472; <span class="highlight">index.html</span>                     <span class="file">&#8592; This page</span></div>
+</section>
+
+<hr class="section-divider">
+
+<!-- TWO PATHS -->
+<section id="quickstart">
+  <h2>Two ways to use this</h2>
+  <p class="subtitle">Same data, same tools — fundamentally different experience. The difference is the point.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px;align-items:start">
+    <!-- Path A: MCP -->
+    <div style="background:var(--surface);border:2px solid var(--accent);border-radius:12px;padding:28px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <span style="background:var(--accent);color:white;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:700;">RECOMMENDED</span>
+      </div>
+      <h3 style="font-size:20px;margin-bottom:8px">Path A: With MCP</h3>
+      <p style="color:var(--text2);font-size:14px;margin-bottom:20px">Agent discovers tools automatically. No glue code. Start talking immediately.</p>
+
+      <div class="steps" style="counter-reset:step">
+        <div class="compact-step">
+          <h4>Install</h4>
+          <p><code>cd agent-sandbox &amp;&amp; pip install -r requirements.txt</code></p>
+        </div>
+        <div class="compact-step">
+          <h4>Add to Claude Desktop config</h4>
+          <p>Settings &#8594; Developer &#8594; Edit Config. Add the <code>healthcare-sandbox</code> server entry. Restart.</p>
+        </div>
+        <div class="compact-step">
+          <h4>Start talking</h4>
+          <p>&#8220;Look up member MBR-B5906016 and tell me about their coverage.&#8221;</p>
+        </div>
+      </div>
+      <p style="color:var(--green);font-size:13px;margin-top:16px;font-weight:600">&#10003; All 18 tools available instantly. Agent reasons about which to use.</p>
+    </div>
+
+    <!-- Path B: REST -->
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px;">
+      <h3 style="font-size:20px;margin-bottom:8px">Path B: Without MCP</h3>
+      <p style="color:var(--text2);font-size:14px;margin-bottom:20px">Traditional REST API. Manual tool wiring and custom integration code.</p>
+
+      <div class="steps" style="counter-reset:step">
+        <div class="compact-step">
+          <h4>Install</h4>
+          <p><code>cd agent-sandbox &amp;&amp; pip install -r requirements.txt</code></p>
+        </div>
+        <div class="compact-step">
+          <h4>Start API server</h4>
+          <p><code>python3 -m uvicorn server:app --reload --port 8000</code></p>
+        </div>
+        <div class="compact-step">
+          <h4>Copy tool schemas into agent config</h4>
+          <p>Load <code>tool_schemas.json</code>, write HTTP client, build conversation loop, handle errors.</p>
+        </div>
+        <div class="compact-step">
+          <h4>Write routing logic</h4>
+          <p>Map each tool to an API call. Parse responses. Manage state between turns.</p>
+        </div>
+        <div class="compact-step">
+          <h4>Test &amp; iterate</h4>
+          <p>Debug tool selection, fix parameter mapping, tune prompts.</p>
+        </div>
+      </div>
+      <p style="color:var(--amber);font-size:13px;margin-top:16px;font-weight:600">&#9888; Same result, hours more work.</p>
+    </div>
+  </div>
+
+  <!-- Comparison table -->
+  <div style="overflow-x:auto">
+    <table class="entity-table">
+      <thead>
+        <tr><th></th><th style="color:var(--accent2)">With MCP</th><th>Without MCP</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Setup time</strong></td><td>2 minutes (config file)</td><td>Hours (integration code)</td></tr>
+        <tr><td><strong>Tool discovery</strong></td><td>Automatic &#8212; agent sees all 18 tools</td><td>Manual &#8212; copy schemas, wire each one</td></tr>
+        <tr><td><strong>First demo</strong></td><td>Immediately &#8212; just start talking</td><td>After building conversation loop</td></tr>
+        <tr><td><strong>Tool selection</strong></td><td>Agent decides which tools to use</td><td>Developer pre-programs routing</td></tr>
+        <tr><td><strong>Multi-step reasoning</strong></td><td>Built in &#8212; agent chains tools naturally</td><td>Developer builds state machine</td></tr>
+        <tr><td><strong>Adding new tools</strong></td><td>Add to server, auto-discovered</td><td>Update schemas, update routing code</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  Healthcare Agent Sandbox &mdash; Synthetic data platform for prototyping AI agents. All data is fictional. No real PHI/PII.
+  <div style="margin-top: 12px; font-size: 12px; color: #6b7280;">Vibe coded by MJ, with the loving and patient support of Claude.</div>
+</footer>
+
+<script>
+function toggleExpand(el) {
+  el.classList.toggle('expanded');
+}
+</script>
+
+</body>
+</html>

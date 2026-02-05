@@ -1,0 +1,277 @@
+{
+  "_description": "Structured business rules for healthcare agent decision-making. These are the if/then rules agents use to determine coverage, authorize services, and adjudicate claims.",
+
+  "coverage_rules": [
+    {
+      "rule_id": "COV-001",
+      "name": "Preventive Care - Zero Cost Share",
+      "description": "All ACA-compliant preventive services are covered at 100% with no member cost sharing when performed by an in-network provider.",
+      "condition": "service_category == 'Preventive Care' AND provider.network_status == 'In-Network'",
+      "action": "member_cost_share = 0, deductible_applies = false",
+      "applicable_plans": ["HMO", "PPO", "EPO", "HDHP", "POS"],
+      "regulatory_basis": "ACA Section 2713"
+    },
+    {
+      "rule_id": "COV-002",
+      "name": "Emergency Room - Prudent Layperson Standard",
+      "description": "Emergency services are covered at in-network rates regardless of whether the provider is in-network, based on the prudent layperson standard.",
+      "condition": "place_of_service == '23' OR claim_type == 'Emergency'",
+      "action": "apply_in_network_rates = true, regardless_of_network_status = true",
+      "applicable_plans": ["HMO", "PPO", "EPO", "HDHP", "POS"],
+      "regulatory_basis": "No Surprises Act, ACA"
+    },
+    {
+      "rule_id": "COV-003",
+      "name": "HMO Referral Requirement",
+      "description": "HMO members must obtain a referral from their PCP before seeing a specialist. Services without referral are denied.",
+      "condition": "plan_type == 'HMO' AND service_category == 'Specialist Visit' AND referral_on_file == false",
+      "action": "deny_claim, denial_reason = 'Referral not obtained'",
+      "applicable_plans": ["HMO"],
+      "exceptions": ["Emergency services", "OB/GYN visits", "Mental health visits"]
+    },
+    {
+      "rule_id": "COV-004",
+      "name": "Out-of-Network - PPO Reduced Coverage",
+      "description": "PPO plans cover out-of-network services at reduced coinsurance. Member is responsible for balance billing.",
+      "condition": "plan_type == 'PPO' AND provider.network_status == 'Out-of-Network'",
+      "action": "coinsurance = plan.coinsurance_out_of_network, balance_billing_applies = true",
+      "applicable_plans": ["PPO"]
+    },
+    {
+      "rule_id": "COV-005",
+      "name": "Out-of-Network - EPO/HMO Denial",
+      "description": "EPO and HMO plans do not cover out-of-network services except emergencies.",
+      "condition": "(plan_type == 'EPO' OR plan_type == 'HMO') AND provider.network_status == 'Out-of-Network' AND NOT emergency",
+      "action": "deny_claim, denial_reason = 'Out of network provider'",
+      "applicable_plans": ["EPO", "HMO"]
+    },
+    {
+      "rule_id": "COV-006",
+      "name": "Deductible Must Be Met Before Coinsurance",
+      "description": "For non-preventive services, the member must meet their annual deductible before the plan begins paying coinsurance.",
+      "condition": "service_category != 'Preventive Care' AND benefit.deductible_applies == 'After deductible'",
+      "action": "if accumulator.deductible_remaining > 0: member_pays_full_allowed, else: apply_coinsurance",
+      "applicable_plans": ["HMO", "PPO", "EPO", "HDHP", "POS"]
+    },
+    {
+      "rule_id": "COV-007",
+      "name": "Out-of-Pocket Maximum Cap",
+      "description": "Once a member reaches their annual OOP maximum, the plan pays 100% of covered services for the remainder of the plan year.",
+      "condition": "accumulator.oop_remaining <= 0",
+      "action": "member_cost_share = 0, plan_pays = 100%",
+      "applicable_plans": ["HMO", "PPO", "EPO", "HDHP", "POS"],
+      "regulatory_basis": "ACA OOP limits"
+    },
+    {
+      "rule_id": "COV-008",
+      "name": "Physical Therapy Visit Limit",
+      "description": "Physical therapy is limited to 30 visits per plan year. Additional visits require prior authorization and clinical review.",
+      "condition": "service_category == 'Physical Therapy' AND visits_this_year > 30",
+      "action": "require_prior_auth, if no auth: deny_claim, denial_reason = 'Exceeds benefit maximum'",
+      "applicable_plans": ["HMO", "PPO", "EPO", "HDHP", "POS"]
+    },
+    {
+      "rule_id": "COV-009",
+      "name": "Telehealth Parity",
+      "description": "Telehealth visits are covered at the same rate as in-person visits for the same service category.",
+      "condition": "service_modality == 'Telehealth'",
+      "action": "apply_same_cost_share_as_in_person_equivalent",
+      "applicable_plans": ["HMO", "PPO", "EPO", "HDHP", "POS"]
+    },
+    {
+      "rule_id": "COV-010",
+      "name": "Mental Health Parity",
+      "description": "Mental health and substance use disorder services must be covered at parity with medical/surgical benefits.",
+      "condition": "service_category IN ('Mental Health Outpatient', 'Mental Health Inpatient')",
+      "action": "cost_share_must_equal_medical_surgical_equivalent, no_separate_limits",
+      "applicable_plans": ["HMO", "PPO", "EPO", "HDHP", "POS"],
+      "regulatory_basis": "Mental Health Parity and Addiction Equity Act"
+    }
+  ],
+
+  "authorization_rules": [
+    {
+      "rule_id": "AUTH-001",
+      "name": "Inpatient Admission Requires Auth",
+      "description": "All non-emergency inpatient hospital admissions require prior authorization. Emergency admissions require notification within 48 hours.",
+      "services_requiring_auth": ["Inpatient Hospital"],
+      "condition": "place_of_service == '21' AND NOT emergency",
+      "turnaround_time": "Standard: 5 business days, Urgent: 24 hours, Emergency: 48 hours post-admission",
+      "denial_criteria": "Admission does not meet InterQual or Milliman criteria for inpatient level of care"
+    },
+    {
+      "rule_id": "AUTH-002",
+      "name": "Advanced Imaging Auth",
+      "description": "MRI, CT, and PET scans require prior authorization. X-rays and ultrasounds do not.",
+      "services_requiring_auth": ["MRI", "CT Scan", "PET Scan"],
+      "condition": "procedure_code IN MRI/CT/PET code ranges",
+      "turnaround_time": "Standard: 5 business days, Urgent: 24 hours",
+      "denial_criteria": "Conservative treatment not attempted first, or imaging not supported by clinical indication"
+    },
+    {
+      "rule_id": "AUTH-003",
+      "name": "Surgical Prior Auth",
+      "description": "Elective surgeries require prior authorization with clinical documentation supporting medical necessity.",
+      "services_requiring_auth": ["Outpatient Surgery", "Inpatient Surgery"],
+      "condition": "procedure_code IN surgical range AND NOT emergency",
+      "turnaround_time": "Standard: 10 business days, Urgent: 24 hours",
+      "required_documentation": ["Clinical notes", "Conservative treatment history", "Imaging results"],
+      "denial_criteria": "Does not meet medical necessity criteria, conservative treatment not exhausted"
+    },
+    {
+      "rule_id": "AUTH-004",
+      "name": "Specialty Drug Auth",
+      "description": "Tier 4 specialty medications require prior authorization with diagnosis confirmation and step therapy documentation.",
+      "services_requiring_auth": ["Specialty Pharmacy"],
+      "condition": "medication.formulary_status == 'Specialty' OR medication.avg_cost > 500",
+      "turnaround_time": "Standard: 72 hours, Urgent: 24 hours",
+      "required_documentation": ["Diagnosis confirmation", "Step therapy documentation", "Lab results if applicable"],
+      "step_therapy_required": true
+    },
+    {
+      "rule_id": "AUTH-005",
+      "name": "DME Prior Auth",
+      "description": "Durable medical equipment over $500 requires prior authorization.",
+      "services_requiring_auth": ["Durable Medical Equipment"],
+      "condition": "service_category == 'DME' AND estimated_cost > 500",
+      "turnaround_time": "Standard: 5 business days",
+      "required_documentation": ["Prescription/order from treating physician", "Clinical justification"]
+    },
+    {
+      "rule_id": "AUTH-006",
+      "name": "Extended Therapy Auth",
+      "description": "Physical, occupational, or speech therapy beyond initial visit allotment requires authorization with progress notes.",
+      "services_requiring_auth": ["Physical Therapy", "Occupational Therapy", "Speech Therapy"],
+      "condition": "therapy_visits_used >= plan.therapy_visit_limit",
+      "turnaround_time": "Standard: 5 business days",
+      "required_documentation": ["Progress notes", "Updated treatment plan", "Functional improvement metrics"]
+    }
+  ],
+
+  "adjudication_rules": [
+    {
+      "rule_id": "ADJ-001",
+      "name": "Eligibility Check",
+      "description": "Verify member was eligible on the date of service. If not eligible, deny the claim.",
+      "step": 1,
+      "condition": "member.eligibility_status(claim.service_date) != 'Active'",
+      "action": "deny_claim",
+      "denial_reason": "Member not eligible on date of service"
+    },
+    {
+      "rule_id": "ADJ-002",
+      "name": "Duplicate Check",
+      "description": "Check for duplicate claims (same member, same provider, same service date, same procedure code).",
+      "step": 2,
+      "condition": "EXISTS claim WHERE member_id = this.member_id AND provider_id = this.provider_id AND service_date = this.service_date AND procedure_code = this.procedure_code AND claim_id != this.claim_id",
+      "action": "deny_claim",
+      "denial_reason": "Duplicate claim"
+    },
+    {
+      "rule_id": "ADJ-003",
+      "name": "Timely Filing Check",
+      "description": "Claims must be submitted within 365 days of the date of service (180 days for out-of-network).",
+      "step": 3,
+      "condition": "days_between(claim.service_date, claim.received_date) > filing_limit",
+      "action": "deny_claim",
+      "denial_reason": "Timely filing limit exceeded",
+      "parameters": { "in_network_limit_days": 365, "out_of_network_limit_days": 180 }
+    },
+    {
+      "rule_id": "ADJ-004",
+      "name": "Prior Auth Verification",
+      "description": "If the service requires prior authorization, verify an approved auth exists on file.",
+      "step": 4,
+      "condition": "service_requires_auth == true AND NOT EXISTS approved_auth FOR this service",
+      "action": "deny_claim",
+      "denial_reason": "Pre-authorization not obtained"
+    },
+    {
+      "rule_id": "ADJ-005",
+      "name": "Network Status Pricing",
+      "description": "Apply contracted rate for in-network, usual/customary rate for out-of-network.",
+      "step": 5,
+      "condition": "always",
+      "action": "if in_network: allowed = contracted_rate, else: allowed = min(billed, usual_customary_rate)"
+    },
+    {
+      "rule_id": "ADJ-006",
+      "name": "Apply Deductible",
+      "description": "Apply remaining deductible to the allowed amount before calculating coinsurance.",
+      "step": 6,
+      "condition": "benefit.deductible_applies == true AND accumulator.deductible_remaining > 0",
+      "action": "deductible_applied = min(allowed_amount, accumulator.deductible_remaining), update_accumulator"
+    },
+    {
+      "rule_id": "ADJ-007",
+      "name": "Apply Copay or Coinsurance",
+      "description": "After deductible, apply the appropriate copay (flat fee) or coinsurance (percentage) based on the benefit schedule.",
+      "step": 7,
+      "condition": "always (after deductible)",
+      "action": "if benefit.cost_sharing_type == 'Copay': member_resp = copay_amount, else: member_resp = allowed * (1 - coinsurance_pct)"
+    },
+    {
+      "rule_id": "ADJ-008",
+      "name": "OOP Maximum Check",
+      "description": "If member has reached their OOP maximum, the plan pays 100%.",
+      "step": 8,
+      "condition": "accumulator.oop_remaining <= 0",
+      "action": "member_responsibility = 0, plan_pays = allowed_amount"
+    },
+    {
+      "rule_id": "ADJ-009",
+      "name": "COB - Coordination of Benefits",
+      "description": "If member has other insurance, determine primary/secondary payer and adjust payment accordingly.",
+      "step": 9,
+      "condition": "member.has_other_insurance == true",
+      "action": "apply_birthday_rule_or_employment_rule, adjust_payment_as_secondary"
+    },
+    {
+      "rule_id": "ADJ-010",
+      "name": "Generate Payment or Denial",
+      "description": "Final step: generate payment to provider or denial notice to member.",
+      "step": 10,
+      "condition": "always",
+      "action": "if plan_paid > 0: status = 'Paid', generate_eob, else: status = 'Denied', generate_denial_notice"
+    }
+  ],
+
+  "pharmacy_rules": [
+    {
+      "rule_id": "RX-001",
+      "name": "Generic Substitution",
+      "description": "When a generic equivalent is available, the generic must be dispensed unless the prescriber specifies DAW (Dispense As Written).",
+      "condition": "generic_available == true AND daw_code == '0'",
+      "action": "substitute_generic, apply_generic_copay"
+    },
+    {
+      "rule_id": "RX-002",
+      "name": "Step Therapy - Diabetes",
+      "description": "GLP-1 agonists (Ozempic, Trulicity) require trial of metformin first. Must show 90-day metformin claim history.",
+      "condition": "medication.category == 'GLP-1' AND NOT EXISTS metformin_claim_last_90_days",
+      "action": "deny_claim, denial_reason = 'Step therapy requirement not met'",
+      "step_therapy_sequence": ["Metformin", "Sulfonylurea or DPP-4", "GLP-1 Agonist"]
+    },
+    {
+      "rule_id": "RX-003",
+      "name": "Quantity Limits",
+      "description": "Controlled substances and high-cost medications have quantity limits per fill.",
+      "condition": "medication.has_quantity_limit == true AND quantity > max_quantity",
+      "action": "deny_excess_quantity, fill_up_to_limit"
+    },
+    {
+      "rule_id": "RX-004",
+      "name": "Specialty Pharmacy Mandate",
+      "description": "Specialty medications must be filled through a designated specialty pharmacy.",
+      "condition": "medication.formulary_status == 'Specialty' AND pharmacy NOT IN designated_specialty_pharmacies",
+      "action": "deny_claim, denial_reason = 'Must use specialty pharmacy'"
+    },
+    {
+      "rule_id": "RX-005",
+      "name": "Mail Order Discount",
+      "description": "90-day supply via mail order pharmacy receives a cost discount (typically 2x copay for 3x supply).",
+      "condition": "pharmacy.type == 'Mail Order' AND days_supply == 90",
+      "action": "copay = 2 * standard_30_day_copay"
+    }
+  ]
+}

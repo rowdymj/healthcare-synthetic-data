@@ -1,0 +1,62 @@
+{
+  "_description": "Document templates that agents generate for members. Each template has placeholder variables ({{variable}}) that get filled from the dataset.",
+
+  "templates": [
+    {
+      "template_id": "TPL-EOB",
+      "name": "Explanation of Benefits",
+      "type": "EOB",
+      "description": "Standard EOB sent to members after a claim is processed.",
+      "variables": ["member_name", "member_id", "plan_name", "claim_id", "service_date", "provider_name", "diagnosis_description", "procedure_description", "billed_amount", "allowed_amount", "plan_paid", "member_responsibility", "deductible_applied", "copay_applied", "coinsurance_applied", "claim_status", "check_number", "payment_date"],
+      "template_text": "EXPLANATION OF BENEFITS\n\nThis is not a bill. This is a summary of how your claim was processed.\n\nMember: {{member_name}} ({{member_id}})\nPlan: {{plan_name}}\nClaim Number: {{claim_id}}\n\nSERVICE DETAILS\nDate of Service: {{service_date}}\nProvider: {{provider_name}}\nDiagnosis: {{diagnosis_description}}\nProcedure: {{procedure_description}}\n\nFINANCIAL SUMMARY\n                          Amount\nBilled Amount:            ${{billed_amount}}\nAllowed Amount:           ${{allowed_amount}}\nPlan Discount:            ${{discount_amount}}\n---\nDeductible Applied:       ${{deductible_applied}}\nCopay:                    ${{copay_applied}}\nCoinsurance (Your Share):  ${{coinsurance_applied}}\n---\nPlan Paid:                ${{plan_paid}}\nYour Responsibility:      ${{member_responsibility}}\n\nStatus: {{claim_status}}\nPayment Reference: {{check_number}}\nPayment Date: {{payment_date}}\n\nQUESTIONS?\nCall Member Services: 1-800-555-PLAN (7526)\nVisit: www.healthplan.example.com\n\nYou have the right to appeal this decision within 180 days."
+    },
+    {
+      "template_id": "TPL-DENIAL",
+      "name": "Claim Denial Letter",
+      "type": "denial_letter",
+      "description": "Letter sent when a medical claim is denied.",
+      "variables": ["member_name", "member_address", "member_id", "plan_name", "claim_id", "service_date", "provider_name", "procedure_description", "billed_amount", "denial_reason", "appeal_deadline", "current_date"],
+      "template_text": "{{current_date}}\n\n{{member_name}}\n{{member_address}}\n\nRe: Claim Denial Notice\nClaim Number: {{claim_id}}\nMember ID: {{member_id}}\n\nDear {{member_name}},\n\nWe have reviewed the claim submitted for services provided on {{service_date}} by {{provider_name}} for {{procedure_description}}.\n\nAfter careful review, this claim has been DENIED for the following reason:\n\n{{denial_reason}}\n\nBilled Amount: ${{billed_amount}}\nPlan Payment: $0.00\n\nYOUR RIGHT TO APPEAL\nYou have the right to appeal this decision. To file an appeal:\n1. Submit a written appeal within 180 days of this notice\n2. Include any additional medical records or documentation supporting medical necessity\n3. Your provider may also appeal on your behalf\n\nMail appeals to:\nAppeals Department\nPO Box 12345\nProcessing Center, ST 00000\n\nOr call: 1-800-555-PLAN (7526)\n\nIf your internal appeal is denied, you may request an independent external review.\n\nSincerely,\nClaims Review Department"
+    },
+    {
+      "template_id": "TPL-AUTH-APPROVE",
+      "name": "Authorization Approval Letter",
+      "type": "auth_approval_letter",
+      "description": "Letter confirming approval of a prior authorization request.",
+      "variables": ["member_name", "member_address", "member_id", "auth_id", "service_description", "provider_name", "approved_units", "effective_date", "expiration_date", "current_date"],
+      "template_text": "{{current_date}}\n\n{{member_name}}\n{{member_address}}\n\nRe: Prior Authorization APPROVED\nAuthorization Number: {{auth_id}}\nMember ID: {{member_id}}\n\nDear {{member_name}},\n\nYour prior authorization request has been APPROVED.\n\nAPPROVED SERVICE\nService: {{service_description}}\nProvider: {{provider_name}}\nApproved Units: {{approved_units}}\nEffective Date: {{effective_date}}\nExpiration Date: {{expiration_date}}\n\nIMPORTANT REMINDERS\n- Services must be received before the expiration date\n- Services must be provided by the authorized provider\n- This authorization does not guarantee payment; coverage is subject to eligibility and plan terms at the time of service\n- Standard cost sharing (deductible, copay, coinsurance) still applies\n\nQuestions? Call Member Services: 1-800-555-PLAN (7526)\n\nSincerely,\nUtilization Management Department"
+    },
+    {
+      "template_id": "TPL-AUTH-DENY",
+      "name": "Authorization Denial Letter",
+      "type": "auth_denial_letter",
+      "description": "Letter when a prior authorization request is denied.",
+      "variables": ["member_name", "member_address", "member_id", "auth_id", "service_description", "provider_name", "denial_reason", "reviewer_name", "current_date"],
+      "template_text": "{{current_date}}\n\n{{member_name}}\n{{member_address}}\n\nRe: Prior Authorization DENIED\nAuthorization Number: {{auth_id}}\nMember ID: {{member_id}}\n\nDear {{member_name}},\n\nAfter clinical review, your prior authorization request has been DENIED.\n\nDENIED SERVICE\nService: {{service_description}}\nProvider: {{provider_name}}\n\nREASON FOR DENIAL\n{{denial_reason}}\n\nThis decision was made by {{reviewer_name}} based on clinical guidelines and your plan's coverage criteria.\n\nYOUR RIGHT TO APPEAL\nYou or your provider may appeal this decision:\n- Standard Appeal: Submit within 180 days. Decision within 30 calendar days.\n- Expedited Appeal: If medically urgent, call 1-800-555-PLAN for 72-hour review.\n- External Review: Available after internal appeal is exhausted.\n\nTO FILE AN APPEAL\nInclude: Authorization number, reason you disagree, and any supporting clinical documentation.\nMail to: Appeals Department, PO Box 12345, Processing Center, ST 00000\nFax: 1-800-555-FAX1\n\nSincerely,\nUtilization Management Department"
+    },
+    {
+      "template_id": "TPL-IDCARD",
+      "name": "Member ID Card",
+      "type": "id_card",
+      "description": "Digital member ID card with key plan information.",
+      "variables": ["member_name", "member_id", "subscriber_id", "plan_name", "plan_type", "group_number", "pcp_name", "pcp_phone", "copay_pcp", "copay_specialist", "copay_er", "copay_rx_generic", "effective_date", "network_name"],
+      "template_text": "╔══════════════════════════════════════════╗\n║         HEALTH PLAN ID CARD              ║\n╠══════════════════════════════════════════╣\n║ Member: {{member_name}}                  ║\n║ Member ID: {{member_id}}                 ║\n║ Subscriber ID: {{subscriber_id}}         ║\n║ Group: {{group_number}}                  ║\n║ Plan: {{plan_name}}                      ║\n║ Network: {{network_name}}                ║\n║ Effective: {{effective_date}}             ║\n╠══════════════════════════════════════════╣\n║ PCP: {{pcp_name}}                        ║\n║ PCP Phone: {{pcp_phone}}                 ║\n╠══════════════════════════════════════════╣\n║ COPAYS                                   ║\n║ PCP Visit: ${{copay_pcp}}                ║\n║ Specialist: ${{copay_specialist}}        ║\n║ Emergency: ${{copay_er}}                 ║\n║ Rx Generic: ${{copay_rx_generic}}        ║\n╠══════════════════════════════════════════╣\n║ Member Services: 1-800-555-PLAN          ║\n║ Pharmacy: 1-800-555-RXRX                 ║\n║ Mental Health: 1-800-555-MIND            ║\n║ www.healthplan.example.com               ║\n╚══════════════════════════════════════════╝"
+    },
+    {
+      "template_id": "TPL-WELCOME",
+      "name": "Welcome Letter",
+      "type": "welcome_letter",
+      "description": "Welcome letter sent to new members upon enrollment.",
+      "variables": ["member_name", "member_address", "member_id", "plan_name", "plan_type", "effective_date", "pcp_name", "deductible_individual", "oop_max_individual", "current_date"],
+      "template_text": "{{current_date}}\n\n{{member_name}}\n{{member_address}}\n\nWelcome to Your Health Plan!\n\nDear {{member_name}},\n\nCongratulations on your enrollment in {{plan_name}}! Your coverage is effective {{effective_date}}.\n\nYOUR PLAN AT A GLANCE\nPlan Type: {{plan_type}}\nMember ID: {{member_id}}\nPrimary Care Provider: {{pcp_name}}\nAnnual Deductible: ${{deductible_individual}}\nOut-of-Pocket Maximum: ${{oop_max_individual}}\n\nGETTING STARTED\n1. Your ID cards will arrive within 7-10 business days. In the meantime, you can access a digital ID card at www.healthplan.example.com\n2. Schedule a wellness visit with your PCP — preventive care is covered at 100%\n3. Download our mobile app to manage your benefits, find providers, and view claims\n4. Register for the member portal at www.healthplan.example.com/register\n\nNEED HELP?\nMember Services: 1-800-555-PLAN (7526)\nAvailable Monday-Friday, 8am-8pm ET\n24/7 Nurse Line: 1-800-555-NURS\n\nWe're here to help you get the most from your benefits.\n\nSincerely,\nMember Services Team"
+    },
+    {
+      "template_id": "TPL-APPEAL-ACK",
+      "name": "Appeal Acknowledgment Letter",
+      "type": "appeal_acknowledgment",
+      "description": "Acknowledgment letter sent when an appeal is received.",
+      "variables": ["member_name", "member_address", "member_id", "appeal_id", "claim_id", "auth_id", "received_date", "expected_decision_date", "current_date"],
+      "template_text": "{{current_date}}\n\n{{member_name}}\n{{member_address}}\n\nRe: Appeal Received\nAppeal Number: {{appeal_id}}\nMember ID: {{member_id}}\nRelated Claim/Auth: {{claim_id}}{{auth_id}}\n\nDear {{member_name}},\n\nWe have received your appeal submitted on {{received_date}}.\n\nNEXT STEPS\n- Your appeal is under review by our clinical team\n- You will receive a written decision by {{expected_decision_date}}\n- If we need additional information, we will contact you\n- You may submit additional supporting documentation at any time during the review\n\nSUBMIT ADDITIONAL DOCUMENTS\nMail: Appeals Department, PO Box 12345, Processing Center, ST 00000\nFax: 1-800-555-FAX1\nSecure Message: www.healthplan.example.com/messages\n\nIMPORTANT\nYour benefits continue during the appeal process. If this appeal involves an ongoing course of treatment, services will continue to be covered pending the appeal decision.\n\nQuestions? Call 1-800-555-PLAN and reference appeal number {{appeal_id}}.\n\nSincerely,\nAppeals Department"
+    }
+  ]
+}

@@ -1,0 +1,809 @@
+{
+  "plan_policies": [
+    {
+      "policy_id": "POL_001_DEDUCTIBLE",
+      "title": "Annual Deductible and Deductible Application Rules",
+      "category": "Cost Sharing",
+      "effective_date": "2024-01-01",
+      "content": "The annual deductible is the amount of eligible medical expenses that a member must pay out-of-pocket before the plan begins to share in the cost of covered services. Deductibles apply separately to in-network and out-of-network services, with out-of-network deductibles typically higher. Once the deductible is met for in-network services, coinsurance and copayments apply. Preventive care services, as defined by the Affordable Care Act, do not count toward the deductible and are covered at 100% with no cost-sharing. The family deductible is two times the individual deductible; once met, the plan covers for all family members. Deductibles reset annually on the plan year effective date.",
+      "applicable_plan_types": ["HMO", "PPO", "EPO", "POS", "HDHP"],
+      "keywords": ["deductible", "out-of-pocket", "annual deductible", "in-network", "out-of-network"]
+    },
+    {
+      "policy_id": "POL_002_OOP_MAXIMUM",
+      "title": "Out-of-Pocket Maximum and Plan Protection",
+      "category": "Cost Sharing",
+      "effective_date": "2024-01-01",
+      "content": "The out-of-pocket (OOP) maximum is the highest amount a member will pay in a plan year for covered services, including deductibles, copayments, and coinsurance. Premiums, balance billing from out-of-network providers, and non-covered services do not count toward the OOP maximum. Once the OOP maximum is reached, the plan covers 100% of eligible services for the remainder of the plan year. The family OOP maximum applies when any family member reaches the individual OOP maximum, or when family members combined reach the family threshold. Separate OOP maximums apply to medical and pharmacy benefits. Out-of-network OOP maximums are higher than in-network and may be combined or separate depending on plan design.",
+      "applicable_plan_types": ["HMO", "PPO", "EPO", "POS", "HDHP"],
+      "keywords": ["out-of-pocket maximum", "OOP", "cost limit", "plan year"]
+    },
+    {
+      "policy_id": "POL_003_COPAY_COINSURANCE",
+      "title": "Copayment vs Coinsurance: When Each Applies",
+      "category": "Cost Sharing",
+      "effective_date": "2024-01-01",
+      "content": "Copayments are fixed dollar amounts paid by members at the time of service for specific covered services, such as office visits ($30), specialist visits ($50), and emergency room visits ($250). Copayments are required regardless of whether the deductible has been met. Coinsurance is the percentage of the cost that members pay after the deductible is met; for example, a plan may require 20% coinsurance for hospital services, meaning the member pays 20% and the plan pays 80%. Copayments typically apply to office visits, urgent care, and pharmacy; coinsurance applies to hospital stays, imaging, and procedures. Some plans use copayments for certain services and coinsurance for others, and both count toward the annual out-of-pocket maximum.",
+      "applicable_plan_types": ["HMO", "PPO", "EPO", "POS"],
+      "keywords": ["copay", "coinsurance", "cost sharing", "percentage", "fixed amount"]
+    },
+    {
+      "policy_id": "POL_004_EMERGENCY_ROOM",
+      "title": "Emergency Room Coverage and Out-of-Network Protection",
+      "category": "Benefits",
+      "effective_date": "2024-01-01",
+      "content": "Emergency room services are covered at the in-network benefit level regardless of whether the facility is in-network, as required by federal law. Members must pay the emergency room copayment (typically $250-$500) at the time of service, which counts toward the deductible and OOP maximum. True emergency services are those seeking diagnosis and treatment of a condition manifesting acute symptoms serious enough that a prudent person would seek immediate care. Balance billing protections apply to emergency room visits; members cannot be charged more than applicable copayments, coinsurance, and deductible amounts. Emergency room coverage includes physician services, facility fees, diagnostic tests, and treatment rendered in the emergency department. Stabilization and necessary treatment cannot be denied due to lack of prior authorization.",
+      "applicable_plan_types": ["HMO", "PPO", "EPO", "HDHP", "POS"],
+      "keywords": ["emergency room", "ER", "emergency services", "out-of-network", "balance billing"]
+    },
+    {
+      "policy_id": "POL_005_PREVENTIVE_CARE",
+      "title": "Preventive Care Coverage at No Cost-Sharing",
+      "category": "Benefits",
+      "effective_date": "2024-01-01",
+      "content": "All plans cover evidence-based preventive services as recommended by the U.S. Preventive Services Task Force (USPSTF) at 100% with no cost-sharing (zero copayment, coinsurance, or deductible). Covered preventive services include annual wellness visits, age-appropriate cancer screenings (mammograms, colonoscopies, cervical cytology), cardiovascular screenings, immunizations per CDC schedules, and behavioral health screenings. Preventive services do not count toward the annual deductible. When a preventive visit identifies a condition requiring diagnostic testing or treatment beyond prevention, those additional services may be subject to normal cost-sharing. Preventive drug prescriptions, such as statins for primary prevention in eligible patients, are covered at 100%. Preventive care benefits apply to both in-network and out-of-network providers when in an emergency setting.",
+      "applicable_plan_types": ["HMO", "PPO", "EPO", "HDHP", "POS"],
+      "keywords": ["preventive care", "screening", "no cost-sharing", "wellness", "immunizations"]
+    },
+    {
+      "policy_id": "POL_006_MENTAL_HEALTH_PARITY",
+      "title": "Mental Health and Substance Use Disorder Parity",
+      "category": "Benefits",
+      "effective_date": "2024-01-01",
+      "content": "Mental health and substance use disorder (SUD) services are covered with the same cost-sharing, visit limits, and authorization requirements as medical/surgical benefits under the Mental Health Parity and Addiction Equity Act (MHPAEA). This means copayments for mental health office visits match medical office visit copayments, and inpatient mental health treatment follows the same deductible and coinsurance as other inpatient services. Coverage includes inpatient psychiatric hospitalization, outpatient individual and group psychotherapy, psychiatric consultations, medication management, and residential SUD treatment. Telehealth mental health services are covered at the same rate as in-person visits. Parity applies to all plan types and all ages. Insurers cannot impose separate, more restrictive limits on mental health services compared to medical services.",
+      "applicable_plan_types": ["HMO", "PPO", "EPO", "HDHP", "POS"],
+      "keywords": ["mental health", "parity", "substance use", "behavioral health", "psychiatric"]
+    },
+    {
+      "policy_id": "POL_007_TELEHEALTH_BENEFITS",
+      "title": "Telehealth and Virtual Care Coverage",
+      "category": "Benefits",
+      "effective_date": "2024-01-01",
+      "content": "Virtual care visits with licensed providers are covered at the same cost-sharing as in-person office visits; typically a $30-$50 copayment or plan coinsurance. Telehealth services include synchronous video consultations for primary care, specialty care, behavioral health, and nutritional counseling. Asynchronous messaging and store-and-forward services (e.g., sending photos for dermatology review) may be covered at a lower copayment ($10-$20). Telehealth is available 24/7 through the plan's designated vendors and participating providers' own platforms. Coverage applies to both in-network and out-of-network providers when delivered via telehealth, though in-network rates apply. Telehealth services do not require prior authorization for most routine visits. Mental health telehealth is covered at parity with in-person mental health visits, with no separate copayments or visit limits.",
+      "applicable_plan_types": ["HMO", "PPO", "EPO", "HDHP", "POS"],
+      "keywords": ["telehealth", "virtual visit", "telemedicine", "video visit", "remote care"]
+    },
+    {
+      "policy_id": "POL_008_PEDIATRIC_DENTAL_VISION",
+      "title": "Pediatric Dental and Vision Coverage",
+      "category": "Benefits",
+      "effective_date": "2024-01-01",
+      "content": "Pediatric dental services for dependents under age 19 are covered at 100% with no cost-sharing, including preventive visits (cleanings, exams, fluoride treatments), basic restorative (fillings), orthodontia (braces and related treatment), and major (endodontics, extractions, crowns). Pediatric vision care includes annual comprehensive eye exams and a set allowance for eyeglasses or contact lenses every 24 months. Both services are covered under the medical plan, not separately, and use medical deductibles and coinsurance where applicable. Adult dental and vision coverage is not included in the standard medical plan; these services require separate voluntary dental and vision plans. Pediatric dental orthodontia typically has a $2,000 lifetime maximum benefit. Vision benefits reset annually and allow one pair of eyeglasses per 24-month period.",
+      "applicable_plan_types": ["HMO", "PPO", "EPO", "POS"],
+      "keywords": ["pediatric dental", "pediatric vision", "child dependent", "braces", "eyeglasses"]
+    },
+    {
+      "policy_id": "POL_009_COBRA_CONTINUATION",
+      "title": "COBRA Continuation Coverage and Eligibility",
+      "category": "Eligibility",
+      "effective_date": "2024-01-01",
+      "content": "Consolidated Omnibus Budget Reconciliation Act (COBRA) continuation coverage allows members and dependents to temporarily extend health insurance coverage after a qualifying event, such as job loss, reduction in hours, divorce, or dependent loss of status. Eligible individuals can continue the same coverage for up to 18 months from the date of the qualifying event (up to 36 months for qualifying dependents of deceased employees). COBRA continuation requires the member to pay 102% of the full premium (the employer and employee share plus 2% administrative fee). Notification of COBRA eligibility must be provided within 60 days of the qualifying event, and members have up to 60 days to elect coverage. COBRA coverage continues under the same plan terms, deductibles, and benefits as the active employee plan. Some members may be eligible for subsidies through the American Rescue Plan, reducing the premium to 0%.",
+      "applicable_plan_types": ["HMO", "PPO", "EPO", "HDHP", "POS"],
+      "keywords": ["COBRA", "continuation coverage", "job loss", "qualifying event", "premium"]
+    },
+    {
+      "policy_id": "POL_010_QUALIFYING_LIFE_EVENTS",
+      "title": "Qualifying Life Events and Special Enrollment Periods",
+      "category": "Eligibility",
+      "effective_date": "2024-01-01",
+      "content": "Members can change plans outside the annual open enrollment period if they experience a qualifying life event, such as marriage, divorce, birth or adoption of a child, loss of other health coverage, change in employment status, or moving to a new service area. The member must enroll in a new plan or make changes within 60 days of the qualifying event. Valid documentation of the qualifying event (marriage certificate, birth certificate, termination letter) must be provided to substantiate the request. Qualifying life events also trigger a special enrollment period (SEP) that allows members to add or remove dependents or change plan types. Loss of minimum essential coverage from another source also qualifies as a life event. Members should contact the plan or broker immediately upon a qualifying event to ensure timely enrollment and avoid coverage gaps.",
+      "applicable_plan_types": ["HMO", "PPO", "EPO", "HDHP", "POS"],
+      "keywords": ["qualifying event", "life event", "special enrollment", "marriage", "birth", "enrollment"]
+    },
+    {
+      "policy_id": "POL_011_COB_MEDICARE",
+      "title": "Coordination of Benefits with Medicare",
+      "category": "Coordination of Benefits",
+      "effective_date": "2024-01-01",
+      "content": "When a member is enrolled in both group health plan coverage and Medicare, coordination of benefits (COB) rules determine which plan pays first. If the member is age 65 or older and has group plan coverage through current employment, the group plan is primary and Medicare is secondary; this allows the group plan to pay the claim first, then Medicare pays any remaining balance. The member must be enrolled in both Medicare Part A and Part B. If the member is under 65 and disabled or has end-stage renal disease, group coverage is primary for 30 months, then Medicare becomes primary. COB prevents duplicate payments and ensures no payment exceeds 100% of the actual medical expense. Retiree coverage coordination with Medicare differs; members must enroll in Medicare Part A and B, and the retiree plan coordinates as secondary.",
+      "applicable_plan_types": ["HMO", "PPO", "EPO", "HDHP", "POS"],
+      "keywords": ["coordination of benefits", "COB", "Medicare", "primary", "secondary", "age 65"]
+    },
+    {
+      "policy_id": "POL_012_BALANCE_BILLING_PROTECTION",
+      "title": "Out-of-Network Balance Billing Protections",
+      "category": "Network",
+      "effective_date": "2024-01-01",
+      "content": "Balance billing protections prevent out-of-network providers from billing members for amounts above the allowed amount, except for copayments, coinsurance, and deductibles that are the member's responsibility. Providers cannot collect payment beyond the member's applicable cost-sharing. Balance billing protections apply to non-emergency out-of-network services only if the member did not knowingly seek care from an out-of-network provider or if the facility was out-of-network but the physician was in-network (inadvertent out-of-network care). In emergency situations, all balance billing protections apply regardless of provider network status. Members should verify provider network status before scheduling non-emergency services to avoid unexpected out-of-pocket costs. If a member receives a balance billing statement, they should contact the plan within 30 days to dispute and request the plan pay the balance on the member's behalf.",
+      "applicable_plan_types": ["HMO", "PPO", "EPO", "HDHP", "POS"],
+      "keywords": ["balance billing", "surprise bill", "out-of-network", "provider billing", "cost sharing"]
+    },
+    {
+      "policy_id": "POL_013_PRESCRIPTION_TIER_STRUCTURE",
+      "title": "Pharmacy Benefit Tier Structure and Cost-Sharing",
+      "category": "Benefits",
+      "effective_date": "2024-01-01",
+      "content": "The pharmacy benefit uses a four-tier structure: Tier 1 (generic) drugs have the lowest copayment ($15 for retail, $35 for mail order); Tier 2 (preferred brand-name) drugs have moderate copayment ($35 retail, $85 mail order); Tier 3 (non-preferred brand-name) drugs have higher copayment ($60 retail, $150 mail order); and Tier 4 (specialty) drugs are subject to coinsurance (typically 25% of the cost) with potentially high out-of-pocket amounts. Coverage is subject to the pharmacy deductible (often $250) and applies toward the medical out-of-pocket maximum. Generic substitution is required; brand-name drugs are covered at the brand-tier copayment only with generic equivalent not available or through prior authorization for medical necessity. Mail order pharmacy discounts apply to maintenance medications (30-day supplies), typically covering a 90-day supply for two copayments. Brand-name drugs require generic step-therapy completion before plan covers at the brand-name tier.",
+      "applicable_plan_types": ["HMO", "PPO", "EPO", "HDHP", "POS"],
+      "keywords": ["pharmacy", "formulary", "tier", "copayment", "generic", "specialty drug"]
+    },
+    {
+      "policy_id": "POL_014_SPECIALTY_DRUG_PROGRAM",
+      "title": "Specialty Pharmacy and High-Cost Drug Management",
+      "category": "Benefits",
+      "effective_date": "2024-01-01",
+      "content": "Specialty drugs are high-cost, complex medications requiring special handling, patient monitoring, or administration support, such as biologics, injectables, infusions, and oral chemotherapy. These medications are typically managed through the plan's designated specialty pharmacy network and require prior authorization before dispensing. Specialty drugs are subject to Tier 4 coinsurance (25% of the cost) and may have annual or lifetime maximums. Patients must be enrolled in required patient assistance programs or manufacturer support programs as a condition of coverage. Specialty pharmacy services include coordination of care, clinical support, drug interaction screening, adherence monitoring, and injection training. Some specialty drugs require step-therapy verification that less expensive alternatives have been tried and failed. Home delivery of injectables and infusion supplies is available through the specialty pharmacy. Copayment accumulation applies to specialty drug coinsurance counts toward both pharmacy and medical out-of-pocket maximums.",
+      "applicable_plan_types": ["HMO", "PPO", "EPO", "HDHP", "POS"],
+      "keywords": ["specialty pharmacy", "high-cost drug", "biologic", "injection", "prior authorization", "coinsurance"]
+    },
+    {
+      "policy_id": "POL_015_MAIL_ORDER_PHARMACY",
+      "title": "Mail Order Pharmacy and Home Delivery Rules",
+      "category": "Benefits",
+      "effective_date": "2024-01-01",
+      "content": "Mail order pharmacy provides 90-day supplies of maintenance medications at a two-copayment cost (equivalent to two 30-day retail copayments), offering savings of 20-40% per dose compared to retail. Mail order is required or incentivized for chronic maintenance medications; members filling these medications at retail after a mail order request may pay the full retail copayment without plan contribution. Delivery typically takes 7-10 business days, with expedited shipping available for an additional fee. Members can request up to a 30-day supply for new medications, three-month vacation supplies without additional cost, and early refills (up to one per year) for plan-approved reasons. Controlled substances are not available through mail order except through specialty pharmacy for legitimate medical uses. Mail order requires authorization for refill dates and will not dispense early except under the vacation rule or medical necessity. Patients can opt out of mail order and use retail pharmacies with standard Tier 1-4 copayments.",
+      "applicable_plan_types": ["HMO", "PPO", "EPO", "HDHP", "POS"],
+      "keywords": ["mail order pharmacy", "home delivery", "90-day supply", "maintenance medication", "copayment"]
+    }
+  ],
+  "coverage_guidelines": [
+    {
+      "guideline_id": "CLIN_001_KNEE_REPLACEMENT",
+      "title": "Total Knee Replacement: Medical Necessity Criteria",
+      "category": "Surgical",
+      "content": "Total knee replacement (TKR) is covered when conservative treatment has failed and medical necessity criteria are met: diagnosis of primary knee osteoarthritis, rheumatoid arthritis, or traumatic arthritis confirmed by imaging (X-ray or MRI); failure of at least 6 months of conservative treatment including physical therapy, NSAIDs, and/or intra-articular steroid injections; persistent pain limiting activities of daily living despite treatment; and absence of active infection, uncontrolled medical conditions, or psychological disorders contraindicated for surgery. BMI is not an absolute contraindication, but patients with BMI >40 may require additional clearance. Pre-operative clearance and surgical plan must document medical necessity. The procedure includes prosthetic implant, surgical facility fees, and post-operative physical therapy (typically 6-8 weeks). Bilateral knee replacements require separate authorization; the second knee may be approved based on additional clinical documentation if deemed medically necessary within 12 months.",
+      "requires_prior_auth": true,
+      "age_criteria": "Typically age 50+, but younger patients with severe arthritis and failed conservative treatment may qualify",
+      "frequency_limits": "One per knee in lifetime; revision surgery covered after 10+ years or if implant failure documented",
+      "applicable_diagnosis_codes": ["M17.11", "M17.12", "M16.11", "M16.12", "M17.0", "M16.0"],
+      "applicable_procedure_codes": ["27447", "27448", "27449"]
+    },
+    {
+      "guideline_id": "CLIN_002_MRI_AUTHORIZATION",
+      "title": "MRI Authorization and Medical Necessity Guidelines",
+      "category": "Imaging",
+      "content": "MRI is a covered imaging modality when medically necessary, defined as clinical findings suggestive of pathology requiring diagnostic confirmation or treatment planning. MRI of the brain requires prior authorization for first incident imaging; indications include suspected stroke, TIA, dementia, multiple sclerosis, tumor, or chronic headache unresponsive to standard therapy. Spine MRI is covered for persistent radicular pain with neurological findings, myelopathy, or suspected stenosis; imaging within 6 weeks of pain onset or for recurrent episodes in the same location requires authorization. MRI of joints (knee, shoulder, hip) requires prior imaging (X-ray) or failure of 4-6 weeks conservative therapy to be present. Contrast MRI requires authorization and documentation of clinical need. MRI is non-covered for screening purposes (asymptomatic patients), chronic stable conditions without acute change, or as routine follow-up imaging. Prior authorization typically takes 24-48 hours; expedited review available for acute presentations. Repeat MRI of the same anatomic region requires 12 months between studies unless acute change documented.",
+      "requires_prior_auth": true,
+      "age_criteria": "All ages, pediatric MRI may require sedation authorization",
+      "frequency_limits": "One per anatomic region per 12 months unless acute change or interval progression documented",
+      "applicable_diagnosis_codes": ["G89.29", "M51.26", "M51.27", "R51.9", "I63.9", "G35"],
+      "applicable_procedure_codes": ["70553", "70554", "72147", "72148", "73721", "73722"]
+    },
+    {
+      "guideline_id": "CLIN_003_COLONOSCOPY_SCREENING",
+      "title": "Colonoscopy Screening Schedule and Coverage",
+      "category": "Preventive",
+      "content": "Screening colonoscopy is a preventive service covered at 100% with no cost-sharing when performed by an in-network gastroenterologist or qualified primary care physician. Standard-risk average-age members (age 45-50+) are eligible for initial colonoscopy, then repeat screening every 10 years if normal findings. Patients with prior adenomatous polyps are screened at 3-5 year intervals based on polyp number, size, and histology (per USPSTF and ASGE guidelines). Patients with inflammatory bowel disease, personal or family history of colorectal cancer, or hereditary polyposis syndromes require more frequent surveillance and specialized protocols. Members at higher risk (age 75+, significant comorbidities, life expectancy <7 years) may have reduced screening recommendations. Therapeutic colonoscopy (with polyp removal) transitions from preventive to diagnostic billing with standard copayments and deductibles. If pathology (polyps, cancer, other disease) is found and removed, the procedure is subject to standard cost-sharing for the therapeutic component. Screening colonoscopy includes anesthesia administration without additional copayment.",
+      "requires_prior_auth": false,
+      "age_criteria": "Age 45-50 for initial screening; no upper age limit but individualized assessment >75 years",
+      "frequency_limits": "Every 10 years for normal findings; 3-5 years for adenomatous polyps; annually for high-risk conditions",
+      "applicable_diagnosis_codes": ["Z12.11", "Z12.12", "Z87.430", "Z87.440"],
+      "applicable_procedure_codes": ["45398", "45399", "45378", "45379", "45398"]
+    },
+    {
+      "guideline_id": "CLIN_004_MAMMOGRAM_SCREENING",
+      "title": "Mammography Screening Frequency and Coverage",
+      "category": "Preventive",
+      "content": "Screening mammography is covered at 100% with no cost-sharing for women age 40-49 (annual or biennial per member choice after shared decision-making), age 50-74 (every 1-2 years), and women age 75+ (individualized based on life expectancy and risk factors). Digital mammography and 3D tomosynthesis (breast tomosynthesis) are covered at the same preventive benefit level as 2D mammography. High-risk women (prior breast cancer, BRCA mutation, dense breast tissue, strong family history) may qualify for supplemental imaging (ultrasound, MRI) with prior authorization. Diagnostic mammography (for symptoms or abnormal findings) is subject to standard cost-sharing and requires appropriate diagnosis coding. Breast MRI is covered for high-risk screening (BRCA+, >20% lifetime risk) after prior authorization; annual MRI is covered for at-risk populations. Supplemental screening ultrasound is covered when authorized for women with dense breasts and additional risk factors. Results must be provided in writing within specific timeframes per state law. Digital breast tomosynthesis may be billed separately; coverage aligns with standard mammography benefits.",
+      "requires_prior_auth": false,
+      "age_criteria": "Age 40+ for average-risk women; younger women with high-risk factors may qualify with prior authorization",
+      "frequency_limits": "Annual or biennial for age 40-49; annual for age 50+; more frequent for high-risk including supplemental imaging",
+      "applicable_diagnosis_codes": ["Z12.31", "Z12.39", "Z15.01", "Z87.2"],
+      "applicable_procedure_codes": ["77065", "77066", "77067", "77068"]
+    },
+    {
+      "guideline_id": "CLIN_005_PHYSICAL_THERAPY_LIMITS",
+      "title": "Physical Therapy Visit Limits and Medical Necessity",
+      "category": "Therapy",
+      "content": "Outpatient physical therapy (PT) is covered at 20% coinsurance (after deductible) for orthopedic conditions, post-surgical rehabilitation, neurological disorders, and cardiopulmonary conditions. Members typically receive 20 visits per benefit period with prior authorization; additional visits require clinical justification documenting functional improvement and continued medical necessity. Acute conditions (post-surgery, acute injury) are more readily approved for extended sessions; chronic conditions (arthritis, COPD) require documentation of measurable functional gains. PT evaluation and re-evaluation visits count toward the visit limit. Home health PT may be covered for homebound patients or post-discharge from hospital/skilled nursing facility. Evaluation must establish baseline functional status and specific, measurable rehabilitation goals. Progress notes must demonstrate objective improvement (increased range of motion, strength, ambulation distance) at re-evaluation intervals (typically every 4 weeks). Modalities without active exercise (ultrasound alone, passive heat) are covered but not favored and may require authorization.",
+      "requires_prior_auth": true,
+      "age_criteria": "All ages; pediatric PT for developmental delay or congenital conditions follows different criteria",
+      "frequency_limits": "20 visits per benefit period; additional visits to 40 may be authorized with clinical justification",
+      "applicable_diagnosis_codes": ["M79.3", "M17.11", "M16.11", "Z54.89", "I63.9", "G20"],
+      "applicable_procedure_codes": ["97161", "97162", "97163", "97164"]
+    },
+    {
+      "guideline_id": "CLIN_006_CPAP_CRITERIA",
+      "title": "CPAP Machine and Sleep Apnea Treatment Coverage",
+      "category": "DME",
+      "content": "Continuous positive airway pressure (CPAP) therapy is covered for diagnosis of obstructive sleep apnea (OSA) documented by overnight polysomnography or home sleep test showing Apnea-Hypopnea Index (AHI) ≥5 events per hour with either sleep-related symptoms or daytime sleepiness, or AHI ≥15 regardless of symptoms. Initial 30-day trial rental is required before purchase; if patient tolerates therapy and shows compliance (>4 hours use on ≥70% of nights), purchase of CPAP device is approved. Supplies include CPAP machine, mask (oronasal, nasal, or nasal pillow), tubing, humidifier, and filters, all covered at 80% coinsurance after deductible. Replacement equipment is covered every 5 years or per FDA guidelines after functional failure. Bilevel (BiPAP), autotitrating (APAP), and specialized masks (for beard wear, side-sleepers) require prior authorization and clinical justification. Sleep study interpretation and physician supervision are covered separately. Portable sleep apnea devices and home sleep tests used for screening are covered for symptomatic patients or those with contraindications to lab sleep study.",
+      "requires_prior_auth": true,
+      "age_criteria": "All ages; OSA common in adults 40+ and in obese children",
+      "frequency_limits": "Initial 30-day rental; if purchased, replacement every 5 years; mask replacement every 12 months",
+      "applicable_diagnosis_codes": ["G47.30", "G47.31", "G47.33", "G47.35"],
+      "applicable_procedure_codes": ["95807", "95808", "95800", "95801", "E0601"]
+    },
+    {
+      "guideline_id": "CLIN_007_BARIATRIC_SURGERY",
+      "title": "Bariatric Surgery: Medical Necessity and Approval Criteria",
+      "category": "Surgical",
+      "content": "Bariatric surgery (gastric bypass, gastric sleeve, lap-band) is covered when medical necessity criteria are met: BMI ≥40 (or ≥35 with weight-related comorbidities such as type 2 diabetes, hypertension, sleep apnea, or osteoarthritis) documented by two measurements taken 6 months apart; documented history of failed medically-supervised weight loss program lasting ≥6 months; psychiatric clearance confirming understanding of procedure and absence of contraindicated conditions; gastroenterology or general surgery clearance; and commitment to lifelong dietary modification and supplementation. Pre-operative testing includes upper endoscopy (EGD) to exclude gastric ulcers or malignancy. Post-operative care includes surgeon follow-up visits, nutritional counseling, and vitamin supplementation for life. Insurance covers the surgical procedure, implantable devices (lap-band), facility costs, and medically necessary complications within 2 years of surgery. Revision bariatric surgery (conversion from one procedure to another or revision for failure) may be approved with documentation of inadequate weight loss or weight regain and persistent comorbidities.",
+      "requires_prior_auth": true,
+      "age_criteria": "Typically age 18+; adolescents age 13-17 may qualify with additional documentation of maturity and family support",
+      "frequency_limits": "One bariatric procedure per lifetime; revision surgery covered if medically indicated",
+      "applicable_diagnosis_codes": ["E66.01", "E66.09", "E11.9", "E78.5", "E78.9"],
+      "applicable_procedure_codes": ["43644", "43645", "43846", "43847", "43772"]
+    },
+    {
+      "guideline_id": "CLIN_008_SPINAL_FUSION",
+      "title": "Spinal Fusion Surgery: Indications and Prior Authorization",
+      "category": "Surgical",
+      "content": "Spinal fusion surgery is covered for degenerative disc disease (DDD), spondylolisthesis, or instability when conservative treatment has failed, imaging (MRI or CT) confirms structural pathology correlating with patient symptoms, and neurological examination documents objective findings (radiculopathy, myelopathy, or significant functional limitation). Conservative treatment must include ≥12 weeks of non-operative management (physical therapy, NSAIDs, activity modification) before fusion is approved; some cases may require trials of epidural steroid injections. Single-level fusion is more readily approved than multi-level fusion, which requires documentation of disease at multiple levels causing symptoms. Fusion for degenerative scoliosis requires >20-degree curve with neurological compromise or pain unresponsive to therapy. Instrumentation (pedicle screws, rods, cages) is included in coverage. Adjacent segment disease (ASD) in previously fused patients may warrant revision surgery if causing new neurological symptoms. Bone graft materials (autograft, allograft, bone morphogenetic protein) are covered as part of the fusion procedure.",
+      "requires_prior_auth": true,
+      "age_criteria": "Typically age 40+; younger patients with trauma or spondylolisthesis may qualify with documented instability",
+      "frequency_limits": "One fusion per spinal segment; revision or extension fusion covered if new pathology at adjacent levels",
+      "applicable_diagnosis_codes": ["M47.26", "M47.27", "M43.17", "M41.124", "M51.26"],
+      "applicable_procedure_codes": ["22612", "22614", "22624", "22630", "22632"]
+    },
+    {
+      "guideline_id": "CLIN_009_CATARACT_SURGERY",
+      "title": "Cataract Surgery: Coverage and Medical Necessity",
+      "category": "Surgical",
+      "content": "Cataract surgery is covered when a cataract causing visual impairment and functional limitation is documented by an ophthalmologist or optometrist, and conservative treatment (glasses or contact lens changes) does not adequately restore functional vision. Cataracts must be visually significant, defined as best-corrected visual acuity ≤20/40 or ≤20/60 in some cases, with no other ophthalmologic disease as the primary cause of reduced vision. Phacoemulsification (standard cataract removal) and intraocular lens (IOL) implantation are covered at the medical benefit level (typically 80% coinsurance after deductible). Premium IOLs (multifocal, toric for astigmatism, extended depth of focus) require prior authorization and documentation of need; if approved, the plan covers the basic single-vision IOL and member pays the difference for premium options. Bilateral cataract surgery is covered when both eyes meet criteria; surgery on the second eye may be deferred based on functional vision in the better-seeing eye. Pediatric cataracts are covered with expedited authorization due to risk of amblyopia. Post-operative glasses or contact lens fitting are covered as the surgical vision-corrective option.",
+      "requires_prior_auth": true,
+      "age_criteria": "Any age; age-related cataracts common after 60 years; pediatric cataracts covered when present",
+      "frequency_limits": "One cataract surgery per eye when medically necessary; IOL replacement covered only if implant failure or catastrophic injury",
+      "applicable_diagnosis_codes": ["H25.001", "H25.011", "H25.101", "H25.111", "H26.001"],
+      "applicable_procedure_codes": ["66984", "66985", "66986", "66987"]
+    },
+    {
+      "guideline_id": "CLIN_010_HEARING_AID_COVERAGE",
+      "title": "Hearing Aid Devices and Audiological Services",
+      "category": "DME",
+      "content": "Hearing aids are covered as durable medical equipment at 50-80% coinsurance after deductible for members age 18+ with documented hearing loss (bone-conduction or air-conduction thresholds ≥40 dB in speech frequencies 500-3000 Hz) verified by audiometry. Coverage includes comprehensive audiological evaluation, hearing aid fitting, programming, and adjustment visits. Hearing aid devices (behind-the-ear, in-the-ear, receiver-in-canal) are covered up to $3,000-$5,000 per ear every 3-5 years, depending on plan design. Replacement hearing aid batteries, tubing, and accessories are covered at varying percentages. Cochlear implants and bone-conduction devices (BAHAs) are covered for severe-to-profound hearing loss when conventional hearing aids are inadequate, supported by multiple audiological evaluations and specialist recommendation. Pediatric hearing aids may be covered at higher percentages (75-100%) to encourage early intervention for developmental speech and language. Telehealth audiology services and remote hearing aid programming are increasingly covered. Cerumen impaction management and temporary hearing loss conditions are covered separately and may not require hearing aid fitting.",
+      "requires_prior_auth": false,
+      "age_criteria": "Age 18+ for standard hearing aids; pediatric hearing aids covered from birth onwards with audiological documentation",
+      "frequency_limits": "Hearing aids every 3-5 years per ear; accessories/batteries as prescribed; cochlear implants typically once per ear",
+      "applicable_diagnosis_codes": ["H90.0", "H90.1", "H90.2", "H90.3", "H90.A", "H91.9"],
+      "applicable_procedure_codes": ["69530", "69714", "92590", "92591", "92604"]
+    },
+    {
+      "guideline_id": "CLIN_011_INFUSION_THERAPY",
+      "title": "Infusion Therapy Protocols and Home Infusion Coverage",
+      "category": "Therapy",
+      "content": "Intravenous (IV) infusion therapies are covered for medications requiring parenteral administration, including chemotherapy, biologics, immunoglobulins, antibiotics, and hydration therapy. Home infusion is covered when medically appropriate, allowing patients to receive therapy in the home rather than the hospital or clinic setting, improving quality of life and reducing total cost of care. Coverage includes the IV medication (subject to formulary and tier placement), infusion supplies (IV lines, pumps, bags), nursing visits for administration and monitoring, and clinical pharmacist consultation. High-dose methotrexate, rituximab, infliximab, tocilizumab, and other biologic infusions for autoimmune/malignancy conditions are Tier 4 (coinsurance-based) and require prior authorization. Infusion frequency (weekly, monthly, quarterly) is established by clinical protocol; any deviation requires physician documentation and plan approval. Patient education, home safety assessment, and emergency access numbers are included. Medication and supply waste due to extravasation or line malfunction may be covered; repeated waste suggests need for alternative access (PICC, port) or infusion site management training.",
+      "requires_prior_auth": true,
+      "age_criteria": "All ages; pediatric patients may require specialized pediatric-capable home infusion vendors",
+      "frequency_limits": "Based on medication protocol (e.g., rituximab every 6-8 months); clinical changes require documentation and re-authorization",
+      "applicable_diagnosis_codes": ["C34.90", "C91.92", "M06.9", "M05.9", "D89.2"],
+      "applicable_procedure_codes": ["96365", "96366", "96367", "96368", "51601"]
+    },
+    {
+      "guideline_id": "CLIN_012_HOME_HEALTH_ELIGIBILITY",
+      "title": "Home Health Care Services and Eligibility Criteria",
+      "category": "Therapy",
+      "content": "Home health services are covered for homebound patients (unable to leave home without considerable difficulty or medical contraindication) who have a medical need for skilled nursing, physical therapy, occupational therapy, speech therapy, or medical social services. Medical homebound status may be due to post-hospitalization recovery, terminal illness, severe mobility limitation, cognitive impairment, psychiatric condition, or chronic illness. Physician must order home health services and certify homebound status and the medical necessity; plan coverage requires prior authorization and continued certification every 60 days. Covered services include nursing assessment and monitoring, medication management, catheter/wound care, physical therapy for post-operative or mobility restoration, and occupational therapy for activities of daily living. Home health aide services (non-skilled personal care) are covered when ordered by the nurse or therapist to support skilled services. Duration is determined by clinical need; acute post-operative patients may receive 2-3 weeks of intensive services, while chronic disease management may continue longer. Custodial care (assistance with bathing, dressing unrelated to skilled need) is not covered.",
+      "requires_prior_auth": true,
+      "age_criteria": "All ages; commonly used for elderly post-hospital patients and homebound chronically ill",
+      "frequency_limits": "Frequency determined by clinical protocol; typically 2-3 visits per week post-acute, 1-2 per week for chronic management",
+      "applicable_diagnosis_codes": ["Z51.89", "Z74.1", "I63.9", "J44.9", "M79.3"],
+      "applicable_procedure_codes": ["99339", "99340", "99341", "99342", "99377"]
+    },
+    {
+      "guideline_id": "CLIN_013_SNF_CRITERIA",
+      "title": "Skilled Nursing Facility (SNF) Coverage and Certification",
+      "category": "Surgical",
+      "content": "Skilled nursing facility (SNF) care is covered following hospitalization for acute illness or injury when the patient requires skilled nursing care (wound care, IV medications, complex medication management, catheter care, tracheostomy care) or 24-hour supervision and monitoring. Medicare requires a prior 3-day hospital stay; commercial plans may cover SNF directly from home or shorter hospitalizations if clinical need is documented. Coverage includes facility charges, nursing and therapist care, meals, and basic supplies; Medicare coinsurance ($194.50 per day for days 1-20, $389 per day for days 21-100 in 2024) applies to SNF stays. Plan coverage is typically limited to 60-100 days per benefit period, with additional days requiring authorization based on ongoing clinical need and therapy progress. Therapy services (PT, OT, speech) must be medically necessary for restoration of function; maintenance therapy or custodial care is not covered. Discharge planning must begin at admission to facilitate timely discharge to home or lower-level care. Medicare and supplemental insurance coordinate benefits; SNF eligibility cannot be used for extended custodial care.",
+      "requires_prior_auth": true,
+      "age_criteria": "Typically Medicare age 65+; younger members with acute rehabilitation needs may qualify",
+      "frequency_limits": "60-100 days per benefit period; additional days if therapy progress continues and function improvement potential documented",
+      "applicable_diagnosis_codes": ["Z51.89", "Z75.1", "Z51.81", "M96.89"],
+      "applicable_procedure_codes": ["99318", "99319", "99320", "99321"]
+    },
+    {
+      "guideline_id": "CLIN_014_CARDIAC_REHAB",
+      "title": "Cardiac Rehabilitation Program Coverage",
+      "category": "Therapy",
+      "content": "Cardiac rehabilitation is covered following acute myocardial infarction (MI), acute coronary syndrome (ACS), coronary artery bypass surgery (CABG), percutaneous coronary intervention (PCI), heart transplantation, heart valve surgery, or other acute cardiac events. Cardiopulmonary rehabilitation is also covered for systolic heart failure (EF ≤35%) with symptoms, or for pulmonary hypertension. Programs typically include 12-36 supervised sessions over 6-12 weeks with exercise training, education on cardiac risk factors and medications, nutritional counseling, and psychosocial support. Exercise sessions are monitored with electrocardiography (ECG) to ensure safety during activity progression. Phases include inpatient cardiac rehab (during hospital stay), outpatient rehabilitation (post-discharge), and maintenance phase. Coverage includes program fees, ECG monitoring, and clinical assessment by interdisciplinary team (cardiologist, physical therapist, nurse, nutritionist). Outpatient cardiac rehab is covered at 80% coinsurance after deductible (or at preventive level on some plans). The program must be offered by a plan-approved facility; programs can be center-based or, increasingly, home-based hybrid models with telehealth education and remote monitoring.",
+      "requires_prior_auth": false,
+      "age_criteria": "Typically ages 40-75; younger patients with acute cardiac events eligible; older patients individualized",
+      "frequency_limits": "12-36 visits over 6-12 weeks; maintenance phase may be longer term with physician recommendation",
+      "applicable_diagnosis_codes": ["I21.9", "I24.9", "I25.10", "I50.9", "I27.9"],
+      "applicable_procedure_codes": ["93797", "93798", "93668"]
+    },
+    {
+      "guideline_id": "CLIN_015_GENETIC_TESTING",
+      "title": "Genetic Testing: Coverage and Medical Necessity",
+      "category": "Medical Necessity",
+      "content": "Genetic testing is covered for individuals meeting clinical criteria suggesting hereditary conditions, including BRCA1/2 testing for breast/ovarian cancer risk (strong family history, early-onset cancer, male breast cancer), Lynch syndrome testing for colorectal cancer risk, hereditary thrombophilia testing, familial hypercholesterolemia (FH) testing, and hereditary arrhythmia syndrome testing. Preconception carrier screening for cystic fibrosis, sickle cell disease, and other autosomal recessive conditions is covered for all pregnancies or those with family history. Non-invasive prenatal testing (NIPT) is covered for pregnant patients age 35+ or those with risk factors for aneuploidy. Pharmacogenomics testing (e.g., CYP450 for medication metabolism) is covered when medically indicated to guide treatment selection. Whole exome or whole genome sequencing is covered for undiagnosed genetic conditions in pediatric patients or those with multiple affected family members, when prior targeted testing is inconclusive. Genetic counseling is covered before and after testing. Direct-to-consumer genetic testing (ancestry, wellness testing unrelated to diagnosed medical conditions) is not covered. Testing must be ordered by a licensed provider and performed by a CLIA-certified laboratory.",
+      "requires_prior_auth": true,
+      "age_criteria": "All ages; prenatal testing for pregnant members; cancer risk assessment for adults with family history",
+      "frequency_limits": "Single testing per gene/condition per lifetime unless clinical course change requires re-evaluation",
+      "applicable_diagnosis_codes": ["Z12.31", "Z15.01", "Z15.02", "Z31.43", "R99"],
+      "applicable_procedure_codes": ["81162", "81165", "81211", "81212", "81479"]
+    },
+    {
+      "guideline_id": "CLIN_016_SLEEP_STUDY",
+      "title": "Sleep Study and Polysomnography Authorization Criteria",
+      "category": "Diagnostic",
+      "content": "Polysomnography (PSG) is covered for suspected obstructive sleep apnea (OSA), central sleep apnea (CSA), periodic breathing, narcolepsy, or restless leg syndrome when clinical symptoms (excessive daytime sleepiness, witnessed apneas, unrefreshed sleep, fatigue) are present. Home sleep apnea testing (HSAT) is covered as an alternative to lab PSG for patients with suspected OSA and no significant comorbidities (chronic hypoventilation, neuromuscular disease, central sleep apnea concerns). Lab sleep studies are required for CSA diagnosis or when HSAT is inconclusive. Sleep studies include baseline PSG (in-lab overnight study with EEG, EOG, chin EMG, airflow, effort, oxygen saturation, heart rate monitoring) and titration studies if sleep apnea is diagnosed to determine optimal CPAP pressure. Full overnight (7+ hours sleep) testing is preferred; split-night studies (diagnosis first half, titration second half) may be approved for severe sleep apnea. Interpretation and report by a sleep medicine specialist is included. Multiple sleep latency tests (MSLT) and maintenance of wakefulness tests (MWT) are covered for narcolepsy and excessive somnolence evaluation.",
+      "requires_prior_auth": false,
+      "age_criteria": "All ages; pediatric sleep studies for suspected OSA, narcolepsy, or restless leg syndrome",
+      "frequency_limits": "One baseline study per suspected condition; titration study if OSA diagnosed; repeat testing only if clinical change or 5+ years",
+      "applicable_diagnosis_codes": ["G47.30", "G47.32", "G47.20", "G47.9", "G25.81"],
+      "applicable_procedure_codes": ["95807", "95808", "95800", "95801", "95782"]
+    }
+  ],
+  "member_faq": [
+    {
+      "faq_id": "FAQ_001",
+      "question": "Why was my claim denied?",
+      "answer": "Claim denials occur for several reasons: the service may not be a covered benefit under your plan, your deductible may not have been met, prior authorization may have been required but not obtained, or the provider may be out-of-network. Check your Explanation of Benefits (EOB) for the specific denial reason. You have the right to appeal any denied claim within 180 days; contact Member Services for an appeal form.",
+      "category": "Claims",
+      "related_policy_ids": ["POL_001_DEDUCTIBLE", "POL_002_OOP_MAXIMUM"]
+    },
+    {
+      "faq_id": "FAQ_002",
+      "question": "How do I find an in-network doctor?",
+      "answer": "Use our online provider directory at www.planproviders.com or call Member Services at 1-800-XXX-XXXX to speak with a representative who can help locate specialists, primary care doctors, or facilities in your area. Our directory includes names, addresses, phone numbers, languages spoken, and acceptance status. Verify that providers are currently accepting new patients before scheduling.",
+      "category": "Providers",
+      "related_policy_ids": ["POL_012_BALANCE_BILLING_PROTECTION"]
+    },
+    {
+      "faq_id": "FAQ_003",
+      "question": "What's the difference between a copay and coinsurance?",
+      "answer": "A copayment (copay) is a fixed dollar amount you pay for a specific service, such as $30 for an office visit. Coinsurance is a percentage of the cost after your deductible is met; for example, you pay 20% and the plan pays 80%. Your plan document specifies which services use copays and which use coinsurance.",
+      "category": "Billing",
+      "related_policy_ids": ["POL_003_COPAY_COINSURANCE"]
+    },
+    {
+      "faq_id": "FAQ_004",
+      "question": "How do I appeal a denied claim?",
+      "answer": "You can appeal any claim denial by contacting Member Services within 180 days of the denial. Provide your claim number, the reason you believe the denial was incorrect, and any supporting medical records or documentation. You have the right to a review by a clinical reviewer if the denial involves medical judgment. The plan must respond within 30 days for standard appeals or 72 hours for expedited appeals.",
+      "category": "Appeals",
+      "related_policy_ids": ["POL_001_DEDUCTIBLE"]
+    },
+    {
+      "faq_id": "FAQ_005",
+      "question": "When can I change my health insurance plan?",
+      "answer": "You can change plans during the annual open enrollment period (typically November-December) without reason. You may also change plans outside of open enrollment if you experience a qualifying life event, such as marriage, birth of a child, loss of other coverage, or job change. You must enroll in a new plan within 60 days of the qualifying event.",
+      "category": "Enrollment",
+      "related_policy_ids": ["POL_010_QUALIFYING_LIFE_EVENTS"]
+    },
+    {
+      "faq_id": "FAQ_006",
+      "question": "What is my annual deductible?",
+      "answer": "Your annual deductible is the amount you must pay out-of-pocket for covered services before the plan begins to share costs. Deductible amounts vary by plan and family member status (individual vs. family). You can find your specific deductible on your plan document, insurance ID card, or by logging into your account. Preventive services do not count toward your deductible.",
+      "category": "Billing",
+      "related_policy_ids": ["POL_001_DEDUCTIBLE", "POL_005_PREVENTIVE_CARE"]
+    },
+    {
+      "faq_id": "FAQ_007",
+      "question": "How do I get a replacement ID card?",
+      "answer": "You can request a replacement ID card by logging into your account online and ordering a replacement, calling Member Services at 1-800-XXX-XXXX, or visiting a plan office in person. Replacement cards typically arrive within 5-7 business days. Digital ID cards are available immediately through the plan's mobile app.",
+      "category": "ID Cards",
+      "related_policy_ids": []
+    },
+    {
+      "faq_id": "FAQ_008",
+      "question": "Is my medication covered?",
+      "answer": "Medication coverage depends on your plan's formulary (list of covered drugs) and the drug's tier level. You can check coverage by searching the online formulary tool, calling Member Services, or asking your pharmacist. Tier 1 (generic) drugs have the lowest copay, while Tier 4 (specialty) drugs require coinsurance. Prior authorization may be required for certain medications.",
+      "category": "Pharmacy",
+      "related_policy_ids": ["POL_013_PRESCRIPTION_TIER_STRUCTURE", "POL_014_SPECIALTY_DRUG_PROGRAM"]
+    },
+    {
+      "faq_id": "FAQ_009",
+      "question": "What is a formulary?",
+      "answer": "A formulary is a list of prescription medications covered by your health plan, organized by tier levels. Tier 1 drugs (generics) have the lowest copayments, while Tier 3 and Tier 4 drugs (brand-name and specialty) have higher copayments. Your plan encourages use of Tier 1 and Tier 2 drugs; if your doctor prescribes a higher-tier drug, prior authorization may be needed.",
+      "category": "Pharmacy",
+      "related_policy_ids": ["POL_013_PRESCRIPTION_TIER_STRUCTURE"]
+    },
+    {
+      "faq_id": "FAQ_010",
+      "question": "How does coordination of benefits work?",
+      "answer": "Coordination of benefits (COB) ensures that when you have coverage from multiple plans (e.g., spouse's plan, Medicare, Medicaid), both plans work together without paying more than 100% of the bill. Your primary plan pays first based on plan rules, then the secondary plan pays any remaining eligible amount. This prevents overpayment and unnecessary out-of-pocket costs.",
+      "category": "Benefits",
+      "related_policy_ids": ["POL_011_COB_MEDICARE"]
+    },
+    {
+      "faq_id": "FAQ_011",
+      "question": "Am I covered if I travel out of state?",
+      "answer": "Yes, you are covered for emergency and urgent care services regardless of where you are in the U.S. or internationally. For routine care while traveling, use in-network providers whenever possible to maximize benefits. Check the provider directory to locate in-network providers at your destination, or call Member Services for referrals. International coverage is limited; emergency services abroad are covered at a higher coinsurance rate.",
+      "category": "Benefits",
+      "related_policy_ids": ["POL_004_EMERGENCY_ROOM"]
+    },
+    {
+      "faq_id": "FAQ_012",
+      "question": "What's the difference between HMO and PPO plans?",
+      "answer": "An HMO (Health Maintenance Organization) requires you to select a primary care physician (PCP) who coordinates your care and provides referrals to specialists. HMO plans have lower premiums but require in-network care. A PPO (Preferred Provider Organization) allows you to see any provider without a referral, in-network or out-of-network, though in-network care has lower out-of-pocket costs. PPO plans have higher premiums but more flexibility.",
+      "category": "Benefits",
+      "related_policy_ids": []
+    },
+    {
+      "faq_id": "FAQ_013",
+      "question": "How do I add a dependent to my plan?",
+      "answer": "You can add a dependent (spouse, child, domestic partner) during a qualifying life event, such as marriage, birth, adoption, or loss of other coverage. Contact Member Services or your benefits administrator with proof of the qualifying event (marriage certificate, birth certificate, adoption papers). Open enrollment periods also allow adding dependents. Processing typically takes 5-10 business days.",
+      "category": "Enrollment",
+      "related_policy_ids": ["POL_010_QUALIFYING_LIFE_EVENTS"]
+    },
+    {
+      "faq_id": "FAQ_014",
+      "question": "What are my telehealth options?",
+      "answer": "You can access 24/7 virtual care through the plan's telehealth vendor via video, phone, or secure messaging. Most visits are with board-certified physicians and cost the same as an in-person office visit copay ($30-$50). Telehealth is available for routine care, mental health, urgent care, and specialist consultation. You can download the app or use the website to schedule appointments without a referral.",
+      "category": "Benefits",
+      "related_policy_ids": ["POL_007_TELEHEALTH_BENEFITS"]
+    },
+    {
+      "faq_id": "FAQ_015",
+      "question": "What's a prior authorization?",
+      "answer": "Prior authorization (preapproval) is permission from the plan required before certain services, medications, or procedures are performed. The goal is to ensure the service is medically necessary and appropriate. Your doctor's office typically submits the authorization request on your behalf. Obtaining authorization before the service helps prevent claim denials and unexpected out-of-pocket costs.",
+      "category": "Benefits",
+      "related_policy_ids": ["POL_001_DEDUCTIBLE"]
+    },
+    {
+      "faq_id": "FAQ_016",
+      "question": "How long does a claim take to process?",
+      "answer": "Most claims are processed within 10-15 business days from receipt by the plan. Simple claims (office visits, labs) may process faster (3-5 days), while complex claims (surgery, hospital stays) may take longer. You can check claim status online, via app, or by calling Member Services. If a claim is taking longer, contact Member Services for an update.",
+      "category": "Claims",
+      "related_policy_ids": []
+    },
+    {
+      "faq_id": "FAQ_017",
+      "question": "What is my out-of-pocket maximum?",
+      "answer": "Your out-of-pocket maximum is the most you will pay for covered services in a plan year. This includes deductibles, copayments, and coinsurance. Once you reach the OOP maximum, the plan covers 100% of eligible services for the rest of the year. Premiums and out-of-network balance billing do not count toward this limit. Your specific OOP maximum is shown on your plan document.",
+      "category": "Billing",
+      "related_policy_ids": ["POL_002_OOP_MAXIMUM"]
+    },
+    {
+      "faq_id": "FAQ_018",
+      "question": "Does my plan cover mental health services?",
+      "answer": "Yes, mental health and substance use disorder services are covered with the same cost-sharing and visit limits as medical services under parity laws. Coverage includes therapy, psychiatric visits, medication management, inpatient hospitalization, and rehabilitation. Telehealth mental health is covered at the same rate as in-person visits. You do not need a referral to access mental health services in most plans.",
+      "category": "Benefits",
+      "related_policy_ids": ["POL_006_MENTAL_HEALTH_PARITY"]
+    },
+    {
+      "faq_id": "FAQ_019",
+      "question": "Are vision and dental services covered?",
+      "answer": "Pediatric dental (under age 19) and vision services are included in your medical plan at 100% preventive coverage for cleanings, exams, and screenings. Adult dental and vision are NOT included in the standard medical plan; you must enroll in separate voluntary dental and vision plans if desired. These optional plans have their own copayments, deductibles, and benefit limits.",
+      "category": "Benefits",
+      "related_policy_ids": ["POL_008_PEDIATRIC_DENTAL_VISION"]
+    },
+    {
+      "faq_id": "FAQ_020",
+      "question": "What happens if I receive a surprise bill from an out-of-network provider?",
+      "answer": "Federal law protects you from balance billing for emergency services and inadvertent out-of-network care at in-network facilities. If you receive a bill above your copayment or coinsurance, contact Member Services with the bill within 30 days, and the plan will address it on your behalf. Do not ignore surprise bills; the plan can help resolve them.",
+      "category": "Billing",
+      "related_policy_ids": ["POL_012_BALANCE_BILLING_PROTECTION"]
+    },
+    {
+      "faq_id": "FAQ_021",
+      "question": "How do I refill a prescription?",
+      "answer": "You can refill prescriptions at any participating pharmacy, through mail order for maintenance medications, or via your doctor's online portal. Most refills are ready within 24 hours at the pharmacy. Mail order refills take 5-10 days but offer better pricing (90-day supply at two copayments). Check your prescription label for the number of refills authorized; if none remain, contact your doctor.",
+      "category": "Pharmacy",
+      "related_policy_ids": ["POL_015_MAIL_ORDER_PHARMACY"]
+    },
+    {
+      "faq_id": "FAQ_022",
+      "question": "What is step therapy?",
+      "answer": "Step therapy is a medication management tool requiring you to try a first-line (typically lower-cost) medication before the plan covers a higher-tier or brand-name medication. Your doctor can often request an exception if the first-line drug is not appropriate for your condition. Step therapy aims to ensure medications are cost-effective and proven effective before advancing to more expensive options.",
+      "category": "Pharmacy",
+      "related_policy_ids": ["POL_013_PRESCRIPTION_TIER_STRUCTURE"]
+    },
+    {
+      "faq_id": "FAQ_023",
+      "question": "Do I have coverage for preventive care services?",
+      "answer": "Yes, all preventive care services recommended by the U.S. Preventive Services Task Force are covered at 100% with zero copayment or coinsurance. This includes annual wellness visits, age-appropriate cancer screenings, immunizations, blood pressure checks, cholesterol screening, and behavioral health screenings. Preventive services do not count toward your deductible.",
+      "category": "Benefits",
+      "related_policy_ids": ["POL_005_PREVENTIVE_CARE"]
+    },
+    {
+      "faq_id": "FAQ_024",
+      "question": "What does it mean if a service requires prior authorization?",
+      "answer": "Prior authorization means the plan must approve the service before it is performed to confirm medical necessity. Your doctor's office submits the request, and the plan reviews clinical information to make a determination. Obtaining authorization before the service helps prevent claim denials. Without proper authorization, the claim may be denied and you could face higher out-of-pocket costs.",
+      "category": "Benefits",
+      "related_policy_ids": []
+    },
+    {
+      "faq_id": "FAQ_025",
+      "question": "Can I see a specialist without a referral?",
+      "answer": "It depends on your plan type. HMO and POS plans typically require a referral from your primary care doctor to see a specialist. PPO and EPO plans do not require referrals; you can contact any specialist directly. Even if you do not need a referral, informing your PCP helps coordinate your care and may help avoid duplicate services.",
+      "category": "Providers",
+      "related_policy_ids": []
+    },
+    {
+      "faq_id": "FAQ_026",
+      "question": "How do I file a grievance about my care or service?",
+      "answer": "You can file a grievance (complaint) about your coverage, benefits, or service experience by contacting Member Services in writing, by phone, or online. Grievances must be filed within 180 days of the issue. The plan will respond within 30 days. If you are not satisfied with the response, you can request an external appeal through the state insurance commissioner's office.",
+      "category": "Appeals",
+      "related_policy_ids": []
+    },
+    {
+      "faq_id": "FAQ_027",
+      "question": "What should I do if I can't find an in-network provider for my needed care?",
+      "answer": "Contact Member Services to request an out-of-network exception if no in-network providers are available in your specialty or area. If approved, you may be allowed to see an out-of-network provider at in-network cost-sharing rates. Alternatively, ask your doctor for referrals to nearby in-network specialists or consider telehealth options.",
+      "category": "Providers",
+      "related_policy_ids": ["POL_012_BALANCE_BILLING_PROTECTION"]
+    },
+    {
+      "faq_id": "FAQ_028",
+      "question": "Are there limits on how many therapy visits I can receive?",
+      "answer": "Yes, most plans limit outpatient therapy (physical therapy, occupational therapy, speech therapy) to 20-30 visits per year. Additional visits may be approved if your therapist documents continued medical necessity and functional improvement. Behavioral health therapy (psychotherapy) typically does not have visit limits. Check your plan document for specific limits.",
+      "category": "Benefits",
+      "related_policy_ids": []
+    },
+    {
+      "faq_id": "FAQ_029",
+      "question": "Is CPAP or other durable medical equipment (DME) covered?",
+      "answer": "Yes, durable medical equipment (DME) such as CPAP machines, wheelchairs, diabetic supplies, and oxygen equipment are covered at 80% coinsurance after your deductible. Prior authorization is typically required. Equipment must be prescribed by a doctor and obtained from a plan-approved DME provider. Supplies (masks, tubing, lancets) are covered and may have their own copayments.",
+      "category": "Benefits",
+      "related_policy_ids": []
+    },
+    {
+      "faq_id": "FAQ_030",
+      "question": "What is COBRA and when can I use it?",
+      "answer": "COBRA continuation coverage allows you to extend health insurance for up to 18 months (or 36 months in some cases) after losing group coverage due to job loss, reduction in hours, or other qualifying events. You pay 102% of the full premium. COBRA is temporary coverage intended to bridge gaps until you obtain new insurance. You must enroll within 60 days of the qualifying event.",
+      "category": "Benefits",
+      "related_policy_ids": ["POL_009_COBRA_CONTINUATION"]
+    },
+    {
+      "faq_id": "FAQ_031",
+      "question": "Can I request a formula exception for a medication not on the formulary?",
+      "answer": "Yes, you can request a formulary exception if a non-covered medication is medically necessary for your condition. Your doctor must submit a clinical justification explaining why alternative formulary drugs are not suitable. The plan reviews the request within 3-5 days and provides a decision. If approved, you typically pay the Tier 3 or Tier 4 copayment.",
+      "category": "Pharmacy",
+      "related_policy_ids": ["POL_013_PRESCRIPTION_TIER_STRUCTURE"]
+    },
+    {
+      "faq_id": "FAQ_032",
+      "question": "What happens to my coverage if I go on leave of absence from my job?",
+      "answer": "This depends on your employer's leave policy. Some employers continue health coverage during approved leave, while others may terminate coverage. Contact your employer's benefits department to understand your coverage during the leave. If coverage terminates, you may be eligible for COBRA or a special enrollment period to obtain other coverage.",
+      "category": "Enrollment",
+      "related_policy_ids": ["POL_009_COBRA_CONTINUATION"]
+    },
+    {
+      "faq_id": "FAQ_033",
+      "question": "Are there any out-of-pocket costs for emergency room visits?",
+      "answer": "Yes, emergency room visits typically have a copayment of $250-$500, depending on your plan. This copayment applies regardless of whether the facility is in-network. However, if the emergency room visit reveals a non-emergency condition, you may be billed for any services beyond stabilization at normal cost-sharing rates. The copayment applies toward your deductible and out-of-pocket maximum.",
+      "category": "Billing",
+      "related_policy_ids": ["POL_004_EMERGENCY_ROOM"]
+    },
+    {
+      "faq_id": "FAQ_034",
+      "question": "Can I get preventive care services without any cost-sharing?",
+      "answer": "Yes, all evidence-based preventive services as recommended by the U.S. Preventive Services Task Force are covered at 100% with no copayment, coinsurance, or deductible. This includes annual wellness exams, cancer screenings, immunizations, and behavioral health screenings. However, if a preventive visit uncovers a medical condition requiring treatment, those follow-up services may be subject to cost-sharing.",
+      "category": "Benefits",
+      "related_policy_ids": ["POL_005_PREVENTIVE_CARE"]
+    },
+    {
+      "faq_id": "FAQ_035",
+      "question": "What is the difference between in-network and out-of-network providers?",
+      "answer": "In-network providers have agreed to accept the plan's payment rates and charge only applicable copayments and coinsurance as cost-sharing. Out-of-network providers have not agreed to set rates and may balance bill (charge additional amounts) beyond your cost-sharing. Using in-network providers results in lower out-of-pocket costs. Check the provider directory to confirm network status.",
+      "category": "Providers",
+      "related_policy_ids": ["POL_012_BALANCE_BILLING_PROTECTION"]
+    },
+    {
+      "faq_id": "FAQ_036",
+      "question": "How do I submit a claim that was not automatically processed?",
+      "answer": "Most claims are automatically submitted by your provider's office. If you receive a bill and the claim was not submitted, gather documentation (receipt, itemized bill, proof of payment, insurance information) and submit a claim form to the plan. Claim forms are available online or from Member Services. Include a cover letter explaining the services received. Claims must be submitted within 180 days of service.",
+      "category": "Claims",
+      "related_policy_ids": []
+    },
+    {
+      "faq_id": "FAQ_037",
+      "question": "What should I do if I receive a medical bill I do not think I owe?",
+      "answer": "Contact Member Services with details of the bill. If the provider is in-network, they should only bill your copayment or coinsurance. If you believe the bill is incorrect, the plan can investigate and request supporting documentation from the provider. Document any communications and keep copies of all bills and correspondence.",
+      "category": "Billing",
+      "related_policy_ids": []
+    },
+    {
+      "faq_id": "FAQ_038",
+      "question": "Are prescription glasses and contact lenses covered under my medical plan?",
+      "answer": "Pediatric vision care (including eyeglasses and contact lenses) for dependents under age 19 is covered with allowance for one pair per 24 months. Adult vision services require a separate voluntary vision plan. If you have a vision plan, contact the vision plan directly for coverage details, costs, and provider information.",
+      "category": "Benefits",
+      "related_policy_ids": ["POL_008_PEDIATRIC_DENTAL_VISION"]
+    },
+    {
+      "faq_id": "FAQ_039",
+      "question": "Can I choose a female or male provider for personal preference?",
+      "answer": "Yes, in most cases you can request a provider of a specific gender. Contact Member Services or use the provider directory filters to search for providers matching your preference. Availability may be limited in some areas or specialties, so plan ahead and allow time for scheduling accommodations.",
+      "category": "Providers",
+      "related_policy_ids": []
+    },
+    {
+      "faq_id": "FAQ_040",
+      "question": "What are my rights if the plan denies a claim due to lack of prior authorization?",
+      "answer": "You have the right to appeal any claim denial, including denials due to lack of authorization. If your doctor's office failed to obtain authorization despite your request, the plan may reconsider based on good faith efforts or clinical urgency. File an appeal within 180 days with supporting documentation. Expedited appeals are available for urgent situations.",
+      "category": "Appeals",
+      "related_policy_ids": ["POL_001_DEDUCTIBLE"]
+    }
+  ],
+  "provider_policies": [
+    {
+      "policy_id": "PROV_001_CREDENTIALING",
+      "title": "Provider Credentialing and Network Participation Requirements",
+      "content": "All providers must complete the credentialing process to be considered for in-network participation. Credentialing verifies provider licensure, education, malpractice history, and credentials. The plan conducts primary source verification of medical licenses through the state licensing board, checking for disciplinary actions, board restrictions, or license suspensions. Providers must have valid Drug Enforcement Administration (DEA) registration and Board Certification in their specialty or be actively pursuing board certification. Malpractice history is reviewed; providers with significant unresolved claims or board sanctions may be denied network participation. Credentialing is completed within 30-45 days; providers receive notification of approval or denial. Re-credentialing occurs every 3 years with updated license verification and attestation of no changes in status. Failure to complete credentialing or maintain compliance results in network termination.",
+      "applicable_provider_types": ["Physicians", "Advanced Practice Providers", "Mental Health Providers", "Allied Health Professionals"]
+    },
+    {
+      "policy_id": "PROV_002_REFERRAL_REQUIREMENTS",
+      "title": "HMO Referral Requirements and Specialist Authorization",
+      "content": "HMO plans require members to select a primary care physician (PCP) who coordinates care and provides referrals for specialist visits. PCPs include family medicine, internal medicine, pediatrics, or other generalists designated by the plan. Specialists may not be visited without a referral from the PCP except for preventive gynecology (annual exam and screening) and emergency care. Referrals are valid for specified number of visits (typically 3-6) or a time period (typically 30-90 days), after which a new referral is needed. PCP practices transmit referrals electronically to ensure quick authorization. Urgent referrals for acute conditions are processed within 24 hours. Specialists must be in-network to use the referral; out-of-network specialists require prior authorization and may require additional cost-sharing. PCPs maintain responsibility for coordinating all care and communicating with specialists regarding treatment plans.",
+      "applicable_provider_types": ["Primary Care Physicians", "Specialists", "Advanced Practice Providers"]
+    },
+    {
+      "policy_id": "PROV_003_INNETWORK_OUTOFNETWORK",
+      "title": "In-Network vs Out-of-Network Provider Rules and Cost Implications",
+      "content": "In-network providers have contracted rates with the plan, obligating them to charge only the allowed amount and member cost-sharing (copay/coinsurance). In-network claims are submitted directly by the provider, and the plan processes and pays the provider. Members use in-network providers whenever possible for lowest out-of-pocket costs. Out-of-network providers have no contracted rates and may charge any amount; the plan pays at a percent of the usual, customary, and reasonable (UCR) fee, leaving balance billing to the member. Out-of-network deductibles and out-of-pocket maximums are typically higher than in-network. Some plans do not cover out-of-network services except in emergencies. Members requesting out-of-network care should contact the plan first to understand cost implications. Prior authorization does not guarantee in-network coverage rates for out-of-network providers.",
+      "applicable_provider_types": ["All Provider Types"]
+    },
+    {
+      "policy_id": "PROV_004_SURPRISE_BILLING_PROTECTION",
+      "title": "Surprise Billing Protections for Members",
+      "content": "Federal law protects members from balance billing for emergency services and inadvertent out-of-network care at in-network facilities. When a member receives emergency care, all providers involved (hospital, emergency physicians, specialists) must be paid at in-network rates regardless of their network status. Similarly, if a member knowingly receives care at an in-network facility but an involved physician is out-of-network (e.g., anesthesiologist, radiologist), that physician must bill at in-network rates. Members are not responsible for balance billing and should contact the plan if they receive a surprise bill. Providers violating balance billing protections may face network termination and penalties. The plan requires providers to prominently disclose network status and cost implications before non-emergency services.",
+      "applicable_provider_types": ["All Provider Types"]
+    },
+    {
+      "policy_id": "PROV_005_PROVIDER_DIRECTORY",
+      "title": "Provider Directory Accuracy and Maintenance Requirements",
+      "content": "The plan maintains an online provider directory listing all in-network providers with credentials, specialties, locations, phone numbers, languages spoken, acceptance status, and board certification. Providers are responsible for notifying the plan of changes (new address, phone, name change, specialty, practice closure) within 30 days. The plan updates the directory within 2 business days of receiving updates. Outdated or inaccurate directory information can result in member service failures; providers found to be providing incorrect information may face corrective action agreements or network termination. Members can report directory inaccuracies to Member Services, and the plan investigates and corrects within 5 business days. The plan verifies directory accuracy quarterly through provider calls and proactive outreach. Providers are required to confirm their directory information annually.",
+      "applicable_provider_types": ["All Provider Types"]
+    },
+    {
+      "policy_id": "PROV_006_PCP_ASSIGNMENT_RULES",
+      "title": "Primary Care Physician Assignment and Member Choice",
+      "content": "HMO and POS members must select a primary care physician (PCP) from in-network providers for ongoing medical care and coordination. Members can choose any PCP in the network when enrolling or during open enrollment. If a member does not actively select a PCP, the plan may auto-assign based on geographic proximity and availability. Members can change PCPs once per year during open enrollment or immediately if their PCP leaves the network, becomes unavailable, or the member experiences a qualifying life event. PCP changes take effect the next day or on the specified date. All non-emergency specialist referrals, imaging, and other services flow through the PCP except preventive gynecology and emergency care. The PCP is responsible for prior authorization requests and care coordination.",
+      "applicable_provider_types": ["Primary Care Physicians"]
+    },
+    {
+      "policy_id": "PROV_007_SPECIALIST_ACCESS",
+      "title": "Specialist Access Rules and Timely Appointment Guarantees",
+      "content": "Members have the right to reasonable access to specialists relevant to their conditions. In-network specialists must accept most members referred by in-network PCPs; specialists should not refuse specialists referrals based on patient insurance status or financial hardship. Timely appointment standards require specialists to provide initial appointments within 30 days for non-urgent conditions, 10-15 days for urgent conditions, and same-day or next-day for emergencies. Specialists must provide appointment availability at multiple locations and times, including early morning, evening, and weekend hours where feasible. Telehealth specialist appointments may count toward timely access standards. If a specialist cannot provide timely access, the member may receive an out-of-network exception or authorization to see an alternative provider at in-network rates.",
+      "applicable_provider_types": ["Specialists", "Sub-specialists"]
+    },
+    {
+      "policy_id": "PROV_008_COMMUNICATION_STANDARDS",
+      "title": "Provider-to-Plan Communication and Prior Authorization Processes",
+      "content": "Providers must communicate with the plan regarding prior authorization requests, referrals, and clinical questions. The plan maintains multiple communication channels: phone line for urgent authorizations (response within hours), fax for routine requests (response within 1-2 business days), and electronic submission through the provider portal (response typically overnight). Providers are responsible for obtaining authorizations on behalf of members; the plan attempts to contact providers and members if information is incomplete. Authorization decisions are communicated to both the provider and member simultaneously. Appeals of authorization denials must be submitted by the provider or member within 60 days. Providers must inform members if services are not authorized, giving members opportunity to discuss options with their doctor.",
+      "applicable_provider_types": ["All Provider Types"]
+    },
+    {
+      "policy_id": "PROV_009_NETWORK_PARTICIPATION_TERMINATION",
+      "title": "Network Termination and Causes for Provider Removal",
+      "content": "Providers may be terminated from the network for cause or at-will. Causes for termination include: loss of license or credentials, disciplinary board actions, repeated violations of plan policies, fraud or abuse, quality or utilization concerns identified through audits, refusal to follow medical policies, failure to maintain credentialing, or failure to comply with billing requirements. Termination for cause requires notice with specific reasons and may allow 30-day cure period for correctable issues. At-will terminations may occur with 30-day notice for plan business reasons (network restructuring, financial changes). Members are notified of provider terminations and given transition support (continuity of care for active patients, extended benefits for ongoing treatment). Terminated providers must return plan materials and cease using the plan's network listing.",
+      "applicable_provider_types": ["All Provider Types"]
+    },
+    {
+      "policy_id": "PROV_010_QUALITY_AND_UTILIZATION",
+      "title": "Provider Quality Monitoring and Utilization Review Programs",
+      "content": "The plan monitors provider quality through multiple mechanisms: claims data analysis (cost, utilization, complications), complaint and grievance tracking, patient satisfaction surveys, clinical outcomes data (complication rates, readmission rates), and adherence to evidence-based guidelines. Outlier providers (high cost, high utilization, high complication rates) are subject to focused review and may be required to participate in quality improvement programs. Underutilization of appropriate services (e.g., preventive care) is also tracked. Providers are provided annual performance reports benchmarking their utilization and quality against peers. Persistent failure to meet quality standards may result in network termination. High-performing providers may receive recognition and incentive bonuses. Providers are encouraged to participate in continuing medical education and maintain certification.",
+      "applicable_provider_types": ["All Provider Types"]
+    }
+  ],
+  "formulary_guidelines": [
+    {
+      "guideline_id": "FORM_001_FOUR_TIER",
+      "title": "Four-Tier Formulary Structure and Cost-Sharing Levels",
+      "content": "The plan's pharmacy benefit uses a four-tier formulary structure designed to encourage cost-effective medication use while ensuring access to necessary drugs. Tier 1 (Generic) includes generic drugs covered at the lowest copayment ($15 for retail 30-day supply, $35 for mail order 90-day supply); these are preferred and should be first-line therapy whenever clinically appropriate. Tier 2 (Preferred Brand-Name) includes brand-name drugs preferred by the plan based on clinical efficacy and cost-effectiveness, covered at moderate copayment ($35 retail, $85 mail order). Tier 3 (Non-Preferred Brand-Name) includes brand-name drugs without generic equivalent or preferred alternatives available, covered at higher copayment ($60 retail, $150 mail order). Tier 4 (Specialty) includes complex, high-cost drugs (biologics, injectables, certain oral chemotherapy) covered at 25% coinsurance of the drug cost with potentially unlimited out-of-pocket amounts. All cost-sharing applies toward the pharmacy deductible and annual out-of-pocket maximum.",
+      "tier_structure": "Tier 1: Generic ($15 retail, $35 mail), Tier 2: Preferred Brand ($35 retail, $85 mail), Tier 3: Non-preferred Brand ($60 retail, $150 mail), Tier 4: Specialty (25% coinsurance)",
+      "step_therapy_requirements": "Step therapy mandatory for most brand-name drugs; generic equivalent or preferred alternative must be tried first unless medical contraindication. Exceptions available through prior authorization.",
+      "quantity_limits": "Most medications limited to 30-day retail supply or 90-day mail order supply; additional quantities require prior authorization based on clinical need"
+    },
+    {
+      "guideline_id": "FORM_002_GENERIC_SUBSTITUTION",
+      "title": "Generic Medication Substitution Policy",
+      "content": "The plan encourages and mandates generic substitution when a generic equivalent is available and therapeutically appropriate. Pharmacists are instructed to substitute generic drugs automatically unless the prescriber writes 'do not substitute' or the member requests brand-name at higher cost-sharing. Generic drugs contain the same active ingredient, strength, and dosage form as brand-name drugs and are FDA-approved as therapeutically equivalent. Cost-sharing for generic medications applies to all members regardless of prescriber intent. If a member or prescriber requests brand-name medication when a generic is available, the member pays the brand-name copayment (Tier 2 or 3) rather than the generic copayment. Documentation of medical necessity or allergy to specific generic formulations may justify using a brand-name product at generic copayment, but requires clinical justification and prior authorization.",
+      "tier_structure": "Generic (Tier 1) automatically applied when equivalent available; brand-name substitution requires additional cost-sharing",
+      "step_therapy_requirements": "Generic substitution is the first step; brand-name allowed only after generic trial or documented allergy/intolerance",
+      "quantity_limits": "No quantity limits for generic medications; supply limits apply to quantity per fill (30 retail, 90 mail order)"
+    },
+    {
+      "guideline_id": "FORM_003_STEP_THERAPY_DIABETES",
+      "title": "Step Therapy for Diabetes Medications",
+      "content": "Step therapy for diabetes medications requires members to try preferred first-line agents before accessing higher-tier or specialty medications. For type 2 diabetes, metformin (Tier 1 generic) is the preferred first-line agent; if insufficient or not tolerated, members step to a Tier 2 or Tier 3 sulfonylurea or SGLT2 inhibitor. GLP-1 receptor agonists (Tier 4 injectable medications like semaglutide, dulaglutide) are reserved for patients not meeting glycemic targets with multiple oral agents or for those requiring intensive weight loss. Insulin therapy steps based on type and complexity: basal insulin (NPH, glargine) is preferred before rapid-acting or premixed insulins. Exceptions to step therapy are available if first-line agents are contraindicated, the patient has allergies, or prior treatment failure is documented. Endocrinologists may request expedited exceptions given their specialty expertise. Steps are tracked in the pharmacy system to identify when members have met criteria for advancing therapy.",
+      "tier_structure": "Metformin (Tier 1) preferred; sulfonylureas/SGLT2i (Tier 2-3); GLP-1 agonists (Tier 4); insulin formulations vary by tier",
+      "step_therapy_requirements": "Metformin failure documented; then step to sulfonylurea, SGLT2i, or DPP-4 inhibitor; GLP-1 agonists after dual/triple therapy or BMI>30 with inadequate control",
+      "quantity_limits": "Insulin pens 3 per month unless documentation of higher requirements; oral medications monthly supply"
+    },
+    {
+      "guideline_id": "FORM_004_SPECIALTY_PHARMACY",
+      "title": "Specialty Pharmacy Requirements and High-Cost Drug Management",
+      "content": "Specialty medications are managed through the plan's designated specialty pharmacy network to ensure proper handling, patient support, and adherence monitoring. Specialty drugs include biologics (monoclonal antibodies, fusion proteins), injectable medications (enoxaparin, epinephrine auto-injectors, injectables), oral chemotherapy agents, and other high-cost medications requiring special handling (temperature control, stability requirements) or complex administration. Prior authorization is mandatory for all specialty drugs before dispensing; authorization includes clinical review confirming medical necessity and appropriateness. Specialty pharmacy services include: delivery coordination (shipping to home or healthcare setting), injection training and device handling, clinical support and side effect management, medication interaction checks, adherence monitoring, and refill management. Patients are required to participate in manufacturer patient assistance programs when available; copayments may be reduced through these programs. Coinsurance accumulation applies; specialty drug costs count toward both pharmacy and medical out-of-pocket maximums.",
+      "tier_structure": "Tier 4 specialty drugs covered at 25% coinsurance of drug cost; copay caps may apply for select biologics",
+      "step_therapy_requirements": "Prior authorization required; step therapy for certain biologic classes (e.g., TNF-inhibitors before JAK inhibitors for rheumatoid arthritis)",
+      "quantity_limits": "Specialty drugs typically dispensed monthly with limited early refill; 12-month supply maximum unless documented long-term stability"
+    },
+    {
+      "guideline_id": "FORM_005_BIOSIMILAR_POLICY",
+      "title": "Biosimilar Medications and Interchangeability Rules",
+      "content": "Biosimilars are biologically derived medications highly similar to FDA-approved reference biologic drugs, often with lower cost than reference products. The plan encourages use of FDA-approved biosimilars as therapeutically equivalent to reference biologics when clinically appropriate. Biosimilars are assigned to the same tier as reference products and have the same cost-sharing. If a member or prescriber prefers the reference biologic over the biosimilar, prior authorization is required and cost-sharing may increase to the higher tier. Interchangeable biosimilars (those meeting enhanced FDA approval requirements) may be automatically substituted by pharmacy if prescribed by generic name; prescriber or patient may request the specific product (reference or non-interchangeable biosimilar) in writing. Pharmacy monitoring includes tracking of adverse events and efficacy by specific biosimilar product to ensure safety and effectiveness. Patients are educated about biosimilar safety and equivalency by the specialty pharmacy.",
+      "tier_structure": "Biosimilars assigned same tier as reference biologic (usually Tier 4); cost-sharing identical to reference product",
+      "step_therapy_requirements": "Biosimilar preferred; reference product allowed after biosimilar trial and inadequate response or documented intolerance",
+      "quantity_limits": "Biosimilar 28-day supply for injectables; same limits as reference biologic"
+    },
+    {
+      "guideline_id": "FORM_006_PRIOR_AUTH_HIGHCOST",
+      "title": "Prior Authorization Requirements for High-Cost Medications",
+      "content": "High-cost drugs (generally defined as medications costing >$100/month or $1,200/year) require prior authorization before the plan will cover the medication. Prior authorization ensures the medication is medically necessary, appropriate for the patient's diagnosis, and meets clinical criteria established by evidence-based guidelines. Tier 3 brand-name medications and all Tier 4 specialty drugs require authorization. Prior authorization requests are submitted by prescriber and reviewed by a pharmacist (and potentially a clinical physician specialist) within 1-2 business days. Documentation includes: patient diagnosis, treatment history (prior agents tried and reasons for failure), clinical indication justifying the requested medication, and any relevant clinical parameters (lab values, disease activity measures). Approvals are typically valid for 6-12 months depending on the medication class; subsequent refills may not require re-authorization unless the patient's clinical status changes. Urgent authorizations for acute conditions are processed within 24 hours.",
+      "tier_structure": "Tier 3 and Tier 4 drugs require prior authorization before dispensing",
+      "step_therapy_requirements": "Clinical failure of step-therapy agents must be documented; prior authorization includes step-therapy verification",
+      "quantity_limits": "Authorization specifies approved quantity and duration; additional supplies require new authorization"
+    },
+    {
+      "guideline_id": "FORM_007_QUANTITY_LIMITS",
+      "title": "Quantity Limits and Refill Restrictions",
+      "content": "Quantity limits restrict the amount of medication dispensed per fill to promote safe use and prevent hoarding or misuse, particularly for controlled substances and high-risk medications. Quantity limits are based on standard dosing regimens and typical usage patterns. For example, a medication taken once daily typically has a 30-day retail supply limit (30 tablets per fill), and 90-day mail order limit (90 tablets). Pain medications (opioids) may have limits of 7-day supplies requiring frequent fills to monitor patient response. Medications with abuse potential or toxicity concerns have strict limits; a prescriber must write a new prescription (not refill) to obtain additional supplies. Some medications have cumulative monthly limits (e.g., ADHD stimulants limited to 30 doses per 30 days). Quantity limit exceptions are granted for clinical reasons (e.g., high-dose regimens, multiple daily dosing, prophylactic use) based on prescriber documentation. Patient vacation supplies (up to 30 days early) are allowed without exceeding annual limits.",
+      "tier_structure": "Quantity limits apply across all tiers; based on standard dosing and frequency",
+      "step_therapy_requirements": "Quantity limits reinforce step therapy; limited supplies encourage trying first-line agents before advancing",
+      "quantity_limits": "Standard: 30-day retail, 90-day mail order; controlled substances 7-30 day limits; exceptions require prescriber documentation"
+    },
+    {
+      "guideline_id": "FORM_008_MAIL_ORDER_DISCOUNTS",
+      "title": "Mail Order Pharmacy Discount Rules and Maintenance Medication Incentives",
+      "content": "Mail order pharmacy provides cost savings for maintenance medications (chronic conditions requiring long-term treatment) by supplying 90-day quantities at a two-copayment cost. The 90-day supply reduces per-dose costs and incentivizes members to use mail order for ongoing medications. Maintenance medications eligible for mail order include: chronic disease management (diabetes, hypertension, cholesterol), mental health (antidepressants), and pain management (non-opioid). First fills or new medications may be limited to 30-day supplies to assess tolerance before committing to 90-day quantities. Refill timing is automated: the plan mails the next 90-day supply at the 60-day mark unless the member requests a different timing. Members can request early refills (up to one early refill per medication per year) for vacation, travel, or anticipated supply shortage. Controlled substances are not available through mail order except through specialty pharmacy for legitimate opioid maintenance therapy. Members can opt out of mail order and use retail pharmacies with standard 30-day copayments.",
+      "tier_structure": "Two copayments for 90-day mail order supply: two Tier 1 copays ($30), two Tier 2 copays ($70), two Tier 3 copays ($120), specialty coinsurance applies to 90-day supply",
+      "step_therapy_requirements": "Step therapy applies to mail order; brand-name drugs subject to same step-therapy rules as retail",
+      "quantity_limits": "90-day supply for mail order; 30-day for retail; vacation supply 30 days without additional copayment annually"
+    },
+    {
+      "guideline_id": "FORM_009_VACATION_SUPPLY_RULES",
+      "title": "Vacation Supply Rules and Travel Medication Access",
+      "content": "Members traveling or away from home may request up to a 30-day vacation supply of maintenance medications without triggering early refill limits or additional copayments. The vacation supply rule allows members to obtain a second fill within 30 days for travel purposes, recognizing that members may not have mail order access during travel. Vacation supplies are requested through the pharmacy or online system; typically just a request for 'vacation supply' is sufficient without detailed documentation. Vacation supplies count toward annual fill limits; members are limited to one vacation supply per maintenance medication per calendar year. Controlled substances may have additional documentation requirements (travel itinerary) to prevent misuse. Members traveling internationally should contact the plan in advance for information about pharmacy access in their destination country; in some cases, prescriptions may be transferred to local pharmacies (not covered by U.S. insurance). Members should carry prescriptions and summary documents for medications when traveling.",
+      "tier_structure": "Vacation supply copayment matches the medication's standard tier copayment",
+      "step_therapy_requirements": "Vacation supplies subject to same formulary restrictions and step-therapy requirements as regular fills",
+      "quantity_limits": "Vacation supply up to 30 days; limited to one per medication per calendar year; does not extend annual supply limits"
+    },
+    {
+      "guideline_id": "FORM_010_FORMULARY_EXCEPTIONS",
+      "title": "Formulary Exception Process for Non-Covered and Specialized Medications",
+      "content": "Formulary exceptions allow members to obtain non-covered medications or step-therapy exceptions when medically necessary and when alternative formulary options are inappropriate or ineffective. Common exception scenarios include: patient already stable on a non-covered medication (continuation of therapy), documented allergy to all available alternatives, prior trial failure of formulary drugs with documented inadequate response, and medical comorbidities making a non-formulary drug necessary. Exceptions are requested by the prescriber through prior authorization submission or by the member contacting Member Services. Documentation required includes: clinical justification explaining why formulary alternatives are inappropriate or inadequate, patient history of prior therapy attempts, and any relevant clinical parameters supporting the need for the non-covered drug. Exceptions for brand-name drugs typically result in Tier 3 or Tier 4 cost-sharing even if the drug becomes covered. Exceptions are usually granted for 6-12 months and may require periodic re-review if clinical status changes.",
+      "tier_structure": "Formulary exception cost-sharing varies; brand-name exceptions typically Tier 3 ($60 retail, $150 mail) or Tier 4 (25% coinsurance)",
+      "step_therapy_requirements": "Formulary exception documentation includes statement that step-therapy agents have been tried and were inadequate or contraindicated",
+      "quantity_limits": "Exception grants typically specify authorized quantity (e.g., 30-day supply for 90 days duration); refills may require re-authorization"
+    }
+  ],
+  "appeals_and_grievances": [
+    {
+      "process_id": "APP_001_INTERNAL_APPEAL",
+      "title": "Internal Claim Appeal Process and Timeline",
+      "content": "Members have the right to appeal any claim denial, coverage limitation, or benefit determination by submitting an internal appeal to the plan. Claims appeals must be filed within 180 days of the initial denial notice. Standard appeals are reviewed within 30 days of receipt; expedited appeals for urgent or health-risk situations are reviewed within 72 hours (3 business days). To file an appeal, members submit a written request (letter, form, online submission) with their claim number, the reason they believe the denial was incorrect, and any supporting medical records or documentation. A clinical reviewer (nurse or physician) reviews the claim and determines whether coverage should be approved based on the plan's medical policies, formulary, and member's plan benefits. The reviewer issues a written decision explaining the appeal outcome and, if denied, the reason and member's next steps (external review right). Members can request a clinical reviewer override if clinical judgement is questioned.",
+      "timeline_days": 30,
+      "required_documents": ["Claim denial notice", "Request for appeal form", "Medical records supporting medical necessity", "Proof of coverage/policy details"],
+      "escalation_path": "Internal appeal review → Clinical reviewer determination → Written decision → External review if denied → State insurance commissioner if all appeals exhausted"
+    },
+    {
+      "process_id": "APP_002_EXTERNAL_REVIEW",
+      "title": "External Independent Review Process for Denied Coverage",
+      "content": "Members have the right to independent external review (by a physician not employed by the plan) for any claim denial involving clinical judgment or medical necessity determinations. External reviews are requested after the internal appeal is denied. An independent review organization (IRO) designated by the state conducts the review, selecting a physician reviewer with expertise in the relevant clinical area. The IRO considers all clinical information submitted by the member, treating provider, and plan. The reviewer has 30-45 days to issue a determination regarding whether the denied service was medically necessary. If the external reviewer agrees that coverage is medically necessary, the plan must immediately approve and cover the service. External review determinations are binding on the plan. External review is available at no cost to the member; the plan pays all IRO and reviewer fees. Expedited external reviews are available when the member has an urgent health condition.",
+      "timeline_days": 45,
+      "required_documents": ["Denied internal appeal decision", "Clinical information and medical records", "Treating provider documentation of medical necessity", "Any expert opinion supporting medical necessity"],
+      "escalation_path": "Internal appeal denial → Request external review → IRO review → External determination (binding on plan) → State insurance commissioner if procedural issues"
+    },
+    {
+      "process_id": "APP_003_EXPEDITED_APPEAL",
+      "title": "Expedited Appeal Process for Urgent Health Situations",
+      "content": "Members and providers can request expedited appeal when the member has an urgent health condition and standard 30-day appeal timelines would jeopardize the member's health. Expedited appeals are appropriate when the member has serious health risks, acute exacerbation of chronic conditions, or impending medical procedures. Expedited appeal requests are submitted by phone, fax, or urgent portal submission. The plan responds within 72 hours (3 business days) with a determination. If the expedited appeal is granted, the plan immediately covers the service. If the expedited appeal is denied, the member is notified of the denial reason and retains the right to file a standard internal appeal and external review. Providers treating the member can contact the plan directly to request expedited review and discuss the urgent clinical situation. Expedited timelines require member or provider certification that standard timelines would jeopardize health.",
+      "timeline_days": 3,
+      "required_documents": ["Request for expedited review with urgent health justification", "Recent clinical documentation", "Provider letter describing urgency and health risk"],
+      "escalation_path": "Expedited appeal denial → Standard internal appeal → External review → State insurance commissioner"
+    },
+    {
+      "process_id": "APP_004_GRIEVANCE_FILING",
+      "title": "Grievance Filing Process for Service and Coverage Issues",
+      "content": "Members can file formal grievances (complaints) about their health insurance coverage, benefits, or service experience separate from claims appeals. Grievances address issues such as: difficulty accessing care, provider network problems, billing disputes, quality of service, customer service failures, and violations of member rights. Grievances must be filed within 180 days of the issue and can be submitted in writing (mail, email, online form), by phone, or in person at a plan office. The plan acknowledges receipt of the grievance within 5 business days and assigns a grievance advocate to investigate. The plan reviews the grievance for potential violations of state insurance regulations or plan policies and contacts relevant parties (provider, billing department, member services) for information. The plan provides written response within 30 days explaining the findings and any remedial actions taken. If the grievance involves a denied benefit or coverage determination, the plan may consolidate it with a claims appeal process.",
+      "timeline_days": 30,
+      "required_documents": ["Grievance form or written description of issue", "Dates and times of incident", "Names of plan employees or providers involved", "Copies of relevant correspondence or billing documents"],
+      "escalation_path": "Grievance filing → Grievance advocate investigation → Written response → State insurance commissioner complaint if unsatisfied → Attorney general office"
+    },
+    {
+      "process_id": "APP_005_PROVIDER_APPEAL",
+      "title": "Provider Appeals for Claim Disputes and Coverage Determinations",
+      "content": "Healthcare providers can appeal on behalf of members for denied claims or coverage determinations. Providers submit appeals directly to the plan's provider relations department using the electronic portal, fax, or phone. Provider appeals follow the same timeline as member appeals: standard appeal decisions within 30 days, expedited appeals within 72 hours. Providers include clinical documentation, test results, treatment notes, and clinical justification explaining why the denied service was medically necessary. The plan's clinical reviewer considers provider input alongside member information and plan policies. Providers are notified of appeal decisions simultaneously with members. If an appeal is denied, providers can request peer-to-peer review with the plan's medical director (physician-to-physician discussion) to discuss the clinical case and determination. Peer-to-peer reviews often result in claim reconsideration or coverage approval.",
+      "timeline_days": 30,
+      "required_documents": ["Claim information and denial notice", "Comprehensive clinical documentation and treatment notes", "Clinical justification and medical necessity statement", "Any relevant test results or imaging"],
+      "escalation_path": "Provider appeal → Clinical reviewer → Peer-to-peer review option → Mediator or arbitration if contractual dispute → Litigation if needed"
+    },
+    {
+      "process_id": "APP_006_PHARMACY_EXCEPTION",
+      "title": "Pharmacy and Formulary Exception Appeal Process",
+      "content": "Members and pharmacists can request formulary exceptions (coverage of non-covered medications or step-therapy exceptions) when formulary alternatives are medically inappropriate or ineffective. Pharmacy exception requests are submitted by the treating physician through the pharmacy benefit manager (PBM) portal, fax, or phone call to the prior authorization team. Requests include: patient diagnosis, medication being requested, reason it is medically necessary, documentation of any prior therapy trials and results, and any clinical parameters supporting the need. The PBM pharmacist or clinical pharmacist reviewer processes the exception within 24-48 hours (urgent requests within a few hours). Approval results in coverage of the non-covered drug typically at Tier 3 or Tier 4 cost-sharing. Denial of the exception can be appealed through the standard claims appeal process. High-risk medications (opioids, controlled substances) may require additional documentation and oversight. Approved exceptions typically remain valid for 6-12 months unless clinical status changes.",
+      "timeline_days": 2,
+      "required_documents": ["Prescription and patient information", "Diagnosis and clinical indication", "Documentation of prior medication trials and failure reasons", "Prescriber contact information for clarification"],
+      "escalation_path": "Pharmacy exception denial → PBM appeal → Plan clinical review → External review through standard claims appeals process"
+    },
+    {
+      "process_id": "APP_007_OUTOFNETWORK_EXCEPTION",
+      "title": "Out-of-Network Provider Exception Request and Approval",
+      "content": "Members can request out-of-network exceptions when in-network providers are unavailable, cannot provide necessary care, or the member has compelling reasons to seek care from an out-of-network provider. Out-of-network exception requests are submitted to Member Services or Provider Network department with documentation explaining the need (e.g., subspecialty expertise not available in-network, recent relocation out of service area, established patient relationship with out-of-network provider). The plan reviews availability of comparable in-network providers; if none exist or all in-network options are exhausted, the exception may be approved. Approved out-of-network exceptions allow members to see the out-of-network provider at in-network cost-sharing rates (copay/coinsurance), protecting the member from balance billing. Exceptions typically require advance approval before services are rendered; emergency exceptions may be granted retroactively. Out-of-network exceptions are time-limited (3-6 months) or service-limited (specific course of treatment) depending on the reason.",
+      "timeline_days": 10,
+      "required_documents": ["Written request explaining need for out-of-network care", "Provider information (name, specialty, location)", "Documentation that in-network options are unavailable or unsuitable", "Provider agreement to in-network rates if exception approved"],
+      "escalation_path": "Initial exception request → Provider network review → Approval or denial with explanation → Appeal rights if denied"
+    },
+    {
+      "process_id": "APP_008_CONTINUATION_DURING_APPEAL",
+      "title": "Continuation of Benefits During Appeal Process",
+      "content": "When a member appeals a claim denial or seeks review of a coverage determination for ongoing treatment, the plan continues providing the disputed service during the appeal process under specific conditions. Continuation applies only if the member submitted the appeal timely (within 180 days of the denial), the service was initially authorized or rendered in-network, and the appeal involves a question of medical necessity or coverage policy (not a new or experimental service). The plan continues coverage at the same copayment and cost-sharing level as if the service were approved, pending the appeal outcome. If the appeal is ultimately denied, the member may be responsible for repaying the plan for services received during the appeal (retroactive denial). Continuation during appeal is particularly important for ongoing treatments (chemotherapy, dialysis, ongoing therapy) where service interruption would be medically harmful. The plan documents continuation of benefits in writing and communicates the condition that repayment may be owed if the appeal is denied.",
+      "timeline_days": "Duration of appeal process (30-45 days standard, 3 days expedited, or longer for external review)",
+      "required_documents": ["Appeal request and claim information", "Confirmation that service is ongoing and medically necessary", "Documentation supporting appeal"],
+      "escalation_path": "Continuation granted during appeal → Appeal decision issued → If denied, repayment demand issued → Member can dispute repayment through grievance process"
+    }
+  ]
+}
