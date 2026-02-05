@@ -19,13 +19,37 @@ healthcare-synthetic-data/
 │   ├── templates/document_templates.json # 7 document templates (EOB, denial letters, etc.)
 │   ├── knowledge-base/knowledge_base.json # Plan policies, FAQs, guidelines
 │   └── AGENT-SANDBOX-SPEC.md            # Detailed agent sandbox spec
-├── docs/DATA-SPECIFICATION.md   # Full data model spec (field-level docs)
+├── docs/DATA-SPECIFICATION.md   # Data-derived data dictionary (field-level)
 ├── generator/                   # Python scripts that generated the data
 │   ├── generate.py              # Base entity generator
 │   └── generate_interactions.py # Call logs, messages, case notes
 ├── frontend/data-platform.jsx   # React + Tailwind data explorer component
+├── scripts/                     # Dev utilities
+│   ├── generate_data_spec.py    # Generate docs/DATA-SPECIFICATION.md
+│   └── validate_data.py         # Referential integrity checks
 └── index.html                   # Documentation site (open in browser)
 ```
+
+## Developer guide
+
+**Architecture at a glance**
+- `data/json` is the source of truth for all entities.
+- `agent-sandbox/api_server.py` loads all JSON into memory and implements the tool handlers.
+- `agent-sandbox/server.py` exposes REST endpoints (including `POST /tool` for agent frameworks).
+- `agent-sandbox/mcp_server.py` exposes the same tools via MCP using `agent-sandbox/tools/tool_schemas.json`.
+
+**Behavioral notes**
+- "Write" tools (`submit_authorization_request`, `create_case_note`, `initiate_appeal`) are in-memory only; restart resets them.
+- `generate_document` renders templates in `agent-sandbox/templates/document_templates.json` and returns `document_text`.
+- `search_knowledge_base` supports `section=business_rules` and `section=reference_data`.
+- `rules/business_rules.json` is reference data; the API does not execute an adjudication pipeline.
+- Search endpoints return `total` for full matches and cap `results` by `limit`.
+
+**Data conventions**
+- Coinsurance fields are integer percentages (e.g., `90` means 90%).
+- Addresses are objects (`line1`, `line2`, `city`, `state`, `zip`).
+- Dependents are also `member_id` values; `subscriber_member_id` points to the primary member.
+- `docs/DATA-SPECIFICATION.md` is generated from the actual JSON files.
 
 ## Two ways to use this
 
@@ -155,11 +179,29 @@ Load `scenarios/scenarios.json` — 20 test cases. Send each `user_prompt` to yo
 
 - **Deterministic**: All generators use `random.seed(42)` — regenerating produces identical data
 - **Referential integrity**: Claims reference real member IDs, dependents link to real members, eligibility ties to real plans
-- **Realistic distributions**: Chronic condition prevalence, claim denial rates (~12%), auth approval rates (~75%) match industry patterns
+- **Realistic distributions**: Chronic condition prevalence, claim denial rate (~7.7%), auth approval rate (~56.1%) match industry patterns
 - **ICD-10 / CPT / NDC codes**: Real code formats with realistic mappings (diagnosis → procedure → place of service)
 
 ## Documentation
 
 - **`index.html`** — Open in a browser for a visual overview of everything in the platform
-- **`docs/DATA-SPECIFICATION.md`** — Full field-level spec for every entity, with join patterns and distribution notes
+- **`docs/DATA-SPECIFICATION.md`** — Data-derived field-level dictionary generated from `data/json`
 - **`agent-sandbox/AGENT-SANDBOX-SPEC.md`** — Agent tooling spec with architecture diagram and API examples
+  - `search_knowledge_base` supports `section=business_rules` and `section=reference_data` for rules and reference codes
+
+## Validation
+
+Run a quick integrity check on the dataset:
+
+```bash
+python3 scripts/validate_data.py
+```
+
+## Regeneration
+
+```bash
+python3 generator/generate.py
+python3 generator/generate_interactions.py
+python3 scripts/generate_data_spec.py
+python3 scripts/validate_data.py
+```
