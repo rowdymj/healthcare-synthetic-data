@@ -1,3 +1,6 @@
 fastapi>=0.104.0
 uvicorn>=0.24.0
-mcp>=1.0.0
+
+# MCP is optional and requires Python 3.10+.
+# Install with:
+#   python3.10 -m pip install git+https://github.com/modelcontextprotocol/python-sdk.git
