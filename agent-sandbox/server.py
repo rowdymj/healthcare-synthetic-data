@@ -92,6 +92,7 @@ class DocumentRequest(BaseModel):
     member_id: str
     claim_id: Optional[str] = None
     auth_id: Optional[str] = None
+    appeal_id: Optional[str] = None
 
 
 # ── Generic Tool Endpoint ──────────────────────────────────────────
@@ -346,7 +347,7 @@ def generate_document(request: DocumentRequest):
 @app.get("/api/knowledge-base", tags=["Knowledge Base"], summary="Search knowledge base")
 def search_kb(
     query: str = Query(..., description="Natural language search"),
-    section: Optional[str] = Query("all", description="plan_policies, coverage_guidelines, member_faq, etc."),
+    section: Optional[str] = Query("all", description="plan_policies, coverage_guidelines, member_faq, business_rules, reference_data, etc."),
 ):
     """Search plan policies, FAQs, coverage guidelines, and formulary info."""
     return api.search_knowledge_base(query, section)

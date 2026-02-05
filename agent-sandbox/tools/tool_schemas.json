@@ -188,12 +188,12 @@
     },
     {
       "name": "search_knowledge_base",
-      "description": "Search the knowledge base for plan policies, coverage guidelines, FAQs, or formulary information. Use this when answering member questions about how their plan works.",
+      "description": "Search policies, FAQs, business rules, and reference data. Use this when answering member questions about how their plan works.",
       "input_schema": {
         "type": "object",
         "properties": {
           "query": { "type": "string", "description": "Natural language search query" },
-          "section": { "type": "string", "enum": ["plan_policies", "coverage_guidelines", "member_faq", "provider_policies", "formulary_guidelines", "appeals_and_grievances", "all"], "description": "Knowledge base section to search (default: all)" },
+          "section": { "type": "string", "enum": ["plan_policies", "coverage_guidelines", "member_faq", "provider_policies", "formulary_guidelines", "appeals_and_grievances", "business_rules", "reference_data", "all"], "description": "Knowledge base section to search (default: all)" },
           "keywords": { "type": "array", "items": { "type": "string" }, "description": "Keyword filters" }
         },
         "required": ["query"]
@@ -229,14 +229,15 @@
     },
     {
       "name": "generate_document",
-      "description": "Generate a member-facing document such as an EOB, denial letter, auth approval letter, or ID card.",
+      "description": "Render a member-facing document such as an EOB, denial letter, auth approval letter, or ID card.",
       "input_schema": {
         "type": "object",
         "properties": {
           "document_type": { "type": "string", "enum": ["EOB", "denial_letter", "auth_approval_letter", "auth_denial_letter", "id_card", "welcome_letter", "appeal_acknowledgment"], "description": "Type of document to generate" },
           "member_id": { "type": "string", "description": "Member ID" },
           "claim_id": { "type": "string", "description": "Related claim ID (for EOB, denial letter)" },
-          "auth_id": { "type": "string", "description": "Related auth ID (for auth letters)" }
+          "auth_id": { "type": "string", "description": "Related auth ID (for auth letters)" },
+          "appeal_id": { "type": "string", "description": "Related appeal ID (for appeal acknowledgment)" }
         },
         "required": ["document_type", "member_id"]
       }
@@ -484,12 +485,12 @@
       "type": "function",
       "function": {
         "name": "search_knowledge_base",
-        "description": "Search the knowledge base for plan policies, coverage guidelines, FAQs, or formulary information.",
+        "description": "Search policies, FAQs, business rules, and reference data.",
         "parameters": {
           "type": "object",
           "properties": {
             "query": { "type": "string", "description": "Natural language search query" },
-            "section": { "type": "string", "enum": ["plan_policies", "coverage_guidelines", "member_faq", "provider_policies", "formulary_guidelines", "appeals_and_grievances", "all"] },
+            "section": { "type": "string", "enum": ["plan_policies", "coverage_guidelines", "member_faq", "provider_policies", "formulary_guidelines", "appeals_and_grievances", "business_rules", "reference_data", "all"] },
             "keywords": { "type": "array", "items": { "type": "string" } }
           },
           "required": ["query"]
@@ -534,14 +535,15 @@
       "type": "function",
       "function": {
         "name": "generate_document",
-        "description": "Generate a member-facing document such as an EOB, denial letter, auth letter, or ID card.",
+        "description": "Render a member-facing document such as an EOB, denial letter, auth letter, or ID card.",
         "parameters": {
           "type": "object",
           "properties": {
             "document_type": { "type": "string", "enum": ["EOB", "denial_letter", "auth_approval_letter", "auth_denial_letter", "id_card", "welcome_letter", "appeal_acknowledgment"] },
             "member_id": { "type": "string" },
             "claim_id": { "type": "string" },
-            "auth_id": { "type": "string" }
+            "auth_id": { "type": "string" },
+            "appeal_id": { "type": "string" }
           },
           "required": ["document_type", "member_id"]
         }

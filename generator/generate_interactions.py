@@ -16,11 +16,12 @@ import uuid
 # Set random seed for reproducibility
 random.seed(42)
 
-# Configuration
-DATA_DIR = Path("/sessions/brave-keen-brahmagupta/mnt/outputs/healthcare-synthetic-data/data")
+# Configuration (repo-relative)
+BASE_DIR = Path(__file__).parent.parent
+DATA_DIR = BASE_DIR / "data"
 JSON_DIR = DATA_DIR / "json"
 CSV_DIR = DATA_DIR / "csv"
-GENERATOR_DIR = Path("/sessions/brave-keen-brahmagupta/mnt/outputs/healthcare-synthetic-data/generator")
+GENERATOR_DIR = Path(__file__).parent
 
 # Constants
 CALL_REASONS = [

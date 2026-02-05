@@ -203,7 +203,7 @@
   </div>
   <div class="card-detail">
     <div class="param-header">Key fields</div>
-    <div class="field-tags"><span class="field-tag">employer_id</span><span class="field-tag">name</span><span class="field-tag">industry</span><span class="field-tag">size</span><span class="field-tag">state</span><span class="field-tag">contract_start_date</span><span class="field-tag">contract_end_date</span></div>
+    <div class="field-tags"><span class="field-tag">employer_id</span><span class="field-tag">name</span><span class="field-tag">tax_id</span><span class="field-tag">industry</span><span class="field-tag">size_category</span><span class="field-tag">employee_count</span><span class="field-tag">address</span><span class="field-tag">effective_date</span><span class="field-tag">status</span></div>
   </div>
 </div>
 <div class="expandable-card data-expand" onclick="toggleExpand(this)">
@@ -213,7 +213,7 @@
   </div>
   <div class="card-detail">
     <div class="param-header">Key fields</div>
-    <div class="field-tags"><span class="field-tag">plan_id</span><span class="field-tag">employer_id</span><span class="field-tag">plan_name</span><span class="field-tag">plan_type</span><span class="field-tag">metal_tier</span><span class="field-tag">deductible_individual</span><span class="field-tag">deductible_family</span><span class="field-tag">oop_max_individual</span><span class="field-tag">oop_max_family</span><span class="field-tag">monthly_premium</span></div>
+    <div class="field-tags"><span class="field-tag">plan_id</span><span class="field-tag">employer_id</span><span class="field-tag">plan_name</span><span class="field-tag">plan_type</span><span class="field-tag">tier</span><span class="field-tag">deductible_individual</span><span class="field-tag">out_of_pocket_max_individual</span><span class="field-tag">monthly_premium_individual</span><span class="field-tag">coinsurance_in_network</span><span class="field-tag">copay_pcp</span></div>
   </div>
 </div>
 <div class="expandable-card data-expand" onclick="toggleExpand(this)">
@@ -223,7 +223,7 @@
   </div>
   <div class="card-detail">
     <div class="param-header">Key fields</div>
-    <div class="field-tags"><span class="field-tag">benefit_id</span><span class="field-tag">plan_id</span><span class="field-tag">service_category</span><span class="field-tag">copay</span><span class="field-tag">coinsurance</span><span class="field-tag">requires_auth</span><span class="field-tag">requires_referral</span><span class="field-tag">annual_visit_limit</span></div>
+    <div class="field-tags"><span class="field-tag">benefit_id</span><span class="field-tag">plan_id</span><span class="field-tag">category</span><span class="field-tag">network_tier</span><span class="field-tag">cost_sharing_type</span><span class="field-tag">deductible_applies</span><span class="field-tag">annual_limit</span><span class="field-tag">requires_auth</span><span class="field-tag">requires_referral</span></div>
   </div>
 </div>
 <div class="expandable-card data-expand" onclick="toggleExpand(this)">
@@ -233,7 +233,7 @@
   </div>
   <div class="card-detail">
     <div class="param-header">Key fields</div>
-    <div class="field-tags"><span class="field-tag">provider_id</span><span class="field-tag">npi</span><span class="field-tag">name</span><span class="field-tag">specialty</span><span class="field-tag">provider_type</span><span class="field-tag">network_status</span><span class="field-tag">accepting_new_patients</span><span class="field-tag">languages</span><span class="field-tag">rating</span></div>
+    <div class="field-tags"><span class="field-tag">provider_id</span><span class="field-tag">npi</span><span class="field-tag">name</span><span class="field-tag">specialty</span><span class="field-tag">type</span><span class="field-tag">network_status</span><span class="field-tag">accepting_new_patients</span><span class="field-tag">languages</span><span class="field-tag">rating</span></div>
   </div>
 </div>
 <div class="expandable-card data-expand" onclick="toggleExpand(this)">
@@ -253,7 +253,7 @@
   </div>
   <div class="card-detail">
     <div class="param-header">Key fields</div>
-    <div class="field-tags"><span class="field-tag">dependent_id</span><span class="field-tag">subscriber_id</span><span class="field-tag">plan_id</span><span class="field-tag">first_name</span><span class="field-tag">last_name</span><span class="field-tag">relationship</span><span class="field-tag">date_of_birth</span><span class="field-tag">gender</span></div>
+    <div class="field-tags"><span class="field-tag">member_id</span><span class="field-tag">subscriber_id</span><span class="field-tag">subscriber_member_id</span><span class="field-tag">plan_id</span><span class="field-tag">first_name</span><span class="field-tag">last_name</span><span class="field-tag">relationship</span><span class="field-tag">date_of_birth</span><span class="field-tag">gender</span></div>
   </div>
 </div>
 <div class="expandable-card data-expand" onclick="toggleExpand(this)">
@@ -263,7 +263,7 @@
   </div>
   <div class="card-detail">
     <div class="param-header">Key fields</div>
-    <div class="field-tags"><span class="field-tag">claim_id</span><span class="field-tag">member_id</span><span class="field-tag">provider_id</span><span class="field-tag">plan_id</span><span class="field-tag">claim_type</span><span class="field-tag">date_of_service</span><span class="field-tag">diagnosis_codes</span><span class="field-tag">claim_status</span><span class="field-tag">billed_amount</span><span class="field-tag">allowed_amount</span><span class="field-tag">paid_amount</span><span class="field-tag">member_responsibility</span></div>
+    <div class="field-tags"><span class="field-tag">claim_id</span><span class="field-tag">member_id</span><span class="field-tag">provider_id</span><span class="field-tag">plan_id</span><span class="field-tag">claim_type</span><span class="field-tag">service_date</span><span class="field-tag">primary_diagnosis</span><span class="field-tag">claim_status</span><span class="field-tag">total_billed</span><span class="field-tag">total_allowed</span><span class="field-tag">total_plan_paid</span><span class="field-tag">total_member_responsibility</span></div>
   </div>
 </div>
 <div class="expandable-card data-expand" onclick="toggleExpand(this)">
@@ -273,7 +273,7 @@
   </div>
   <div class="card-detail">
     <div class="param-header">Key fields</div>
-    <div class="field-tags"><span class="field-tag">claim_line_id</span><span class="field-tag">claim_id</span><span class="field-tag">line_number</span><span class="field-tag">procedure_code</span><span class="field-tag">modifier</span><span class="field-tag">units</span><span class="field-tag">place_of_service</span><span class="field-tag">billed_amount</span><span class="field-tag">allowed_amount</span><span class="field-tag">paid_amount</span></div>
+    <div class="field-tags"><span class="field-tag">claim_line_id</span><span class="field-tag">claim_id</span><span class="field-tag">line_number</span><span class="field-tag">procedure_code</span><span class="field-tag">modifier</span><span class="field-tag">units</span><span class="field-tag">billed_amount</span><span class="field-tag">allowed_amount</span><span class="field-tag">plan_paid_amount</span><span class="field-tag">member_responsibility</span></div>
   </div>
 </div>
 <div class="expandable-card data-expand" onclick="toggleExpand(this)">
@@ -283,7 +283,7 @@
   </div>
   <div class="card-detail">
     <div class="param-header">Key fields</div>
-    <div class="field-tags"><span class="field-tag">rx_claim_id</span><span class="field-tag">member_id</span><span class="field-tag">plan_id</span><span class="field-tag">medication_name</span><span class="field-tag">ndc_code</span><span class="field-tag">generic_name</span><span class="field-tag">drug_category</span><span class="field-tag">formulary_tier</span><span class="field-tag">days_supply</span><span class="field-tag">quantity</span><span class="field-tag">total_cost</span><span class="field-tag">plan_paid</span><span class="field-tag">member_paid</span></div>
+    <div class="field-tags"><span class="field-tag">rx_claim_id</span><span class="field-tag">member_id</span><span class="field-tag">plan_id</span><span class="field-tag">medication_name</span><span class="field-tag">ndc</span><span class="field-tag">medication_category</span><span class="field-tag">formulary_status</span><span class="field-tag">days_supply</span><span class="field-tag">quantity</span><span class="field-tag">total_cost</span><span class="field-tag">plan_paid</span><span class="field-tag">member_copay</span></div>
   </div>
 </div>
 <div class="expandable-card data-expand" onclick="toggleExpand(this)">
@@ -293,7 +293,7 @@
   </div>
   <div class="card-detail">
     <div class="param-header">Key fields</div>
-    <div class="field-tags"><span class="field-tag">auth_id</span><span class="field-tag">member_id</span><span class="field-tag">provider_id</span><span class="field-tag">plan_id</span><span class="field-tag">service_description</span><span class="field-tag">procedure_code</span><span class="field-tag">diagnosis_code</span><span class="field-tag">status</span><span class="field-tag">decision_date</span><span class="field-tag">expiration_date</span><span class="field-tag">denial_reason</span></div>
+    <div class="field-tags"><span class="field-tag">auth_id</span><span class="field-tag">member_id</span><span class="field-tag">provider_id</span><span class="field-tag">plan_id</span><span class="field-tag">service_description</span><span class="field-tag">procedure_code</span><span class="field-tag">service_category</span><span class="field-tag">status</span><span class="field-tag">request_date</span><span class="field-tag">decision_date</span><span class="field-tag">expiration_date</span><span class="field-tag">denial_reason</span></div>
   </div>
 </div>
 <div class="expandable-card data-expand" onclick="toggleExpand(this)">
@@ -303,7 +303,7 @@
   </div>
   <div class="card-detail">
     <div class="param-header">Key fields</div>
-    <div class="field-tags"><span class="field-tag">accumulator_id</span><span class="field-tag">member_id</span><span class="field-tag">plan_id</span><span class="field-tag">plan_year</span><span class="field-tag">individual_deductible_used</span><span class="field-tag">individual_deductible_max</span><span class="field-tag">individual_oop_used</span><span class="field-tag">individual_oop_max</span></div>
+    <div class="field-tags"><span class="field-tag">accumulator_id</span><span class="field-tag">member_id</span><span class="field-tag">plan_id</span><span class="field-tag">plan_year</span><span class="field-tag">deductible_used</span><span class="field-tag">deductible_remaining</span><span class="field-tag">oop_used</span><span class="field-tag">oop_remaining</span></div>
   </div>
 </div>
 <div class="expandable-card data-expand" onclick="toggleExpand(this)">
@@ -401,7 +401,7 @@
     <div class="example-label">Example request</div>
     <div class="example-code">curl http://localhost:8000/api/members/MBR-B5906016/coverage</div>
     <div class="example-label" style="margin-top:12px">Example response</div>
-    <div class="example-code">{&quot;member&quot;: {...}, &quot;plan&quot;: {...}, &quot;benefits&quot;: [...], &quot;accumulator&quot;: {...}}</div>
+    <div class="example-code">{&quot;member&quot;: {...}, &quot;plan&quot;: {...}, &quot;employer&quot;: {...}, &quot;benefits&quot;: [...], &quot;accumulator&quot;: {...}, &quot;eligibility_periods&quot;: [...]}</div>
   </div>
 </div>
 <div class="expandable-card api-expand" onclick="toggleExpand(this)">
@@ -416,7 +416,7 @@
     <div class="example-label">Example request</div>
     <div class="example-code">curl http://localhost:8000/api/members/MBR-B5906016/dependents</div>
     <div class="example-label" style="margin-top:12px">Example response</div>
-    <div class="example-code">{&quot;member_id&quot;: &quot;MBR-B5906016&quot;, &quot;dependents&quot;: [...], &quot;total&quot;: 2}</div>
+    <div class="example-code">{&quot;member_id&quot;: &quot;MBR-B5906016&quot;, &quot;dependents&quot;: [...], &quot;count&quot;: 2}</div>
   </div>
 </div>
 <div class="expandable-card api-expand" onclick="toggleExpand(this)">
@@ -431,7 +431,7 @@
     <div class="example-label">Example request</div>
     <div class="example-code">curl http://localhost:8000/api/members/MBR-B5906016/accumulator</div>
     <div class="example-label" style="margin-top:12px">Example response</div>
-    <div class="example-code">{&quot;member_id&quot;: &quot;...&quot;, &quot;individual_deductible_used&quot;: 1250.00, &quot;individual_deductible_max&quot;: 3000.00, ...}</div>
+    <div class="example-code">{&quot;accumulator_id&quot;: &quot;ACC-...&quot;, &quot;member_id&quot;: &quot;...&quot;, &quot;deductible_used&quot;: 1250.00, &quot;deductible_limit&quot;: 3000.00, &quot;oop_used&quot;: 800.00, &quot;oop_max_limit&quot;: 7500.00}</div>
   </div>
 </div>
 <div class="expandable-card api-expand" onclick="toggleExpand(this)">
@@ -446,7 +446,7 @@
     <div class="example-label">Example request</div>
     <div class="example-code">curl http://localhost:8000/api/members/MBR-B5906016/eligibility</div>
     <div class="example-label" style="margin-top:12px">Example response</div>
-    <div class="example-code">{&quot;member_id&quot;: &quot;...&quot;, &quot;eligibility_records&quot;: [...]}</div>
+    <div class="example-code">{&quot;member_id&quot;: &quot;...&quot;, &quot;eligible&quot;: true, &quot;period&quot;: {...}}</div>
   </div>
 </div>
 <div class="expandable-card api-expand" onclick="toggleExpand(this)">
@@ -461,7 +461,7 @@
     <div class="example-label">Example request</div>
     <div class="example-code">curl http://localhost:8000/api/members/MBR-B5906016/interactions</div>
     <div class="example-label" style="margin-top:12px">Example response</div>
-    <div class="example-code">{&quot;call_logs&quot;: [...], &quot;secure_messages&quot;: [...], &quot;case_notes&quot;: [...]}</div>
+    <div class="example-code">{&quot;member_id&quot;: &quot;...&quot;, &quot;calls&quot;: [...], &quot;messages&quot;: [...], &quot;case_notes&quot;: [...]}</div>
   </div>
 </div>
 <div class="expandable-card api-expand" onclick="toggleExpand(this)">
@@ -491,7 +491,7 @@
     <div class="example-label">Example request</div>
     <div class="example-code">curl http://localhost:8000/api/claims/CLM-487B442D</div>
     <div class="example-label" style="margin-top:12px">Example response</div>
-    <div class="example-code">{&quot;claim_id&quot;: &quot;CLM-487B442D&quot;, &quot;claim_lines&quot;: [...], &quot;diagnosis_codes&quot;: [...], ...}</div>
+    <div class="example-code">{&quot;claim&quot;: {...}, &quot;claim_lines&quot;: [...], &quot;provider&quot;: {...}, &quot;member_name&quot;: &quot;...&quot;}</div>
   </div>
 </div>
 <div class="expandable-card api-expand" onclick="toggleExpand(this)">
@@ -566,7 +566,7 @@
     <div class="example-label">Example request</div>
     <div class="example-code">curl http://localhost:8000/api/plans/PLN-AAF39C04/benefits</div>
     <div class="example-label" style="margin-top:12px">Example response</div>
-    <div class="example-code">[{&quot;service_category&quot;: &quot;preventive_care&quot;, &quot;copay&quot;: 0, ...}]</div>
+    <div class="example-code">[{&quot;benefit_id&quot;: &quot;BEN-...&quot;, &quot;category&quot;: &quot;Preventive Care&quot;, &quot;network_tier&quot;: &quot;In-Network&quot;, ...}]</div>
   </div>
 </div>
 <div class="expandable-card api-expand" onclick="toggleExpand(this)">
@@ -581,7 +581,7 @@
     <div class="example-label">Example request</div>
     <div class="example-code">curl &#x27;http://localhost:8000/api/authorizations?member_id=MBR-B5906016&#x27;</div>
     <div class="example-label" style="margin-top:12px">Example response</div>
-    <div class="example-code">{&quot;results&quot;: [{...}], &quot;total&quot;: 1}</div>
+    <div class="example-code">{&quot;member_id&quot;: &quot;...&quot;, &quot;authorizations&quot;: [{...}], &quot;count&quot;: 1}</div>
   </div>
 </div>
 <div class="expandable-card api-expand" onclick="toggleExpand(this)">
@@ -1103,7 +1103,7 @@
 </div>
 <div class="expandable-card tool-expand" onclick="toggleExpand(this)">
   <div class="card-header">
-    <div><div class="name">search_knowledge_base</div><div class="desc">Search the knowledge base for plan policies, coverage guidelines, FAQs, or formulary information. Use this when answering member questions about how their plan works.</div></div>
+    <div><div class="name">search_knowledge_base</div><div class="desc">Search policies, FAQs, business rules, and reference data. Use this when answering member questions about how their plan works.</div></div>
     <span class="expand-icon">+</span>
   </div>
   <div class="card-detail">
@@ -1116,7 +1116,7 @@
     <div class="param-row">
       <code class="param-name">section</code>
       <span class="param-type">string</span>
-      <div class="param-desc">Knowledge base section to search (default: all)</div>
+      <div class="param-desc">Knowledge base section to search (default: all). Supports business_rules and reference_data.</div>
     </div>
     <div class="param-row">
       <code class="param-name">keywords</code>
@@ -1185,7 +1185,7 @@
 </div>
 <div class="expandable-card tool-expand" onclick="toggleExpand(this)">
   <div class="card-header">
-    <div><div class="name">generate_document</div><div class="desc">Generate a member-facing document such as an EOB, denial letter, auth approval letter, or ID card.</div></div>
+    <div><div class="name">generate_document</div><div class="desc">Render a member-facing document such as an EOB, denial letter, auth approval letter, or ID card.</div></div>
     <span class="expand-icon">+</span>
   </div>
   <div class="card-detail">
@@ -1209,6 +1209,11 @@
       <code class="param-name">auth_id</code>
       <span class="param-type">string</span>
       <div class="param-desc">Related auth ID (for auth letters)</div>
+    </div>
+    <div class="param-row">
+      <code class="param-name">appeal_id</code>
+      <span class="param-type">string</span>
+      <div class="param-desc">Related appeal ID (for appeal acknowledgment)</div>
     </div>
   </div>
 </div>

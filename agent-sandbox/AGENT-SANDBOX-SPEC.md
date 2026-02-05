@@ -57,13 +57,14 @@ These are defined in `tools/tool_schemas.json` in both Anthropic and OpenAI func
 | `submit_authorization_request` | Submit new prior auth | member_id, procedure, diagnosis |
 | `get_interaction_history` | Call logs, messages, case notes | member_id, type filter |
 | `create_case_note` | Document an interaction | member_id, category, content |
-| `search_knowledge_base` | Search policies, FAQs, guidelines | query, section filter |
+| `search_knowledge_base` | Search policies, FAQs, business rules, reference data | query, section filter |
 | `initiate_appeal` | File an appeal on a denial | member_id, claim_id, reason |
-| `generate_document` | Create EOB, denial letter, ID card | document_type, member_id |
+| `generate_document` | Render EOB, denial letter, ID card | document_type, member_id, (claim/auth/appeal ids) |
 
 ## Business Rules
 
 Located in `rules/business_rules.json`. Four categories:
+These are also searchable via `search_knowledge_base` with `section=business_rules`.
 
 **Coverage Rules (10 rules)** — When is something covered? Key rules include: preventive care at $0, ER prudent layperson standard, HMO referral requirements, OOP maximum cap, mental health parity.
 
@@ -72,6 +73,8 @@ Located in `rules/business_rules.json`. Four categories:
 **Adjudication Rules (10 rules)** — How claims get processed. 10-step pipeline: eligibility check → duplicate check → timely filing → auth verification → network pricing → deductible → copay/coinsurance → OOP cap → COB → payment/denial.
 
 **Pharmacy Rules (5 rules)** — Generic substitution, step therapy for diabetes drugs, quantity limits, specialty pharmacy mandate, mail order discounts.
+
+**Reference Data** — ICD-10, CPT/HCPCS, place of service, and medications are searchable via `search_knowledge_base` with `section=reference_data`.
 
 ## How to Use the API Layer
 
@@ -114,6 +117,7 @@ Each scenario includes: user prompt, expected tool calls, expected agent behavio
 ## Document Templates
 
 Located in `templates/document_templates.json`. 7 templates with `{{variable}}` placeholders:
+`generate_document` renders these templates and returns the filled document text.
 
 - **EOB** — Explanation of Benefits with full financial breakdown
 - **Claim Denial Letter** — Denial notification with appeal rights
