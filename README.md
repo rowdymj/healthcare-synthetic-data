@@ -68,6 +68,12 @@ cd agent-sandbox
 pip install -r requirements.txt
 ```
 
+Note: MCP requires Python 3.10+ and must be installed from GitHub:
+
+```bash
+python3.10 -m pip install git+https://github.com/modelcontextprotocol/python-sdk.git
+```
+
 **2. Add to Claude Desktop**
 
 Open Claude Desktop → Settings → Developer → Edit Config. Add:
