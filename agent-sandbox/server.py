@@ -18,9 +18,9 @@ from datetime import datetime
 import sys
 from pathlib import Path
 
-# Import the existing query layer
+# Import the query layer — auto-detects SQLite backend if healthcare.db exists
 sys.path.insert(0, str(Path(__file__).parent))
-from api_server import HealthcareAPI
+from api_server import create_api
 
 # ── App Setup ──────────────────────────────────────────────────────
 
@@ -51,7 +51,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-api = HealthcareAPI()
+api = create_api()
 
 
 # ── Pydantic Models ────────────────────────────────────────────────
