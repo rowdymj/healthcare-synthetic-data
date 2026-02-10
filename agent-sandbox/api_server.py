@@ -132,6 +132,7 @@ class HealthcareAPI:
 
     def execute_tool(self, tool_name: str, params: dict) -> dict:
         """Route a tool call to the appropriate handler. Returns a dict."""
+        print(f"[data-source] {tool_name} -> JSON backend")
         if self._tool_allowlist and tool_name not in self._tool_allowlist:
             return {"error": f"Unknown tool: {tool_name}"}
         handler = getattr(self, tool_name, None)

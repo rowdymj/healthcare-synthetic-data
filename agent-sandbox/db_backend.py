@@ -88,6 +88,7 @@ class HealthcareDB:
     # ── Tool Router ────────────────────────────────────────────────
 
     def execute_tool(self, tool_name: str, params: dict) -> dict:
+        print(f"[data-source] {tool_name} -> SQLite backend")
         if self._tool_allowlist and tool_name not in self._tool_allowlist:
             return {"error": f"Unknown tool: {tool_name}"}
         handler = getattr(self, tool_name, None)
