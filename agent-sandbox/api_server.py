@@ -41,6 +41,23 @@ def _load_allowed_tools():
 ALLOWED_TOOLS = _load_allowed_tools()
 
 
+def create_api(data_dir=None, force_json=False):
+    """Factory: returns HealthcareDB if healthcare.db exists, else HealthcareAPI.
+
+    Set force_json=True to always use the in-memory JSON backend.
+    """
+    if not force_json:
+        db_path = (Path(data_dir) if data_dir else DATA_DIR).parent / "healthcare.db"
+        if not db_path.exists():
+            db_path = BASE_DIR / "data" / "healthcare.db"
+        if db_path.exists():
+            from db_backend import HealthcareDB
+            print(f"[api_server] Using SQLite backend: {db_path.name}")
+            return HealthcareDB(db_path)
+    print("[api_server] Using in-memory JSON backend")
+    return HealthcareAPI(data_dir)
+
+
 class HealthcareAPI:
     """In-memory query layer over the synthetic healthcare dataset."""
 

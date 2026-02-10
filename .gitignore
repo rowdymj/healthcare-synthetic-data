@@ -8,3 +8,6 @@ dist/
 build/
 .venv/
 venv/
+
+# Generated database — rebuild with: python3 scripts/build_database.py
+data/healthcare.db
