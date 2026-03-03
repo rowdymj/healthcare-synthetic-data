@@ -11,3 +11,6 @@ venv/
 
 # Generated database — rebuild with: python3 scripts/build_database.py
 data/healthcare.db
+data/*.db-shm
+data/*.db-wal
+data/*.db-journal
