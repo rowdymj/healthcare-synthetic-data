@@ -9,6 +9,7 @@ Auto-detected by api_server.py when data/healthcare.db exists.
 
 import sqlite3
 import json
+import sys
 from pathlib import Path
 from datetime import datetime, timedelta
 
@@ -88,6 +89,7 @@ class HealthcareDB:
     # ── Tool Router ────────────────────────────────────────────────
 
     def execute_tool(self, tool_name: str, params: dict) -> dict:
+        print(f"[data-source] {tool_name} -> SQLite backend", file=sys.stderr)
         if self._tool_allowlist and tool_name not in self._tool_allowlist:
             return {"error": f"Unknown tool: {tool_name}"}
         handler = getattr(self, tool_name, None)

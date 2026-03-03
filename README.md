@@ -8,10 +8,13 @@ Synthetic data platform for prototyping AI agents against realistic health insur
 healthcare-synthetic-data/
 ├── data/                        # 33MB of synthetic healthcare data
 │   ├── json/                    # 21 JSON files (primary format)
-│   └── csv/                     # CSV mirrors of all entities
+│   ├── csv/                     # CSV mirrors of all entities
+│   ├── healthcare.db            # SQLite database (built from JSON)
+│   └── schema.sql               # SQLite schema reference
 ├── agent-sandbox/               # API server + agent tooling
 │   ├── server.py                # FastAPI server (23 endpoints)
-│   ├── api_server.py            # Core query engine (18 tools)
+│   ├── api_server.py            # Core query engine (18 tools, JSON backend)
+│   ├── db_backend.py            # SQLite backend (same tool interface)
 │   ├── mcp_server.py            # MCP server (Claude Desktop / Cursor / etc.)
 │   ├── tools/tool_schemas.json  # Tool definitions (Anthropic + OpenAI formats)
 │   ├── rules/business_rules.json        # 31 healthcare business rules
@@ -35,8 +38,43 @@ healthcare-synthetic-data/
 **Architecture at a glance**
 - `data/json` is the source of truth for all entities.
 - `agent-sandbox/api_server.py` loads all JSON into memory and implements the tool handlers.
+- `agent-sandbox/db_backend.py` provides an optional SQLite backend with identical tool interface.
 - `agent-sandbox/server.py` exposes REST endpoints (including `POST /tool` for agent frameworks).
 - `agent-sandbox/mcp_server.py` exposes the same tools via MCP using `agent-sandbox/tools/tool_schemas.json`.
+
+**Data backends**
+
+The platform supports two data backends:
+
+| Backend | Storage | Best for |
+|---------|---------|----------|
+| JSON (default) | In-memory from `data/json/*.json` | Quick start, no setup |
+| SQLite | `data/healthcare.db` | Better query performance, SQL access |
+
+The backend is auto-selected at startup based on whether `data/healthcare.db` exists.
+
+**Setting up SQLite**
+
+```bash
+# Build the database from JSON source files
+python3 scripts/build_database.py
+
+# Rebuild (if JSON data changes)
+python3 scripts/build_database.py --force
+```
+
+This creates `data/healthcare.db` (~16 MB) with:
+- 23 tables with foreign key constraints
+- Indexes on all foreign keys and commonly queried columns
+- Identical tool interface — no code changes needed
+
+To switch back to JSON, simply delete or rename the `.db` file.
+
+Console output shows which backend is active:
+```
+[api_server] Using SQLite backend: healthcare.db
+[data-source] lookup_member -> SQLite backend
+```
 
 **Behavioral notes**
 - "Write" tools (`submit_authorization_request`, `create_case_note`, `initiate_appeal`) are in-memory only; restart resets them.

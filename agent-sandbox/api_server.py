@@ -13,6 +13,7 @@ Usage:
 import json
 import os
 import re
+import sys
 from pathlib import Path
 from datetime import datetime, timedelta
 
@@ -52,9 +53,9 @@ def create_api(data_dir=None, force_json=False):
             db_path = BASE_DIR / "data" / "healthcare.db"
         if db_path.exists():
             from db_backend import HealthcareDB
-            print(f"[api_server] Using SQLite backend: {db_path.name}")
+            print(f"[api_server] Using SQLite backend: {db_path.name}", file=sys.stderr)
             return HealthcareDB(db_path)
-    print("[api_server] Using in-memory JSON backend")
+    print("[api_server] Using in-memory JSON backend", file=sys.stderr)
     return HealthcareAPI(data_dir)
 
 
@@ -132,6 +133,7 @@ class HealthcareAPI:
 
     def execute_tool(self, tool_name: str, params: dict) -> dict:
         """Route a tool call to the appropriate handler. Returns a dict."""
+        print(f"[data-source] {tool_name} -> JSON backend", file=sys.stderr)
         if self._tool_allowlist and tool_name not in self._tool_allowlist:
             return {"error": f"Unknown tool: {tool_name}"}
         handler = getattr(self, tool_name, None)
