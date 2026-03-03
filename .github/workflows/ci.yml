@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Compile Python files
+        run: |
+          python -m py_compile \
+            agent-sandbox/api_server.py \
+            agent-sandbox/db_backend.py \
+            agent-sandbox/server.py \
+            agent-sandbox/mcp_server.py \
+            scripts/build_database.py \
+            scripts/generate_data_spec.py \
+            scripts/validate_data.py \
+            generator/generate.py \
+            generator/generate_interactions.py
+
+      - name: Validate generated data
+        run: python scripts/validate_data.py
