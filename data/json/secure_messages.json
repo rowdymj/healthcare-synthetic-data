@@ -27998,5 +27998,33 @@
     "related_claim_id": null,
     "priority": "Normal",
     "response_time_hours": null
+  },
+  {
+    "message_id": "MSG-MB-001",
+    "thread_id": "THD-MB-001",
+    "member_id": "MBR-ANCHOR-B",
+    "direction": "Inbound",
+    "sent_date": "2025-02-23 00:00:00",
+    "subject": "Complaint: MRI Claim Denied Without Warning",
+    "body": "I am filing a formal complaint about the denial of my MRI claim (CLM-MB-003). My PCP referred me to an orthopedic specialist, who ordered the MRI for my right knee. At no point was I informed that a prior authorization was required. I received a bill for $1,950 with no warning. This is unacceptable. I have already called member services and filed an appeal, but I want this complaint on record. The process for communicating prior auth requirements to members needs to be improved.",
+    "category": "Complaint",
+    "status": "Replied",
+    "related_claim_id": "CLM-MB-003",
+    "priority": "High",
+    "response_time_hours": 18
+  },
+  {
+    "message_id": "MSG-MB-002",
+    "thread_id": "THD-MB-001",
+    "member_id": "MBR-ANCHOR-B",
+    "direction": "Outbound",
+    "sent_date": "2025-02-24 00:00:00",
+    "subject": "RE: Complaint: MRI Claim Denied Without Warning",
+    "body": "Dear Marcus, thank you for reaching out. We understand your frustration and sincerely apologize for the lack of communication regarding the prior authorization requirement. Your complaint has been documented (CASE-MB-001). Your appeal is currently under review and we expect a decision within 30 days. We are also forwarding your feedback about prior auth communication to our quality improvement team. If you have further questions, please call Member Services at 1-800-555-0199. \u2014 Janet Rodriguez, Member Services",
+    "category": "Complaint",
+    "status": "Read",
+    "related_claim_id": "CLM-MB-003",
+    "priority": "High",
+    "response_time_hours": null
   }
 ]

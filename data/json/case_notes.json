@@ -22498,5 +22498,35 @@
     "follow_up_required": true,
     "follow_up_date": "2024-02-13",
     "status": "Closed"
+  },
+  {
+    "note_id": "NOTE-MB-001",
+    "member_id": "MBR-ANCHOR-B",
+    "case_id": "CASE-MB-001",
+    "author": "Janet Rodriguez",
+    "created_date": "2025-02-22 00:00:00",
+    "category": "Claim Inquiry",
+    "note_type": "Manual",
+    "content": "Member called regarding denied MRI claim CLM-MB-003. Member states his PCP referred him to orthopedics and the MRI was ordered by the orthopedic specialist. Member was not informed that prior authorization was required. Explained the prior auth requirement under his PPO plan for advanced imaging. Member is upset \u2014 requesting appeal. Initiated appeal process and provided case reference number. Advised member that appeal decision typically takes 30 days.",
+    "related_claim_id": "CLM-MB-003",
+    "related_auth_id": null,
+    "follow_up_required": true,
+    "follow_up_date": "2025-03-22",
+    "status": "Closed"
+  },
+  {
+    "note_id": "NOTE-MB-002",
+    "member_id": "MBR-ANCHOR-B",
+    "case_id": "CASE-MB-001",
+    "author": "Janet Rodriguez",
+    "created_date": "2025-03-15 00:00:00",
+    "category": "Appeal Resolution",
+    "note_type": "Manual",
+    "content": "Appeal for MRI claim CLM-MB-003 has been approved. Medical necessity confirmed by clinical review team. Retroactive prior authorization AUTH-MB-001 issued. Original claim reprocessed as CLM-MB-004 with standard in-network benefits applied. Member notified by mail. Case closed.",
+    "related_claim_id": "CLM-MB-004",
+    "related_auth_id": "AUTH-MB-001",
+    "follow_up_required": false,
+    "follow_up_date": null,
+    "status": "Closed"
   }
 ]
