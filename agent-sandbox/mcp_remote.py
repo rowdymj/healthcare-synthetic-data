@@ -8,6 +8,9 @@ Required env vars:
     HEALTHCARE_API_URL  — base URL (e.g. https://your-app.vercel.app)
     HEALTHCARE_API_KEY  — API key for the deployment
 
+Optional env vars:
+    VERCEL_PROTECTION_BYPASS — bypass token for Vercel Deployment Protection
+
 Usage:
     export HEALTHCARE_API_URL=https://your-app.vercel.app
     export HEALTHCARE_API_KEY=your-key
@@ -21,7 +24,8 @@ Claude Desktop config (~/.claude/claude_desktop_config.json):
                 "args": ["/absolute/path/to/agent-sandbox/mcp_remote.py"],
                 "env": {
                     "HEALTHCARE_API_URL": "https://your-app.vercel.app",
-                    "HEALTHCARE_API_KEY": "your-key"
+                    "HEALTHCARE_API_KEY": "your-key",
+                    "VERCEL_PROTECTION_BYPASS": "your-bypass-secret"
                 }
             }
         }
@@ -56,6 +60,7 @@ from mcp.types import Tool, TextContent
 
 API_URL = os.environ.get("HEALTHCARE_API_URL", "").rstrip("/")
 API_KEY = os.environ.get("HEALTHCARE_API_KEY", "")
+VERCEL_BYPASS = os.environ.get("VERCEL_PROTECTION_BYPASS", "")
 
 if not API_URL:
     log.error("Set HEALTHCARE_API_URL env var (e.g. https://your-app.vercel.app)")
@@ -80,6 +85,7 @@ for t in tool_schemas["anthropic_tools"]:
 log.info(f"Remote proxy -> {API_URL}")
 log.info(f"Tools loaded: {len(mcp_tools)}")
 log.info(f"Auth: {'API key set' if API_KEY else 'no key (public)'}")
+log.info(f"Vercel bypass: {'set' if VERCEL_BYPASS else 'not set'}")
 
 # ── MCP Server ────────────────────────────────────────────────────
 
@@ -100,6 +106,8 @@ async def call_tool(name: str, arguments: dict):
         headers = {"Content-Type": "application/json"}
         if API_KEY:
             headers["Authorization"] = f"Bearer {API_KEY}"
+        if VERCEL_BYPASS:
+            headers["x-vercel-protection-bypass"] = VERCEL_BYPASS
         req = urllib.request.Request(
             f"{API_URL}/tool", data=payload, headers=headers, method="POST"
         )
