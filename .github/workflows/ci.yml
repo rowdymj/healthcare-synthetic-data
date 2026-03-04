@@ -29,7 +29,13 @@ jobs:
             scripts/generate_data_spec.py \
             scripts/validate_data.py \
             generator/generate.py \
-            generator/generate_interactions.py
+            generator/generate_interactions.py \
+            agent-sandbox/mcp_remote.py \
+            scripts/run_evals.py \
+            api/index.py
 
       - name: Validate generated data
         run: python scripts/validate_data.py
+
+      - name: Run eval scenarios
+        run: python scripts/run_evals.py
