@@ -3,9 +3,24 @@
     {
       "src": "api/index.py",
       "use": "@vercel/python"
+    },
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/",
+      "dest": "api/index.py"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/ui",
+      "dest": "/index.html"
+    },
     {
       "src": "/(.*)",
       "dest": "api/index.py"
