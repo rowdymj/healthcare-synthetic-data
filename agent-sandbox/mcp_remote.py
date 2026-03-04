@@ -109,7 +109,7 @@ async def call_tool(name: str, arguments: dict):
         log.info(f"OK   {name} ({elapsed:.0f}ms)")
     except urllib.error.HTTPError as e:
         elapsed = (time.monotonic() - start) * 1000
-        body = e.read().decode() if e.fp else str(e)
+        body = e.read().decode(errors='replace') if e.fp else str(e)
         log.error(f"FAIL {name}: HTTP {e.code} ({elapsed:.0f}ms)")
         result = {"error": f"Remote API error: HTTP {e.code}", "detail": body}
     except Exception as e:
