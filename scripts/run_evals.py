@@ -13,6 +13,7 @@ Usage:
 Exit code: 0 if all pass, 1 if any fail.
 """
 
+import argparse
 import json
 import sys
 import time
@@ -214,23 +215,44 @@ def run_scenario(api, scenario, verbose=False):
 
 # ── Main ──────────────────────────────────────────────────────────
 
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Run Healthcare Sandbox eval scenarios."
+    )
+    parser.add_argument(
+        "-v",
+        "--verbose",
+        action="store_true",
+        help="Show tool-by-tool detail for each scenario.",
+    )
+    parser.add_argument(
+        "--filter",
+        metavar="DIFFICULTY",
+        help="Run only scenarios matching a difficulty value (case-insensitive).",
+    )
+    return parser.parse_args()
+
+
 def main():
-    verbose = "--verbose" in sys.argv or "-v" in sys.argv
-    difficulty_filter = None
-    if "--filter" in sys.argv:
-        idx = sys.argv.index("--filter")
-        if idx + 1 < len(sys.argv):
-            difficulty_filter = sys.argv[idx + 1]
+    args = parse_args()
+    verbose = args.verbose
+    difficulty_filter = args.filter
 
     with open(SCENARIOS_PATH) as f:
         data = json.load(f)
     scenarios = data["scenarios"]
 
     if difficulty_filter:
-        scenarios = [s for s in scenarios if s["difficulty"].lower() == difficulty_filter.lower()]
-        if not scenarios:
-            print(f"No scenarios match difficulty filter: {difficulty_filter}")
-            sys.exit(1)
+        valid_difficulties = sorted({s["difficulty"] for s in scenarios})
+        difficulty_lookup = {d.lower(): d for d in valid_difficulties}
+        matched_difficulty = difficulty_lookup.get(difficulty_filter.lower())
+        if not matched_difficulty:
+            valid = ", ".join(valid_difficulties)
+            raise SystemExit(
+                f"Invalid --filter value: {difficulty_filter!r}. "
+                f"Valid values: {valid}"
+            )
+        scenarios = [s for s in scenarios if s["difficulty"] == matched_difficulty]
 
     api = create_api(force_json=True)
 
