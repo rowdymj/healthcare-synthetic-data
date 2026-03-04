@@ -18,7 +18,7 @@ from pathlib import Path
 from datetime import datetime, timedelta
 
 BASE_DIR = Path(__file__).parent.parent
-DATA_DIR = BASE_DIR / "data" / "json"
+DATA_DIR = Path(os.environ["DATA_DIR"]) if "DATA_DIR" in os.environ else BASE_DIR / "data" / "json"
 KB_DIR = Path(__file__).parent / "knowledge-base"
 RULES_DIR = Path(__file__).parent / "rules"
 TEMPLATES_DIR = Path(__file__).parent / "templates"
