@@ -221,6 +221,136 @@
       "expected_behavior": "Agent should de-escalate, review the interaction history to understand the issue, address the underlying claim problem, explain the grievance process, and document the complaint.",
       "success_criteria": "Agent acknowledges frustration, reviews past interactions, addresses the claim issue, explains grievance filing, and creates documentation.",
       "agent_role": "Supervisor"
+    },
+    {
+      "id": "EVAL-021",
+      "name": "Member ID doesn't exist",
+      "category": "Error Handling",
+      "difficulty": "Easy",
+      "user_prompt": "Can you look up member MBR-ZZZZZZZZ for me?",
+      "expected_tools": ["lookup_member"],
+      "expected_behavior": "Agent should call lookup_member with the provided ID, receive a not-found result, and clearly tell the caller the member ID does not exist. Must not invent or hallucinate member details.",
+      "success_criteria": "Agent acknowledges the member was not found, asks the caller to verify the ID, and does not fabricate any member information.",
+      "agent_role": "Member Services",
+      "expected_facts": {
+        "must_contain": ["not found", "verify", "member ID"],
+        "must_not_contain": ["your plan", "your deductible", "your coverage", "date of birth", "address on file"],
+        "required_tool_calls": ["lookup_member"],
+        "tool_call_order": "lookup_member"
+      },
+      "scoring": {
+        "weights": {
+          "correct_tools_called": 30,
+          "correct_tool_order": 10,
+          "facts_present": 30,
+          "no_forbidden_phrases": 30
+        },
+        "pass_threshold": 70
+      }
+    },
+    {
+      "id": "EVAL-022",
+      "name": "Member with lapsed coverage",
+      "category": "Eligibility",
+      "difficulty": "Medium",
+      "user_prompt": "I need to check on a claim for Jonathan Perez. His member ID is MBR-555AC861. He says he had a doctor visit last month but hasn't received an EOB.",
+      "expected_tools": ["lookup_member", "check_eligibility", "get_member_coverage"],
+      "expected_behavior": "Agent should look up the member, discover the coverage status is Terminated, and clearly explain that the member's coverage has lapsed. Should advise on COBRA or re-enrollment options rather than proceeding to search for claims.",
+      "success_criteria": "Agent identifies the terminated coverage status, explains the eligibility gap, and suggests next steps (COBRA, marketplace, re-enrollment through employer).",
+      "agent_role": "Eligibility Specialist",
+      "expected_facts": {
+        "must_contain": ["terminated", "coverage", "not active", "COBRA"],
+        "must_not_contain": ["your claim is processing", "you are currently covered", "active coverage"],
+        "required_tool_calls": ["lookup_member", "check_eligibility"],
+        "tool_call_order": "lookup_member before check_eligibility"
+      },
+      "scoring": {
+        "weights": {
+          "correct_tools_called": 30,
+          "correct_tool_order": 20,
+          "facts_present": 30,
+          "no_forbidden_phrases": 20
+        },
+        "pass_threshold": 70
+      }
+    },
+    {
+      "id": "EVAL-025",
+      "name": "Dual-eligible member coordination of benefits",
+      "category": "Benefits Inquiry",
+      "difficulty": "Hard",
+      "user_prompt": "I have Medicare and I think my other insurance should have covered this claim. Can you help me figure out which pays first?",
+      "expected_tools": ["lookup_member", "search_knowledge_base", "search_claims"],
+      "expected_behavior": "Agent should look up the member, search the knowledge base for coordination of benefits and Medicare Secondary Payer rules, and review relevant claims. Must explain primary vs secondary payer determination for Medicare dual-eligible members including the birthday rule and employer size exceptions.",
+      "success_criteria": "Agent explains Medicare as primary vs secondary based on employment status and employer size, references the birthday rule where applicable, and reviews claims to identify COB issues.",
+      "agent_role": "Benefits Specialist",
+      "expected_facts": {
+        "must_contain": ["primary", "secondary", "Medicare", "coordination of benefits"],
+        "must_not_contain": ["Medicare always pays first", "you only have one insurance", "COB does not apply"],
+        "required_tool_calls": ["lookup_member", "search_knowledge_base"],
+        "tool_call_order": "lookup_member before search_knowledge_base"
+      },
+      "scoring": {
+        "weights": {
+          "correct_tools_called": 30,
+          "correct_tool_order": 20,
+          "facts_present": 30,
+          "no_forbidden_phrases": 20
+        },
+        "pass_threshold": 70
+      }
+    },
+    {
+      "id": "EVAL-028",
+      "name": "Auth approved but claim denied",
+      "category": "Claim Inquiry",
+      "difficulty": "Hard",
+      "user_prompt": "My doctor got approval for my procedure but my claim was still denied. How is that possible?",
+      "expected_tools": ["lookup_member", "get_authorization", "search_claims", "get_claim_detail"],
+      "expected_behavior": "Agent should look up the member, find the approved authorization and the denied claim, and explain that authorization and claim adjudication are separate processes. Auth confirms medical necessity but the claim can still deny for other reasons (timely filing, coding errors, out-of-network, benefit exclusions, etc.).",
+      "success_criteria": "Agent clearly explains that authorization does not guarantee payment, identifies the specific denial reason on the claim, and explains the distinction between auth approval and claims adjudication.",
+      "agent_role": "Claims Specialist",
+      "expected_facts": {
+        "must_contain": ["authorization", "claim", "separate", "denial reason"],
+        "must_not_contain": ["that shouldn't happen", "authorization guarantees payment", "this is a system error"],
+        "required_tool_calls": ["lookup_member", "get_authorization", "search_claims", "get_claim_detail"],
+        "tool_call_order": "lookup_member before get_authorization before search_claims"
+      },
+      "scoring": {
+        "weights": {
+          "correct_tools_called": 30,
+          "correct_tool_order": 20,
+          "facts_present": 30,
+          "no_forbidden_phrases": 20
+        },
+        "pass_threshold": 70
+      }
+    },
+    {
+      "id": "EVAL-029",
+      "name": "Member with multiple open appeals",
+      "category": "Appeals",
+      "difficulty": "Medium",
+      "user_prompt": "I have three different appeals open right now. Can you tell me where they all stand?",
+      "expected_tools": ["lookup_member", "get_authorization", "search_claims"],
+      "expected_behavior": "Agent should look up the member, retrieve all authorizations and claims with appeal statuses, and present a clear summary of each open appeal with its current status. Must distinguish between the different appeals rather than giving a generic response.",
+      "success_criteria": "Agent provides the status of each individual appeal, references specific claim or auth IDs, and clearly distinguishes between them so the member knows which is which.",
+      "agent_role": "Appeals Specialist",
+      "expected_facts": {
+        "must_contain": ["appeal", "status", "claim"],
+        "must_not_contain": ["you only have one appeal", "I can only see one", "no appeals found"],
+        "required_tool_calls": ["lookup_member", "get_authorization", "search_claims"],
+        "tool_call_order": "lookup_member before get_authorization"
+      },
+      "scoring": {
+        "weights": {
+          "correct_tools_called": 30,
+          "correct_tool_order": 20,
+          "facts_present": 30,
+          "no_forbidden_phrases": 20
+        },
+        "pass_threshold": 70
+      }
     }
   ]
 }

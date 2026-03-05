@@ -57931,5 +57931,33 @@
     "enrollment_date": "2020-02-18",
     "termination_date": null,
     "chronic_conditions": []
+  },
+  {
+    "member_id": "MBR-ANCHOR-B",
+    "subscriber_id": "SUB700200301",
+    "employer_id": "EMP-82A6A329",
+    "plan_id": "PLN-E6364680",
+    "first_name": "Marcus",
+    "last_name": "Thompson",
+    "date_of_birth": "1991-06-15",
+    "age": 34,
+    "gender": "M",
+    "ssn_last4": "4821",
+    "email": "marcus.thompson91@gmail.com",
+    "phone": "(512) 738-2049",
+    "address": {
+      "line1": "2214 Cedar Park Dr",
+      "line2": null,
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78745"
+    },
+    "coverage_type": "Individual",
+    "relationship": "Self",
+    "pcp_provider_id": "PRV-34A607E4",
+    "status": "Active",
+    "enrollment_date": "2023-01-01",
+    "termination_date": null,
+    "chronic_conditions": []
   }
 ]

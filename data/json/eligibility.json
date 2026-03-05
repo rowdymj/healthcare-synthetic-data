@@ -42968,5 +42968,15 @@
     "termination_date": null,
     "status": "Active",
     "cobra_flag": false
+  },
+  {
+    "eligibility_id": "ELG-ANCHOR-B",
+    "member_id": "MBR-ANCHOR-B",
+    "plan_id": "PLN-E6364680",
+    "coverage_type": "Individual",
+    "effective_date": "2023-01-01",
+    "termination_date": null,
+    "status": "Active",
+    "cobra_flag": false
   }
 ]

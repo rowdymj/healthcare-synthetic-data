@@ -25998,5 +25998,18 @@
     "oop_used": 644.61,
     "oop_remaining": 4855.39,
     "last_updated": "2025-12-31"
+  },
+  {
+    "accumulator_id": "ACC-ANCHOR-B",
+    "member_id": "MBR-ANCHOR-B",
+    "plan_id": "PLN-E6364680",
+    "plan_year": 2025,
+    "deductible_limit": 750,
+    "deductible_used": 750,
+    "deductible_remaining": 0,
+    "oop_max_limit": 3500,
+    "oop_used": 3500,
+    "oop_remaining": 0,
+    "last_updated": "2025-10-30"
   }
 ]
