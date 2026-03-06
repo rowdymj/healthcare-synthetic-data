@@ -1,6 +1,6 @@
 [
   {
-    "employer_id": "EMP-08EABF98",
+    "employer_id": "EMP-8303D139",
     "name": "Acme Corporation",
     "tax_id": "96-2458591",
     "industry": "Technology",
@@ -19,7 +19,7 @@
     "account_manager": "David Brown"
   },
   {
-    "employer_id": "EMP-55218316",
+    "employer_id": "EMP-8C87C2AD",
     "name": "GlobalTech Industries",
     "tax_id": "67-5667265",
     "industry": "Manufacturing",
@@ -38,7 +38,7 @@
     "account_manager": "Sharon Baker"
   },
   {
-    "employer_id": "EMP-132801F2",
+    "employer_id": "EMP-04696E78",
     "name": "Meridian Healthcare Systems",
     "tax_id": "15-8707870",
     "industry": "Healthcare",
@@ -57,7 +57,7 @@
     "account_manager": "Kenneth Campbell"
   },
   {
-    "employer_id": "EMP-823D57E7",
+    "employer_id": "EMP-88892271",
     "name": "Pinnacle Financial Group",
     "tax_id": "20-4905582",
     "industry": "Financial Services",
@@ -76,7 +76,7 @@
     "account_manager": "Michelle Mitchell"
   },
   {
-    "employer_id": "EMP-DF5849C1",
+    "employer_id": "EMP-0E4961CE",
     "name": "Summit Manufacturing Co",
     "tax_id": "78-5107245",
     "industry": "Construction",
@@ -95,7 +95,7 @@
     "account_manager": "Laura Adams"
   },
   {
-    "employer_id": "EMP-EC0B4754",
+    "employer_id": "EMP-60D9678D",
     "name": "Horizon Media Group",
     "tax_id": "82-6279418",
     "industry": "Media",
@@ -114,7 +114,7 @@
     "account_manager": "Shirley Moore"
   },
   {
-    "employer_id": "EMP-6EDD3EEB",
+    "employer_id": "EMP-EC5045AA",
     "name": "Cascade Energy Solutions",
     "tax_id": "38-3320821",
     "industry": "Energy",
@@ -133,7 +133,7 @@
     "account_manager": "Kenneth Lee"
   },
   {
-    "employer_id": "EMP-2575D1BC",
+    "employer_id": "EMP-00CC8072",
     "name": "Sterling Logistics Inc",
     "tax_id": "80-1192619",
     "industry": "Logistics",
@@ -152,7 +152,7 @@
     "account_manager": "Sandra Nguyen"
   },
   {
-    "employer_id": "EMP-DA5C85E5",
+    "employer_id": "EMP-22246F87",
     "name": "Vanguard Retail Corp",
     "tax_id": "74-2785277",
     "industry": "Retail",
@@ -171,7 +171,7 @@
     "account_manager": "Catherine Lee"
   },
   {
-    "employer_id": "EMP-B48DF0E2",
+    "employer_id": "EMP-6E9FFED8",
     "name": "Apex Construction LLC",
     "tax_id": "49-5017343",
     "industry": "Aerospace",
@@ -190,7 +190,7 @@
     "account_manager": "Frank Rodriguez"
   },
   {
-    "employer_id": "EMP-D4C99B0F",
+    "employer_id": "EMP-B2AC58A2",
     "name": "Quantum Software Solutions",
     "tax_id": "77-8099076",
     "industry": "Hospitality",
@@ -209,7 +209,7 @@
     "account_manager": "Ronald Mitchell"
   },
   {
-    "employer_id": "EMP-788C5CE6",
+    "employer_id": "EMP-48775A3B",
     "name": "Heritage Foods International",
     "tax_id": "85-4860684",
     "industry": "Consulting",
@@ -228,7 +228,7 @@
     "account_manager": "Cynthia Rodriguez"
   },
   {
-    "employer_id": "EMP-2FCDCBBA",
+    "employer_id": "EMP-D4042822",
     "name": "Titan Aerospace Engineering",
     "tax_id": "79-3219824",
     "industry": "Transportation",
@@ -247,7 +247,7 @@
     "account_manager": "Gregory Evans"
   },
   {
-    "employer_id": "EMP-060B5767",
+    "employer_id": "EMP-B385C8F6",
     "name": "Coastal Hospitality Group",
     "tax_id": "69-1908841",
     "industry": "Education",
@@ -266,7 +266,7 @@
     "account_manager": "Debra Wilson"
   },
   {
-    "employer_id": "EMP-FA66821C",
+    "employer_id": "EMP-E95753E6",
     "name": "Redwood Consulting Partners",
     "tax_id": "45-8761611",
     "industry": "Security",
@@ -285,7 +285,7 @@
     "account_manager": "Christopher Johnson"
   },
   {
-    "employer_id": "EMP-9641BB3D",
+    "employer_id": "EMP-8F516799",
     "name": "Atlas Transportation Co",
     "tax_id": "17-3762152",
     "industry": "Telecommunications",
@@ -304,7 +304,7 @@
     "account_manager": "Pamela Diaz"
   },
   {
-    "employer_id": "EMP-2D272DE5",
+    "employer_id": "EMP-F727D281",
     "name": "Beacon Education Foundation",
     "tax_id": "50-1959074",
     "industry": "Agriculture",
@@ -323,7 +323,7 @@
     "account_manager": "Jessica Rogers"
   },
   {
-    "employer_id": "EMP-ACCD0AB9",
+    "employer_id": "EMP-86B8A6A3",
     "name": "Ironclad Security Services",
     "tax_id": "25-5130808",
     "industry": "Public Sector",
@@ -342,7 +342,7 @@
     "account_manager": "Matthew Gutierrez"
   },
   {
-    "employer_id": "EMP-C6908DB9",
+    "employer_id": "EMP-5C9B67F9",
     "name": "Sapphire Telecommunications",
     "tax_id": "60-3195773",
     "industry": "Environmental Services",
@@ -361,7 +361,7 @@
     "account_manager": "Matthew Gonzalez"
   },
   {
-    "employer_id": "EMP-4362159B",
+    "employer_id": "EMP-7C3684F5",
     "name": "Prairie Agricultural Corp",
     "tax_id": "57-5781295",
     "industry": "Mining",
@@ -380,7 +380,7 @@
     "account_manager": "Gregory Ortiz"
   },
   {
-    "employer_id": "EMP-CA4D951E",
+    "employer_id": "EMP-EAEFA15C",
     "name": "Metro Transit Authority",
     "tax_id": "24-2795765",
     "industry": "Insurance",
@@ -399,7 +399,7 @@
     "account_manager": "Jason King"
   },
   {
-    "employer_id": "EMP-22AA0BE9",
+    "employer_id": "EMP-1BD1B23D",
     "name": "Evergreen Environmental Services",
     "tax_id": "15-1059486",
     "industry": "Marine",
@@ -418,7 +418,7 @@
     "account_manager": "Charles Diaz"
   },
   {
-    "employer_id": "EMP-79CFB3CC",
+    "employer_id": "EMP-4EC4C137",
     "name": "Diamond Mining Operations",
     "tax_id": "57-3484601",
     "industry": "Pharmaceutical",
@@ -437,7 +437,7 @@
     "account_manager": "Samuel Garcia"
   },
   {
-    "employer_id": "EMP-CD4BA896",
+    "employer_id": "EMP-827467D8",
     "name": "Liberty Insurance Brokers",
     "tax_id": "89-3592974",
     "industry": "Legal Services",
@@ -456,7 +456,7 @@
     "account_manager": "Kyle Nelson"
   },
   {
-    "employer_id": "EMP-C7867AA8",
+    "employer_id": "EMP-F2238A7D",
     "name": "Pacific Marine Industries",
     "tax_id": "14-8896868",
     "industry": "Real Estate",
@@ -473,5 +473,24 @@
     "effective_date": "2020-01-01",
     "status": "Active",
     "account_manager": "Aaron Robinson"
+  },
+  {
+    "employer_id": "EMP-82A6A329",
+    "name": "Anchor Employer A329",
+    "tax_id": "61-7387969",
+    "industry": "Healthcare",
+    "size_category": "medium",
+    "employee_count": 250,
+    "address": {
+      "line1": "100 Main St",
+      "line2": "",
+      "city": "Dallas",
+      "state": "TX",
+      "zip": "75201"
+    },
+    "phone": "(555) 000-0000",
+    "effective_date": "2020-01-01",
+    "status": "Active",
+    "account_manager": "System Admin"
   }
 ]

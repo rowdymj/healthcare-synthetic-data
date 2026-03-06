@@ -1,6 +1,6 @@
 [
   {
-    "provider_id": "PRV-00B6A7AE",
+    "provider_id": "PRV-FBED065E",
     "npi": "1790874064",
     "name": "Sarah Rogers, DO",
     "type": "Individual",
@@ -25,7 +25,7 @@
     "effective_date": "2021-03-01"
   },
   {
-    "provider_id": "PRV-3B9396C4",
+    "provider_id": "PRV-0177A94F",
     "npi": "1512868230",
     "name": "Elizabeth Moore, PA",
     "type": "Individual",
@@ -48,7 +48,7 @@
     "effective_date": "2017-05-01"
   },
   {
-    "provider_id": "PRV-1980A8C7",
+    "provider_id": "PRV-BE948BE3",
     "npi": "1190790306",
     "name": "Donald Clark, MD",
     "type": "Individual",
@@ -71,7 +71,7 @@
     "effective_date": "2020-04-01"
   },
   {
-    "provider_id": "PRV-EA700D19",
+    "provider_id": "PRV-AFEB23FC",
     "npi": "1892687056",
     "name": "St. Marys Hospital",
     "type": "Facility",
@@ -96,7 +96,7 @@
     "effective_date": "2017-08-01"
   },
   {
-    "provider_id": "PRV-CDB20AED",
+    "provider_id": "PRV-F939F7CF",
     "npi": "1435175183",
     "name": "University Lab",
     "type": "Facility",
@@ -121,7 +121,7 @@
     "effective_date": "2020-05-01"
   },
   {
-    "provider_id": "PRV-9DF3A216",
+    "provider_id": "PRV-0A999E4A",
     "npi": "1385467854",
     "name": "Frank Clark, DO",
     "type": "Individual",
@@ -145,7 +145,7 @@
     "effective_date": "2021-01-01"
   },
   {
-    "provider_id": "PRV-3764D2B7",
+    "provider_id": "PRV-942BBD2F",
     "npi": "1536937854",
     "name": "Emily Martin, MD",
     "type": "Individual",
@@ -169,7 +169,7 @@
     "effective_date": "2016-11-01"
   },
   {
-    "provider_id": "PRV-EE047326",
+    "provider_id": "PRV-00206FF9",
     "npi": "1750997700",
     "name": "James Ramirez, NP",
     "type": "Individual",
@@ -193,7 +193,7 @@
     "effective_date": "2017-02-01"
   },
   {
-    "provider_id": "PRV-42D0878C",
+    "provider_id": "PRV-343C1023",
     "npi": "1615679334",
     "name": "Julie Rivera, MD",
     "type": "Individual",
@@ -218,7 +218,7 @@
     "effective_date": "2017-02-01"
   },
   {
-    "provider_id": "PRV-A02FCE2F",
+    "provider_id": "PRV-CDCB25B9",
     "npi": "1339740148",
     "name": "Zachary Ortiz, MD",
     "type": "Individual",
@@ -243,7 +243,7 @@
     "effective_date": "2018-10-01"
   },
   {
-    "provider_id": "PRV-13FEF430",
+    "provider_id": "PRV-9BAB6EC8",
     "npi": "1163159996",
     "name": "Nicholas Hall, MD",
     "type": "Individual",
@@ -267,7 +267,7 @@
     "effective_date": "2021-02-01"
   },
   {
-    "provider_id": "PRV-7DC491A5",
+    "provider_id": "PRV-6F12D6A9",
     "npi": "1655110475",
     "name": "Regional Hospital",
     "type": "Facility",
@@ -292,7 +292,7 @@
     "effective_date": "2023-02-01"
   },
   {
-    "provider_id": "PRV-8C40D095",
+    "provider_id": "PRV-F2C2C9AA",
     "npi": "1839826224",
     "name": "Memorial Lab",
     "type": "Facility",
@@ -316,7 +316,7 @@
     "effective_date": "2018-12-01"
   },
   {
-    "provider_id": "PRV-3CB154D6",
+    "provider_id": "PRV-7076051C",
     "npi": "1657569245",
     "name": "Ronald Nelson, NP",
     "type": "Individual",
@@ -340,7 +340,7 @@
     "effective_date": "2019-07-01"
   },
   {
-    "provider_id": "PRV-2F7B11E0",
+    "provider_id": "PRV-29E6B0D1",
     "npi": "1737416724",
     "name": "Gregory Brown, PA",
     "type": "Individual",
@@ -365,7 +365,7 @@
     "effective_date": "2021-09-01"
   },
   {
-    "provider_id": "PRV-2F367AC6",
+    "provider_id": "PRV-B64152E4",
     "npi": "1529096561",
     "name": "Richard Young, PA",
     "type": "Individual",
@@ -390,7 +390,7 @@
     "effective_date": "2024-12-01"
   },
   {
-    "provider_id": "PRV-023400FA",
+    "provider_id": "PRV-BF105A9D",
     "npi": "1254573875",
     "name": "Rebecca Hernandez, MD",
     "type": "Individual",
@@ -415,7 +415,7 @@
     "effective_date": "2016-11-01"
   },
   {
-    "provider_id": "PRV-A3887E7B",
+    "provider_id": "PRV-90AFF4B6",
     "npi": "1362266093",
     "name": "Brenda Diaz, DO",
     "type": "Individual",
@@ -438,7 +438,7 @@
     "effective_date": "2023-03-01"
   },
   {
-    "provider_id": "PRV-70B71036",
+    "provider_id": "PRV-0FD07710",
     "npi": "1696915579",
     "name": "Shirley Green, NP",
     "type": "Individual",
@@ -461,7 +461,7 @@
     "effective_date": "2020-12-01"
   },
   {
-    "provider_id": "PRV-517FE7EF",
+    "provider_id": "PRV-4CAB12AD",
     "npi": "1278282742",
     "name": "Chicago Health Partners",
     "type": "Facility",
@@ -485,7 +485,7 @@
     "effective_date": "2023-09-01"
   },
   {
-    "provider_id": "PRV-E14A6037",
+    "provider_id": "PRV-A0A6A23E",
     "npi": "1903404384",
     "name": "Memorial Lab",
     "type": "Facility",
@@ -508,7 +508,7 @@
     "effective_date": "2020-09-01"
   },
   {
-    "provider_id": "PRV-74451D9A",
+    "provider_id": "PRV-B481EBEA",
     "npi": "1451713395",
     "name": "Joshua Jones, DO",
     "type": "Individual",
@@ -531,7 +531,7 @@
     "effective_date": "2024-09-01"
   },
   {
-    "provider_id": "PRV-29E3213E",
+    "provider_id": "PRV-77A099B4",
     "npi": "1126042232",
     "name": "Joyce Rogers, PA",
     "type": "Individual",
@@ -555,7 +555,7 @@
     "effective_date": "2016-07-01"
   },
   {
-    "provider_id": "PRV-EE7D0E74",
+    "provider_id": "PRV-E801B84C",
     "npi": "1175186363",
     "name": "Michelle Smith, PA",
     "type": "Individual",
@@ -579,7 +579,7 @@
     "effective_date": "2022-01-01"
   },
   {
-    "provider_id": "PRV-AF35351E",
+    "provider_id": "PRV-AFB40F7E",
     "npi": "1424154152",
     "name": "Frank Taylor, PA",
     "type": "Individual",
@@ -602,7 +602,7 @@
     "effective_date": "2016-03-01"
   },
   {
-    "provider_id": "PRV-DF321465",
+    "provider_id": "PRV-7FB14700",
     "npi": "1627136111",
     "name": "Frank Baker, MD",
     "type": "Individual",
@@ -625,7 +625,7 @@
     "effective_date": "2024-01-01"
   },
   {
-    "provider_id": "PRV-F832ABBD",
+    "provider_id": "PRV-D3C9ABE7",
     "npi": "1731121965",
     "name": "Kyle Evans, NP",
     "type": "Individual",
@@ -650,7 +650,7 @@
     "effective_date": "2019-04-01"
   },
   {
-    "provider_id": "PRV-239C9B04",
+    "provider_id": "PRV-632353DE",
     "npi": "1761379180",
     "name": "Houston Medical Group",
     "type": "Facility",
@@ -674,7 +674,7 @@
     "effective_date": "2015-05-01"
   },
   {
-    "provider_id": "PRV-5C23DEC1",
+    "provider_id": "PRV-5DE05510",
     "npi": "1666188924",
     "name": "Good Samaritan Lab",
     "type": "Facility",
@@ -698,7 +698,7 @@
     "effective_date": "2021-12-01"
   },
   {
-    "provider_id": "PRV-7395F570",
+    "provider_id": "PRV-BCF0388E",
     "npi": "1210202758",
     "name": "Helen Davis, MD",
     "type": "Individual",
@@ -723,7 +723,7 @@
     "effective_date": "2019-09-01"
   },
   {
-    "provider_id": "PRV-101ECA28",
+    "provider_id": "PRV-7078CB25",
     "npi": "1792524191",
     "name": "Angela Campbell, MD",
     "type": "Individual",
@@ -747,7 +747,7 @@
     "effective_date": "2015-09-01"
   },
   {
-    "provider_id": "PRV-493D2B1F",
+    "provider_id": "PRV-AAE89BAF",
     "npi": "1518023806",
     "name": "Julie Martinez, NP",
     "type": "Individual",
@@ -770,7 +770,7 @@
     "effective_date": "2024-05-01"
   },
   {
-    "provider_id": "PRV-C524BCAB",
+    "provider_id": "PRV-66FEC772",
     "npi": "1038505064",
     "name": "Christopher Smith, DO",
     "type": "Individual",
@@ -793,7 +793,7 @@
     "effective_date": "2018-09-01"
   },
   {
-    "provider_id": "PRV-3223F606",
+    "provider_id": "PRV-A1BF1885",
     "npi": "1619906234",
     "name": "Nicholas Moore, PA",
     "type": "Individual",
@@ -816,7 +816,7 @@
     "effective_date": "2024-02-01"
   },
   {
-    "provider_id": "PRV-C2AAD544",
+    "provider_id": "PRV-C3D87517",
     "npi": "1374741124",
     "name": "Jessica Morgan, MD",
     "type": "Individual",
@@ -840,7 +840,7 @@
     "effective_date": "2019-03-01"
   },
   {
-    "provider_id": "PRV-7D201828",
+    "provider_id": "PRV-8D434772",
     "npi": "1121003236",
     "name": "Presbyterian Hospital",
     "type": "Facility",
@@ -863,7 +863,7 @@
     "effective_date": "2022-03-01"
   },
   {
-    "provider_id": "PRV-B8ABA427",
+    "provider_id": "PRV-101FB298",
     "npi": "1667066253",
     "name": "Mercy Lab",
     "type": "Facility",
@@ -886,7 +886,7 @@
     "effective_date": "2023-08-01"
   },
   {
-    "provider_id": "PRV-1C6ECC81",
+    "provider_id": "PRV-97D814DF",
     "npi": "1806578759",
     "name": "Samuel Ortiz, MD",
     "type": "Individual",
@@ -909,7 +909,7 @@
     "effective_date": "2022-09-01"
   },
   {
-    "provider_id": "PRV-BB6C1046",
+    "provider_id": "PRV-606841BA",
     "npi": "1039652239",
     "name": "Andrew Morgan, PA",
     "type": "Individual",
@@ -934,7 +934,7 @@
     "effective_date": "2022-01-01"
   },
   {
-    "provider_id": "PRV-AC6BC0E5",
+    "provider_id": "PRV-217646AF",
     "npi": "1325250029",
     "name": "Mary Nelson, NP",
     "type": "Individual",
@@ -958,7 +958,7 @@
     "effective_date": "2017-03-01"
   },
   {
-    "provider_id": "PRV-A40CD1BD",
+    "provider_id": "PRV-326516DE",
     "npi": "1442209690",
     "name": "Sandra Thompson, DO",
     "type": "Individual",
@@ -983,7 +983,7 @@
     "effective_date": "2017-11-01"
   },
   {
-    "provider_id": "PRV-7F165D0A",
+    "provider_id": "PRV-FD9EC04E",
     "npi": "1410067626",
     "name": "Frank Rodriguez, MD",
     "type": "Individual",
@@ -1008,7 +1008,7 @@
     "effective_date": "2015-05-01"
   },
   {
-    "provider_id": "PRV-719EA3B3",
+    "provider_id": "PRV-4B6853E9",
     "npi": "1181599706",
     "name": "Douglas Carter, MD",
     "type": "Individual",
@@ -1031,7 +1031,7 @@
     "effective_date": "2023-05-01"
   },
   {
-    "provider_id": "PRV-68F39F7D",
+    "provider_id": "PRV-C0F1CB9C",
     "npi": "1205061497",
     "name": "Philadelphia Physicians Group",
     "type": "Facility",
@@ -1055,7 +1055,7 @@
     "effective_date": "2022-08-01"
   },
   {
-    "provider_id": "PRV-ACDAF6ED",
+    "provider_id": "PRV-432097B4",
     "npi": "1527047743",
     "name": "Methodist Lab",
     "type": "Facility",
@@ -1080,7 +1080,7 @@
     "effective_date": "2021-09-01"
   },
   {
-    "provider_id": "PRV-4F98C6C5",
+    "provider_id": "PRV-CCBF1EAA",
     "npi": "1989921722",
     "name": "Ronald Jones, NP",
     "type": "Individual",
@@ -1103,7 +1103,7 @@
     "effective_date": "2019-06-01"
   },
   {
-    "provider_id": "PRV-968AF770",
+    "provider_id": "PRV-E179C704",
     "npi": "1709986162",
     "name": "Joyce Scott, NP",
     "type": "Individual",
@@ -1127,7 +1127,7 @@
     "effective_date": "2022-10-01"
   },
   {
-    "provider_id": "PRV-3C6BF4D4",
+    "provider_id": "PRV-E5985507",
     "npi": "1307450544",
     "name": "Jennifer Gomez, MD",
     "type": "Individual",
@@ -1151,7 +1151,7 @@
     "effective_date": "2021-10-01"
   },
   {
-    "provider_id": "PRV-9364C892",
+    "provider_id": "PRV-54C52400",
     "npi": "1214862890",
     "name": "Julie Davis, NP",
     "type": "Individual",
@@ -1175,7 +1175,7 @@
     "effective_date": "2022-09-01"
   },
   {
-    "provider_id": "PRV-BEB1948B",
+    "provider_id": "PRV-9EAE2C28",
     "npi": "1798552414",
     "name": "Nicole Edwards, MD",
     "type": "Individual",
@@ -1200,7 +1200,7 @@
     "effective_date": "2015-11-01"
   },
   {
-    "provider_id": "PRV-18ACDEF0",
+    "provider_id": "PRV-987848BD",
     "npi": "1446657437",
     "name": "Mark Allen, NP",
     "type": "Individual",
@@ -1224,7 +1224,7 @@
     "effective_date": "2016-08-01"
   },
   {
-    "provider_id": "PRV-16EF8D06",
+    "provider_id": "PRV-602149D3",
     "npi": "1328309652",
     "name": "Community Hospital",
     "type": "Facility",
@@ -1249,7 +1249,7 @@
     "effective_date": "2023-11-01"
   },
   {
-    "provider_id": "PRV-80E17EC5",
+    "provider_id": "PRV-066ACEFA",
     "npi": "1417248251",
     "name": "San Antonio Clinic",
     "type": "Facility",
@@ -1273,7 +1273,7 @@
     "effective_date": "2016-08-01"
   },
   {
-    "provider_id": "PRV-7513C664",
+    "provider_id": "PRV-C41F71BA",
     "npi": "1022356972",
     "name": "Shirley Hill, DO",
     "type": "Individual",
@@ -1297,7 +1297,7 @@
     "effective_date": "2018-03-01"
   },
   {
-    "provider_id": "PRV-D77C1034",
+    "provider_id": "PRV-5AE7461B",
     "npi": "1676008350",
     "name": "Samantha Diaz, DO",
     "type": "Individual",
@@ -1322,7 +1322,7 @@
     "effective_date": "2023-10-01"
   },
   {
-    "provider_id": "PRV-1C08F4CE",
+    "provider_id": "PRV-31C8017F",
     "npi": "1856257532",
     "name": "Cynthia Gutierrez, NP",
     "type": "Individual",
@@ -1347,7 +1347,7 @@
     "effective_date": "2015-07-01"
   },
   {
-    "provider_id": "PRV-2A3BB2BF",
+    "provider_id": "PRV-667869CD",
     "npi": "1761847230",
     "name": "Michael Anderson, DO",
     "type": "Individual",
@@ -1370,7 +1370,7 @@
     "effective_date": "2016-09-01"
   },
   {
-    "provider_id": "PRV-F8AFF1DA",
+    "provider_id": "PRV-E5A620C2",
     "npi": "1835642087",
     "name": "Scott Sanchez, MD",
     "type": "Individual",
@@ -1393,7 +1393,7 @@
     "effective_date": "2016-09-01"
   },
   {
-    "provider_id": "PRV-06A426FD",
+    "provider_id": "PRV-6E65F470",
     "npi": "1120455611",
     "name": "Dorothy Reyes, MD",
     "type": "Individual",
@@ -1418,7 +1418,7 @@
     "effective_date": "2017-02-01"
   },
   {
-    "provider_id": "PRV-42C548A7",
+    "provider_id": "PRV-26E46F2D",
     "npi": "1621202169",
     "name": "San Diego Physicians Group",
     "type": "Facility",
@@ -1443,7 +1443,7 @@
     "effective_date": "2021-08-01"
   },
   {
-    "provider_id": "PRV-EC52B6CC",
+    "provider_id": "PRV-B55DDD00",
     "npi": "1993588916",
     "name": "San Diego Wellness Center",
     "type": "Facility",
@@ -1468,7 +1468,7 @@
     "effective_date": "2023-08-01"
   },
   {
-    "provider_id": "PRV-DE92E333",
+    "provider_id": "PRV-98574C99",
     "npi": "1838663177",
     "name": "Kevin Scott, MD",
     "type": "Individual",
@@ -1493,7 +1493,7 @@
     "effective_date": "2023-09-01"
   },
   {
-    "provider_id": "PRV-6931BCBE",
+    "provider_id": "PRV-96DCCE46",
     "npi": "1375503758",
     "name": "Victoria Rogers, NP",
     "type": "Individual",
@@ -1518,7 +1518,7 @@
     "effective_date": "2019-09-01"
   },
   {
-    "provider_id": "PRV-F041F67C",
+    "provider_id": "PRV-3DDBBB2A",
     "npi": "1493316373",
     "name": "Sarah Evans, MD",
     "type": "Individual",
@@ -1543,7 +1543,7 @@
     "effective_date": "2023-03-01"
   },
   {
-    "provider_id": "PRV-AB1CF821",
+    "provider_id": "PRV-963600D2",
     "npi": "1292216995",
     "name": "Olivia Morris, NP",
     "type": "Individual",
@@ -1567,7 +1567,7 @@
     "effective_date": "2024-12-01"
   },
   {
-    "provider_id": "PRV-3DCD0CD7",
+    "provider_id": "PRV-944BB4FD",
     "npi": "1452288515",
     "name": "Matthew Clark, NP",
     "type": "Individual",
@@ -1592,7 +1592,7 @@
     "effective_date": "2016-01-01"
   },
   {
-    "provider_id": "PRV-5D021F4D",
+    "provider_id": "PRV-68A19DA5",
     "npi": "1420438057",
     "name": "Maria Lee, MD",
     "type": "Individual",
@@ -1617,7 +1617,7 @@
     "effective_date": "2020-09-01"
   },
   {
-    "provider_id": "PRV-DAB7B6A4",
+    "provider_id": "PRV-877FC955",
     "npi": "1359893347",
     "name": "Dallas Physicians Group",
     "type": "Facility",
@@ -1641,7 +1641,7 @@
     "effective_date": "2024-05-01"
   },
   {
-    "provider_id": "PRV-BF7CD3B2",
+    "provider_id": "PRV-FE74FDDE",
     "npi": "1909479851",
     "name": "Baptist Lab",
     "type": "Facility",
@@ -1665,7 +1665,7 @@
     "effective_date": "2018-04-01"
   },
   {
-    "provider_id": "PRV-939C14DE",
+    "provider_id": "PRV-CAD74C95",
     "npi": "1573993056",
     "name": "Brenda Johnson, MD",
     "type": "Individual",
@@ -1689,7 +1689,7 @@
     "effective_date": "2019-11-01"
   },
   {
-    "provider_id": "PRV-FC6B59EB",
+    "provider_id": "PRV-52043A06",
     "npi": "1361386120",
     "name": "Benjamin Rodriguez, MD",
     "type": "Individual",
@@ -1714,7 +1714,7 @@
     "effective_date": "2022-11-01"
   },
   {
-    "provider_id": "PRV-D3302C10",
+    "provider_id": "PRV-F672C4DF",
     "npi": "1919015814",
     "name": "Jonathan Smith, PA",
     "type": "Individual",
@@ -1738,7 +1738,7 @@
     "effective_date": "2018-03-01"
   },
   {
-    "provider_id": "PRV-C0B47103",
+    "provider_id": "PRV-96598F8D",
     "npi": "1009968814",
     "name": "Mary Jackson, MD",
     "type": "Individual",
@@ -1763,7 +1763,7 @@
     "effective_date": "2024-01-01"
   },
   {
-    "provider_id": "PRV-796AF8E6",
+    "provider_id": "PRV-6191E9FE",
     "npi": "1975523149",
     "name": "Steven Gonzalez, MD",
     "type": "Individual",
@@ -1788,7 +1788,7 @@
     "effective_date": "2021-03-01"
   },
   {
-    "provider_id": "PRV-2053B477",
+    "provider_id": "PRV-24A3E87B",
     "npi": "1577754781",
     "name": "Kimberly Campbell, MD",
     "type": "Individual",
@@ -1813,7 +1813,7 @@
     "effective_date": "2015-10-01"
   },
   {
-    "provider_id": "PRV-CBFD85E7",
+    "provider_id": "PRV-B9401E11",
     "npi": "1872563942",
     "name": "Austin Wellness Center",
     "type": "Facility",
@@ -1836,7 +1836,7 @@
     "effective_date": "2017-08-01"
   },
   {
-    "provider_id": "PRV-B0044833",
+    "provider_id": "PRV-ADA1B31B",
     "npi": "1373145303",
     "name": "Austin Medical Center",
     "type": "Facility",
@@ -1861,7 +1861,7 @@
     "effective_date": "2019-12-01"
   },
   {
-    "provider_id": "PRV-1E232D7A",
+    "provider_id": "PRV-01436D0B",
     "npi": "1386557790",
     "name": "Eric Allen, DO",
     "type": "Individual",
@@ -1884,7 +1884,7 @@
     "effective_date": "2020-10-01"
   },
   {
-    "provider_id": "PRV-6C649E59",
+    "provider_id": "PRV-7FF80F2D",
     "npi": "1392603029",
     "name": "Debra Morris, DO",
     "type": "Individual",
@@ -1907,7 +1907,7 @@
     "effective_date": "2017-09-01"
   },
   {
-    "provider_id": "PRV-DC482C3A",
+    "provider_id": "PRV-6DD14169",
     "npi": "1236929298",
     "name": "Jeffrey Stewart, DO",
     "type": "Individual",
@@ -1930,7 +1930,7 @@
     "effective_date": "2017-02-01"
   },
   {
-    "provider_id": "PRV-3AB67F0B",
+    "provider_id": "PRV-9C8910AF",
     "npi": "1127990881",
     "name": "Julie Martin, NP",
     "type": "Individual",
@@ -1955,7 +1955,7 @@
     "effective_date": "2023-07-01"
   },
   {
-    "provider_id": "PRV-BDB9E01A",
+    "provider_id": "PRV-9D927357",
     "npi": "1731498643",
     "name": "Jason Moore, MD",
     "type": "Individual",
@@ -1978,7 +1978,7 @@
     "effective_date": "2016-03-01"
   },
   {
-    "provider_id": "PRV-7CEA6C23",
+    "provider_id": "PRV-77C9B38E",
     "npi": "1636887258",
     "name": "Helen Scott, PA",
     "type": "Individual",
@@ -2001,7 +2001,7 @@
     "effective_date": "2022-12-01"
   },
   {
-    "provider_id": "PRV-0FD082F4",
+    "provider_id": "PRV-A0FF7097",
     "npi": "1026012796",
     "name": "Jacksonville Medical Practice",
     "type": "Facility",
@@ -2025,7 +2025,7 @@
     "effective_date": "2024-01-01"
   },
   {
-    "provider_id": "PRV-44CE3D69",
+    "provider_id": "PRV-A310E5B1",
     "npi": "1430988392",
     "name": "Jacksonville Wellness Center",
     "type": "Facility",
@@ -2049,7 +2049,7 @@
     "effective_date": "2021-10-01"
   },
   {
-    "provider_id": "PRV-CACBD4F8",
+    "provider_id": "PRV-4B0FD6D3",
     "npi": "1439376904",
     "name": "Janet Hall, MD",
     "type": "Individual",
@@ -2072,7 +2072,7 @@
     "effective_date": "2023-10-01"
   },
   {
-    "provider_id": "PRV-2150A431",
+    "provider_id": "PRV-82836262",
     "npi": "1790714163",
     "name": "Dennis Baker, DO",
     "type": "Individual",
@@ -2096,7 +2096,7 @@
     "effective_date": "2020-02-01"
   },
   {
-    "provider_id": "PRV-6C68B073",
+    "provider_id": "PRV-45D726C4",
     "npi": "1333433339",
     "name": "Nancy Harris, DO",
     "type": "Individual",
@@ -2121,7 +2121,7 @@
     "effective_date": "2015-08-01"
   },
   {
-    "provider_id": "PRV-675017AD",
+    "provider_id": "PRV-6BFE42C8",
     "npi": "1639208678",
     "name": "Dennis Rogers, MD",
     "type": "Individual",
@@ -2146,7 +2146,7 @@
     "effective_date": "2018-07-01"
   },
   {
-    "provider_id": "PRV-60C9AE4C",
+    "provider_id": "PRV-CFF08AA2",
     "npi": "1479552763",
     "name": "Stephen King, MD",
     "type": "Individual",
@@ -2171,7 +2171,7 @@
     "effective_date": "2018-09-01"
   },
   {
-    "provider_id": "PRV-62472AA8",
+    "provider_id": "PRV-324C133A",
     "npi": "1288574489",
     "name": "Daniel Turner, DO",
     "type": "Individual",
@@ -2195,7 +2195,7 @@
     "effective_date": "2019-06-01"
   },
   {
-    "provider_id": "PRV-9667A6BA",
+    "provider_id": "PRV-FB51C210",
     "npi": "1399824558",
     "name": "Mercy Hospital",
     "type": "Facility",
@@ -2218,7 +2218,7 @@
     "effective_date": "2024-10-01"
   },
   {
-    "provider_id": "PRV-C05E9CC1",
+    "provider_id": "PRV-CCCF6371",
     "npi": "1496475987",
     "name": "Community Lab",
     "type": "Facility",
@@ -2243,7 +2243,7 @@
     "effective_date": "2016-02-01"
   },
   {
-    "provider_id": "PRV-D3BEA820",
+    "provider_id": "PRV-2F936608",
     "npi": "1216433472",
     "name": "Richard King, NP",
     "type": "Individual",
@@ -2267,7 +2267,7 @@
     "effective_date": "2023-05-01"
   },
   {
-    "provider_id": "PRV-F9089F56",
+    "provider_id": "PRV-2EEF1E7E",
     "npi": "1845783174",
     "name": "Samantha Parker, NP",
     "type": "Individual",
@@ -2290,7 +2290,7 @@
     "effective_date": "2023-01-01"
   },
   {
-    "provider_id": "PRV-56175BB0",
+    "provider_id": "PRV-925681D3",
     "npi": "1536866326",
     "name": "Tyler Smith, NP",
     "type": "Individual",
@@ -2315,7 +2315,7 @@
     "effective_date": "2019-07-01"
   },
   {
-    "provider_id": "PRV-DFB8C9B2",
+    "provider_id": "PRV-B8C54D25",
     "npi": "1973502080",
     "name": "Helen Edwards, MD",
     "type": "Individual",
@@ -2338,7 +2338,7 @@
     "effective_date": "2022-04-01"
   },
   {
-    "provider_id": "PRV-3CF13B0E",
+    "provider_id": "PRV-06F6E39B",
     "npi": "1120461872",
     "name": "Rachel Jones, MD",
     "type": "Individual",
@@ -2362,7 +2362,7 @@
     "effective_date": "2015-04-01"
   },
   {
-    "provider_id": "PRV-C427E726",
+    "provider_id": "PRV-C8D157D5",
     "npi": "1208814743",
     "name": "Debra Flores, MD",
     "type": "Individual",
@@ -2385,7 +2385,7 @@
     "effective_date": "2024-02-01"
   },
   {
-    "provider_id": "PRV-00CFD84D",
+    "provider_id": "PRV-110213A9",
     "npi": "1251327195",
     "name": "Mercy Hospital",
     "type": "Facility",
@@ -2408,7 +2408,7 @@
     "effective_date": "2023-11-01"
   },
   {
-    "provider_id": "PRV-0645B5C0",
+    "provider_id": "PRV-D6A2F6D4",
     "npi": "1407784873",
     "name": "Regional Lab",
     "type": "Facility",
@@ -2433,7 +2433,7 @@
     "effective_date": "2022-05-01"
   },
   {
-    "provider_id": "PRV-56540614",
+    "provider_id": "PRV-D0FCF694",
     "npi": "1593518638",
     "name": "Douglas Williams, NP",
     "type": "Individual",
@@ -2458,7 +2458,7 @@
     "effective_date": "2016-01-01"
   },
   {
-    "provider_id": "PRV-3448D83E",
+    "provider_id": "PRV-EF32F971",
     "npi": "1967899405",
     "name": "Betty Gonzalez, MD",
     "type": "Individual",
@@ -2482,7 +2482,7 @@
     "effective_date": "2021-06-01"
   },
   {
-    "provider_id": "PRV-8E17BD3D",
+    "provider_id": "PRV-0F43423B",
     "npi": "1138633839",
     "name": "Anthony Gutierrez, MD",
     "type": "Individual",
@@ -2507,7 +2507,7 @@
     "effective_date": "2016-03-01"
   },
   {
-    "provider_id": "PRV-D85B23E8",
+    "provider_id": "PRV-D2B26C8F",
     "npi": "1855665939",
     "name": "Christina Rivera, MD",
     "type": "Individual",
@@ -2531,7 +2531,7 @@
     "effective_date": "2024-01-01"
   },
   {
-    "provider_id": "PRV-3CE2DC8D",
+    "provider_id": "PRV-A311B2FA",
     "npi": "1488899210",
     "name": "Anthony Green, MD",
     "type": "Individual",
@@ -2554,7 +2554,7 @@
     "effective_date": "2016-10-01"
   },
   {
-    "provider_id": "PRV-135ACB95",
+    "provider_id": "PRV-4E5E60BB",
     "npi": "1409610556",
     "name": "Gary Gonzalez, NP",
     "type": "Individual",
@@ -2577,7 +2577,7 @@
     "effective_date": "2020-09-01"
   },
   {
-    "provider_id": "PRV-04D1439E",
+    "provider_id": "PRV-E71FC6E9",
     "npi": "1799813646",
     "name": "Methodist Hospital",
     "type": "Facility",
@@ -2601,7 +2601,7 @@
     "effective_date": "2021-12-01"
   },
   {
-    "provider_id": "PRV-FC5C75FF",
+    "provider_id": "PRV-FE611D93",
     "npi": "1389833146",
     "name": "Mercy Lab",
     "type": "Facility",
@@ -2625,7 +2625,7 @@
     "effective_date": "2017-06-01"
   },
   {
-    "provider_id": "PRV-9BA49629",
+    "provider_id": "PRV-66656F47",
     "npi": "1039240514",
     "name": "Karen Hernandez, MD",
     "type": "Individual",
@@ -2650,7 +2650,7 @@
     "effective_date": "2017-12-01"
   },
   {
-    "provider_id": "PRV-6AB2EA01",
+    "provider_id": "PRV-CF43F9E2",
     "npi": "1394070164",
     "name": "Lisa Davis, MD",
     "type": "Individual",
@@ -2673,7 +2673,7 @@
     "effective_date": "2016-06-01"
   },
   {
-    "provider_id": "PRV-65075F97",
+    "provider_id": "PRV-AF6FD314",
     "npi": "1457620555",
     "name": "John Young, NP",
     "type": "Individual",
@@ -2697,7 +2697,7 @@
     "effective_date": "2020-07-01"
   },
   {
-    "provider_id": "PRV-278E64D1",
+    "provider_id": "PRV-F7B9B99A",
     "npi": "1264957823",
     "name": "Edward Walker, NP",
     "type": "Individual",
@@ -2722,7 +2722,7 @@
     "effective_date": "2017-11-01"
   },
   {
-    "provider_id": "PRV-9669AC5E",
+    "provider_id": "PRV-E9F1A9F5",
     "npi": "1056647423",
     "name": "Daniel Green, MD",
     "type": "Individual",
@@ -2747,7 +2747,7 @@
     "effective_date": "2016-12-01"
   },
   {
-    "provider_id": "PRV-1283E6A2",
+    "provider_id": "PRV-44B520D9",
     "npi": "1722330604",
     "name": "Nancy Roberts, DO",
     "type": "Individual",
@@ -2771,7 +2771,7 @@
     "effective_date": "2018-07-01"
   },
   {
-    "provider_id": "PRV-6BFEE3B6",
+    "provider_id": "PRV-868D567C",
     "npi": "1988081770",
     "name": "Mercy Hospital",
     "type": "Facility",
@@ -2796,7 +2796,7 @@
     "effective_date": "2019-05-01"
   },
   {
-    "provider_id": "PRV-161A4245",
+    "provider_id": "PRV-E09DC9E8",
     "npi": "1771812982",
     "name": "San Francisco Clinic",
     "type": "Facility",
@@ -2821,7 +2821,7 @@
     "effective_date": "2017-12-01"
   },
   {
-    "provider_id": "PRV-60010636",
+    "provider_id": "PRV-E43E0936",
     "npi": "1689268602",
     "name": "Elizabeth Ortiz, PA",
     "type": "Individual",
@@ -2845,7 +2845,7 @@
     "effective_date": "2017-02-01"
   },
   {
-    "provider_id": "PRV-B426462E",
+    "provider_id": "PRV-9401CE19",
     "npi": "1097339776",
     "name": "Amy Murphy, NP",
     "type": "Individual",
@@ -2870,7 +2870,7 @@
     "effective_date": "2015-11-01"
   },
   {
-    "provider_id": "PRV-356F6D3C",
+    "provider_id": "PRV-956F5D23",
     "npi": "1162249998",
     "name": "Carol Lopez, MD",
     "type": "Individual",
@@ -2894,7 +2894,7 @@
     "effective_date": "2016-07-01"
   },
   {
-    "provider_id": "PRV-BE61120A",
+    "provider_id": "PRV-A3B278DC",
     "npi": "1833901981",
     "name": "Carol Ortiz, DO",
     "type": "Individual",
@@ -2919,7 +2919,7 @@
     "effective_date": "2023-12-01"
   },
   {
-    "provider_id": "PRV-557A42BD",
+    "provider_id": "PRV-50125180",
     "npi": "1071396605",
     "name": "Betty Smith, MD",
     "type": "Individual",
@@ -2942,7 +2942,7 @@
     "effective_date": "2023-06-01"
   },
   {
-    "provider_id": "PRV-788B8EB0",
+    "provider_id": "PRV-9638B39E",
     "npi": "1557702727",
     "name": "Nathan Thompson, MD",
     "type": "Individual",
@@ -2967,7 +2967,7 @@
     "effective_date": "2020-06-01"
   },
   {
-    "provider_id": "PRV-84884E9B",
+    "provider_id": "PRV-54FCD80B",
     "npi": "1299629145",
     "name": "Seattle Wellness Center",
     "type": "Facility",
@@ -2991,7 +2991,7 @@
     "effective_date": "2020-01-01"
   },
   {
-    "provider_id": "PRV-499EEBAD",
+    "provider_id": "PRV-1C4A7A59",
     "npi": "1357845218",
     "name": "Seattle Clinic",
     "type": "Facility",
@@ -3016,7 +3016,7 @@
     "effective_date": "2024-02-01"
   },
   {
-    "provider_id": "PRV-5EFFBEF1",
+    "provider_id": "PRV-C60C1E9E",
     "npi": "1353344857",
     "name": "Patricia Flores, PA",
     "type": "Individual",
@@ -3041,7 +3041,7 @@
     "effective_date": "2023-06-01"
   },
   {
-    "provider_id": "PRV-2BA6388D",
+    "provider_id": "PRV-C3571E7C",
     "npi": "1958702070",
     "name": "Charles Martinez, MD",
     "type": "Individual",
@@ -3066,7 +3066,7 @@
     "effective_date": "2018-12-01"
   },
   {
-    "provider_id": "PRV-6219651E",
+    "provider_id": "PRV-E362DA9C",
     "npi": "1747733294",
     "name": "William Reyes, MD",
     "type": "Individual",
@@ -3090,7 +3090,7 @@
     "effective_date": "2016-06-01"
   },
   {
-    "provider_id": "PRV-1E5E9D8E",
+    "provider_id": "PRV-E9520ADF",
     "npi": "1158148769",
     "name": "Nicholas Wilson, DO",
     "type": "Individual",
@@ -3113,7 +3113,7 @@
     "effective_date": "2024-07-01"
   },
   {
-    "provider_id": "PRV-1A923920",
+    "provider_id": "PRV-4E3FFBB1",
     "npi": "1997581724",
     "name": "Jack Morales, MD",
     "type": "Individual",
@@ -3136,7 +3136,7 @@
     "effective_date": "2017-10-01"
   },
   {
-    "provider_id": "PRV-798BF0E9",
+    "provider_id": "PRV-3286BEB7",
     "npi": "1354946519",
     "name": "Deborah Edwards, MD",
     "type": "Individual",
@@ -3159,7 +3159,7 @@
     "effective_date": "2020-02-01"
   },
   {
-    "provider_id": "PRV-20CE92AE",
+    "provider_id": "PRV-55F052CB",
     "npi": "1666832723",
     "name": "Denver Health Partners",
     "type": "Facility",
@@ -3182,7 +3182,7 @@
     "effective_date": "2015-03-01"
   },
   {
-    "provider_id": "PRV-F0B3365A",
+    "provider_id": "PRV-C9428FD0",
     "npi": "1796927868",
     "name": "Denver Health Partners",
     "type": "Facility",
@@ -3206,7 +3206,7 @@
     "effective_date": "2023-10-01"
   },
   {
-    "provider_id": "PRV-EF077782",
+    "provider_id": "PRV-D12A88A8",
     "npi": "1128478189",
     "name": "Justin Morris, PA",
     "type": "Individual",
@@ -3231,7 +3231,7 @@
     "effective_date": "2015-08-01"
   },
   {
-    "provider_id": "PRV-4DDFB793",
+    "provider_id": "PRV-BE76A786",
     "npi": "1209494079",
     "name": "Amanda Nguyen, MD",
     "type": "Individual",
@@ -3256,7 +3256,7 @@
     "effective_date": "2019-05-01"
   },
   {
-    "provider_id": "PRV-BAF03DBF",
+    "provider_id": "PRV-CCB959A9",
     "npi": "1243728051",
     "name": "Raymond Edwards, MD",
     "type": "Individual",
@@ -3280,7 +3280,7 @@
     "effective_date": "2020-01-01"
   },
   {
-    "provider_id": "PRV-2A35AF7D",
+    "provider_id": "PRV-768B936A",
     "npi": "1836674286",
     "name": "Donna Stewart, PA",
     "type": "Individual",
@@ -3303,7 +3303,7 @@
     "effective_date": "2020-07-01"
   },
   {
-    "provider_id": "PRV-1180372C",
+    "provider_id": "PRV-E8AA6432",
     "npi": "1938525800",
     "name": "Cynthia Walker, PA",
     "type": "Individual",
@@ -3326,7 +3326,7 @@
     "effective_date": "2015-01-01"
   },
   {
-    "provider_id": "PRV-59C50124",
+    "provider_id": "PRV-25C0DF1F",
     "npi": "1926921244",
     "name": "Alexander Thomas, MD",
     "type": "Individual",
@@ -3351,7 +3351,7 @@
     "effective_date": "2019-01-01"
   },
   {
-    "provider_id": "PRV-6A144E69",
+    "provider_id": "PRV-915F6DF5",
     "npi": "1739627128",
     "name": "Memorial Hospital",
     "type": "Facility",
@@ -3374,7 +3374,7 @@
     "effective_date": "2024-12-01"
   },
   {
-    "provider_id": "PRV-A9FD53BB",
+    "provider_id": "PRV-77C2D015",
     "npi": "1642569087",
     "name": "Nashville Medical Center",
     "type": "Facility",
@@ -3399,7 +3399,7 @@
     "effective_date": "2020-06-01"
   },
   {
-    "provider_id": "PRV-D14A764D",
+    "provider_id": "PRV-45250545",
     "npi": "1328063461",
     "name": "Elizabeth Collins, MD",
     "type": "Individual",
@@ -3422,7 +3422,7 @@
     "effective_date": "2024-04-01"
   },
   {
-    "provider_id": "PRV-70EA39FF",
+    "provider_id": "PRV-80095B0A",
     "npi": "1005050613",
     "name": "Amy Morgan, DO",
     "type": "Individual",
@@ -3445,7 +3445,7 @@
     "effective_date": "2022-11-01"
   },
   {
-    "provider_id": "PRV-5D83339A",
+    "provider_id": "PRV-7BC2B02B",
     "npi": "1041792911",
     "name": "James Thompson, PA",
     "type": "Individual",
@@ -3469,7 +3469,7 @@
     "effective_date": "2024-09-01"
   },
   {
-    "provider_id": "PRV-3C32FCF4",
+    "provider_id": "PRV-1854CB3A",
     "npi": "1426258273",
     "name": "Kevin Rodriguez, MD",
     "type": "Individual",
@@ -3493,7 +3493,7 @@
     "effective_date": "2016-12-01"
   },
   {
-    "provider_id": "PRV-534F3B16",
+    "provider_id": "PRV-C4B616E0",
     "npi": "1487632909",
     "name": "Anthony Jackson, PA",
     "type": "Individual",
@@ -3516,7 +3516,7 @@
     "effective_date": "2023-02-01"
   },
   {
-    "provider_id": "PRV-F4BBCBCB",
+    "provider_id": "PRV-5D036D8F",
     "npi": "1772200543",
     "name": "Matthew Anderson, MD",
     "type": "Individual",
@@ -3541,7 +3541,7 @@
     "effective_date": "2023-02-01"
   },
   {
-    "provider_id": "PRV-07FA04B4",
+    "provider_id": "PRV-7A4300C3",
     "npi": "1531531363",
     "name": "University Hospital",
     "type": "Facility",
@@ -3564,7 +3564,7 @@
     "effective_date": "2020-03-01"
   },
   {
-    "provider_id": "PRV-50B87668",
+    "provider_id": "PRV-647E89AD",
     "npi": "1904217762",
     "name": "St. Marys Lab",
     "type": "Facility",
@@ -3589,7 +3589,7 @@
     "effective_date": "2023-08-01"
   },
   {
-    "provider_id": "PRV-D4EF60C9",
+    "provider_id": "PRV-51FC0265",
     "npi": "1569392906",
     "name": "Catherine Young, MD",
     "type": "Individual",
@@ -3613,7 +3613,7 @@
     "effective_date": "2016-09-01"
   },
   {
-    "provider_id": "PRV-53B8C6C9",
+    "provider_id": "PRV-FBD4805D",
     "npi": "1742799077",
     "name": "Ashley Lopez, MD",
     "type": "Individual",
@@ -3638,7 +3638,7 @@
     "effective_date": "2015-05-01"
   },
   {
-    "provider_id": "PRV-BA57B953",
+    "provider_id": "PRV-FAE23154",
     "npi": "1508501657",
     "name": "Tyler Hernandez, NP",
     "type": "Individual",
@@ -3663,7 +3663,7 @@
     "effective_date": "2016-11-01"
   },
   {
-    "provider_id": "PRV-F294C20F",
+    "provider_id": "PRV-2008441E",
     "npi": "1640155778",
     "name": "Kelly Wright, NP",
     "type": "Individual",
@@ -3687,7 +3687,7 @@
     "effective_date": "2016-04-01"
   },
   {
-    "provider_id": "PRV-96B43ABD",
+    "provider_id": "PRV-E9E58B45",
     "npi": "1127238046",
     "name": "Richard Perez, MD",
     "type": "Individual",
@@ -3711,7 +3711,7 @@
     "effective_date": "2018-09-01"
   },
   {
-    "provider_id": "PRV-C6F9A0F3",
+    "provider_id": "PRV-D0815CF1",
     "npi": "1242437540",
     "name": "Cynthia Hill, NP",
     "type": "Individual",
@@ -3736,7 +3736,7 @@
     "effective_date": "2017-03-01"
   },
   {
-    "provider_id": "PRV-10EE337A",
+    "provider_id": "PRV-459FE9E0",
     "npi": "1238055257",
     "name": "Baptist Hospital",
     "type": "Facility",
@@ -3760,7 +3760,7 @@
     "effective_date": "2017-01-01"
   },
   {
-    "provider_id": "PRV-DDEE0642",
+    "provider_id": "PRV-16B20F14",
     "npi": "1297517028",
     "name": "Atlanta Medical Practice",
     "type": "Facility",
@@ -3783,7 +3783,7 @@
     "effective_date": "2018-05-01"
   },
   {
-    "provider_id": "PRV-19B06FB7",
+    "provider_id": "PRV-413BBE62",
     "npi": "1759980562",
     "name": "Nicholas Gomez, MD",
     "type": "Individual",
@@ -3807,7 +3807,7 @@
     "effective_date": "2022-12-01"
   },
   {
-    "provider_id": "PRV-9E433009",
+    "provider_id": "PRV-AADED71D",
     "npi": "1347851961",
     "name": "Nathan Lopez, MD",
     "type": "Individual",
@@ -3832,7 +3832,7 @@
     "effective_date": "2019-09-01"
   },
   {
-    "provider_id": "PRV-79CA7279",
+    "provider_id": "PRV-E39264CC",
     "npi": "1002447146",
     "name": "Amy Reyes, MD",
     "type": "Individual",
@@ -3856,7 +3856,7 @@
     "effective_date": "2024-07-01"
   },
   {
-    "provider_id": "PRV-70ECC025",
+    "provider_id": "PRV-3D955768",
     "npi": "1902572520",
     "name": "Henry King, MD",
     "type": "Individual",
@@ -3881,7 +3881,7 @@
     "effective_date": "2016-10-01"
   },
   {
-    "provider_id": "PRV-ED0FAE6A",
+    "provider_id": "PRV-ACC14892",
     "npi": "1520284576",
     "name": "Susan Morgan, NP",
     "type": "Individual",
@@ -3906,7 +3906,7 @@
     "effective_date": "2016-02-01"
   },
   {
-    "provider_id": "PRV-3DCF713F",
+    "provider_id": "PRV-695AE561",
     "npi": "1852401322",
     "name": "Sarah Cruz, NP",
     "type": "Individual",
@@ -3931,7 +3931,7 @@
     "effective_date": "2021-01-01"
   },
   {
-    "provider_id": "PRV-4E99D793",
+    "provider_id": "PRV-4614BF2D",
     "npi": "1401401193",
     "name": "Memorial Hospital",
     "type": "Facility",
@@ -3956,7 +3956,7 @@
     "effective_date": "2023-12-01"
   },
   {
-    "provider_id": "PRV-B04864BC",
+    "provider_id": "PRV-20E5414A",
     "npi": "1334280138",
     "name": "Minneapolis Wellness Center",
     "type": "Facility",
@@ -3979,7 +3979,7 @@
     "effective_date": "2021-04-01"
   },
   {
-    "provider_id": "PRV-2B9FEEE9",
+    "provider_id": "PRV-446F1D1F",
     "npi": "1754801571",
     "name": "Jessica Gutierrez, MD",
     "type": "Individual",
@@ -4002,7 +4002,7 @@
     "effective_date": "2021-04-01"
   },
   {
-    "provider_id": "PRV-5399FF48",
+    "provider_id": "PRV-52A86C0D",
     "npi": "1167811266",
     "name": "Gregory Morales, PA",
     "type": "Individual",
@@ -4025,7 +4025,7 @@
     "effective_date": "2021-12-01"
   },
   {
-    "provider_id": "PRV-CCD60F3A",
+    "provider_id": "PRV-4EB7847B",
     "npi": "1796784271",
     "name": "Maria Phillips, MD",
     "type": "Individual",
@@ -4048,7 +4048,7 @@
     "effective_date": "2022-11-01"
   },
   {
-    "provider_id": "PRV-68A1B409",
+    "provider_id": "PRV-6E3E45FD",
     "npi": "1877347784",
     "name": "Helen Gonzalez, MD",
     "type": "Individual",
@@ -4072,7 +4072,7 @@
     "effective_date": "2021-08-01"
   },
   {
-    "provider_id": "PRV-D214F1BE",
+    "provider_id": "PRV-3DBC8BBA",
     "npi": "1624671978",
     "name": "Victoria Perez, DO",
     "type": "Individual",
@@ -4096,7 +4096,7 @@
     "effective_date": "2019-06-01"
   },
   {
-    "provider_id": "PRV-3CAB339D",
+    "provider_id": "PRV-7A8E87F9",
     "npi": "1561655650",
     "name": "Ruth Brown, PA",
     "type": "Individual",
@@ -4119,7 +4119,7 @@
     "effective_date": "2017-01-01"
   },
   {
-    "provider_id": "PRV-24C99CC4",
+    "provider_id": "PRV-F74AD7A5",
     "npi": "1407905696",
     "name": "Tampa Health Partners",
     "type": "Facility",
@@ -4144,7 +4144,7 @@
     "effective_date": "2021-04-01"
   },
   {
-    "provider_id": "PRV-010BAEB9",
+    "provider_id": "PRV-99F337D1",
     "npi": "1496391919",
     "name": "St. Marys Lab",
     "type": "Facility",
@@ -4167,7 +4167,7 @@
     "effective_date": "2019-07-01"
   },
   {
-    "provider_id": "PRV-4589E8FD",
+    "provider_id": "PRV-CEA7D1FE",
     "npi": "1829737489",
     "name": "Christine White, MD",
     "type": "Individual",
@@ -4192,7 +4192,7 @@
     "effective_date": "2016-11-01"
   },
   {
-    "provider_id": "PRV-E181C06B",
+    "provider_id": "PRV-1AE6325E",
     "npi": "1312303477",
     "name": "Steven Walker, DO",
     "type": "Individual",
@@ -4215,7 +4215,7 @@
     "effective_date": "2019-11-01"
   },
   {
-    "provider_id": "PRV-27180073",
+    "provider_id": "PRV-DFBF7EBB",
     "npi": "1941651623",
     "name": "Michael Hernandez, MD",
     "type": "Individual",
@@ -4238,7 +4238,7 @@
     "effective_date": "2020-06-01"
   },
   {
-    "provider_id": "PRV-21B6349C",
+    "provider_id": "PRV-44A0480A",
     "npi": "1347649078",
     "name": "Christopher Wilson, MD",
     "type": "Individual",
@@ -4262,7 +4262,7 @@
     "effective_date": "2020-05-01"
   },
   {
-    "provider_id": "PRV-F64A0C2C",
+    "provider_id": "PRV-62861CCA",
     "npi": "1518376064",
     "name": "Steven Roberts, MD",
     "type": "Individual",
@@ -4286,7 +4286,7 @@
     "effective_date": "2019-02-01"
   },
   {
-    "provider_id": "PRV-2A553BC9",
+    "provider_id": "PRV-E7B29397",
     "npi": "1481569857",
     "name": "Jose Lee, PA",
     "type": "Individual",
@@ -4309,7 +4309,7 @@
     "effective_date": "2019-06-01"
   },
   {
-    "provider_id": "PRV-32F5799F",
+    "provider_id": "PRV-43134269",
     "npi": "1965772429",
     "name": "Miami Clinic",
     "type": "Facility",
@@ -4333,7 +4333,7 @@
     "effective_date": "2023-11-01"
   },
   {
-    "provider_id": "PRV-AA640704",
+    "provider_id": "PRV-1FB35502",
     "npi": "1069694215",
     "name": "Miami Clinic",
     "type": "Facility",
@@ -4357,7 +4357,7 @@
     "effective_date": "2018-04-01"
   },
   {
-    "provider_id": "PRV-71A63696",
+    "provider_id": "PRV-0B32620D",
     "npi": "1343626204",
     "name": "Joyce Clark, NP",
     "type": "Individual",
@@ -4381,7 +4381,7 @@
     "effective_date": "2020-12-01"
   },
   {
-    "provider_id": "PRV-06419C18",
+    "provider_id": "PRV-65A54D32",
     "npi": "1005375990",
     "name": "Barbara Gonzalez, NP",
     "type": "Individual",
@@ -4405,7 +4405,7 @@
     "effective_date": "2019-03-01"
   },
   {
-    "provider_id": "PRV-F41B5154",
+    "provider_id": "PRV-19307552",
     "npi": "1241502745",
     "name": "Kenneth Ortiz, DO",
     "type": "Individual",
@@ -4428,7 +4428,7 @@
     "effective_date": "2022-03-01"
   },
   {
-    "provider_id": "PRV-5C5C5CF7",
+    "provider_id": "PRV-361F6A1B",
     "npi": "1427617075",
     "name": "Daniel Jones, DO",
     "type": "Individual",
@@ -4451,7 +4451,7 @@
     "effective_date": "2019-03-01"
   },
   {
-    "provider_id": "PRV-A218708E",
+    "provider_id": "PRV-DBB993C3",
     "npi": "1926137150",
     "name": "Justin Smith, NP",
     "type": "Individual",
@@ -4474,7 +4474,7 @@
     "effective_date": "2022-08-01"
   },
   {
-    "provider_id": "PRV-A2585173",
+    "provider_id": "PRV-3B5773E4",
     "npi": "1045018961",
     "name": "Janet Taylor, MD",
     "type": "Individual",
@@ -4497,7 +4497,7 @@
     "effective_date": "2019-11-01"
   },
   {
-    "provider_id": "PRV-05F0B510",
+    "provider_id": "PRV-FBF0BA82",
     "npi": "1251583776",
     "name": "Raleigh Medical Practice",
     "type": "Facility",
@@ -4521,7 +4521,7 @@
     "effective_date": "2016-01-01"
   },
   {
-    "provider_id": "PRV-F021997A",
+    "provider_id": "PRV-9A4B7F96",
     "npi": "1788147617",
     "name": "Raleigh Clinic",
     "type": "Facility",
@@ -4545,7 +4545,7 @@
     "effective_date": "2023-02-01"
   },
   {
-    "provider_id": "PRV-A400833E",
+    "provider_id": "PRV-8707510E",
     "npi": "1180172260",
     "name": "Amanda Allen, NP",
     "type": "Individual",
@@ -4570,7 +4570,7 @@
     "effective_date": "2017-04-01"
   },
   {
-    "provider_id": "PRV-D934D5BF",
+    "provider_id": "PRV-C9E7B7CD",
     "npi": "1061027769",
     "name": "Jason Morgan, MD",
     "type": "Individual",
@@ -4595,7 +4595,7 @@
     "effective_date": "2015-04-01"
   },
   {
-    "provider_id": "PRV-87F97118",
+    "provider_id": "PRV-66C36452",
     "npi": "1368314727",
     "name": "Katherine Jackson, PA",
     "type": "Individual",
@@ -4619,7 +4619,7 @@
     "effective_date": "2024-04-01"
   },
   {
-    "provider_id": "PRV-61F60A97",
+    "provider_id": "PRV-2AF52B94",
     "npi": "1667998407",
     "name": "Mary Wilson, PA",
     "type": "Individual",
@@ -4642,7 +4642,7 @@
     "effective_date": "2023-02-01"
   },
   {
-    "provider_id": "PRV-91241296",
+    "provider_id": "PRV-E1D5FF07",
     "npi": "1243757383",
     "name": "Laura Parker, MD",
     "type": "Individual",
@@ -4667,7 +4667,7 @@
     "effective_date": "2020-08-01"
   },
   {
-    "provider_id": "PRV-0EE8DE48",
+    "provider_id": "PRV-CFDCE1F1",
     "npi": "1297167433",
     "name": "Sarah Thompson, MD",
     "type": "Individual",
@@ -4692,7 +4692,7 @@
     "effective_date": "2024-04-01"
   },
   {
-    "provider_id": "PRV-487FA682",
+    "provider_id": "PRV-7EEB6C5E",
     "npi": "1428910771",
     "name": "Boston Wellness Center",
     "type": "Facility",
@@ -4715,7 +4715,7 @@
     "effective_date": "2019-12-01"
   },
   {
-    "provider_id": "PRV-4391E3F1",
+    "provider_id": "PRV-54FB0399",
     "npi": "1213760375",
     "name": "Boston Medical Associates",
     "type": "Facility",
@@ -4739,7 +4739,7 @@
     "effective_date": "2023-07-01"
   },
   {
-    "provider_id": "PRV-4AD6D163",
+    "provider_id": "PRV-AFFCE7A5",
     "npi": "1507208115",
     "name": "Joyce Gutierrez, PA",
     "type": "Individual",
@@ -4764,7 +4764,7 @@
     "effective_date": "2023-05-01"
   },
   {
-    "provider_id": "PRV-B291159D",
+    "provider_id": "PRV-DDB30A04",
     "npi": "1489267389",
     "name": "Lauren Hall, MD",
     "type": "Individual",
@@ -4787,7 +4787,7 @@
     "effective_date": "2021-12-01"
   },
   {
-    "provider_id": "PRV-8C99244C",
+    "provider_id": "PRV-FA119042",
     "npi": "1200894346",
     "name": "Shirley Baker, PA",
     "type": "Individual",
@@ -4810,7 +4810,7 @@
     "effective_date": "2016-08-01"
   },
   {
-    "provider_id": "PRV-F347CE92",
+    "provider_id": "PRV-4629F969",
     "npi": "1926831589",
     "name": "Brian Hill, MD",
     "type": "Individual",
@@ -4833,7 +4833,7 @@
     "effective_date": "2017-08-01"
   },
   {
-    "provider_id": "PRV-1ED7B131",
+    "provider_id": "PRV-216DF455",
     "npi": "1767762282",
     "name": "Virginia King, NP",
     "type": "Individual",
@@ -4856,7 +4856,7 @@
     "effective_date": "2017-09-01"
   },
   {
-    "provider_id": "PRV-C68CFFB6",
+    "provider_id": "PRV-7198018F",
     "npi": "1821545447",
     "name": "George Nguyen, MD",
     "type": "Individual",
@@ -4880,7 +4880,7 @@
     "effective_date": "2022-01-01"
   },
   {
-    "provider_id": "PRV-21DC1FEA",
+    "provider_id": "PRV-CA64A4A2",
     "npi": "1975679228",
     "name": "Community Hospital",
     "type": "Facility",
@@ -4903,7 +4903,7 @@
     "effective_date": "2021-06-01"
   },
   {
-    "provider_id": "PRV-C527A395",
+    "provider_id": "PRV-A6F71132",
     "npi": "1094818139",
     "name": "Detroit Clinic",
     "type": "Facility",
@@ -4926,7 +4926,7 @@
     "effective_date": "2023-03-01"
   },
   {
-    "provider_id": "PRV-7944B6E8",
+    "provider_id": "PRV-002C1F87",
     "npi": "1569070562",
     "name": "Elizabeth Morgan, NP",
     "type": "Individual",
@@ -4949,7 +4949,7 @@
     "effective_date": "2017-03-01"
   },
   {
-    "provider_id": "PRV-DE36D768",
+    "provider_id": "PRV-78EC8D91",
     "npi": "1004615265",
     "name": "Michael Adams, MD",
     "type": "Individual",
@@ -4972,7 +4972,7 @@
     "effective_date": "2023-07-01"
   },
   {
-    "provider_id": "PRV-9015602D",
+    "provider_id": "PRV-EE1FF9CC",
     "npi": "1630489138",
     "name": "Barbara Morris, MD",
     "type": "Individual",
@@ -4997,7 +4997,7 @@
     "effective_date": "2017-04-01"
   },
   {
-    "provider_id": "PRV-0F2C4DA5",
+    "provider_id": "PRV-47F68916",
     "npi": "1074946539",
     "name": "Katherine Perez, MD",
     "type": "Individual",
@@ -5021,7 +5021,7 @@
     "effective_date": "2019-07-01"
   },
   {
-    "provider_id": "PRV-83B8FD72",
+    "provider_id": "PRV-67FEF0C2",
     "npi": "1537950209",
     "name": "Baptist Pharmacy",
     "type": "Facility",
@@ -5046,7 +5046,7 @@
     "effective_date": "2016-09-01"
   },
   {
-    "provider_id": "PRV-A010EB50",
+    "provider_id": "PRV-372B325B",
     "npi": "1017537030",
     "name": "Regional Surgery Center",
     "type": "Facility",
@@ -5070,7 +5070,7 @@
     "effective_date": "2024-04-01"
   },
   {
-    "provider_id": "PRV-0847A643",
+    "provider_id": "PRV-7F354A26",
     "npi": "1992192124",
     "name": "Minneapolis Medical Practice",
     "type": "Facility",
@@ -5095,7 +5095,7 @@
     "effective_date": "2022-01-01"
   },
   {
-    "provider_id": "PRV-28491D0A",
+    "provider_id": "PRV-16468078",
     "npi": "1758030468",
     "name": "Gregory Gutierrez, DO",
     "type": "Individual",
@@ -5118,7 +5118,7 @@
     "effective_date": "2021-02-01"
   },
   {
-    "provider_id": "PRV-D4D16438",
+    "provider_id": "PRV-B42D577A",
     "npi": "1543173505",
     "name": "Sharon Brown, NP",
     "type": "Individual",
@@ -5143,7 +5143,7 @@
     "effective_date": "2021-06-01"
   },
   {
-    "provider_id": "PRV-140B1D79",
+    "provider_id": "PRV-238B0F70",
     "npi": "1108046619",
     "name": "Helen Parker, MD",
     "type": "Individual",
@@ -5167,7 +5167,7 @@
     "effective_date": "2015-08-01"
   },
   {
-    "provider_id": "PRV-F16ADC75",
+    "provider_id": "PRV-1D99C03F",
     "npi": "1845679723",
     "name": "Zachary Taylor, PA",
     "type": "Individual",
@@ -5192,7 +5192,7 @@
     "effective_date": "2017-03-01"
   },
   {
-    "provider_id": "PRV-65E170B3",
+    "provider_id": "PRV-8EECE026",
     "npi": "1806533315",
     "name": "Michael Walker, NP",
     "type": "Individual",
@@ -5217,7 +5217,7 @@
     "effective_date": "2016-08-01"
   },
   {
-    "provider_id": "PRV-2902A7F2",
+    "provider_id": "PRV-51DBBCD2",
     "npi": "1563620501",
     "name": "Donald Morris, PA",
     "type": "Individual",
@@ -5242,7 +5242,7 @@
     "effective_date": "2019-03-01"
   },
   {
-    "provider_id": "PRV-8C8CF8A7",
+    "provider_id": "PRV-A1CC744C",
     "npi": "1410261534",
     "name": "Regional Imaging Center",
     "type": "Facility",
@@ -5267,7 +5267,7 @@
     "effective_date": "2017-04-01"
   },
   {
-    "provider_id": "PRV-F33F54CD",
+    "provider_id": "PRV-D796B9AB",
     "npi": "1384253042",
     "name": "Charlotte Medical Practice",
     "type": "Facility",
@@ -5292,7 +5292,7 @@
     "effective_date": "2023-06-01"
   },
   {
-    "provider_id": "PRV-807B608D",
+    "provider_id": "PRV-F387157C",
     "npi": "1903337363",
     "name": "Kimberly Phillips, PA",
     "type": "Individual",
@@ -5317,7 +5317,7 @@
     "effective_date": "2022-09-01"
   },
   {
-    "provider_id": "PRV-96A945A3",
+    "provider_id": "PRV-E0495340",
     "npi": "1754602734",
     "name": "Sharon Evans, MD",
     "type": "Individual",
@@ -5342,7 +5342,7 @@
     "effective_date": "2016-06-01"
   },
   {
-    "provider_id": "PRV-6E0F9B84",
+    "provider_id": "PRV-C5D86141",
     "npi": "1840445669",
     "name": "San Antonio Clinic",
     "type": "Facility",
@@ -5366,7 +5366,7 @@
     "effective_date": "2018-08-01"
   },
   {
-    "provider_id": "PRV-E14792B1",
+    "provider_id": "PRV-F3ACDAA0",
     "npi": "1366377805",
     "name": "Portland Medical Associates",
     "type": "Facility",
@@ -5390,7 +5390,7 @@
     "effective_date": "2021-12-01"
   },
   {
-    "provider_id": "PRV-0DADD053",
+    "provider_id": "PRV-EC1077E1",
     "npi": "1186371597",
     "name": "Deborah Clark, DO",
     "type": "Individual",
@@ -5415,7 +5415,7 @@
     "effective_date": "2021-05-01"
   },
   {
-    "provider_id": "PRV-BEF63B54",
+    "provider_id": "PRV-2C1DFD6E",
     "npi": "1662128671",
     "name": "Baptist Imaging Center",
     "type": "Facility",
@@ -5439,7 +5439,7 @@
     "effective_date": "2023-12-01"
   },
   {
-    "provider_id": "PRV-46101359",
+    "provider_id": "PRV-9E42D606",
     "npi": "1777901475",
     "name": "Eric Nelson, NP",
     "type": "Individual",
@@ -5464,7 +5464,7 @@
     "effective_date": "2017-12-01"
   },
   {
-    "provider_id": "PRV-084978B1",
+    "provider_id": "PRV-67C2E4DF",
     "npi": "1376815118",
     "name": "Christine Rodriguez, PA",
     "type": "Individual",
@@ -5487,7 +5487,7 @@
     "effective_date": "2022-07-01"
   },
   {
-    "provider_id": "PRV-46EE61D6",
+    "provider_id": "PRV-7371A097",
     "npi": "1711837274",
     "name": "Christine Reyes, DO",
     "type": "Individual",
@@ -5512,7 +5512,7 @@
     "effective_date": "2015-11-01"
   },
   {
-    "provider_id": "PRV-9284A5C6",
+    "provider_id": "PRV-237848B4",
     "npi": "1816470900",
     "name": "Rachel Miller, PA",
     "type": "Individual",
@@ -5535,7 +5535,7 @@
     "effective_date": "2018-11-01"
   },
   {
-    "provider_id": "PRV-52A06B49",
+    "provider_id": "PRV-DED8B499",
     "npi": "1386613315",
     "name": "Michelle Harris, NP",
     "type": "Individual",
@@ -5558,7 +5558,7 @@
     "effective_date": "2019-11-01"
   },
   {
-    "provider_id": "PRV-BAB7BEEC",
+    "provider_id": "PRV-173E6706",
     "npi": "1241956252",
     "name": "Alexander Morgan, NP",
     "type": "Individual",
@@ -5583,7 +5583,7 @@
     "effective_date": "2018-09-01"
   },
   {
-    "provider_id": "PRV-1499E1A9",
+    "provider_id": "PRV-E76077B3",
     "npi": "1743263039",
     "name": "Michael Moore, MD",
     "type": "Individual",
@@ -5608,7 +5608,7 @@
     "effective_date": "2020-06-01"
   },
   {
-    "provider_id": "PRV-6283BA79",
+    "provider_id": "PRV-15507672",
     "npi": "1017130232",
     "name": "Presbyterian Hospital",
     "type": "Facility",
@@ -5633,7 +5633,7 @@
     "effective_date": "2018-07-01"
   },
   {
-    "provider_id": "PRV-5D4995B8",
+    "provider_id": "PRV-280BCD04",
     "npi": "1156627768",
     "name": "San Diego Physicians Group",
     "type": "Facility",
@@ -5656,7 +5656,7 @@
     "effective_date": "2017-09-01"
   },
   {
-    "provider_id": "PRV-9F27E4C7",
+    "provider_id": "PRV-DB6003B6",
     "npi": "1732300857",
     "name": "Barbara Nelson, MD",
     "type": "Individual",
@@ -5681,7 +5681,7 @@
     "effective_date": "2016-07-01"
   },
   {
-    "provider_id": "PRV-FEA8745D",
+    "provider_id": "PRV-DC2005C5",
     "npi": "1066337050",
     "name": "Samantha Mitchell, PA",
     "type": "Individual",
@@ -5704,7 +5704,7 @@
     "effective_date": "2016-11-01"
   },
   {
-    "provider_id": "PRV-EE2BBADD",
+    "provider_id": "PRV-C38BE211",
     "npi": "1869461195",
     "name": "Dorothy Hill, NP",
     "type": "Individual",
@@ -5727,7 +5727,7 @@
     "effective_date": "2016-12-01"
   },
   {
-    "provider_id": "PRV-8134F6E0",
+    "provider_id": "PRV-90EA8CBE",
     "npi": "1817932302",
     "name": "Matthew Morales, MD",
     "type": "Individual",
@@ -5751,7 +5751,7 @@
     "effective_date": "2016-06-01"
   },
   {
-    "provider_id": "PRV-D9EE5C86",
+    "provider_id": "PRV-57E1688D",
     "npi": "1138069847",
     "name": "San Diego Medical Center",
     "type": "Facility",
@@ -5775,7 +5775,7 @@
     "effective_date": "2021-10-01"
   },
   {
-    "provider_id": "PRV-2887963E",
+    "provider_id": "PRV-CA341C57",
     "npi": "1843579786",
     "name": "Memorial Pharmacy",
     "type": "Facility",
@@ -5798,7 +5798,7 @@
     "effective_date": "2018-10-01"
   },
   {
-    "provider_id": "PRV-747D0088",
+    "provider_id": "PRV-34FD9606",
     "npi": "1289802714",
     "name": "Nicole Harris, PA",
     "type": "Individual",
@@ -5821,7 +5821,7 @@
     "effective_date": "2016-02-01"
   },
   {
-    "provider_id": "PRV-7AA75EB7",
+    "provider_id": "PRV-74D70C9F",
     "npi": "1128715399",
     "name": "Christine Stewart, PA",
     "type": "Individual",
@@ -5845,7 +5845,7 @@
     "effective_date": "2019-02-01"
   },
   {
-    "provider_id": "PRV-407E0D16",
+    "provider_id": "PRV-653EA06C",
     "npi": "1690409836",
     "name": "Baptist Imaging Center",
     "type": "Facility",
@@ -5868,7 +5868,7 @@
     "effective_date": "2023-08-01"
   },
   {
-    "provider_id": "PRV-51A0EEDF",
+    "provider_id": "PRV-E87065D1",
     "npi": "1548149737",
     "name": "Karen Jones, NP",
     "type": "Individual",
@@ -5893,7 +5893,7 @@
     "effective_date": "2022-12-01"
   },
   {
-    "provider_id": "PRV-BCCB2336",
+    "provider_id": "PRV-C507564A",
     "npi": "1443861259",
     "name": "Stephanie Martinez, NP",
     "type": "Individual",
@@ -5917,7 +5917,7 @@
     "effective_date": "2018-12-01"
   },
   {
-    "provider_id": "PRV-AE4A2A25",
+    "provider_id": "PRV-61D78F01",
     "npi": "1157201859",
     "name": "Debra Perez, MD",
     "type": "Individual",
@@ -5941,7 +5941,7 @@
     "effective_date": "2017-11-01"
   },
   {
-    "provider_id": "PRV-72845F84",
+    "provider_id": "PRV-D4293794",
     "npi": "1111783099",
     "name": "Melissa Johnson, MD",
     "type": "Individual",
@@ -5965,7 +5965,7 @@
     "effective_date": "2016-06-01"
   },
   {
-    "provider_id": "PRV-B9CAA7D9",
+    "provider_id": "PRV-EDB0B7C4",
     "npi": "1871898131",
     "name": "Detroit Wellness Center",
     "type": "Facility",
@@ -5988,7 +5988,7 @@
     "effective_date": "2016-09-01"
   },
   {
-    "provider_id": "PRV-1BE868B0",
+    "provider_id": "PRV-43BC23FF",
     "npi": "1408487297",
     "name": "Jason Smith, MD",
     "type": "Individual",
@@ -6013,7 +6013,7 @@
     "effective_date": "2019-04-01"
   },
   {
-    "provider_id": "PRV-9FB752E3",
+    "provider_id": "PRV-FEA1EBAD",
     "npi": "1626714628",
     "name": "Stephen Allen, MD",
     "type": "Individual",
@@ -6036,7 +6036,7 @@
     "effective_date": "2023-10-01"
   },
   {
-    "provider_id": "PRV-B0E0C111",
+    "provider_id": "PRV-3B22C145",
     "npi": "1186151554",
     "name": "Good Samaritan Urgent Care",
     "type": "Facility",
@@ -6060,7 +6060,7 @@
     "effective_date": "2019-10-01"
   },
   {
-    "provider_id": "PRV-8B31FA0D",
+    "provider_id": "PRV-62D59817",
     "npi": "1256258896",
     "name": "Nicole Gonzalez, MD",
     "type": "Individual",
@@ -6083,7 +6083,7 @@
     "effective_date": "2019-01-01"
   },
   {
-    "provider_id": "PRV-E6C644BE",
+    "provider_id": "PRV-25333323",
     "npi": "1446834146",
     "name": "Ruth Reyes, NP",
     "type": "Individual",
@@ -6106,7 +6106,7 @@
     "effective_date": "2019-09-01"
   },
   {
-    "provider_id": "PRV-8A969CA7",
+    "provider_id": "PRV-960562B6",
     "npi": "1160930685",
     "name": "Angela Morgan, PA",
     "type": "Individual",
@@ -6131,7 +6131,7 @@
     "effective_date": "2017-09-01"
   },
   {
-    "provider_id": "PRV-42ECE637",
+    "provider_id": "PRV-55B5382D",
     "npi": "1474430963",
     "name": "Nathan Thomas, MD",
     "type": "Individual",
@@ -6155,7 +6155,7 @@
     "effective_date": "2015-06-01"
   },
   {
-    "provider_id": "PRV-57734201",
+    "provider_id": "PRV-83422976",
     "npi": "1617024376",
     "name": "Eric Rogers, MD",
     "type": "Individual",
@@ -6179,7 +6179,7 @@
     "effective_date": "2021-01-01"
   },
   {
-    "provider_id": "PRV-76226E76",
+    "provider_id": "PRV-BEF535B9",
     "npi": "1237416787",
     "name": "Catherine Nelson, MD",
     "type": "Individual",
@@ -6203,7 +6203,7 @@
     "effective_date": "2015-03-01"
   },
   {
-    "provider_id": "PRV-3DC2EDD3",
+    "provider_id": "PRV-F8ABF270",
     "npi": "1674471639",
     "name": "Denver Medical Center",
     "type": "Facility",
@@ -6228,7 +6228,7 @@
     "effective_date": "2016-12-01"
   },
   {
-    "provider_id": "PRV-4BE18C90",
+    "provider_id": "PRV-AF6BA8D8",
     "npi": "1609310668",
     "name": "Andrew Harris, MD",
     "type": "Individual",
@@ -6253,7 +6253,7 @@
     "effective_date": "2019-06-01"
   },
   {
-    "provider_id": "PRV-96489079",
+    "provider_id": "PRV-E81C6A64",
     "npi": "1491624755",
     "name": "Margaret Torres, DO",
     "type": "Individual",
@@ -6276,7 +6276,7 @@
     "effective_date": "2020-12-01"
   },
   {
-    "provider_id": "PRV-342C5AAB",
+    "provider_id": "PRV-B8AA2306",
     "npi": "1910933711",
     "name": "Elizabeth Wilson, MD",
     "type": "Individual",
@@ -6301,7 +6301,7 @@
     "effective_date": "2023-12-01"
   },
   {
-    "provider_id": "PRV-A0209269",
+    "provider_id": "PRV-5BEC4277",
     "npi": "1802942409",
     "name": "Jacob Turner, NP",
     "type": "Individual",
@@ -6324,7 +6324,7 @@
     "effective_date": "2023-07-01"
   },
   {
-    "provider_id": "PRV-C17C6ACA",
+    "provider_id": "PRV-E18FFA23",
     "npi": "1788443448",
     "name": "Justin Johnson, NP",
     "type": "Individual",
@@ -6347,7 +6347,7 @@
     "effective_date": "2019-01-01"
   },
   {
-    "provider_id": "PRV-8D681B3A",
+    "provider_id": "PRV-3BE0661B",
     "npi": "1842694500",
     "name": "Michelle Hernandez, PA",
     "type": "Individual",
@@ -6372,7 +6372,7 @@
     "effective_date": "2024-09-01"
   },
   {
-    "provider_id": "PRV-664B578B",
+    "provider_id": "PRV-C85B7FBD",
     "npi": "1527172722",
     "name": "Methodist Clinic",
     "type": "Facility",
@@ -6395,7 +6395,7 @@
     "effective_date": "2018-02-01"
   },
   {
-    "provider_id": "PRV-982F670D",
+    "provider_id": "PRV-2B9D231D",
     "npi": "1916601002",
     "name": "Indianapolis Medical Center",
     "type": "Facility",
@@ -6418,7 +6418,7 @@
     "effective_date": "2020-12-01"
   },
   {
-    "provider_id": "PRV-A26349A2",
+    "provider_id": "PRV-58C7543B",
     "npi": "1084810018",
     "name": "University Surgery Center",
     "type": "Facility",
@@ -6441,7 +6441,7 @@
     "effective_date": "2020-11-01"
   },
   {
-    "provider_id": "PRV-A7A056FF",
+    "provider_id": "PRV-608FE93D",
     "npi": "1515109226",
     "name": "Amanda Martinez, NP",
     "type": "Individual",
@@ -6465,7 +6465,7 @@
     "effective_date": "2019-08-01"
   },
   {
-    "provider_id": "PRV-6BC56900",
+    "provider_id": "PRV-4F3462BD",
     "npi": "1711964215",
     "name": "Timothy Edwards, PA",
     "type": "Individual",
@@ -6490,7 +6490,7 @@
     "effective_date": "2018-07-01"
   },
   {
-    "provider_id": "PRV-79426211",
+    "provider_id": "PRV-AD423E8E",
     "npi": "1931350305",
     "name": "Justin Turner, NP",
     "type": "Individual",
@@ -6513,7 +6513,7 @@
     "effective_date": "2023-07-01"
   },
   {
-    "provider_id": "PRV-3BEF18C7",
+    "provider_id": "PRV-9E63756E",
     "npi": "1501917920",
     "name": "San Diego Health Partners",
     "type": "Facility",
@@ -6537,7 +6537,7 @@
     "effective_date": "2017-12-01"
   },
   {
-    "provider_id": "PRV-F474E264",
+    "provider_id": "PRV-62BEEDB8",
     "npi": "1092820667",
     "name": "Christopher Davis, PA",
     "type": "Individual",
@@ -6560,7 +6560,7 @@
     "effective_date": "2023-07-01"
   },
   {
-    "provider_id": "PRV-E1A7A835",
+    "provider_id": "PRV-3F9E6D9B",
     "npi": "1775662056",
     "name": "Jose Martinez, PA",
     "type": "Individual",
@@ -6584,7 +6584,7 @@
     "effective_date": "2023-02-01"
   },
   {
-    "provider_id": "PRV-A3132357",
+    "provider_id": "PRV-3712A534",
     "npi": "1909700514",
     "name": "Mercy Hospital",
     "type": "Facility",
@@ -6608,7 +6608,7 @@
     "effective_date": "2016-06-01"
   },
   {
-    "provider_id": "PRV-474D4ABA",
+    "provider_id": "PRV-4B4B0F82",
     "npi": "1227113322",
     "name": "Kathleen Jones, MD",
     "type": "Individual",
@@ -6631,7 +6631,7 @@
     "effective_date": "2024-07-01"
   },
   {
-    "provider_id": "PRV-ECFD6042",
+    "provider_id": "PRV-5C0C3574",
     "npi": "1710248171",
     "name": "Miami Medical Practice",
     "type": "Facility",
@@ -6655,7 +6655,7 @@
     "effective_date": "2022-05-01"
   },
   {
-    "provider_id": "PRV-DE727CD4",
+    "provider_id": "PRV-60D2FFE6",
     "npi": "1692758955",
     "name": "George Torres, DO",
     "type": "Individual",
@@ -6678,7 +6678,7 @@
     "effective_date": "2018-12-01"
   },
   {
-    "provider_id": "PRV-3D31E365",
+    "provider_id": "PRV-045757DD",
     "npi": "1157787112",
     "name": "Mark Roberts, DO",
     "type": "Individual",
@@ -6702,7 +6702,7 @@
     "effective_date": "2022-02-01"
   },
   {
-    "provider_id": "PRV-D88A445B",
+    "provider_id": "PRV-9B45D7DF",
     "npi": "1567303064",
     "name": "Scott Carter, MD",
     "type": "Individual",
@@ -6727,7 +6727,7 @@
     "effective_date": "2019-03-01"
   },
   {
-    "provider_id": "PRV-1DD2C3AC",
+    "provider_id": "PRV-A9AA704B",
     "npi": "1265960893",
     "name": "Kathleen Morgan, PA",
     "type": "Individual",
@@ -6750,7 +6750,7 @@
     "effective_date": "2016-11-01"
   },
   {
-    "provider_id": "PRV-B79C848B",
+    "provider_id": "PRV-3217021B",
     "npi": "1336829635",
     "name": "Samantha Gonzalez, MD",
     "type": "Individual",
@@ -6774,7 +6774,7 @@
     "effective_date": "2022-07-01"
   },
   {
-    "provider_id": "PRV-A987BD47",
+    "provider_id": "PRV-34447750",
     "npi": "1289286646",
     "name": "Ryan Diaz, MD",
     "type": "Individual",
@@ -6797,7 +6797,7 @@
     "effective_date": "2024-07-01"
   },
   {
-    "provider_id": "PRV-08FDEB2C",
+    "provider_id": "PRV-4AB26D1D",
     "npi": "1633786137",
     "name": "Raleigh Healthcare",
     "type": "Facility",
@@ -6820,7 +6820,7 @@
     "effective_date": "2019-05-01"
   },
   {
-    "provider_id": "PRV-B123A0FC",
+    "provider_id": "PRV-3A560950",
     "npi": "1955296386",
     "name": "Christopher Mitchell, NP",
     "type": "Individual",
@@ -6845,7 +6845,7 @@
     "effective_date": "2021-04-01"
   },
   {
-    "provider_id": "PRV-6B8BF087",
+    "provider_id": "PRV-E140329E",
     "npi": "1253110609",
     "name": "Detroit Wellness Center",
     "type": "Facility",
@@ -6869,7 +6869,7 @@
     "effective_date": "2020-03-01"
   },
   {
-    "provider_id": "PRV-79CBA43D",
+    "provider_id": "PRV-0AA0C094",
     "npi": "1120911791",
     "name": "San Diego Healthcare",
     "type": "Facility",
@@ -6893,7 +6893,7 @@
     "effective_date": "2015-07-01"
   },
   {
-    "provider_id": "PRV-B564A08D",
+    "provider_id": "PRV-32B9CEFB",
     "npi": "1299015579",
     "name": "St. Marys Hospital",
     "type": "Facility",
@@ -6916,7 +6916,7 @@
     "effective_date": "2023-03-01"
   },
   {
-    "provider_id": "PRV-612AD067",
+    "provider_id": "PRV-F8AC26EB",
     "npi": "1447315847",
     "name": "Columbus Clinic",
     "type": "Facility",
@@ -6941,7 +6941,7 @@
     "effective_date": "2024-05-01"
   },
   {
-    "provider_id": "PRV-4E5AE5AF",
+    "provider_id": "PRV-CF7FB4B5",
     "npi": "1919663955",
     "name": "San Antonio Medical Associates",
     "type": "Facility",
@@ -6965,7 +6965,7 @@
     "effective_date": "2016-03-01"
   },
   {
-    "provider_id": "PRV-1DE61D30",
+    "provider_id": "PRV-CD157384",
     "npi": "1105053795",
     "name": "Melissa Jackson, MD",
     "type": "Individual",
@@ -6989,7 +6989,7 @@
     "effective_date": "2021-06-01"
   },
   {
-    "provider_id": "PRV-DEE40D58",
+    "provider_id": "PRV-4BE481CA",
     "npi": "1959639040",
     "name": "Joseph Edwards, MD",
     "type": "Individual",
@@ -7014,7 +7014,7 @@
     "effective_date": "2016-08-01"
   },
   {
-    "provider_id": "PRV-AE3E4263",
+    "provider_id": "PRV-D1E29D3C",
     "npi": "1790647715",
     "name": "Baptist Surgery Center",
     "type": "Facility",
@@ -7038,7 +7038,7 @@
     "effective_date": "2018-12-01"
   },
   {
-    "provider_id": "PRV-4155C33A",
+    "provider_id": "PRV-ED153507",
     "npi": "1145964229",
     "name": "Joseph Miller, MD",
     "type": "Individual",
@@ -7062,7 +7062,7 @@
     "effective_date": "2018-10-01"
   },
   {
-    "provider_id": "PRV-DC0EB72A",
+    "provider_id": "PRV-8529A6E1",
     "npi": "1311703037",
     "name": "Brian Young, PA",
     "type": "Individual",
@@ -7087,7 +7087,7 @@
     "effective_date": "2022-11-01"
   },
   {
-    "provider_id": "PRV-14E5E561",
+    "provider_id": "PRV-19F1BB9E",
     "npi": "1363146249",
     "name": "Denver Wellness Center",
     "type": "Facility",
@@ -7111,7 +7111,7 @@
     "effective_date": "2023-08-01"
   },
   {
-    "provider_id": "PRV-57F6FD1E",
+    "provider_id": "PRV-42CFE1A8",
     "npi": "1745106634",
     "name": "Angela Nelson, MD",
     "type": "Individual",
@@ -7135,7 +7135,7 @@
     "effective_date": "2016-04-01"
   },
   {
-    "provider_id": "PRV-61A55A77",
+    "provider_id": "PRV-489A671F",
     "npi": "1666134732",
     "name": "Mercy Lab",
     "type": "Facility",
@@ -7160,7 +7160,7 @@
     "effective_date": "2018-03-01"
   },
   {
-    "provider_id": "PRV-B74AB193",
+    "provider_id": "PRV-76C23EF1",
     "npi": "1241209579",
     "name": "Sharon Nelson, MD",
     "type": "Individual",
@@ -7185,7 +7185,7 @@
     "effective_date": "2017-02-01"
   },
   {
-    "provider_id": "PRV-EA67EFF8",
+    "provider_id": "PRV-3334E6E4",
     "npi": "1457054589",
     "name": "Presbyterian Imaging Center",
     "type": "Facility",
@@ -7207,5 +7207,51 @@
     ],
     "rating": 3.7,
     "effective_date": "2015-04-01"
+  },
+  {
+    "provider_id": "PRV-34A607E4",
+    "npi": "1314829375",
+    "name": "Dr. Anchor 07E4",
+    "type": "Individual",
+    "specialty": "Family Medicine",
+    "tax_id": "86-3999805",
+    "address": {
+      "line1": "200 Medical Dr",
+      "line2": "",
+      "city": "Dallas",
+      "state": "TX",
+      "zip": "75201"
+    },
+    "phone": "(555) 000-0001",
+    "accepting_new_patients": true,
+    "network_status": "In-Network",
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "effective_date": "2020-01-01"
+  },
+  {
+    "provider_id": "PRV-9C40752C",
+    "npi": "1347242720",
+    "name": "Dr. Anchor 752C",
+    "type": "Individual",
+    "specialty": "Family Medicine",
+    "tax_id": "41-3235470",
+    "address": {
+      "line1": "200 Medical Dr",
+      "line2": "",
+      "city": "Dallas",
+      "state": "TX",
+      "zip": "75201"
+    },
+    "phone": "(555) 000-0001",
+    "accepting_new_patients": true,
+    "network_status": "In-Network",
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "effective_date": "2020-01-01"
   }
 ]
