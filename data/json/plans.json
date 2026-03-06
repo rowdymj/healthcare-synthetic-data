@@ -1426,5 +1426,33 @@
     "copay_rx_specialty": 200,
     "network_name": "Anchor Care Network",
     "pharmacy_benefit_manager": "Express Scripts"
+  },
+  {
+    "plan_id": "PLN-AAF39C04",
+    "employer_id": "EMP-C0F92299",
+    "plan_name": "Anchor Plan 9C04",
+    "plan_type": "PPO",
+    "tier": "Gold",
+    "effective_date": "2020-01-01",
+    "termination_date": null,
+    "status": "Active",
+    "deductible_individual": 1500,
+    "deductible_family": 3000,
+    "out_of_pocket_max_individual": 5000,
+    "out_of_pocket_max_family": 10000,
+    "monthly_premium_individual": 550,
+    "monthly_premium_family": 1650.0,
+    "coinsurance_in_network": 80,
+    "coinsurance_out_of_network": 60,
+    "copay_pcp": 25,
+    "copay_specialist": 50,
+    "copay_er": 250,
+    "copay_urgent_care": 75,
+    "copay_rx_generic": 10,
+    "copay_rx_preferred_brand": 40,
+    "copay_rx_non_preferred": 75,
+    "copay_rx_specialty": 200,
+    "network_name": "Anchor Care Network",
+    "pharmacy_benefit_manager": "Express Scripts"
   }
 ]

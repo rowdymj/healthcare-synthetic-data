@@ -7253,5 +7253,51 @@
     ],
     "rating": 4.5,
     "effective_date": "2020-01-01"
+  },
+  {
+    "provider_id": "PRV-519B7B94",
+    "npi": "1478363692",
+    "name": "Dr. Anchor 7B94",
+    "type": "Individual",
+    "specialty": "Family Medicine",
+    "tax_id": "63-1985238",
+    "address": {
+      "line1": "200 Medical Dr",
+      "line2": "",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94101"
+    },
+    "phone": "(555) 000-0001",
+    "accepting_new_patients": true,
+    "network_status": "In-Network",
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "effective_date": "2020-01-01"
+  },
+  {
+    "provider_id": "PRV-78ECD681",
+    "npi": "1608234790",
+    "name": "Dr. Anchor D681",
+    "type": "Individual",
+    "specialty": "Family Medicine",
+    "tax_id": "46-2084704",
+    "address": {
+      "line1": "200 Medical Dr",
+      "line2": "",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94101"
+    },
+    "phone": "(555) 000-0001",
+    "accepting_new_patients": true,
+    "network_status": "In-Network",
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "effective_date": "2020-01-01"
   }
 ]

@@ -28026,5 +28026,33 @@
     "related_claim_id": "CLM-MB-003",
     "priority": "High",
     "response_time_hours": null
+  },
+  {
+    "message_id": "MSG-FC-001",
+    "thread_id": "THD-FC-001",
+    "member_id": "MBR-B5906016",
+    "direction": "Outbound",
+    "sent_date": "2025-03-12 09:00:00",
+    "subject": "Follow-Up: Your Recent Emergency Visit",
+    "body": "Dear Frank, we hope you are recovering well after your visit to LA Healthcare on March 8. Your PCP has submitted a referral to pulmonology (Karen Taylor, PA) to help optimize your asthma management. This referral has been approved. Please call (415) 555-0178 to schedule your appointment. If you have questions about your bill or benefits, please contact us. Take care.",
+    "category": "Care Coordination",
+    "status": "Read",
+    "related_claim_id": "CLM-FC-002",
+    "priority": "High",
+    "response_time_hours": null
+  },
+  {
+    "message_id": "MSG-FC-002",
+    "thread_id": "THD-FC-002",
+    "member_id": "MBR-B5906016",
+    "direction": "Inbound",
+    "sent_date": "2025-12-06 18:30:00",
+    "subject": "Montelukast Copay Increase",
+    "body": "Hi, I just picked up my Montelukast refill and was charged $75 instead of the usual $30. Is this correct? I've been on this medication for years and the cost has never been this high. Please explain.",
+    "category": "Pharmacy",
+    "status": "Replied",
+    "related_claim_id": null,
+    "priority": "Normal",
+    "response_time_hours": 18
   }
 ]

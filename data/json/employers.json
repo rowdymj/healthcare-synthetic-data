@@ -492,5 +492,24 @@
     "effective_date": "2020-01-01",
     "status": "Active",
     "account_manager": "System Admin"
+  },
+  {
+    "employer_id": "EMP-C0F92299",
+    "name": "Anchor Employer 2299",
+    "tax_id": "55-1722768",
+    "industry": "Healthcare",
+    "size_category": "medium",
+    "employee_count": 250,
+    "address": {
+      "line1": "100 Main St",
+      "line2": "",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94101"
+    },
+    "phone": "(555) 000-0000",
+    "effective_date": "2020-01-01",
+    "status": "Active",
+    "account_manager": "System Admin"
   }
 ]

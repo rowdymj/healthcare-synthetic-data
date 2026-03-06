@@ -57964,5 +57964,36 @@
     "enrollment_date": "2023-01-01",
     "termination_date": null,
     "chronic_conditions": []
+  },
+  {
+    "member_id": "MBR-B5906016",
+    "subscriber_id": "SUB190723988",
+    "employer_id": "EMP-C0F92299",
+    "plan_id": "PLN-AAF39C04",
+    "first_name": "Frank",
+    "last_name": "Cruz",
+    "date_of_birth": "1993-10-08",
+    "age": 33,
+    "gender": "M",
+    "ssn_last4": "7214",
+    "email": "frank.cruz546@gmail.com",
+    "phone": "(876) 512-1512",
+    "address": {
+      "line1": "448 Highland Ave",
+      "line2": "Apt 285",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90044"
+    },
+    "coverage_type": "Individual",
+    "relationship": "Self",
+    "pcp_provider_id": "PRV-519B7B94",
+    "status": "Active",
+    "enrollment_date": "2022-11-25",
+    "termination_date": null,
+    "chronic_conditions": [
+      "hypertension",
+      "asthma"
+    ]
   }
 ]
