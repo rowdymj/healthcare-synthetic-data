@@ -158,6 +158,13 @@
   /* Footer */
   footer { max-width: 1200px; margin: 0 auto; padding: 40px 24px; border-top: 2px solid transparent; border-image: linear-gradient(to right, #F07898, #E44DA0, #C030B0) 1; text-align: center; color: var(--text2); font-size: 13px; }
 
+  /* Filter bar */
+  .filter-bar { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+  .filter-btn { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; padding: 6px 16px; border-radius: 100px; border: 1px solid var(--border); background: var(--surface); color: var(--text2); cursor: pointer; transition: all 0.2s; }
+  .filter-btn:hover { border-color: var(--accent); color: var(--text); }
+  .filter-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
+  .filter-btn .count { font-size: 11px; opacity: 0.7; margin-left: 4px; }
+
   /* Click hint */
   .click-hint { font-size: 12px; color: var(--text2); margin-top: 8px; font-style: italic; }
 </style>
@@ -1538,6 +1545,12 @@ POST /tool
 <section id="scenarios">
   <h2>40 eval scenarios</h2>
   <p class="subtitle">Test cases with user prompts, expected tool calls, and success criteria. Click to expand.</p>
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterScenarios('all', this)">All<span class="count">40</span></button>
+    <button class="filter-btn" onclick="filterScenarios('easy', this)" style="--btn-color: var(--green)">Easy<span class="count">10</span></button>
+    <button class="filter-btn" onclick="filterScenarios('medium', this)" style="--btn-color: var(--amber)">Medium<span class="count">18</span></button>
+    <button class="filter-btn" onclick="filterScenarios('hard', this)" style="--btn-color: var(--red)">Hard<span class="count">12</span></button>
+  </div>
   <div class="scenario-grid">
 <div class="expandable-card scenario-expand" onclick="toggleExpand(this)">
   <div class="card-header">
@@ -2185,3 +2198,223 @@ POST /tool
 <hr class="section-divider">
 
 <!-- ARCHITECTURE -->
+<section>
+  <h2>Project structure</h2>
+  <p class="subtitle">Everything in one folder. Data, API, agent config, evals, and docs.</p>
+  <div class="arch-tree"><span class="folder">healthcare-synthetic-data/</span>
+&#9500;&#9472;&#9472; <span class="folder">data/</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="folder">json/</span>                      <span class="file">&#8592; 21 JSON files, ~33 MB</span>
+&#9474;   &#9492;&#9472;&#9472; <span class="folder">csv/</span>                       <span class="file">&#8592; 15 CSV files, ~9 MB</span>
+&#9474;
+&#9500;&#9472;&#9472; <span class="folder">agent-sandbox/</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="highlight">server.py</span>                  <span class="file">&#8592; FastAPI server (start here)</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="highlight">api_server.py</span>              <span class="file">&#8592; Query layer (18 tools implemented)</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="highlight">mcp_server.py</span>              <span class="file">&#8592; MCP server (Claude Desktop / Cursor)</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="highlight">mcp_remote.py</span>              <span class="file">&#8592; Remote MCP proxy (team Vercel access)</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="highlight">requirements.txt</span>           <span class="file">&#8592; pip install -r requirements.txt</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="folder">tools/</span>
+&#9474;   &#9474;   &#9492;&#9472;&#9472; <span class="highlight">tool_schemas.json</span>      <span class="file">&#8592; Anthropic + OpenAI function schemas</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="folder">rules/</span>
+&#9474;   &#9474;   &#9492;&#9472;&#9472; <span class="highlight">business_rules.json</span>    <span class="file">&#8592; 31 coverage/auth/adjudication rules</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="folder">knowledge-base/</span>
+&#9474;   &#9474;   &#9492;&#9472;&#9472; <span class="highlight">knowledge_base.json</span>    <span class="file">&#8592; Policies, FAQs, clinical guidelines</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="folder">scenarios/</span>
+&#9474;   &#9474;   &#9492;&#9472;&#9472; <span class="highlight">scenarios.json</span>         <span class="file">&#8592; 40 eval test cases</span>
+&#9474;   &#9492;&#9472;&#9472; <span class="folder">templates/</span>
+&#9474;       &#9492;&#9472;&#9472; <span class="highlight">document_templates.json</span> <span class="file">&#8592; EOB, denial letter, ID card, etc.</span>
+&#9474;
+&#9500;&#9472;&#9472; <span class="folder">generator/</span>
+&#9474;   &#9500;&#9472;&#9472; generate.py                <span class="file">&#8592; Core data generator</span>
+&#9474;   &#9492;&#9472;&#9472; generate_interactions.py   <span class="file">&#8592; Interaction history generator</span>
+&#9474;
+&#9500;&#9472;&#9472; <span class="folder">docs/</span>
+&#9474;   &#9492;&#9472;&#9472; DATA-SPECIFICATION.md      <span class="file">&#8592; Full engineering spec</span>
+&#9474;
+&#9500;&#9472;&#9472; <span class="folder">api/</span>
+&#9474;   &#9492;&#9472;&#9472; <span class="highlight">index.py</span>                   <span class="file">&#8592; Vercel serverless entry point</span>
+&#9474;
+&#9500;&#9472;&#9472; <span class="folder">scripts/</span>
+&#9474;   &#9500;&#9472;&#9472; <span class="highlight">run_evals.py</span>               <span class="file">&#8592; Automated scenario testing (40 evals)</span>
+&#9474;   &#9500;&#9472;&#9472; validate_data.py               <span class="file">&#8592; Referential integrity checks</span>
+&#9474;   &#9492;&#9472;&#9472; build_database.py              <span class="file">&#8592; SQLite database builder</span>
+&#9474;
+&#9500;&#9472;&#9472; <span class="highlight">vercel.json</span>                    <span class="file">&#8592; Vercel deployment config</span>
+&#9500;&#9472;&#9472; <span class="highlight">requirements.txt</span>               <span class="file">&#8592; Root deps for Vercel runtime</span>
+&#9500;&#9472;&#9472; <span class="highlight">TEAM-SETUP.md</span>                  <span class="file">&#8592; Team onboarding guide</span>
+&#9500;&#9472;&#9472; <span class="highlight">README.md</span>                      <span class="file">&#8592; Start here</span>
+&#9492;&#9472;&#9472; <span class="highlight">index.html</span>                     <span class="file">&#8592; This page</span></div>
+</section>
+
+<hr class="section-divider">
+
+<!-- TWO PATHS -->
+<section id="quickstart">
+  <h2>Two ways to use this</h2>
+  <p class="subtitle">Same data, same tools &#8212; fundamentally different experience. The difference is the point.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px;align-items:start">
+    <!-- Path A: MCP -->
+    <div style="background:var(--surface);border:2px solid #E44DA0;border-radius:12px;padding:28px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <span style="background:linear-gradient(135deg,#F2788A,#E44DA0,#C030B0);color:white;padding:2px 10px;border-radius:4px;font-size:12px;font-weight:700;">RECOMMENDED</span>
+      </div>
+      <h3 style="font-size:20px;margin-bottom:8px">Path A: With MCP</h3>
+      <p style="color:var(--text2);font-size:14px;margin-bottom:20px">Agent discovers tools automatically. No glue code. Start talking immediately.</p>
+
+      <div class="steps" style="counter-reset:step">
+        <div class="compact-step">
+          <h4>Install</h4>
+          <p><code>cd agent-sandbox &amp;&amp; pip install -r requirements.txt</code></p>
+        </div>
+        <div class="compact-step">
+          <h4>Add to Claude Desktop config</h4>
+          <p>Settings &#8594; Developer &#8594; Edit Config. Add the <code>healthcare-sandbox</code> server entry. Restart.</p>
+        </div>
+        <div class="compact-step">
+          <h4>Start talking</h4>
+          <p>&#8220;Look up member MBR-B5906016 and tell me about their coverage.&#8221;</p>
+        </div>
+      </div>
+      <p style="color:var(--green);font-size:13px;margin-top:16px;font-weight:600">&#10003; All 18 tools available instantly. Agent reasons about which to use.</p>
+    </div>
+
+    <!-- Path B: REST -->
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px;">
+      <h3 style="font-size:20px;margin-bottom:8px">Path B: Without MCP</h3>
+      <p style="color:var(--text2);font-size:14px;margin-bottom:20px">Traditional REST API. Manual tool wiring and custom integration code.</p>
+
+      <div class="steps" style="counter-reset:step">
+        <div class="compact-step">
+          <h4>Install</h4>
+          <p><code>cd agent-sandbox &amp;&amp; pip install -r requirements.txt</code></p>
+        </div>
+        <div class="compact-step">
+          <h4>Start API server</h4>
+          <p><code>python3 -m uvicorn server:app --reload --port 8000</code></p>
+        </div>
+        <div class="compact-step">
+          <h4>Copy tool schemas into agent config</h4>
+          <p>Load <code>tool_schemas.json</code>, write HTTP client, build conversation loop, handle errors.</p>
+        </div>
+        <div class="compact-step">
+          <h4>Write routing logic</h4>
+          <p>Map each tool to an API call. Parse responses. Manage state between turns.</p>
+        </div>
+        <div class="compact-step">
+          <h4>Test &amp; iterate</h4>
+          <p>Debug tool selection, fix parameter mapping, tune prompts.</p>
+        </div>
+      </div>
+      <p style="color:var(--amber);font-size:13px;margin-top:16px;font-weight:600">&#9888; Same result, hours more work.</p>
+    </div>
+  </div>
+
+  <!-- Comparison table -->
+  <div style="overflow-x:auto">
+    <table class="entity-table">
+      <thead>
+        <tr><th></th><th style="color:#E44DA0">With MCP</th><th>Without MCP</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Setup time</strong></td><td>2 minutes (config file)</td><td>Hours (integration code)</td></tr>
+        <tr><td><strong>Tool discovery</strong></td><td>Automatic &#8212; agent sees all 18 tools</td><td>Manual &#8212; copy schemas, wire each one</td></tr>
+        <tr><td><strong>First demo</strong></td><td>Immediately &#8212; just start talking</td><td>After building conversation loop</td></tr>
+        <tr><td><strong>Tool selection</strong></td><td>Agent decides which tools to use</td><td>Developer pre-programs routing</td></tr>
+        <tr><td><strong>Multi-step reasoning</strong></td><td>Built in &#8212; agent chains tools naturally</td><td>Developer builds state machine</td></tr>
+        <tr><td><strong>Adding new tools</strong></td><td>Add to server, auto-discovered</td><td>Update schemas, update routing code</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- TEAM ACCESS -->
+<section id="team">
+  <h2>Team access</h2>
+  <p class="subtitle">Share the sandbox with your team via Vercel deployment. No local data setup required for teammates.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:40px">
+
+    <!-- Card 1: Vercel Deployment -->
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;">
+      <div style="font-size:24px;margin-bottom:8px">&#9729;</div>
+      <h3 style="font-size:16px;margin-bottom:8px">Vercel Deployment</h3>
+      <p style="color:var(--text2);font-size:13px;margin-bottom:16px">REST API hosted on Vercel with API key auth. All 23 endpoints + Swagger docs available over HTTPS.</p>
+      <div style="font-size:12px;color:var(--text2);font-family:'SF Mono',monospace">
+        <div style="margin-bottom:4px"><span style="color:var(--teal)">vercel.json</span> &rarr; routing</div>
+        <div style="margin-bottom:4px"><span style="color:var(--teal)">api/index.py</span> &rarr; entry point</div>
+        <div><span style="color:var(--teal)">API_KEY</span> &rarr; env var auth</div>
+      </div>
+    </div>
+
+    <!-- Card 2: MCP Remote Proxy -->
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;">
+      <div style="font-size:24px;margin-bottom:8px">&#128279;</div>
+      <h3 style="font-size:16px;margin-bottom:8px">MCP Remote Proxy</h3>
+      <p style="color:var(--text2);font-size:13px;margin-bottom:16px">Teammates run <code style="color:var(--teal);font-size:11px">mcp_remote.py</code> locally. It speaks MCP stdio to Claude Desktop and forwards tool calls to Vercel.</p>
+      <div style="font-size:12px;color:var(--text2);font-family:'SF Mono',monospace">
+        <div style="margin-bottom:4px">Claude Desktop &harr; stdio</div>
+        <div style="margin-bottom:4px">mcp_remote.py &harr; HTTPS</div>
+        <div>Vercel /tool endpoint</div>
+      </div>
+    </div>
+
+    <!-- Card 3: Eval Runner -->
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;">
+      <div style="font-size:24px;margin-bottom:8px">&#9989;</div>
+      <h3 style="font-size:16px;margin-bottom:8px">Eval Runner</h3>
+      <p style="color:var(--text2);font-size:13px;margin-bottom:16px">40 scenarios validated automatically. Run before demos or in CI to catch regressions across all 18 tools.</p>
+      <div style="font-size:12px;color:var(--text2);font-family:'SF Mono',monospace">
+        <div style="margin-bottom:4px"><span style="color:var(--teal)">python3 scripts/run_evals.py</span></div>
+        <div style="margin-bottom:4px">--verbose &middot; --filter Hard</div>
+        <div>Runs in GitHub Actions CI</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Quick setup -->
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px;">
+    <h3 style="font-size:16px;margin-bottom:12px">Teammate quick start</h3>
+    <div class="steps" style="counter-reset:step">
+      <div class="compact-step">
+        <h4>Clone &amp; install MCP SDK</h4>
+        <p><code>git clone https://github.com/rowdymj/healthcare-synthetic-data.git &amp;&amp; pip install "mcp[cli]"</code></p>
+      </div>
+      <div class="compact-step">
+        <h4>Add to Claude Desktop config</h4>
+        <p>Point <code>mcp_remote.py</code> at the Vercel URL with your API key. See <code>TEAM-SETUP.md</code> for full config.</p>
+      </div>
+      <div class="compact-step">
+        <h4>Start talking</h4>
+        <p>&#8220;Look up member Smith and check their deductible status.&#8221; All 18 tools work through the remote proxy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<footer>
+  ShippyHC &mdash; Synthetic data platform for prototyping AI agents. All data is fictional. No real PHI/PII.
+  <div style="margin-top: 12px; font-size: 12px; color: #6b7280;">Built by Blank Metal &mdash; to help accelerate AI use cases in healthcare.</div>
+</footer>
+
+<script>
+function toggleExpand(el) {
+  el.classList.toggle('expanded');
+}
+function filterScenarios(difficulty, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.scenario-expand').forEach(card => {
+    if (difficulty === 'all') { card.style.display = ''; return; }
+    var hasDiff = card.querySelector('.diff-' + difficulty);
+    card.style.display = hasDiff ? '' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>
