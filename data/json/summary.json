@@ -1,26 +1,26 @@
 {
-  "generated_at": "2026-02-05T18:16:10.057149",
+  "generated_at": "2026-03-05T20:18:20.589680",
   "entity_counts": {
     "employers": 25,
     "plans": 50,
     "benefits": 900,
     "providers": 300,
     "members_primary": 2000,
-    "dependents": 2297,
-    "total_covered_lives": 4297,
-    "eligibility_periods": 4297,
-    "medical_claims": 13841,
-    "claim_lines": 24206,
-    "pharmacy_claims": 7055,
-    "authorizations": 567,
+    "dependents": 2285,
+    "total_covered_lives": 4285,
+    "eligibility_periods": 4285,
+    "medical_claims": 13890,
+    "claim_lines": 24352,
+    "pharmacy_claims": 6963,
+    "authorizations": 611,
     "accumulators": 2000
   },
   "financial_summary": {
-    "total_medical_billed": 63278604.76,
-    "total_medical_paid": 33998600.33,
-    "total_pharmacy_cost": 1200215.78,
-    "avg_claim_amount": 4571.82,
-    "claim_denial_rate": 7.7,
-    "auth_approval_rate": 56.1
+    "total_medical_billed": 33530000.24,
+    "total_medical_paid": 17821504.95,
+    "total_pharmacy_cost": 1099599.15,
+    "avg_claim_amount": 2413.97,
+    "claim_denial_rate": 7.9,
+    "auth_approval_rate": 50.6
   }
 }

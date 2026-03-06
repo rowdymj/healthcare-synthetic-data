@@ -1,26 +1,27 @@
 employer_id,name,tax_id,industry,size_category,employee_count,address_line1,address_line2,address_city,address_state,address_zip,phone,effective_date,status,account_manager
-EMP-A2B12586,Acme Corporation,96-2458591,Technology,small,85,1924 Oak Ave,,Raleigh,NC,27645,(632) 232-1488,2018-01-01,Active,David Brown
-EMP-712A6693,GlobalTech Industries,67-5667265,Manufacturing,medium,103,9295 Sycamore Ave,Apt 719,Miami,FL,33193,(977) 363-7924,2020-01-01,Active,Sharon Baker
-EMP-82A6A329,Meridian Healthcare Systems,15-8707870,Healthcare,large,4892,1774 Pine Rd,,Charlotte,NC,28222,(327) 587-2291,2022-01-01,Active,Kenneth Campbell
-EMP-6D5C2D0C,Pinnacle Financial Group,20-4905582,Financial Services,large,1327,9559 Sycamore Ave,,Miami,FL,33118,(589) 484-8428,2023-01-01,Active,Michelle Mitchell
-EMP-F652468B,Summit Manufacturing Co,78-5107245,Construction,medium,183,5920 Hickory Ln,,Tampa,FL,33644,(673) 588-5422,2023-01-01,Active,Laura Adams
-EMP-06437E66,Horizon Media Group,82-6279418,Media,medium,208,1016 Poplar St,,Los Angeles,CA,90050,(871) 711-7482,2023-01-01,Active,Shirley Moore
-EMP-C21CF936,Cascade Energy Solutions,38-3320821,Energy,large,4674,4140 Cypress Rd,Apt 439,Raleigh,NC,27684,(705) 293-1771,2024-01-01,Active,Kenneth Lee
-EMP-1F3D4A21,Sterling Logistics Inc,80-1192619,Logistics,large,1438,7016 Elm St,Suite 579,Charlotte,NC,28258,(898) 749-5371,2024-01-01,Active,Sandra Nguyen
-EMP-ADBBA4AC,Vanguard Retail Corp,74-2785277,Retail,medium,420,7223 Spruce Ter,,San Francisco,CA,94110,(505) 854-9317,2022-01-01,Active,Catherine Lee
-EMP-C562B04C,Apex Construction LLC,49-5017343,Aerospace,large,974,8937 Main St,,Atlanta,GA,30351,(446) 780-2290,2018-01-01,Active,Frank Rodriguez
-EMP-7BA695B3,Quantum Software Solutions,77-8099076,Hospitality,large,2235,8827 Birch Way,,Phoenix,AZ,85094,(752) 973-4295,2023-01-01,Active,Ronald Mitchell
-EMP-DBD29718,Heritage Foods International,85-4860684,Consulting,small,85,7277 Hill St,,Houston,TX,77041,(425) 207-2163,2023-01-01,Active,Cynthia Rodriguez
-EMP-4129A363,Titan Aerospace Engineering,79-3219824,Transportation,medium,470,614 Lincoln Blvd,Apt 244,Chicago,IL,60675,(784) 790-8744,2019-01-01,Active,Gregory Evans
-EMP-8EDD567A,Coastal Hospitality Group,69-1908841,Education,enterprise,49129,3219 Walnut Blvd,Apt 442,Houston,TX,77094,(869) 861-2612,2018-01-01,Active,Debra Wilson
-EMP-E221F7C8,Redwood Consulting Partners,45-8761611,Security,medium,227,4173 Sycamore Ave,Apt 460,San Antonio,TX,78278,(277) 653-2604,2018-01-01,Active,Christopher Johnson
-EMP-0D7C111A,Atlas Transportation Co,17-3762152,Telecommunications,enterprise,29836,1628 Magnolia Blvd,,Philadelphia,PA,19162,(202) 599-5345,2024-01-01,Active,Pamela Diaz
-EMP-029CD8A5,Beacon Education Foundation,50-1959074,Agriculture,small,16,9205 Highland Ave,,Phoenix,AZ,85034,(798) 688-9238,2024-01-01,Active,Jessica Rogers
-EMP-5E36E698,Ironclad Security Services,25-5130808,Public Sector,enterprise,42940,1412 Willow Dr,,Chicago,IL,60686,(808) 240-2343,2021-01-01,Active,Matthew Gutierrez
-EMP-32C946FC,Sapphire Telecommunications,60-3195773,Environmental Services,large,2957,5283 Cypress Rd,,San Antonio,TX,78295,(668) 523-2188,2018-01-01,Active,Matthew Gonzalez
-EMP-0CB04780,Prairie Agricultural Corp,57-5781295,Mining,medium,180,1300 Hickory Ln,,Denver,CO,80243,(648) 756-5956,2022-01-01,Terminated,Gregory Ortiz
-EMP-143C232D,Metro Transit Authority,24-2795765,Insurance,large,1773,228 Juniper Pl,,Tampa,FL,33623,(478) 488-4450,2023-01-01,Active,Jason King
-EMP-C0F92299,Evergreen Environmental Services,15-1059486,Marine,large,3232,8380 Highland Ave,Apt 95,Dallas,TX,75216,(989) 333-5291,2019-01-01,Active,Charles Diaz
-EMP-FA89C4F0,Diamond Mining Operations,57-3484601,Pharmaceutical,small,65,9289 Main St,,Houston,TX,77019,(330) 242-6050,2020-01-01,Active,Samuel Garcia
-EMP-CDAEA330,Liberty Insurance Brokers,89-3592974,Legal Services,enterprise,20514,5962 Hickory Ln,,Tampa,FL,33641,(366) 381-7755,2018-01-01,Active,Kyle Nelson
-EMP-BEA02DE5,Pacific Marine Industries,14-8896868,Real Estate,enterprise,19577,6845 Magnolia Blvd,,Dallas,TX,75230,(404) 671-6728,2020-01-01,Active,Aaron Robinson
+EMP-8303D139,Acme Corporation,96-2458591,Technology,small,85,1924 Oak Ave,,Raleigh,NC,27645,(632) 232-1488,2018-01-01,Active,David Brown
+EMP-8C87C2AD,GlobalTech Industries,67-5667265,Manufacturing,medium,103,9295 Sycamore Ave,Apt 719,Miami,FL,33193,(977) 363-7924,2020-01-01,Active,Sharon Baker
+EMP-04696E78,Meridian Healthcare Systems,15-8707870,Healthcare,large,4892,1774 Pine Rd,,Charlotte,NC,28222,(327) 587-2291,2022-01-01,Active,Kenneth Campbell
+EMP-88892271,Pinnacle Financial Group,20-4905582,Financial Services,large,1327,9559 Sycamore Ave,,Miami,FL,33118,(589) 484-8428,2023-01-01,Active,Michelle Mitchell
+EMP-0E4961CE,Summit Manufacturing Co,78-5107245,Construction,medium,183,5920 Hickory Ln,,Tampa,FL,33644,(673) 588-5422,2023-01-01,Active,Laura Adams
+EMP-60D9678D,Horizon Media Group,82-6279418,Media,medium,208,1016 Poplar St,,Los Angeles,CA,90050,(871) 711-7482,2023-01-01,Active,Shirley Moore
+EMP-EC5045AA,Cascade Energy Solutions,38-3320821,Energy,large,4674,4140 Cypress Rd,Apt 439,Raleigh,NC,27684,(705) 293-1771,2024-01-01,Active,Kenneth Lee
+EMP-00CC8072,Sterling Logistics Inc,80-1192619,Logistics,large,1438,7016 Elm St,Suite 579,Charlotte,NC,28258,(898) 749-5371,2024-01-01,Active,Sandra Nguyen
+EMP-22246F87,Vanguard Retail Corp,74-2785277,Retail,medium,420,7223 Spruce Ter,,San Francisco,CA,94110,(505) 854-9317,2022-01-01,Active,Catherine Lee
+EMP-6E9FFED8,Apex Construction LLC,49-5017343,Aerospace,large,974,8937 Main St,,Atlanta,GA,30351,(446) 780-2290,2018-01-01,Active,Frank Rodriguez
+EMP-B2AC58A2,Quantum Software Solutions,77-8099076,Hospitality,large,2235,8827 Birch Way,,Phoenix,AZ,85094,(752) 973-4295,2023-01-01,Active,Ronald Mitchell
+EMP-48775A3B,Heritage Foods International,85-4860684,Consulting,small,85,7277 Hill St,,Houston,TX,77041,(425) 207-2163,2023-01-01,Active,Cynthia Rodriguez
+EMP-D4042822,Titan Aerospace Engineering,79-3219824,Transportation,medium,470,614 Lincoln Blvd,Apt 244,Chicago,IL,60675,(784) 790-8744,2019-01-01,Active,Gregory Evans
+EMP-B385C8F6,Coastal Hospitality Group,69-1908841,Education,enterprise,49129,3219 Walnut Blvd,Apt 442,Houston,TX,77094,(869) 861-2612,2018-01-01,Active,Debra Wilson
+EMP-E95753E6,Redwood Consulting Partners,45-8761611,Security,medium,227,4173 Sycamore Ave,Apt 460,San Antonio,TX,78278,(277) 653-2604,2018-01-01,Active,Christopher Johnson
+EMP-8F516799,Atlas Transportation Co,17-3762152,Telecommunications,enterprise,29836,1628 Magnolia Blvd,,Philadelphia,PA,19162,(202) 599-5345,2024-01-01,Active,Pamela Diaz
+EMP-F727D281,Beacon Education Foundation,50-1959074,Agriculture,small,16,9205 Highland Ave,,Phoenix,AZ,85034,(798) 688-9238,2024-01-01,Active,Jessica Rogers
+EMP-86B8A6A3,Ironclad Security Services,25-5130808,Public Sector,enterprise,42940,1412 Willow Dr,,Chicago,IL,60686,(808) 240-2343,2021-01-01,Active,Matthew Gutierrez
+EMP-5C9B67F9,Sapphire Telecommunications,60-3195773,Environmental Services,large,2957,5283 Cypress Rd,,San Antonio,TX,78295,(668) 523-2188,2018-01-01,Active,Matthew Gonzalez
+EMP-7C3684F5,Prairie Agricultural Corp,57-5781295,Mining,medium,180,1300 Hickory Ln,,Denver,CO,80243,(648) 756-5956,2022-01-01,Terminated,Gregory Ortiz
+EMP-EAEFA15C,Metro Transit Authority,24-2795765,Insurance,large,1773,228 Juniper Pl,,Tampa,FL,33623,(478) 488-4450,2023-01-01,Active,Jason King
+EMP-1BD1B23D,Evergreen Environmental Services,15-1059486,Marine,large,3232,8380 Highland Ave,Apt 95,Dallas,TX,75216,(989) 333-5291,2019-01-01,Active,Charles Diaz
+EMP-4EC4C137,Diamond Mining Operations,57-3484601,Pharmaceutical,small,65,9289 Main St,,Houston,TX,77019,(330) 242-6050,2020-01-01,Active,Samuel Garcia
+EMP-827467D8,Liberty Insurance Brokers,89-3592974,Legal Services,enterprise,20514,5962 Hickory Ln,,Tampa,FL,33641,(366) 381-7755,2018-01-01,Active,Kyle Nelson
+EMP-F2238A7D,Pacific Marine Industries,14-8896868,Real Estate,enterprise,19577,6845 Magnolia Blvd,,Dallas,TX,75230,(404) 671-6728,2020-01-01,Active,Aaron Robinson
+EMP-82A6A329,Anchor Employer A329,61-7387969,Healthcare,medium,250,100 Main St,,Dallas,TX,75201,(555) 000-0000,2020-01-01,Active,System Admin

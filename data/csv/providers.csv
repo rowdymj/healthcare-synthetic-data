@@ -1,301 +1,303 @@
 provider_id,npi,name,type,specialty,tax_id,address_line1,address_line2,address_city,address_state,address_zip,phone,accepting_new_patients,network_status,languages,rating,effective_date
-PRV-24EED9EF,1406403910,"Cynthia Davis, NP",Individual,OB/GYN,64-6780235,8461 Hill St,Suite 235,Detroit,MI,48217,(917) 265-9866,True,Out-of-Network,Hindi,3.1,2021-03-01
-PRV-10EEE483,1128682300,"Gregory Moore, PA",Individual,Rheumatology,48-8767916,6987 Franklin St,Apt 891,Charlotte,NC,28267,(889) 936-9920,True,In-Network,Vietnamese,3.9,2017-05-01
-PRV-369E12FE,1907903067,Memorial Clinic,Facility,Clinic,39-4645172,1948 Maple Dr,,Detroit,MI,48294,(972) 994-1924,False,Out-of-Network,French,4.2,2020-04-01
-PRV-00D4B19C,1056856624,"Benjamin Diaz, NP",Individual,Psychiatry,58-4084977,2447 Poplar St,Suite 162,Indianapolis,IN,46248,(972) 750-8758,True,In-Network,Mandarin; Hindi; English,4.1,2021-09-01
-PRV-D3820CA3,1304699013,"Joyce Mitchell, MD",Individual,Radiology,85-4640933,6463 Magnolia Blvd,,Dallas,TX,75236,(690) 413-6455,True,Out-of-Network,Vietnamese,4.9,2016-12-01
-PRV-05199A28,1785445877,"Stephen Adams, MD",Individual,Urology,22-8876742,7946 Magnolia Blvd,Apt 721,Miami,FL,33187,(979) 527-4328,True,In-Network,Vietnamese; Mandarin; English,3.5,2024-10-01
-PRV-FFA6E34D,1777252287,"Gary Baker, MD",Individual,Physical Therapy,33-1985360,4936 Ash Pl,Suite 488,San Antonio,TX,78252,(736) 234-2217,True,In-Network,Arabic,3.3,2018-02-01
-PRV-34A607E4,1886008484,"Christine Morales, MD",Individual,Family Medicine,12-9425786,249 Hickory Ln,Suite 161,Denver,CO,80268,(914) 890-8054,True,Out-of-Network,Spanish,4.0,2018-04-01
-PRV-6F896144,1410166687,"Pamela Young, PA",Individual,Neurology,17-1158547,4235 Jefferson Dr,Apt 81,Dallas,TX,75260,(919) 375-2354,True,In-Network,Spanish; English,3.5,2024-08-01
-PRV-9C40752C,1614293968,"Patricia Clark, NP",Individual,Orthopedics,52-7439870,1318 Laurel Way,,Nashville,TN,37282,(973) 957-3292,True,In-Network,Tagalog,4.5,2020-01-01
-PRV-D06B964C,1047735866,Jacksonville Medical Associates,Facility,Surgery Center,33-7376562,3903 Elm St,Suite 728,Jacksonville,FL,32287,(287) 990-5839,True,In-Network,Korean,3.3,2017-12-01
-PRV-26D70456,1126788861,"Maria Wright, MD",Individual,Orthopedics,13-2503554,6009 Walnut Blvd,Apt 966,Chicago,IL,60610,(562) 767-2524,True,In-Network,English; Korean,3.8,2016-12-01
-PRV-CE6F0150,1264647154,"Kimberly Murphy, MD",Individual,Pediatrics,41-9318184,4077 Spruce Ter,,Tampa,FL,33658,(808) 831-4203,True,In-Network,Arabic,3.7,2024-07-01
-PRV-D4C0C77C,1375265479,"Joshua Adams, NP",Individual,ENT,41-6467463,5499 Hill St,Suite 943,Jacksonville,FL,32265,(585) 487-7437,True,Out-of-Network,Tagalog,3.4,2023-01-01
-PRV-096CA36D,1434266179,"Debra Murphy, MD",Individual,General Surgery,71-7724393,7663 Hickory Ln,,San Francisco,CA,94147,(747) 718-7853,True,In-Network,Tagalog; Spanish,3.2,2018-11-01
-PRV-5234F32C,1143888993,"Diane Parker, MD",Individual,Family Medicine,67-7276684,2825 Maple Dr,Apt 694,Portland,OR,97292,(600) 674-9199,True,Out-of-Network,Spanish; Korean,3.8,2016-02-01
-PRV-87B06386,1751401051,"Amanda Stewart, MD",Individual,OB/GYN,96-3757404,2421 Jefferson Dr,,Austin,TX,78753,(958) 449-9454,True,In-Network,Arabic; Hindi; Spanish,4.6,2017-03-01
-PRV-AD2F2C73,1341918255,"Deborah Smith, PA",Individual,Gastroenterology,35-8676422,7180 Park Ave,Apt 905,New York,NY,10088,(316) 468-9019,True,In-Network,Arabic; Tagalog; Korean,3.2,2020-08-01
-PRV-1F58DBD4,1286692966,"Jessica White, MD",Individual,ENT,33-9164971,4973 Pine Rd,,Tampa,FL,33627,(850) 750-3838,True,In-Network,Mandarin,3.6,2022-10-01
-PRV-C98B9731,1676772190,Seattle Physicians Group,Facility,Lab,38-5900455,5982 Main St,Apt 200,Seattle,WA,98127,(233) 481-4683,True,In-Network,Hindi; Spanish,4.1,2019-09-01
-PRV-83D3D6E1,1745171339,"Jack Young, MD",Individual,Internal Medicine,98-6882609,6110 Maple Dr,Apt 560,Boston,MA,02166,(927) 824-8015,True,In-Network,Vietnamese,4.6,2024-06-01
-PRV-DC8FC14A,1223253672,"Thomas Evans, MD",Individual,Oncology,83-5508325,9878 Spruce Ter,,Jacksonville,FL,32247,(842) 624-7146,True,In-Network,Arabic,4.0,2019-12-01
-PRV-DAE4C320,1863637454,"Samantha Rivera, MD",Individual,Occupational Therapy,53-3191007,6146 Valley Way,,Seattle,WA,98151,(779) 696-6631,True,In-Network,Spanish,4.3,2022-01-01
-PRV-36F0FACE,1241541520,San Francisco Healthcare,Facility,Imaging Center,60-6125594,2688 Hill St,,San Francisco,CA,94110,(943) 916-4836,True,In-Network,English,3.4,2016-03-01
-PRV-524736D1,1361115542,"Rachel Taylor, DO",Individual,Pediatrics,58-3233823,8610 Hill St,,New York,NY,10011,(856) 893-3340,False,In-Network,Mandarin; Hindi; Tagalog,4.4,2017-07-01
-PRV-08FC0920,1234138999,"Amanda Diaz, MD",Individual,Occupational Therapy,46-1450038,7348 Hickory Ln,,Chicago,IL,60622,(874) 508-4366,True,In-Network,Arabic; Korean; French,3.1,2018-08-01
-PRV-80BE7ADD,1965827109,"Christina Green, MD",Individual,Urology,18-1231415,4049 Highland Ave,,Minneapolis,MN,55486,(468) 420-1652,True,Out-of-Network,Tagalog; Korean,4.3,2023-07-01
-PRV-30E17ACD,1328569146,"Elizabeth Flores, MD",Individual,Emergency Medicine,40-1971500,6690 Pine Rd,,Minneapolis,MN,55478,(450) 288-8118,False,In-Network,Korean,4.3,2017-02-01
-PRV-D4C0A7D3,1252410564,Philadelphia Healthcare,Facility,Lab,77-2071594,2348 Main St,Suite 455,Philadelphia,PA,19173,(469) 929-2262,True,In-Network,Hindi,4.7,2017-06-01
-PRV-156C2ABA,1622086353,Baptist Clinic,Facility,Clinic,63-6367620,1785 Cherry Ct,,San Diego,CA,92175,(477) 279-7108,False,In-Network,Mandarin,3.4,2023-01-01
-PRV-4F849906,1949375973,"Mary Mitchell, MD",Individual,Pulmonology,79-5112546,1229 Valley Way,Suite 188,Austin,TX,78749,(354) 206-7718,False,In-Network,English; French; Tagalog,4.5,2021-12-01
-PRV-173A2C66,1386571918,"Alexander Scott, MD",Individual,Internal Medicine,27-7616116,1803 Hickory Ln,,Denver,CO,80240,(276) 806-2020,True,Out-of-Network,Korean,3.5,2020-07-01
-PRV-25DF97DE,1277561853,"Jerry Wilson, MD",Individual,Cardiology,67-6172545,5445 Washington Ave,,San Francisco,CA,94144,(674) 471-2964,False,In-Network,English; Vietnamese,4.7,2020-03-01
-PRV-4D547B42,1067883171,Charlotte Clinic,Facility,Urgent Care,27-3037647,4166 Jefferson Dr,,Charlotte,NC,28275,(212) 263-4641,False,In-Network,Spanish; Korean,4.8,2016-01-01
-PRV-3392B225,1966706625,"John Reyes, MD",Individual,Dermatology,37-4139874,3339 Hill St,,Detroit,MI,48226,(481) 486-8307,True,In-Network,Vietnamese; Korean; Tagalog,3.8,2023-08-01
-PRV-1C020366,1065787598,Phoenix Wellness Center,Facility,Clinic,51-7515956,4683 Madison Ln,Suite 758,Phoenix,AZ,85063,(476) 384-1427,True,In-Network,English; Hindi,4.1,2024-04-01
-PRV-73CCD0A2,1223955905,"Larry Roberts, MD",Individual,Pharmacy,82-3384080,1740 Magnolia Blvd,,Tampa,FL,33640,(776) 392-9064,True,In-Network,Spanish,3.1,2024-04-01
-PRV-1CBF7E2D,1002921851,Jacksonville Medical Associates,Facility,Urgent Care,57-7636992,7931 Main St,,Jacksonville,FL,32288,(800) 303-6514,True,In-Network,Arabic,4.6,2022-11-01
-PRV-032CDCBA,1096902959,"Donna Nguyen, MD",Individual,Dermatology,38-2746679,9307 Jefferson Dr,,San Diego,CA,92195,(708) 344-6425,True,In-Network,Mandarin; Spanish,4.6,2020-08-01
-PRV-F86E1812,1762676586,Methodist Imaging Center,Facility,Imaging Center,22-9044494,3535 Magnolia Blvd,,Miami,FL,33118,(791) 866-4695,True,In-Network,Korean,3.0,2019-02-01
-PRV-32474E5F,1062962015,Philadelphia Physicians Group,Facility,Lab,36-4187406,2887 Madison Ln,,Philadelphia,PA,19119,(619) 913-9849,True,In-Network,Spanish,3.1,2024-09-01
-PRV-0D985AE5,1241714677,"Betty Gonzalez, MD",Individual,Gastroenterology,94-5446036,2616 Cedar Ln,,Columbus,OH,43210,(293) 857-9914,True,In-Network,French; Mandarin,3.9,2019-08-01
-PRV-B9BB5E87,1938068687,"Raymond Hall, NP",Individual,Ophthalmology,83-4953417,3806 Laurel Way,,Portland,OR,97217,(687) 506-2293,True,In-Network,Tagalog,4.1,2023-10-01
-PRV-2D851725,1632945116,"Thomas Garcia, DO",Individual,Pediatrics,81-7666510,2515 Cherry Ct,,Boston,MA,02167,(765) 533-5525,True,Out-of-Network,Tagalog,4.6,2016-07-01
-PRV-9F804A4D,1646799702,Houston Medical Associates,Facility,Pharmacy,45-7760781,9383 Walnut Blvd,,Houston,TX,77082,(347) 833-7581,False,In-Network,Vietnamese; English,4.5,2019-06-01
-PRV-AFB3830E,1754691373,Community Pharmacy,Facility,Pharmacy,62-9127895,5065 Juniper Pl,,Dallas,TX,75272,(977) 728-7126,True,In-Network,Spanish,3.6,2023-07-01
-PRV-2B244920,1705345786,St. Marys Pharmacy,Facility,Pharmacy,91-3078241,8689 Oak Ave,,Philadelphia,PA,19134,(897) 231-4963,True,In-Network,Hindi,4.2,2020-06-01
-PRV-9BADC846,1333468007,Austin Medical Group,Facility,Pharmacy,26-3905824,4337 Pine Rd,,Austin,TX,78713,(815) 208-4666,True,In-Network,Korean; Arabic,4.8,2020-08-01
-PRV-E31EAD66,1589944171,"James Rogers, PA",Individual,Pharmacy,53-5638619,7746 Juniper Pl,Apt 845,Tampa,FL,33676,(855) 532-5536,True,In-Network,Korean; Vietnamese; Spanish,4.0,2018-01-01
-PRV-248C26D2,1609935387,"Emily King, DO",Individual,Urology,95-7014583,9930 Park Ave,,Tampa,FL,33650,(719) 507-3785,True,In-Network,Korean,3.2,2017-12-01
-PRV-700E0098,1554947170,"Sandra Flores, DO",Individual,Occupational Therapy,91-2194801,9259 Willow Dr,,Tampa,FL,33652,(683) 399-9199,False,In-Network,Korean; Arabic; English,4.7,2017-03-01
-PRV-E2709ED5,1500743292,"Gary Nelson, PA",Individual,Dermatology,72-2477088,5714 Lake Dr,,Portland,OR,97268,(332) 829-8105,True,In-Network,Arabic; English,3.1,2018-12-01
-PRV-407677D4,1168942104,"Mark Hall, MD",Individual,Orthopedics,47-8649174,330 Washington Ave,,Boston,MA,02177,(945) 732-9587,True,In-Network,French,5.0,2022-06-01
-PRV-EE0D91ED,1215064890,"Patrick Williams, NP",Individual,Emergency Medicine,86-1804641,2801 Park Ave,,New York,NY,10039,(877) 310-1323,False,In-Network,Arabic; Spanish,4.1,2022-12-01
-PRV-F84CD0EE,1618914117,Indianapolis Clinic,Facility,Urgent Care,35-4351238,252 Juniper Pl,Suite 778,Indianapolis,IN,46294,(996) 469-9571,True,In-Network,Korean; Mandarin,3.1,2022-04-01
-PRV-44A4E6AB,1811437447,"Nathan Murphy, MD",Individual,Pediatrics,16-2674515,7975 Lincoln Blvd,,San Diego,CA,92110,(378) 240-5760,True,In-Network,Spanish; Tagalog,4.7,2015-01-01
-PRV-EBE76EE3,1667467621,"George Baker, MD",Individual,Cardiology,26-1983923,2893 Lincoln Blvd,,Columbus,OH,43266,(363) 306-7816,True,In-Network,Hindi; Mandarin; Korean,3.8,2020-10-01
-PRV-B78CF312,1089935889,Baptist Hospital,Facility,Hospital,22-8261982,2240 Sunset Blvd,Apt 909,Seattle,WA,98124,(877) 944-5072,True,In-Network,Arabic; Mandarin; Tagalog,4.7,2024-01-01
-PRV-BF7B3625,1540838663,University Pharmacy,Facility,Pharmacy,20-8702329,2671 Meadow Ln,,Seattle,WA,98173,(654) 786-8341,False,In-Network,Spanish; Hindi,4.5,2015-02-01
-PRV-C50C99DD,1037589975,"Samuel Collins, MD",Individual,Rheumatology,67-2912994,687 Main St,,Chicago,IL,60687,(299) 977-4633,False,In-Network,Korean; French; Hindi,3.2,2017-08-01
-PRV-D25103DF,1351609177,Presbyterian Pharmacy,Facility,Pharmacy,94-9459031,6804 Walnut Blvd,,Dallas,TX,75288,(337) 710-1071,True,In-Network,Hindi; Mandarin,4.4,2017-12-01
-PRV-EC82F3B0,1547226984,"Rebecca Young, MD",Individual,Urology,99-6266549,1796 Madison Ln,Suite 429,Tampa,FL,33686,(928) 954-4560,True,In-Network,French; Mandarin,5.0,2017-09-01
-PRV-4D8FE36F,1081062003,"Debra Morgan, MD",Individual,Ophthalmology,44-3700047,5381 Cherry Ct,Suite 591,Boston,MA,02155,(493) 899-5105,False,In-Network,Vietnamese; English,3.7,2022-02-01
-PRV-9694DC88,1658004397,"Rachel Miller, DO",Individual,Urology,38-7169672,9305 Poplar St,,Raleigh,NC,27692,(973) 802-9955,True,In-Network,Vietnamese; Korean; Tagalog,3.4,2016-03-01
-PRV-08276C65,1057202590,"Sarah Lee, NP",Individual,Oncology,90-6052539,8518 Cherry Ct,Suite 385,Charlotte,NC,28215,(702) 786-6866,False,In-Network,Vietnamese; Mandarin; Korean,3.1,2023-03-01
-PRV-642B6A39,1987801573,"Melissa Nguyen, MD",Individual,Physical Therapy,92-5090740,8898 Park Ave,,Chicago,IL,60654,(240) 898-6258,True,In-Network,Arabic,3.5,2019-01-01
-PRV-FD3F3658,1112880133,"Kelly Harris, MD",Individual,Emergency Medicine,97-8117053,6243 Meadow Ln,,Detroit,MI,48275,(306) 410-9810,True,In-Network,Arabic; Spanish; French,4.4,2015-08-01
-PRV-368E956D,1676650618,"Larry Robinson, MD",Individual,Ophthalmology,10-2060950,720 Pine Rd,,Chicago,IL,60616,(974) 963-1745,True,In-Network,Spanish; Korean; Arabic,4.4,2024-02-01
-PRV-1DD0879B,1245088210,"Thomas Gomez, NP",Individual,Pulmonology,10-7611593,7270 Madison Ln,,Charlotte,NC,28294,(750) 760-2394,True,In-Network,French; Vietnamese; Hindi,4.8,2023-03-01
-PRV-A4B7B99B,1781414139,Good Samaritan Pharmacy,Facility,Pharmacy,72-6550757,3717 Cypress Rd,Suite 787,San Antonio,TX,78224,(565) 331-4842,False,In-Network,French,4.0,2020-10-01
-PRV-BB161DED,1364525777,"Lisa Smith, MD",Individual,Neurology,55-6124966,9671 Ash Pl,,Portland,OR,97282,(698) 764-2783,True,In-Network,Mandarin; Vietnamese,3.5,2016-12-01
-PRV-71AA2839,1084887256,Minneapolis Medical Group,Facility,Surgery Center,38-5882155,405 Meadow Ln,Suite 695,Minneapolis,MN,55413,(337) 675-9210,True,In-Network,English; Vietnamese; Arabic,4.9,2024-11-01
-PRV-6A016108,1750373145,San Francisco Clinic,Facility,Imaging Center,39-1718206,8523 Birch Way,Suite 679,San Francisco,CA,94130,(884) 411-9485,True,In-Network,Hindi; English,3.1,2020-02-01
-PRV-B177819C,1184638655,"Timothy Carter, MD",Individual,Anesthesiology,72-9088465,8642 Laurel Way,Suite 657,Raleigh,NC,27643,(818) 206-9222,True,In-Network,Spanish,4.0,2019-04-01
-PRV-ECFFBE74,1777392603,Memorial Pharmacy,Facility,Pharmacy,15-3145556,2678 Franklin St,Apt 677,Atlanta,GA,30325,(787) 806-3639,False,In-Network,Mandarin; English; Spanish,3.5,2017-09-01
-PRV-4E8A013F,1369292984,"Jeffrey Stewart, DO",Individual,Dermatology,31-6749069,9919 Oak Ave,,Raleigh,NC,27694,(664) 810-2127,True,In-Network,English,3.4,2023-11-01
-PRV-629428FB,1117298068,"Douglas Morgan, NP",Individual,Physical Therapy,63-7213902,2550 Walnut Blvd,Suite 729,Philadelphia,PA,19170,(244) 914-9680,True,Out-of-Network,Arabic; French,4.2,2024-02-01
-PRV-C6F5E3D4,1009818063,"Nicole Evans, MD",Individual,Gastroenterology,98-6299951,4270 Sunset Blvd,,Boston,MA,02139,(618) 570-2746,True,In-Network,Korean; Arabic,4.1,2024-05-01
-PRV-0FB648A5,1956213721,"George Morris, MD",Individual,Pulmonology,37-9528589,6611 Hickory Ln,Apt 803,Indianapolis,IN,46280,(610) 546-1852,True,Out-of-Network,Spanish,4.6,2022-10-01
-PRV-1CE65C99,1849027703,"Christina Phillips, NP",Individual,General Surgery,94-9693169,1149 Cypress Rd,,San Diego,CA,92157,(492) 399-1550,True,In-Network,Vietnamese; Mandarin; French,3.1,2018-11-01
-PRV-5934DEBA,1011848955,Dallas Wellness Center,Facility,Surgery Center,45-4796608,2679 Pine Rd,Apt 362,Dallas,TX,75261,(820) 399-8450,True,In-Network,Mandarin; Arabic,4.0,2023-02-01
-PRV-873CCEE8,1735779071,"Rachel Cruz, DO",Individual,Anesthesiology,43-2133372,5670 Cherry Ct,Suite 363,Detroit,MI,48275,(591) 848-4610,True,In-Network,Arabic; French,4.0,2015-12-01
-PRV-C352E2B2,1539423733,"Stephen Thompson, DO",Individual,Endocrinology,40-5452763,4167 Dogwood Ct,,Chicago,IL,60661,(411) 434-4322,True,In-Network,Mandarin; Spanish,3.2,2016-11-01
-PRV-7C3E7F00,1472846392,"Helen Green, DO",Individual,Anesthesiology,16-9820377,8171 Main St,Apt 981,Boston,MA,02179,(633) 689-9859,False,In-Network,Mandarin; Hindi; English,4.4,2022-06-01
-PRV-9E1A69DC,1795527636,"Nancy King, MD",Individual,Oncology,99-7246319,293 Hickory Ln,,Charlotte,NC,28284,(573) 610-5581,True,In-Network,Vietnamese; Spanish; French,3.5,2018-09-01
-PRV-D553304F,1885744890,"Edward Murphy, MD",Individual,General Surgery,60-2660521,6340 Sycamore Ave,,Phoenix,AZ,85029,(907) 367-1983,True,In-Network,Spanish; Hindi; French,3.7,2020-06-01
-PRV-B7134D91,1455877169,"Larry Morgan, MD",Individual,Physical Therapy,46-8780468,4322 Jefferson Dr,Suite 459,New York,NY,10062,(846) 348-3745,True,Out-of-Network,Arabic; Spanish,3.2,2020-04-01
-PRV-60168D08,1220234132,"Catherine Gutierrez, DO",Individual,Ophthalmology,60-2728209,4873 Laurel Way,Apt 405,Atlanta,GA,30392,(297) 265-8752,True,In-Network,Tagalog; Spanish,3.2,2024-03-01
-PRV-547B69EB,1200557784,Good Samaritan Imaging Center,Facility,Imaging Center,80-8463259,6487 Juniper Pl,Apt 756,San Diego,CA,92141,(338) 914-9835,True,In-Network,Arabic; Korean; Mandarin,4.0,2018-02-01
-PRV-0832013A,1077406493,"Brian Torres, DO",Individual,Radiology,10-7268704,6092 Lake Dr,,Dallas,TX,75229,(393) 621-8161,True,In-Network,Arabic; Tagalog; Spanish,3.5,2021-11-01
-PRV-3B14F8B5,1241797497,Minneapolis Clinic,Facility,Clinic,34-6379509,4554 Dogwood Ct,Apt 829,Minneapolis,MN,55478,(219) 355-1813,True,In-Network,Korean,3.5,2022-12-01
-PRV-7274115A,1570512046,New York Physicians Group,Facility,Urgent Care,19-8887754,1577 Ash Pl,Apt 223,New York,NY,10073,(385) 396-5097,True,In-Network,Vietnamese,3.8,2022-04-01
-PRV-7E5F3C70,1088147435,"Deborah Flores, MD",Individual,Dermatology,16-4653880,649 Sycamore Ave,,San Francisco,CA,94122,(315) 441-8113,True,In-Network,Spanish; Arabic,4.6,2015-01-01
-PRV-BB7766E1,1052812735,"Gregory Baker, PA",Individual,Internal Medicine,81-6827024,7886 Ash Pl,Apt 255,Columbus,OH,43221,(649) 950-4161,False,In-Network,Mandarin; Korean; English,4.0,2022-09-01
-PRV-96F26AEF,1274485708,"Kimberly Lee, MD",Individual,Emergency Medicine,58-4112748,8129 Sycamore Ave,,Portland,OR,97233,(219) 834-6965,True,In-Network,Spanish; Arabic; Tagalog,4.0,2022-09-01
-PRV-6B22122B,1220317310,Indianapolis Medical Center,Facility,Lab,83-7519606,4738 Washington Ave,,Indianapolis,IN,46292,(873) 701-9615,True,In-Network,French,3.4,2016-01-01
-PRV-D9E79E95,1094801413,"Brenda Turner, MD",Individual,Occupational Therapy,76-2629390,3519 Highland Ave,,Chicago,IL,60669,(303) 942-4784,True,In-Network,Vietnamese; Mandarin; Korean,4.5,2021-12-01
-PRV-12B6BDAE,1868528975,Regional Hospital,Facility,Hospital,50-6446792,9546 Jefferson Dr,Apt 720,Tampa,FL,33668,(580) 622-8054,True,In-Network,Tagalog,3.4,2023-12-01
-PRV-B4BF580F,1433504888,"Eric Moore, MD",Individual,Family Medicine,83-3595683,7512 Hill St,,Charlotte,NC,28210,(296) 238-8542,True,In-Network,Vietnamese; Tagalog,3.5,2019-02-01
-PRV-A78E2C0E,1409610556,"Gary Gonzalez, NP",Individual,General Surgery,63-3022334,9423 Hickory Ln,Apt 741,Raleigh,NC,27619,(988) 432-1187,True,In-Network,Korean,4.0,2020-09-01
-PRV-053B4113,1646225179,"Maria Cook, MD",Individual,Neurology,16-7697318,5454 Meadow Ln,Apt 157,Miami,FL,33138,(468) 287-7529,True,In-Network,Mandarin,4.0,2018-08-01
-PRV-E65369F1,1911665535,"David Wright, DO",Individual,Endocrinology,54-1406123,9460 Sycamore Ave,,Nashville,TN,37288,(988) 512-3773,True,In-Network,Mandarin; Hindi,3.1,2018-04-01
-PRV-5DB773DA,1147705383,"Mary Baker, PA",Individual,Occupational Therapy,36-9778944,2655 Pine Rd,,Houston,TX,77016,(968) 464-9991,True,In-Network,English,3.8,2023-01-01
-PRV-5303FA46,1451046368,"Katherine Johnson, MD",Individual,Urology,22-6292472,1084 Dogwood Ct,,San Antonio,TX,78299,(696) 811-9709,False,In-Network,Tagalog; English,3.1,2023-05-01
-PRV-A134A580,1046084325,"Ashley Cook, MD",Individual,Occupational Therapy,60-3302852,6545 Spruce Ter,,New York,NY,10054,(289) 947-7262,True,In-Network,Vietnamese; Arabic; Spanish,4.1,2021-05-01
-PRV-33D02E0E,1826292518,"Peter Moore, MD",Individual,ENT,78-2986209,5495 Hill St,,Nashville,TN,37226,(388) 525-3384,True,In-Network,Arabic; Korean,3.9,2019-03-01
-PRV-6D6DA84C,1305172897,"Nicole Robinson, NP",Individual,Neurology,93-7273997,1849 Birch Way,Suite 726,Philadelphia,PA,19113,(388) 596-9051,True,In-Network,English,3.8,2015-05-01
-PRV-7892BC72,1660965699,"Rachel Adams, DO",Individual,Neurology,86-9995261,3746 Sycamore Ave,Apt 68,Boston,MA,02136,(737) 856-1630,True,In-Network,Vietnamese,4.0,2021-12-01
-PRV-9203164B,1264908277,San Antonio Physicians Group,Facility,Pharmacy,21-9399643,6447 Cedar Ln,,San Antonio,TX,78247,(315) 384-9952,False,In-Network,English; Mandarin,3.9,2018-08-01
-PRV-C17D0DD9,1689268602,Good Samaritan Imaging Center,Facility,Imaging Center,52-3518087,5409 Spruce Ter,Apt 94,Miami,FL,33125,(366) 348-3930,True,In-Network,Korean; Hindi,3.6,2017-02-01
-PRV-69604873,1339776719,"Anna Smith, NP",Individual,Psychiatry,86-1110277,3423 Main St,Apt 13,Atlanta,GA,30342,(450) 760-5556,True,In-Network,English,3.4,2015-11-01
-PRV-2DA36447,1622499982,"Lauren Lopez, MD",Individual,Cardiology,68-7042962,2481 Maple Dr,,Tampa,FL,33683,(236) 295-5903,True,In-Network,Arabic,4.7,2016-05-01
-PRV-EF1DBB13,1817946954,"Brandon Davis, MD",Individual,Anesthesiology,77-6936673,2099 Laurel Way,,Jacksonville,FL,32277,(332) 829-9132,True,In-Network,Mandarin; Vietnamese,4.4,2018-01-01
-PRV-B1162525,1830344144,Baptist Surgery Center,Facility,Surgery Center,74-6434540,7716 Cherry Ct,Apt 819,Raleigh,NC,27636,(985) 206-2865,True,In-Network,English; Mandarin; Spanish,3.7,2020-11-01
-PRV-1F774BE1,1849588039,"Cynthia Evans, PA",Individual,Internal Medicine,97-6565326,7874 Maple Dr,Apt 494,Minneapolis,MN,55427,(562) 267-3446,True,In-Network,Tagalog; Mandarin,4.1,2021-03-01
-PRV-D0E0A62E,1438421503,"Victoria Walker, MD",Individual,OB/GYN,21-8445293,5150 Washington Ave,,Miami,FL,33114,(718) 225-8907,True,In-Network,Hindi; Korean,4.6,2017-02-01
-PRV-D581320F,1915701840,"James Flores, MD",Individual,Plastic Surgery,83-6236888,8556 Birch Way,Suite 496,San Antonio,TX,78214,(854) 414-6257,True,In-Network,French; Hindi; Tagalog,3.2,2017-03-01
-PRV-CB4D8725,1493214958,"Kimberly Jackson, PA",Individual,Occupational Therapy,66-1851044,349 Meadow Ln,Suite 458,Houston,TX,77036,(333) 229-8712,True,In-Network,English; Spanish,3.9,2017-12-01
-PRV-61EE69A6,1171747733,"Dennis Reyes, NP",Individual,Orthopedics,28-5329406,9811 Hill St,,Atlanta,GA,30355,(572) 601-4004,True,In-Network,Hindi; Tagalog,3.1,2022-02-01
-PRV-DA1FFE8F,1148769639,"Ronald Wilson, MD",Individual,Radiology,41-3667917,7656 Spruce Ter,,Austin,TX,78754,(693) 593-2082,True,In-Network,Arabic; Tagalog; Korean,4.6,2023-12-01
-PRV-397AE729,1246191965,Presbyterian Lab,Facility,Lab,73-2031500,1376 Highland Ave,,Houston,TX,77085,(292) 422-3276,True,Out-of-Network,English; Mandarin; French,3.3,2023-05-01
-PRV-DE34D133,1519098624,"Pamela Hill, DO",Individual,ENT,17-7194532,9568 Hill St,,San Antonio,TX,78236,(762) 254-1013,True,In-Network,Spanish; Korean,4.7,2018-07-01
-PRV-39CF3EB8,1386562422,"Raymond Thompson, DO",Individual,Orthopedics,11-2203698,6559 Washington Ave,Apt 416,Miami,FL,33158,(863) 216-3359,True,In-Network,Mandarin; Spanish,3.3,2021-08-01
-PRV-E41C8E3B,1909738468,"Amanda Lewis, MD",Individual,Ophthalmology,83-7156735,7074 Willow Dr,Apt 435,San Francisco,CA,94175,(234) 238-8917,True,In-Network,Spanish; Mandarin,4.5,2023-05-01
-PRV-591EDE85,1077879565,"Helen Miller, MD",Individual,Radiology,47-5852112,1381 Pine Rd,,San Diego,CA,92170,(371) 236-5981,True,In-Network,Hindi,4.2,2024-01-01
-PRV-9DF6F295,1944401929,"Henry Scott, MD",Individual,Orthopedics,29-8493596,4880 Oak Ave,Suite 229,Austin,TX,78772,(578) 379-5280,True,In-Network,Tagalog,4.7,2020-02-01
-PRV-2113524C,1504102767,"Janet Perez, MD",Individual,Anesthesiology,48-8990421,9857 Ash Pl,,Seattle,WA,98162,(964) 970-9724,True,In-Network,Hindi; Korean,3.3,2021-01-01
-PRV-604354C2,1694544149,"Kyle Morgan, PA",Individual,Rheumatology,60-8736118,7453 Madison Ln,,Tampa,FL,33650,(991) 891-4961,True,In-Network,Tagalog,3.7,2017-06-01
-PRV-485A98B2,1430091093,"Amanda Lewis, PA",Individual,Pulmonology,86-3043299,238 Elm St,,New York,NY,10062,(925) 322-2415,True,In-Network,Mandarin; Spanish; French,3.4,2019-08-01
-PRV-2591CA05,1066504427,"Lisa Martinez, MD",Individual,Physical Therapy,18-9249722,1340 Valley Way,,Dallas,TX,75264,(405) 824-7432,True,In-Network,Tagalog,4.5,2018-10-01
-PRV-27AACDC7,1200642569,"Heather Edwards, MD",Individual,Psychiatry,10-9646691,7334 Cypress Rd,Suite 172,Houston,TX,77014,(924) 989-9039,True,In-Network,Spanish; Vietnamese; English,3.8,2022-02-01
-PRV-FA96A06C,1743280634,"Anna Baker, MD",Individual,Pharmacy,99-7544871,5980 Lincoln Blvd,,Tampa,FL,33648,(309) 845-6886,True,In-Network,Vietnamese; Mandarin,3.1,2015-12-01
-PRV-CAD299E6,1505061387,"Anna Edwards, MD",Individual,Internal Medicine,96-3499027,4007 Highland Ave,,Charlotte,NC,28218,(958) 793-4817,True,In-Network,Hindi,4.3,2022-10-01
-PRV-4613629B,1111799313,Philadelphia Medical Practice,Facility,Surgery Center,64-6659678,2238 Main St,,Philadelphia,PA,19190,(955) 894-7586,True,Out-of-Network,Tagalog; Mandarin; Hindi,4.7,2018-01-01
-PRV-5E3E9881,1739021962,"Frank Mitchell, NP",Individual,Dermatology,12-9169958,5596 Elm St,Apt 145,Houston,TX,77045,(282) 206-1118,True,In-Network,Korean; Arabic; French,4.6,2022-12-01
-PRV-C1B61D40,1279145608,Denver Medical Practice,Facility,Lab,40-4219595,2444 Laurel Way,,Denver,CO,80267,(320) 742-2567,True,In-Network,Tagalog; Vietnamese; Hindi,4.5,2018-05-01
-PRV-19471813,1543645970,Tampa Medical Center,Facility,Imaging Center,23-1880075,1946 Ash Pl,,Tampa,FL,33670,(750) 380-3589,True,In-Network,Spanish,4.8,2022-10-01
-PRV-AB723999,1636317970,"Kenneth Robinson, MD",Individual,Neurology,65-3431711,6965 Sycamore Ave,,Raleigh,NC,27696,(421) 824-8454,True,In-Network,Vietnamese; French,5.0,2018-06-01
-PRV-7E7DA3FE,1349292983,Baptist Surgery Center,Facility,Surgery Center,21-7907115,9417 Cedar Ln,Apt 114,Dallas,TX,75227,(734) 700-4546,True,In-Network,English; Arabic,4.5,2018-04-01
-PRV-F6322066,1806867177,"Jennifer Garcia, DO",Individual,Allergy & Immunology,40-2394044,9593 Poplar St,,Portland,OR,97229,(771) 971-1203,True,In-Network,Mandarin,3.7,2018-11-01
-PRV-73ACB0F5,1625701658,"Ryan Reyes, MD",Individual,ENT,14-5975954,360 Sunset Blvd,Apt 166,Tampa,FL,33649,(636) 970-5420,True,In-Network,Vietnamese; Spanish; Korean,4.8,2015-09-01
-PRV-9BB16D7F,1818325381,"George Campbell, MD",Individual,General Surgery,93-9027788,6063 Cedar Ln,Suite 576,Houston,TX,77059,(955) 970-4437,True,In-Network,French; Korean,4.0,2021-05-01
-PRV-735F8BE8,1479513711,San Francisco Wellness Center,Facility,Surgery Center,60-3999964,6208 Jefferson Dr,,San Francisco,CA,94172,(495) 278-2791,True,In-Network,Hindi,3.3,2018-09-01
-PRV-EC705673,1043103856,"Rebecca Cruz, PA",Individual,General Surgery,84-6751103,471 Dogwood Ct,Apt 555,Indianapolis,IN,46297,(871) 861-6346,True,In-Network,Tagalog; Hindi; Vietnamese,3.6,2017-05-01
-PRV-1A2132AE,1292842222,Presbyterian Clinic,Facility,Clinic,40-2961547,4359 Poplar St,,Seattle,WA,98157,(242) 524-3072,True,In-Network,Tagalog,4.4,2020-06-01
-PRV-1F444E2E,1520885474,Nashville Physicians Group,Facility,Surgery Center,83-3467651,7447 Spruce Ter,Apt 125,Nashville,TN,37248,(778) 946-8243,True,In-Network,English; Mandarin,4.4,2016-05-01
-PRV-43DE03CA,1343018718,Good Samaritan Imaging Center,Facility,Imaging Center,60-4262330,3710 Hill St,Suite 156,Columbus,OH,43221,(702) 525-9381,True,Out-of-Network,Arabic; Mandarin,4.4,2021-06-01
-PRV-DA62C900,1742662991,"Anthony Cruz, PA",Individual,Ophthalmology,28-4486033,299 Dogwood Ct,Suite 556,Columbus,OH,43254,(510) 686-9606,True,In-Network,Arabic; Spanish; English,3.8,2019-07-01
-PRV-37D1B49C,1947873002,Community Lab,Facility,Lab,43-6036006,7671 Birch Way,,San Antonio,TX,78233,(855) 851-8742,False,In-Network,Arabic; Mandarin,4.0,2018-01-01
-PRV-96DA52E6,1715890429,Chicago Healthcare,Facility,Surgery Center,17-3451774,4641 Highland Ave,Suite 470,Chicago,IL,60686,(527) 672-3219,True,In-Network,Arabic; French,3.1,2019-09-01
-PRV-BBF3E53A,1445189520,"Jonathan Adams, MD",Individual,Pharmacy,27-9693462,1358 Meadow Ln,,San Antonio,TX,78290,(488) 581-8944,True,Out-of-Network,Spanish,3.4,2023-04-01
-PRV-0C0AE307,1527985240,"Robert Morris, MD",Individual,Pulmonology,25-4730545,9253 Cherry Ct,,Indianapolis,IN,46268,(331) 910-3332,True,In-Network,Mandarin,5.0,2021-12-01
-PRV-148F5EAC,1907140140,"Richard Jones, PA",Individual,Emergency Medicine,22-3076911,1930 Elm St,,New York,NY,10071,(816) 410-4277,True,In-Network,Mandarin,4.7,2019-10-01
-PRV-D01D86CE,1342801387,"Richard Johnson, NP",Individual,Gastroenterology,56-4105895,2730 Meadow Ln,Suite 617,Boston,MA,02188,(650) 889-2758,True,In-Network,Arabic; Vietnamese,4.0,2021-02-01
-PRV-9D437E6D,1015716479,"Carolyn Torres, NP",Individual,Allergy & Immunology,49-8448343,5249 Cherry Ct,Apt 533,San Francisco,CA,94124,(431) 767-7672,True,In-Network,Spanish,4.8,2022-11-01
-PRV-852B7FD1,1912153539,"Joseph Jackson, DO",Individual,Urology,61-3059607,309 Highland Ave,Suite 548,Tampa,FL,33623,(438) 634-9177,True,In-Network,Korean; Arabic; Mandarin,4.0,2024-07-01
-PRV-6CB31C30,1010170269,"Amy Robinson, PA",Individual,Orthopedics,96-6485409,8479 Laurel Way,,Phoenix,AZ,85068,(356) 510-2578,True,In-Network,Hindi; Tagalog; Spanish,3.6,2022-08-01
-PRV-D3A44FC1,1567700284,"Victoria Thomas, DO",Individual,OB/GYN,31-9245659,8987 Lincoln Blvd,,Detroit,MI,48279,(641) 337-6119,True,In-Network,Hindi,4.3,2023-10-01
-PRV-DFF64D86,1009025590,"Helen Rivera, MD",Individual,Endocrinology,90-6725334,9311 Spruce Ter,Apt 401,Denver,CO,80217,(589) 299-8014,True,In-Network,English; Vietnamese,3.5,2019-10-01
-PRV-544022F1,1986407905,Methodist Urgent Care,Facility,Urgent Care,58-7548160,1173 Juniper Pl,Suite 120,Houston,TX,77053,(530) 786-2601,True,In-Network,Vietnamese; French; Tagalog,4.0,2020-03-01
-PRV-14EFDBC1,1963919195,"Paul King, MD",Individual,Pulmonology,44-2128599,6052 River Rd,,San Antonio,TX,78273,(780) 743-8786,True,In-Network,Korean,4.0,2019-07-01
-PRV-78BABEB2,1829737489,"Christine White, MD",Individual,General Surgery,65-2004647,5233 Sycamore Ave,Suite 739,Indianapolis,IN,46261,(734) 405-6968,True,In-Network,Korean; Arabic; Vietnamese,3.6,2016-11-01
-PRV-5239F790,1230347786,Memorial Clinic,Facility,Clinic,64-1620819,6857 Laurel Way,Suite 362,Austin,TX,78792,(406) 363-5468,False,In-Network,Tagalog; Mandarin,4.3,2015-12-01
-PRV-C166AE1C,1162319818,"Kelly Campbell, PA",Individual,Plastic Surgery,95-9812402,426 Cedar Ln,,Chicago,IL,60650,(457) 708-2478,True,In-Network,French; Arabic,4.6,2018-07-01
-PRV-37D54B78,1851586734,San Antonio Physicians Group,Facility,Pharmacy,28-7090096,1850 Willow Dr,,San Antonio,TX,78245,(686) 932-7025,True,In-Network,English; Tagalog; French,4.8,2018-05-01
-PRV-DE18BA4D,1413432756,"Deborah Johnson, DO",Individual,Oncology,14-5597569,5167 Franklin St,,Detroit,MI,48297,(282) 998-9055,True,In-Network,Arabic; Spanish,4.6,2019-09-01
-PRV-0DCC19C5,1206345911,San Francisco Physicians Group,Facility,Imaging Center,30-5187652,6995 Washington Ave,,San Francisco,CA,94198,(728) 930-3131,True,In-Network,Hindi; Tagalog,4.7,2017-05-01
-PRV-5BAD4CC3,1930089317,Methodist Urgent Care,Facility,Urgent Care,35-5391992,9816 Washington Ave,Apt 204,Detroit,MI,48246,(918) 372-1815,True,In-Network,Mandarin; Spanish,4.9,2017-10-01
-PRV-48184912,1344762639,University Hospital,Facility,Hospital,37-5747402,8715 River Rd,Apt 848,Boston,MA,02168,(944) 893-4102,True,In-Network,English,3.6,2019-04-01
-PRV-E5C7E7C4,1636694118,"Jacob Moore, MD",Individual,ENT,17-1874304,4168 Franklin St,,Portland,OR,97297,(540) 440-8715,True,Out-of-Network,English; Tagalog; Mandarin,4.0,2021-05-01
-PRV-8A4274BB,1215862415,"Nicholas Murphy, MD",Individual,OB/GYN,15-3145327,6176 Birch Way,,Nashville,TN,37215,(711) 487-6907,True,In-Network,Korean; French,3.9,2017-06-01
-PRV-9EE6A8ED,1207427617,"Matthew Martin, MD",Individual,Neurology,15-8407471,8149 Ash Pl,Apt 652,Nashville,TN,37294,(565) 926-8949,True,In-Network,Mandarin; Spanish; Tagalog,3.2,2019-03-01
-PRV-810E1DC3,1371504165,"Eric White, DO",Individual,Pediatrics,85-2779557,8435 Laurel Way,Suite 317,Portland,OR,97294,(531) 357-1473,False,In-Network,Hindi; Tagalog; French,4.9,2024-11-01
-PRV-64781FDA,1018961642,Jacksonville Medical Associates,Facility,Pharmacy,40-7692721,818 Hill St,,Jacksonville,FL,32282,(291) 221-4411,True,In-Network,Mandarin; Spanish,3.6,2021-12-01
-PRV-60C5A2E1,1499616592,"Gary Edwards, DO",Individual,Psychiatry,65-8147380,5180 Birch Way,,Columbus,OH,43295,(295) 241-9410,True,In-Network,Mandarin,4.9,2023-11-01
-PRV-78ECD681,1386490810,"Karen Taylor, PA",Individual,Pulmonology,75-2805768,1475 Dogwood Ct,Apt 82,San Francisco,CA,94165,(722) 635-7766,False,In-Network,Korean; French; Mandarin,4.2,2023-01-01
-PRV-24185FD4,1597794523,Community Hospital,Facility,Hospital,33-2312322,7683 Willow Dr,,Detroit,MI,48233,(964) 818-5248,True,In-Network,English; Tagalog; Vietnamese,3.2,2017-11-01
-PRV-FF3D22F8,1203103037,"Ruth Hill, MD",Individual,Orthopedics,93-3435283,6737 Highland Ave,,Austin,TX,78789,(865) 447-8139,True,In-Network,Vietnamese; Spanish; Mandarin,4.5,2017-08-01
-PRV-2743D5FC,1349605016,"Peter Edwards, NP",Individual,Neurology,63-9316519,2008 Spruce Ter,Apt 456,Phoenix,AZ,85099,(954) 792-5764,False,In-Network,Hindi; Vietnamese; French,3.1,2015-07-01
-PRV-4AEEAD52,1602437573,"Helen Hall, DO",Individual,ENT,74-4685993,9164 Elm St,,Dallas,TX,75292,(801) 901-6556,True,In-Network,Hindi; Mandarin; Tagalog,4.4,2021-07-01
-PRV-BC2DD6D6,1329716743,"Raymond Morris, MD",Individual,Dermatology,36-1789356,6002 Sunset Blvd,,Detroit,MI,48230,(218) 567-5273,True,In-Network,English; Spanish; Mandarin,3.9,2024-04-01
-PRV-DA5373F3,1289107711,Dallas Healthcare,Facility,Pharmacy,88-2709062,3771 Highland Ave,,Dallas,TX,75253,(775) 242-9311,False,In-Network,French,3.3,2019-12-01
-PRV-F3D2FB96,1760375482,"Julie Moore, MD",Individual,Gastroenterology,20-5463001,8388 Highland Ave,,Raleigh,NC,27622,(581) 932-7799,True,In-Network,Tagalog,3.8,2018-03-01
-PRV-1D59B341,1811556260,"Jeffrey Jackson, MD",Individual,ENT,60-1622329,6873 Lake Dr,,San Francisco,CA,94176,(876) 856-3473,True,In-Network,Tagalog; Korean; Vietnamese,3.8,2023-05-01
-PRV-C627F6F4,1389975634,"Frank Phillips, DO",Individual,General Surgery,20-1620256,5239 Jefferson Dr,Suite 640,New York,NY,10045,(750) 542-7389,True,In-Network,Tagalog,5.0,2019-04-01
-PRV-C98965AE,1943468105,Good Samaritan Hospital,Facility,Hospital,43-9514426,9140 Juniper Pl,,Denver,CO,80253,(562) 326-1782,True,Out-of-Network,Korean; English,3.9,2018-12-01
-PRV-F84E96B6,1315893571,"Alexander Carter, NP",Individual,Allergy & Immunology,28-8141928,9366 Poplar St,Suite 782,Columbus,OH,43248,(621) 283-2511,False,In-Network,Vietnamese; Hindi,3.2,2023-07-01
-PRV-F537A5AC,1228277288,"Rachel Morales, PA",Individual,Ophthalmology,25-4567549,8602 Park Ave,Apt 511,Dallas,TX,75284,(666) 684-1534,True,Out-of-Network,Spanish; Arabic,3.2,2020-10-01
-PRV-35A22E4D,1960443270,"Amy Brown, MD",Individual,Orthopedics,25-6849358,8665 Ash Pl,,Houston,TX,77057,(269) 245-7841,True,In-Network,French; Arabic,4.0,2024-03-01
-PRV-42312726,1658074120,"Elizabeth Evans, DO",Individual,Neurology,83-6181610,8370 Valley Way,,Boston,MA,02167,(774) 860-3028,True,In-Network,Tagalog; English; Korean,4.0,2022-09-01
-PRV-ECEC1744,1690705626,"Elizabeth Morgan, NP",Individual,Endocrinology,13-9856721,2070 Willow Dr,,New York,NY,10045,(524) 591-5213,False,Out-of-Network,Mandarin; Korean; Spanish,3.4,2016-03-01
-PRV-3D0FFC1A,1152654610,"Alexander Davis, MD",Individual,Urology,35-5020206,6772 Spruce Ter,,Los Angeles,CA,90088,(970) 811-4874,True,In-Network,Spanish; Korean,3.1,2022-09-01
-PRV-A59C68A6,1671832582,"Donald Taylor, MD",Individual,Anesthesiology,41-8109386,8032 Oak Ave,,Indianapolis,IN,46291,(768) 662-1684,False,In-Network,Korean; Mandarin; English,3.1,2022-05-01
-PRV-CA9AB8B0,1914161284,"Jennifer Lee, PA",Individual,Radiology,65-4537478,6328 Jefferson Dr,Suite 960,Minneapolis,MN,55437,(825) 716-6215,True,Out-of-Network,Korean; Hindi; Mandarin,3.5,2020-06-01
-PRV-9FA7E141,1268768118,St. Marys Lab,Facility,Lab,13-8468826,9922 Lincoln Blvd,,New York,NY,10098,(888) 326-6783,True,In-Network,French; Arabic; Spanish,4.7,2015-02-01
-PRV-FFFED6B7,1433750479,"Betty Lopez, NP",Individual,General Surgery,36-1119712,3261 Hill St,,New York,NY,10038,(400) 853-7489,False,In-Network,Hindi; Mandarin; Korean,3.4,2024-11-01
-PRV-C67EE143,1430894870,"Steven Robinson, NP",Individual,Allergy & Immunology,64-1870113,9359 Willow Dr,,Chicago,IL,60685,(530) 642-7666,True,In-Network,Hindi; French,4.0,2015-12-01
-PRV-B164879D,1036133254,Mercy Clinic,Facility,Clinic,18-2622794,4653 Lake Dr,Apt 324,Nashville,TN,37267,(228) 691-8077,True,In-Network,French; Korean; Spanish,3.2,2018-06-01
-PRV-49DE96B4,1065120704,"Emma Thomas, MD",Individual,Internal Medicine,88-8245056,5565 Magnolia Blvd,,Chicago,IL,60686,(267) 304-1914,True,In-Network,Arabic; Spanish,4.2,2021-04-01
-PRV-FA936E8A,1593110919,"Kevin Brown, DO",Individual,Emergency Medicine,34-3113620,273 Valley Way,Suite 538,Charlotte,NC,28269,(852) 721-5198,True,In-Network,Hindi; Mandarin; Spanish,3.3,2015-01-01
-PRV-A6B378F0,1274954508,Denver Clinic,Facility,Lab,85-3425991,9676 River Rd,,Denver,CO,80293,(258) 443-9308,True,In-Network,Arabic,3.7,2018-11-01
-PRV-BED6132F,1652170730,"Joyce Nelson, NP",Individual,Pulmonology,91-4741740,1220 Lincoln Blvd,Apt 488,San Antonio,TX,78295,(909) 435-8643,True,In-Network,French; Arabic; Spanish,3.8,2015-06-01
-PRV-B82D3AD8,1003342342,Nashville Medical Associates,Facility,Clinic,53-5126595,5963 Oak Ave,Apt 146,Nashville,TN,37224,(382) 400-1352,True,In-Network,English,4.7,2017-07-01
-PRV-F145ACA6,1961122338,"Christine Perez, NP",Individual,Occupational Therapy,58-7278962,1918 Lincoln Blvd,,San Antonio,TX,78249,(525) 813-8037,True,In-Network,Vietnamese,4.7,2019-03-01
-PRV-855E9B74,1912868578,"Patrick Hernandez, DO",Individual,Occupational Therapy,69-4003096,972 Laurel Way,Apt 992,Phoenix,AZ,85075,(529) 929-7125,True,In-Network,Hindi; Korean,4.2,2024-11-01
-PRV-6E18184C,1254812147,San Francisco Medical Practice,Facility,Surgery Center,76-6898448,3696 Sycamore Ave,,San Francisco,CA,94140,(435) 797-1674,True,In-Network,Hindi; Tagalog,3.9,2020-08-01
-PRV-0C9D7EA7,1888143111,"Kelly Hernandez, MD",Individual,Pharmacy,56-1642255,6364 Oak Ave,,Philadelphia,PA,19166,(759) 405-6468,True,In-Network,Korean; Vietnamese,4.4,2017-12-01
-PRV-2D95E03B,1826333738,"Stephanie Johnson, DO",Individual,General Surgery,85-8864124,4378 Main St,,Boston,MA,02148,(939) 672-6581,True,In-Network,Arabic,4.5,2021-04-01
-PRV-33C2CB58,1553666845,"Catherine Johnson, DO",Individual,Occupational Therapy,85-1389899,9249 Oak Ave,,Columbus,OH,43227,(781) 232-3279,True,Out-of-Network,Arabic; Tagalog,3.4,2021-02-01
-PRV-4C2F2EE7,1209702316,"Charles Wilson, PA",Individual,Radiology,46-4454299,3185 Sunset Blvd,,Houston,TX,77052,(438) 498-9591,False,In-Network,English; Mandarin; Hindi,4.7,2021-07-01
-PRV-D88CFF2A,1234672994,Nashville Medical Group,Facility,Surgery Center,85-4405319,1914 Birch Way,,Nashville,TN,37263,(714) 933-8519,True,In-Network,Hindi,3.1,2021-10-01
-PRV-588B6BC9,1754692632,"Jack Lopez, MD",Individual,General Surgery,89-8249042,8715 Lincoln Blvd,Suite 573,Portland,OR,97272,(668) 593-4005,True,In-Network,English; Vietnamese; Arabic,3.3,2023-05-01
-PRV-78C30C67,1567243807,"Barbara Wilson, NP",Individual,Physical Therapy,13-2228016,1193 Hickory Ln,,Seattle,WA,98162,(854) 911-8567,True,In-Network,Arabic,3.1,2019-02-01
-PRV-642C256C,1274220912,"Stephen Young, PA",Individual,OB/GYN,47-3082914,2336 Washington Ave,,Tampa,FL,33669,(747) 959-7403,True,In-Network,Korean,3.3,2020-03-01
-PRV-FE94E6DA,1647090063,San Francisco Health System,Facility,Imaging Center,41-7285495,664 Hickory Ln,Suite 956,San Francisco,CA,94199,(444) 404-2497,False,In-Network,French,4.6,2016-04-01
-PRV-9AD49D6E,1393866133,"Jose Adams, MD",Individual,Radiology,23-6982358,1682 Spruce Ter,Suite 525,Raleigh,NC,27631,(531) 377-1245,True,In-Network,Vietnamese; Hindi,3.4,2019-11-01
-PRV-97FE83DF,1419562525,"Susan Morgan, NP",Individual,Dermatology,95-9088805,819 Elm St,Suite 885,San Antonio,TX,78262,(269) 543-1289,True,In-Network,Tagalog; Vietnamese,4.0,2015-04-01
-PRV-06202C83,1743263039,Baptist Hospital,Facility,Hospital,66-6514500,2132 Juniper Pl,Suite 349,San Diego,CA,92164,(337) 484-6202,True,In-Network,Arabic; Korean; Tagalog,3.0,2020-06-01
-PRV-1CF6786C,1527017130,Tampa Wellness Center,Facility,Lab,91-3374513,8936 Cedar Ln,,Tampa,FL,33641,(409) 328-2503,True,In-Network,Vietnamese,4.0,2021-12-01
-PRV-74042118,1471566277,"Emily Edwards, PA",Individual,Gastroenterology,64-9477402,2789 Sycamore Ave,,San Diego,CA,92164,(824) 952-8101,True,In-Network,English; Arabic,3.9,2016-05-01
-PRV-00DE148D,1273230085,"Deborah Morris, MD",Individual,Endocrinology,72-7787310,2603 Willow Dr,Apt 475,Dallas,TX,75258,(625) 604-7113,True,In-Network,Spanish; Arabic; English,5.0,2016-07-01
-PRV-D1F0A626,1663370502,"Samantha Mitchell, PA",Individual,Internal Medicine,43-8641531,2760 Sycamore Ave,,Boston,MA,02165,(897) 350-5166,True,In-Network,Mandarin; English; Hindi,4.5,2021-07-01
-PRV-FBFE2603,1946119524,"Angela Morgan, PA",Individual,Urology,36-7676832,1416 Sycamore Ave,,Indianapolis,IN,46231,(915) 515-1105,True,In-Network,Spanish,3.1,2021-09-01
-PRV-7C5D6F0B,1793230234,"Gary White, NP",Individual,Cardiology,62-8394229,4824 River Rd,,Philadelphia,PA,19132,(841) 839-2789,True,In-Network,Spanish; Arabic,3.2,2016-06-01
-PRV-6223BEF2,1901380698,St. Marys Hospital,Facility,Hospital,44-9152488,3946 Sunset Blvd,,Seattle,WA,98196,(684) 975-6521,True,In-Network,French; Tagalog; Arabic,3.5,2020-11-01
-PRV-88039E71,1357978630,"Robert Thomas, NP",Individual,Oncology,91-6405343,1037 Jefferson Dr,Apt 4,Jacksonville,FL,32222,(217) 848-6901,True,Out-of-Network,French; Hindi; Spanish,4.2,2021-12-01
-PRV-EDC64B86,1898027148,"Emily Harris, PA",Individual,Orthopedics,69-3819458,1433 Jefferson Dr,,Indianapolis,IN,46270,(656) 318-8899,True,In-Network,Mandarin,4.5,2016-02-01
-PRV-6CB50863,1287153991,"Christine Stewart, PA",Individual,Cardiology,92-6758373,578 Spruce Ter,,Jacksonville,FL,32259,(586) 934-7252,True,In-Network,Vietnamese; Tagalog,3.5,2019-02-01
-PRV-83CE013B,1904098366,Methodist Pharmacy,Facility,Pharmacy,50-7124083,5674 Sycamore Ave,,Raleigh,NC,27624,(895) 329-9515,True,In-Network,Arabic,3.0,2022-06-01
-PRV-1CC47CCD,1954814973,St. Marys Urgent Care,Facility,Urgent Care,73-5890476,4963 Poplar St,Suite 250,Seattle,WA,98197,(921) 585-1963,True,In-Network,Vietnamese; Tagalog; French,4.5,2017-08-01
-PRV-74CBFC7B,1844386125,"Amanda Gomez, DO",Individual,Pediatrics,84-1908038,5000 Spruce Ter,Apt 402,New York,NY,10080,(926) 511-8496,True,In-Network,Hindi; Korean,4.8,2018-04-01
-PRV-2FE5AAA9,1572018596,"Sharon Perez, MD",Individual,Cardiology,29-7777894,3305 Main St,,Columbus,OH,43283,(450) 234-2946,True,In-Network,Mandarin; Arabic; Hindi,4.4,2016-08-01
-PRV-3E7D0909,1830999741,"Joseph Hernandez, MD",Individual,Psychiatry,85-4038296,6360 Laurel Way,,Minneapolis,MN,55493,(593) 695-8105,True,In-Network,Spanish; Mandarin,3.8,2015-07-01
-PRV-3B70B65F,1292087510,"Dennis Clark, PA",Individual,Cardiology,26-4459963,8888 Highland Ave,Suite 698,Chicago,IL,60676,(868) 365-2438,True,In-Network,Spanish,5.0,2023-05-01
-PRV-83D8D190,1729758598,"Eric Nguyen, PA",Individual,Radiology,75-4520522,9019 Spruce Ter,,Indianapolis,IN,46294,(904) 301-1732,True,In-Network,Vietnamese; Mandarin,4.2,2018-10-01
-PRV-0D087338,1628314359,"Ronald Collins, MD",Individual,Oncology,94-9580328,2205 River Rd,Apt 262,Chicago,IL,60680,(819) 367-7876,True,In-Network,Arabic; English,4.9,2018-02-01
-PRV-892324D7,1340163611,"George Nelson, MD",Individual,Orthopedics,32-9832796,8807 Cherry Ct,,Tampa,FL,33680,(945) 513-9021,False,In-Network,Korean; Tagalog; Hindi,3.2,2015-03-01
-PRV-742220BC,1822269405,"Kathleen Taylor, MD",Individual,Family Medicine,41-8016965,6482 Willow Dr,Suite 907,Columbus,OH,43296,(923) 668-3999,True,In-Network,Tagalog; Korean,3.6,2021-09-01
-PRV-ED46858F,1131290148,"Joyce Lopez, PA",Individual,Pediatrics,73-1179426,3848 Juniper Pl,Apt 971,Minneapolis,MN,55421,(634) 893-9334,True,In-Network,Tagalog; Spanish,3.8,2024-04-01
-PRV-62E022AA,1832152850,"Scott Edwards, MD",Individual,Plastic Surgery,64-9313242,219 River Rd,,Miami,FL,33178,(588) 374-7115,True,In-Network,Vietnamese; Spanish; Mandarin,3.6,2019-05-01
-PRV-7FAADD1D,1970509754,San Antonio Physicians Group,Facility,Pharmacy,55-2797914,9419 Park Ave,Suite 758,San Antonio,TX,78249,(205) 558-4050,True,In-Network,Hindi; Vietnamese,3.2,2023-03-01
-PRV-0BA50CF9,1284177225,"Melissa Hill, MD",Individual,Ophthalmology,65-1097479,8085 Main St,Apt 257,Phoenix,AZ,85094,(567) 926-4251,False,In-Network,Arabic,3.8,2020-01-01
-PRV-10E43EC0,1568621102,Regional Lab,Facility,Lab,29-6773384,3360 Sunset Blvd,Apt 122,Tampa,FL,33644,(712) 213-4874,False,In-Network,English; Arabic,4.0,2019-08-01
-PRV-A880592D,1436371892,Memorial Clinic,Facility,Clinic,34-3495209,7127 Magnolia Blvd,,Atlanta,GA,30329,(434) 323-3167,True,In-Network,Mandarin,3.9,2024-04-01
-PRV-AA6E86B8,1086041454,Presbyterian Clinic,Facility,Clinic,54-8014121,934 Madison Ln,,Indianapolis,IN,46277,(452) 527-1779,True,In-Network,French; Vietnamese; Mandarin,3.9,2024-02-01
-PRV-D7F1ED34,1598953439,"Gregory Taylor, MD",Individual,Rheumatology,59-2463496,4233 Highland Ave,,Columbus,OH,43252,(308) 333-2971,False,Out-of-Network,Vietnamese; Tagalog; French,3.9,2016-02-01
-PRV-C0265164,1848557161,"John Taylor, MD",Individual,Ophthalmology,71-8029723,5718 Juniper Pl,Suite 306,Raleigh,NC,27670,(736) 715-1358,True,In-Network,Korean,3.1,2024-01-01
-PRV-D6B1CAC7,1866943202,"Charles Cruz, NP",Individual,Urology,83-4654207,3216 Park Ave,Suite 991,Seattle,WA,98197,(806) 913-1145,True,In-Network,Tagalog; Korean,3.6,2018-05-01
-PRV-DEAF7450,1403381059,"Jennifer Jackson, MD",Individual,Orthopedics,57-6445244,9146 Cherry Ct,,Philadelphia,PA,19138,(285) 922-9999,True,In-Network,Korean; French; English,4.3,2015-06-01
-PRV-16911040,1498373543,Dallas Health Partners,Facility,Hospital,84-7634775,4682 Willow Dr,Suite 773,Dallas,TX,75212,(359) 656-4796,True,In-Network,Hindi,3.2,2017-08-01
-PRV-5BE5835B,1226931216,Community Imaging Center,Facility,Imaging Center,41-8634038,2985 Sycamore Ave,,Portland,OR,97272,(860) 612-2642,True,In-Network,Spanish,3.8,2015-02-01
-PRV-D0816FAF,1513279724,"Tyler Johnson, MD",Individual,Radiology,52-9034749,816 Birch Way,Suite 246,San Diego,CA,92120,(358) 449-1915,True,In-Network,Spanish; English; Arabic,3.1,2023-05-01
-PRV-F0AAA8F3,1361721314,Community Surgery Center,Facility,Surgery Center,55-2279932,6904 Ash Pl,Apt 25,New York,NY,10038,(830) 541-2939,True,Out-of-Network,English,4.2,2017-07-01
-PRV-E3EE1A4F,1541022526,"Amanda Wilson, MD",Individual,Psychiatry,67-9026757,9924 Willow Dr,,Tampa,FL,33664,(268) 315-8003,True,In-Network,French,5.0,2017-07-01
-PRV-400BD3B4,1878878836,"Sarah Young, DO",Individual,Ophthalmology,20-8077313,8197 River Rd,Suite 523,Seattle,WA,98198,(739) 791-4593,True,In-Network,Vietnamese,5.0,2015-06-01
-PRV-34A5ADB0,1333021260,"Cynthia Jackson, NP",Individual,Ophthalmology,99-8125430,2288 Cherry Ct,,Los Angeles,CA,90054,(580) 255-2736,True,In-Network,Mandarin; English; Spanish,3.7,2016-04-01
-PRV-B258C810,1765704120,Phoenix Healthcare,Facility,Imaging Center,92-1538869,9425 Lake Dr,,Phoenix,AZ,85033,(818) 969-3843,True,In-Network,Hindi; Korean,4.8,2023-05-01
-PRV-9F16F546,1289177566,"Ronald Davis, MD",Individual,Urology,31-1917238,7041 Spruce Ter,,Dallas,TX,75221,(580) 862-7950,True,In-Network,French,4.2,2020-01-01
-PRV-61C1C066,1341990970,Chicago Medical Center,Facility,Clinic,16-6277781,2766 Walnut Blvd,,Chicago,IL,60637,(295) 516-1138,True,In-Network,Tagalog; Vietnamese,3.6,2021-12-01
-PRV-5450E276,1679042271,"Nicholas Martin, MD",Individual,Anesthesiology,90-2565160,2222 Walnut Blvd,Suite 859,Jacksonville,FL,32262,(935) 437-4533,True,In-Network,Mandarin; French; Vietnamese,4.6,2020-05-01
-PRV-C13810C6,1024817175,"Christopher Murphy, MD",Individual,Occupational Therapy,31-5959482,7159 Maple Dr,,Miami,FL,33197,(365) 269-5589,True,In-Network,Mandarin,4.4,2022-05-01
-PRV-4252D817,1692758955,"Jennifer Campbell, MD",Individual,Urology,20-7932248,4294 Hill St,Suite 226,Minneapolis,MN,55427,(718) 660-5306,True,Out-of-Network,English,4.5,2018-12-01
-PRV-74BFF4A4,1715778711,"Joyce Martinez, MD",Individual,Urology,33-2817783,230 Ash Pl,Suite 262,Houston,TX,77047,(606) 986-8096,True,In-Network,French; Hindi,3.4,2022-02-01
-PRV-5EFD0D3F,1567303064,"Scott Carter, MD",Individual,Occupational Therapy,42-3954562,727 Ash Pl,,Seattle,WA,98128,(285) 345-2134,True,In-Network,Hindi; Arabic; Korean,3.4,2019-03-01
-PRV-72DB4FF9,1265960893,"Kathleen Stewart, NP",Individual,ENT,19-3426274,1614 River Rd,,Jacksonville,FL,32248,(531) 880-6185,False,In-Network,Hindi,4.7,2016-11-01
-PRV-3A7C2E24,1682963533,"John Ramirez, PA",Individual,Gastroenterology,96-1241105,8631 Main St,Suite 560,San Francisco,CA,94126,(579) 572-1265,True,In-Network,Hindi,4.3,2022-07-01
-PRV-A5FD8163,1286646491,"Melissa Thompson, NP",Individual,Pathology,21-2741677,5870 River Rd,Apt 117,Denver,CO,80252,(291) 865-1269,True,In-Network,Tagalog; Spanish,4.3,2023-10-01
-PRV-0DA0DD5A,1576605384,"Jessica Sanchez, DO",Individual,Cardiology,44-5437558,4849 Lake Dr,Suite 565,San Antonio,TX,78238,(514) 624-4957,False,Out-of-Network,English,3.1,2020-09-01
-PRV-4142E0D4,1609626265,"Stephen Gomez, MD",Individual,Pathology,76-3658243,9929 Washington Ave,Apt 983,Jacksonville,FL,32231,(647) 436-2631,True,In-Network,Arabic,4.7,2019-09-01
-PRV-AF60E2F2,1098196027,Chicago Clinic,Facility,Imaging Center,91-7008279,5382 Hickory Ln,,Chicago,IL,60621,(391) 445-4633,True,In-Network,Arabic,4.5,2015-05-01
-PRV-3AC735DA,1124421175,Minneapolis Health System,Facility,Surgery Center,36-7556539,2455 Oak Ave,,Minneapolis,MN,55484,(303) 702-1359,True,In-Network,Spanish; Vietnamese; French,3.8,2020-11-01
-PRV-D7325923,1998028413,"Joseph Baker, MD",Individual,Psychiatry,87-1495854,2739 Willow Dr,Suite 282,Austin,TX,78711,(748) 223-9486,True,In-Network,Spanish; Vietnamese,3.1,2017-04-01
-PRV-DF39C301,1776863423,Dallas Healthcare,Facility,Imaging Center,97-5715786,2173 Laurel Way,,Dallas,TX,75271,(602) 305-6105,True,In-Network,Hindi; Arabic; Vietnamese,3.8,2019-06-01
-PRV-3C96A51D,1964985601,"Lisa Jones, NP",Individual,Oncology,33-6413691,6375 River Rd,,San Antonio,TX,78282,(639) 390-6861,True,In-Network,French; Mandarin,4.6,2016-01-01
-PRV-E1F06CAB,1938318491,"Stephen Rodriguez, DO",Individual,Pulmonology,83-8075793,278 Lincoln Blvd,,San Antonio,TX,78269,(898) 974-8130,True,In-Network,English,4.6,2022-01-01
-PRV-B28D1646,1907426088,"Ashley Williams, MD",Individual,Family Medicine,15-6660462,7001 Cherry Ct,,Houston,TX,77067,(860) 216-2137,True,In-Network,Korean; Tagalog,3.6,2020-07-01
-PRV-7BE2E899,1591030021,Atlanta Health System,Facility,Surgery Center,51-8309538,5231 Highland Ave,Apt 403,Atlanta,GA,30316,(431) 374-2442,True,Out-of-Network,Tagalog; English,4.9,2015-05-01
-PRV-675A77CF,1712529671,"Kimberly Perez, MD",Individual,Anesthesiology,76-9851473,805 Cherry Ct,,Los Angeles,CA,90048,(446) 791-8830,True,Out-of-Network,Hindi; Vietnamese,3.2,2019-12-01
-PRV-3EA0B48D,1030376371,Presbyterian Imaging Center,Facility,Imaging Center,53-4500758,9250 Magnolia Blvd,,Tampa,FL,33692,(804) 979-9644,True,In-Network,Hindi; Mandarin,4.7,2016-03-01
-PRV-3EDE0423,1249127113,Methodist Clinic,Facility,Clinic,12-8731726,6057 Madison Ln,Apt 526,San Francisco,CA,94189,(391) 473-1468,True,In-Network,Korean; Spanish,4.9,2016-06-01
-PRV-8F99DE4C,1663436294,"Kimberly Mitchell, MD",Individual,Internal Medicine,77-9281506,2567 Park Ave,,Denver,CO,80265,(731) 643-2788,True,In-Network,Vietnamese,3.2,2015-10-01
-PRV-7B546D73,1473235494,"Stephanie Gonzalez, MD",Individual,Allergy & Immunology,10-2581127,1178 Walnut Blvd,Apt 904,Dallas,TX,75238,(389) 715-8811,True,In-Network,Vietnamese; Mandarin; Hindi,4.4,2017-03-01
-PRV-E71CC3BD,1095790737,"Daniel King, MD",Individual,Dermatology,24-1757936,7558 Ash Pl,,New York,NY,10095,(217) 780-5762,True,In-Network,Mandarin,4.6,2016-05-01
-PRV-9664347E,1545897148,"Melissa Collins, MD",Individual,Pharmacy,91-1347746,5599 Hill St,Apt 559,Seattle,WA,98154,(351) 620-4608,True,In-Network,English; Vietnamese,4.2,2021-06-01
-PRV-D2A533F7,1245569644,Charlotte Wellness Center,Facility,Surgery Center,34-1689543,1562 Sycamore Ave,Suite 380,Charlotte,NC,28291,(793) 732-6624,True,In-Network,French; Korean,3.2,2015-08-01
-PRV-2225D250,1407034910,"Joshua Morales, MD",Individual,Pediatrics,72-6130833,2510 Valley Way,Suite 396,Tampa,FL,33629,(205) 640-6771,True,In-Network,Mandarin; French,4.8,2023-11-01
-PRV-BCA08DFB,1075366614,"Emma Hernandez, MD",Individual,Neurology,48-6213281,9287 Ash Pl,,Chicago,IL,60644,(377) 777-8140,True,In-Network,Mandarin; Vietnamese; Tagalog,3.3,2023-04-01
-PRV-E45920BF,1875857567,"Diane Parker, MD",Individual,Orthopedics,63-7882997,1502 Juniper Pl,,Portland,OR,97290,(672) 228-1432,True,In-Network,Korean,4.6,2024-09-01
-PRV-F41FA5D6,1010415914,"Ruth Gutierrez, DO",Individual,Pharmacy,82-9077690,9000 Dogwood Ct,,Los Angeles,CA,90060,(907) 539-1997,False,In-Network,English; Vietnamese; Korean,3.3,2022-03-01
-PRV-8480BF15,1102918133,Minneapolis Health System,Facility,Lab,23-8948078,2635 Juniper Pl,Apt 737,Minneapolis,MN,55449,(225) 717-8271,True,Out-of-Network,Arabic; Hindi,5.0,2018-09-01
-PRV-5EEC3115,1837744197,"Jose Walker, MD",Individual,Emergency Medicine,57-5616776,7294 Cherry Ct,,Indianapolis,IN,46228,(600) 595-2758,True,In-Network,English,3.6,2016-10-01
-PRV-C826828A,1740258835,"Jennifer Rivera, MD",Individual,OB/GYN,77-7553588,9611 Juniper Pl,Suite 772,Los Angeles,CA,90092,(725) 264-3858,True,In-Network,French; Hindi; Tagalog,4.7,2017-05-01
-PRV-7EE99058,1425995996,"Larry Cook, PA",Individual,Emergency Medicine,18-1753785,5063 Park Ave,Apt 496,Chicago,IL,60692,(230) 950-3607,True,In-Network,Hindi; French,4.5,2018-02-01
-PRV-C5DC3744,1759025176,"Jessica Jones, PA",Individual,Pediatrics,27-4350987,2950 Madison Ln,,Boston,MA,02163,(400) 458-9046,True,In-Network,Mandarin,3.9,2023-04-01
-PRV-7A9AA65A,1815287339,San Antonio Medical Practice,Facility,Urgent Care,70-9402873,497 Walnut Blvd,,San Antonio,TX,78214,(560) 565-3258,True,In-Network,Arabic; Spanish; Korean,3.2,2023-05-01
-PRV-519B7B94,1465124189,Los Angeles Healthcare,Facility,Clinic,40-9686567,8270 Poplar St,,Los Angeles,CA,90086,(825) 712-6115,True,In-Network,Spanish; Hindi; Mandarin,4.3,2015-06-01
-PRV-BF01A448,1199051699,"Christina Davis, MD",Individual,Psychiatry,20-9032452,3385 Lincoln Blvd,Suite 309,Boston,MA,02117,(332) 477-1683,False,In-Network,French,3.9,2019-04-01
-PRV-54BB22D0,1870662668,Boston Medical Center,Facility,Imaging Center,27-2939164,1006 Oak Ave,Apt 548,Boston,MA,02135,(648) 320-7024,True,In-Network,Vietnamese,3.5,2024-01-01
-PRV-1D8033EA,1272405593,St. Marys Pharmacy,Facility,Pharmacy,47-3176277,8885 Maple Dr,,Detroit,MI,48211,(820) 607-8843,True,In-Network,Korean,4.9,2018-08-01
-PRV-928A8952,1588105697,"Virginia Young, NP",Individual,Oncology,45-2316106,5948 Poplar St,Suite 475,San Francisco,CA,94148,(408) 340-9535,True,In-Network,Spanish,3.7,2017-01-01
+PRV-FBED065E,1790874064,"Sarah Rogers, DO",Individual,Family Medicine,10-4655777,8108 Pine Rd,Apt 921,New York,NY,10017,(792) 274-1742,True,In-Network,English; Spanish; Vietnamese,3.1,2021-03-01
+PRV-0177A94F,1512868230,"Elizabeth Moore, PA",Individual,Family Medicine,12-6005700,2318 Lake Dr,Apt 384,New York,NY,10058,(674) 889-9920,True,In-Network,Vietnamese,3.9,2017-05-01
+PRV-BE948BE3,1190790306,"Donald Clark, MD",Individual,Internal Medicine,66-4931560,3188 Cherry Ct,Apt 33,New York,NY,10088,(752) 422-1924,False,Out-of-Network,French,4.2,2020-04-01
+PRV-AFEB23FC,1892687056,St. Marys Hospital,Facility,Hospital,77-6347476,5044 Ash Pl,,New York,NY,10062,(913) 626-7688,False,In-Network,Hindi; Vietnamese; Arabic,3.5,2017-08-01
+PRV-F939F7CF,1435175183,University Lab,Facility,Lab,16-5504038,1044 Lake Dr,Suite 526,New York,NY,10077,(586) 889-1647,True,In-Network,Tagalog; Vietnamese; Hindi,3.4,2020-05-01
+PRV-0A999E4A,1385467854,"Frank Clark, DO",Individual,Cardiology,43-7033835,351 Hickory Ln,,New York,NY,10071,(725) 709-8635,False,Out-of-Network,French; Vietnamese,3.7,2021-01-01
+PRV-942BBD2F,1536937854,"Emily Martin, MD",Individual,Orthopedics,72-9230828,9316 Poplar St,,New York,NY,10043,(671) 372-6770,True,In-Network,Mandarin; English,4.0,2016-11-01
+PRV-00206FF9,1750997700,"James Ramirez, NP",Individual,Emergency Medicine,78-7901115,894 Main St,,New York,NY,10018,(212) 217-9673,True,In-Network,English; Arabic,4.6,2017-02-01
+PRV-343C1023,1615679334,"Julie Rivera, MD",Individual,Family Medicine,97-2352527,1678 Ash Pl,Suite 296,Los Angeles,CA,90077,(869) 865-1519,False,In-Network,Hindi; English; French,3.0,2017-02-01
+PRV-CDCB25B9,1339740148,"Zachary Ortiz, MD",Individual,Family Medicine,82-1552000,8289 River Rd,,Los Angeles,CA,90082,(383) 522-1256,True,In-Network,Arabic; Spanish; Mandarin,3.3,2018-10-01
+PRV-9BAB6EC8,1163159996,"Nicholas Hall, MD",Individual,Internal Medicine,51-1497036,6475 Lincoln Blvd,,Los Angeles,CA,90098,(849) 479-8381,True,In-Network,Arabic; Mandarin,4.4,2021-02-01
+PRV-6F12D6A9,1655110475,Regional Hospital,Facility,Hospital,44-2715158,4939 Magnolia Blvd,,Los Angeles,CA,90044,(335) 289-4070,True,In-Network,Arabic; Spanish; English,3.2,2023-02-01
+PRV-F2C2C9AA,1839826224,Memorial Lab,Facility,Lab,48-5503118,9880 Washington Ave,,Los Angeles,CA,90047,(704) 349-2036,True,In-Network,Hindi; Spanish,3.7,2018-12-01
+PRV-7076051C,1657569245,"Ronald Nelson, NP",Individual,Cardiology,87-4369728,8223 Sycamore Ave,,Los Angeles,CA,90048,(690) 521-3910,True,Out-of-Network,Hindi; Vietnamese,3.7,2019-07-01
+PRV-29E6B0D1,1737416724,"Gregory Brown, PA",Individual,Orthopedics,40-5239295,6080 Cherry Ct,,Los Angeles,CA,90085,(874) 357-7932,True,In-Network,Hindi; Arabic; Korean,4.0,2021-09-01
+PRV-B64152E4,1529096561,"Richard Young, PA",Individual,Emergency Medicine,11-2654343,702 Franklin St,Suite 931,Los Angeles,CA,90086,(464) 427-9366,True,In-Network,Vietnamese; Hindi; Mandarin,3.8,2024-12-01
+PRV-BF105A9D,1254573875,"Rebecca Hernandez, MD",Individual,Family Medicine,70-2637842,8299 Ash Pl,Apt 354,Chicago,IL,60623,(648) 939-8412,True,In-Network,Spanish; English; Arabic,3.7,2016-11-01
+PRV-90AFF4B6,1362266093,"Brenda Diaz, DO",Individual,Family Medicine,67-8206700,2792 Magnolia Blvd,Suite 278,Chicago,IL,60630,(598) 204-4519,True,In-Network,Spanish,4.6,2023-03-01
+PRV-0FD07710,1696915579,"Shirley Green, NP",Individual,Internal Medicine,32-5990296,6093 Washington Ave,,Chicago,IL,60643,(829) 804-2388,True,In-Network,Korean,3.2,2020-12-01
+PRV-4CAB12AD,1278282742,Chicago Health Partners,Facility,Hospital,33-6277776,2416 Meadow Ln,Suite 528,Chicago,IL,60627,(661) 834-1878,True,Out-of-Network,Mandarin; Vietnamese,4.6,2023-09-01
+PRV-A0A6A23E,1903404384,Memorial Lab,Facility,Lab,31-8672579,8209 Lake Dr,Apt 702,Chicago,IL,60666,(779) 960-9115,True,In-Network,Korean,4.6,2020-09-01
+PRV-B481EBEA,1451713395,"Joshua Jones, DO",Individual,Cardiology,88-8183451,781 Hill St,Apt 560,Chicago,IL,60623,(369) 830-3281,True,In-Network,French,4.1,2024-09-01
+PRV-77A099B4,1126042232,"Joyce Rogers, PA",Individual,Orthopedics,51-5153279,2858 Washington Ave,,Chicago,IL,60683,(979) 892-7434,True,In-Network,Arabic; Tagalog,3.9,2016-07-01
+PRV-E801B84C,1175186363,"Michelle Smith, PA",Individual,Emergency Medicine,73-5505300,8547 Laurel Way,,Chicago,IL,60668,(530) 490-6533,True,In-Network,French; English,3.1,2022-01-01
+PRV-AFB40F7E,1424154152,"Frank Taylor, PA",Individual,Family Medicine,16-7649508,2135 Spruce Ter,,Houston,TX,77064,(840) 512-4836,True,In-Network,English,3.4,2016-03-01
+PRV-7FB14700,1627136111,"Frank Baker, MD",Individual,Family Medicine,50-7166661,9826 Poplar St,Apt 532,Houston,TX,77011,(506) 340-7270,True,In-Network,Mandarin,3.1,2024-01-01
+PRV-D3C9ABE7,1731121965,"Kyle Evans, NP",Individual,Internal Medicine,64-6276495,2788 Hill St,,Houston,TX,77090,(343) 453-5537,True,In-Network,Korean; English; Arabic,4.7,2019-04-01
+PRV-632353DE,1761379180,Houston Medical Group,Facility,Hospital,56-6309530,8582 Meadow Ln,Apt 194,Houston,TX,77047,(335) 596-7895,True,In-Network,Spanish; English,4.2,2015-05-01
+PRV-5DE05510,1666188924,Good Samaritan Lab,Facility,Lab,20-6199374,3634 Maple Dr,Apt 945,Houston,TX,77074,(280) 723-4329,True,In-Network,Arabic; Spanish,3.6,2021-12-01
+PRV-BCF0388E,1210202758,"Helen Davis, MD",Individual,Cardiology,76-5349442,4009 Cedar Ln,Apt 251,Houston,TX,77024,(370) 580-3079,True,In-Network,Spanish; English; Mandarin,4.6,2019-09-01
+PRV-7078CB25,1792524191,"Angela Campbell, MD",Individual,Orthopedics,39-9536665,1146 Cypress Rd,,Houston,TX,77073,(202) 245-1201,True,In-Network,Mandarin; Tagalog,4.9,2015-09-01
+PRV-AAE89BAF,1518023806,"Julie Martinez, NP",Individual,Emergency Medicine,18-8802985,6970 Poplar St,Apt 330,Houston,TX,77050,(489) 992-6090,True,In-Network,French,3.4,2024-05-01
+PRV-66FEC772,1038505064,"Christopher Smith, DO",Individual,Family Medicine,23-4442590,4074 Valley Way,Apt 378,Phoenix,AZ,85035,(742) 443-7878,True,In-Network,Korean,3.2,2018-09-01
+PRV-A1BF1885,1619906234,"Nicholas Moore, PA",Individual,Family Medicine,43-6284972,6867 Franklin St,,Phoenix,AZ,85084,(602) 917-6345,True,In-Network,Vietnamese,3.3,2024-02-01
+PRV-C3D87517,1374741124,"Jessica Morgan, MD",Individual,Internal Medicine,99-1676621,2646 Walnut Blvd,Apt 169,Phoenix,AZ,85050,(420) 535-3430,False,In-Network,Arabic; English,4.4,2019-03-01
+PRV-8D434772,1121003236,Presbyterian Hospital,Facility,Hospital,57-2409947,609 Park Ave,Suite 563,Phoenix,AZ,85080,(796) 800-5240,True,In-Network,Vietnamese,4.8,2022-03-01
+PRV-101FB298,1667066253,Mercy Lab,Facility,Lab,33-5613428,1606 Lincoln Blvd,Apt 126,Phoenix,AZ,85016,(486) 656-3435,False,In-Network,Korean,4.0,2023-08-01
+PRV-97D814DF,1806578759,"Samuel Ortiz, MD",Individual,Cardiology,74-6395626,1099 Pine Rd,,Phoenix,AZ,85063,(597) 476-3946,False,In-Network,Korean,3.1,2022-09-01
+PRV-606841BA,1039652239,"Andrew Morgan, PA",Individual,Orthopedics,50-7019382,5956 Poplar St,,Phoenix,AZ,85041,(805) 228-6761,True,In-Network,Vietnamese; Hindi; Korean,3.6,2022-01-01
+PRV-217646AF,1325250029,"Mary Nelson, NP",Individual,Emergency Medicine,28-2860938,1578 Cedar Ln,,Phoenix,AZ,85012,(738) 573-2188,True,Out-of-Network,Spanish; French,3.6,2017-03-01
+PRV-326516DE,1442209690,"Sandra Thompson, DO",Individual,Family Medicine,33-6338793,7257 Highland Ave,,Philadelphia,PA,19181,(826) 426-2705,True,In-Network,Spanish; Vietnamese; Mandarin,5.0,2017-11-01
+PRV-FD9EC04E,1410067626,"Frank Rodriguez, MD",Individual,Family Medicine,73-7353742,1553 Lincoln Blvd,,Philadelphia,PA,19136,(559) 759-7149,False,In-Network,Vietnamese; Mandarin; Tagalog,3.1,2015-05-01
+PRV-4B6853E9,1181599706,"Douglas Carter, MD",Individual,Internal Medicine,93-3768193,428 Washington Ave,,Philadelphia,PA,19153,(821) 644-3573,False,In-Network,Arabic,4.4,2023-05-01
+PRV-C0F1CB9C,1205061497,Philadelphia Physicians Group,Facility,Hospital,35-2627170,4712 Juniper Pl,,Philadelphia,PA,19160,(226) 411-3798,True,Out-of-Network,Spanish; Korean,4.6,2022-08-01
+PRV-432097B4,1527047743,Methodist Lab,Facility,Lab,44-2034137,4441 Pine Rd,Apt 658,Philadelphia,PA,19133,(354) 970-2584,False,In-Network,Arabic; Vietnamese; Korean,3.1,2021-09-01
+PRV-CCBF1EAA,1989921722,"Ronald Jones, NP",Individual,Cardiology,37-4233407,6958 Sunset Blvd,Apt 587,Philadelphia,PA,19148,(329) 243-7936,False,In-Network,Mandarin,4.7,2019-06-01
+PRV-E179C704,1709986162,"Joyce Scott, NP",Individual,Orthopedics,28-2681144,1197 Pine Rd,Apt 398,Philadelphia,PA,19180,(308) 776-2654,True,In-Network,Arabic; Korean,3.8,2022-10-01
+PRV-E5985507,1307450544,"Jennifer Gomez, MD",Individual,Emergency Medicine,45-9248001,7850 Maple Dr,Apt 177,Philadelphia,PA,19128,(912) 901-2609,True,In-Network,Hindi; French,3.5,2021-10-01
+PRV-54C52400,1214862890,"Julie Davis, NP",Individual,Family Medicine,32-4234033,1562 Sycamore Ave,Apt 453,San Antonio,TX,78272,(405) 259-5087,False,In-Network,Vietnamese; Korean,3.7,2022-09-01
+PRV-9EAE2C28,1798552414,"Nicole Edwards, MD",Individual,Family Medicine,13-7485495,6603 Cherry Ct,,San Antonio,TX,78257,(250) 366-4511,True,In-Network,Vietnamese; Korean; French,3.8,2015-11-01
+PRV-987848BD,1446657437,"Mark Allen, NP",Individual,Internal Medicine,48-9734854,245 Sunset Blvd,,San Antonio,TX,78286,(838) 606-2676,False,Out-of-Network,Tagalog; Korean,3.6,2016-08-01
+PRV-602149D3,1328309652,Community Hospital,Facility,Hospital,13-9344531,1145 Lincoln Blvd,,San Antonio,TX,78245,(502) 465-7857,True,In-Network,Vietnamese; French; Hindi,4.4,2023-11-01
+PRV-066ACEFA,1417248251,San Antonio Clinic,Facility,Lab,38-6960666,7894 Jefferson Dr,,San Antonio,TX,78294,(428) 962-6031,True,In-Network,Korean; Tagalog,3.9,2016-08-01
+PRV-C41F71BA,1022356972,"Shirley Hill, DO",Individual,Cardiology,50-4025884,979 Elm St,Suite 299,San Antonio,TX,78225,(997) 282-8988,True,Out-of-Network,English; Tagalog,3.9,2018-03-01
+PRV-5AE7461B,1676008350,"Samantha Diaz, DO",Individual,Orthopedics,51-9909268,9541 Spruce Ter,,San Antonio,TX,78226,(395) 218-1067,True,In-Network,French; Korean; Spanish,3.2,2023-10-01
+PRV-31C8017F,1856257532,"Cynthia Gutierrez, NP",Individual,Emergency Medicine,61-1320859,5115 Spruce Ter,,San Antonio,TX,78248,(433) 429-3149,True,In-Network,Mandarin; Spanish; Tagalog,4.4,2015-07-01
+PRV-667869CD,1761847230,"Michael Anderson, DO",Individual,Family Medicine,48-8061051,4290 Cedar Ln,,San Diego,CA,92193,(877) 303-9524,True,In-Network,Arabic,4.7,2016-09-01
+PRV-E5A620C2,1835642087,"Scott Sanchez, MD",Individual,Family Medicine,36-9064202,2028 Dogwood Ct,,San Diego,CA,92173,(538) 440-1044,False,In-Network,Hindi,3.3,2016-09-01
+PRV-6E65F470,1120455611,"Dorothy Reyes, MD",Individual,Internal Medicine,15-1162274,1329 Walnut Blvd,,San Diego,CA,92168,(341) 879-3793,True,In-Network,Korean; Spanish; Mandarin,4.6,2017-02-01
+PRV-26E46F2D,1621202169,San Diego Physicians Group,Facility,Hospital,71-8351152,6666 Park Ave,,San Diego,CA,92159,(385) 825-7221,True,In-Network,Mandarin; Hindi; Vietnamese,3.2,2021-08-01
+PRV-B55DDD00,1993588916,San Diego Wellness Center,Facility,Lab,94-5170429,853 Elm St,,San Diego,CA,92111,(693) 554-7305,False,In-Network,English; Tagalog; French,4.9,2023-08-01
+PRV-98574C99,1838663177,"Kevin Scott, MD",Individual,Cardiology,83-8517846,8223 Spruce Ter,Apt 77,San Diego,CA,92151,(290) 710-8324,True,Out-of-Network,English; Spanish; Vietnamese,3.8,2023-09-01
+PRV-96DCCE46,1375503758,"Victoria Rogers, NP",Individual,Orthopedics,89-8937865,102 Pine Rd,Suite 718,San Diego,CA,92191,(933) 872-6952,True,In-Network,Vietnamese; English; Mandarin,3.7,2019-09-01
+PRV-3DDBBB2A,1493316373,"Sarah Evans, MD",Individual,Emergency Medicine,53-2808009,8652 Franklin St,,San Diego,CA,92131,(975) 624-1761,True,In-Network,Spanish; Hindi; Vietnamese,4.3,2023-03-01
+PRV-963600D2,1292216995,"Olivia Morris, NP",Individual,Family Medicine,74-7453568,8272 Main St,,Dallas,TX,75280,(628) 823-5067,True,Out-of-Network,Hindi; Mandarin,3.3,2024-12-01
+PRV-944BB4FD,1452288515,"Matthew Clark, NP",Individual,Family Medicine,81-9059269,8493 Juniper Pl,Suite 818,Dallas,TX,75250,(796) 784-7839,True,In-Network,Korean; Arabic; Hindi,3.0,2016-01-01
+PRV-68A19DA5,1420438057,"Maria Lee, MD",Individual,Internal Medicine,23-4763253,6340 Ash Pl,,Dallas,TX,75235,(960) 862-7371,True,In-Network,Korean; English; Vietnamese,3.8,2020-09-01
+PRV-877FC955,1359893347,Dallas Physicians Group,Facility,Hospital,32-2249382,981 Main St,,Dallas,TX,75289,(391) 377-9418,False,In-Network,Tagalog; Korean,3.3,2024-05-01
+PRV-FE74FDDE,1909479851,Baptist Lab,Facility,Lab,50-9814666,192 Lincoln Blvd,,Dallas,TX,75215,(425) 388-9529,False,In-Network,Tagalog; Arabic,3.2,2018-04-01
+PRV-CAD74C95,1573993056,"Brenda Johnson, MD",Individual,Cardiology,24-7473923,5537 Lincoln Blvd,,Dallas,TX,75289,(462) 753-5633,False,In-Network,Tagalog; Hindi,4.0,2019-11-01
+PRV-52043A06,1361386120,"Benjamin Rodriguez, MD",Individual,Orthopedics,68-6565260,3254 Washington Ave,,Dallas,TX,75231,(238) 289-2200,False,In-Network,Spanish; Vietnamese; Mandarin,3.8,2022-11-01
+PRV-F672C4DF,1919015814,"Jonathan Smith, PA",Individual,Emergency Medicine,97-6055825,6726 River Rd,Apt 324,Dallas,TX,75296,(821) 288-5612,True,In-Network,English; Hindi,3.3,2018-03-01
+PRV-96598F8D,1009968814,"Mary Jackson, MD",Individual,Family Medicine,36-6768873,6506 Dogwood Ct,,Austin,TX,78748,(416) 622-9397,False,In-Network,Korean; Vietnamese; English,3.4,2024-01-01
+PRV-6191E9FE,1975523149,"Steven Gonzalez, MD",Individual,Family Medicine,18-4246367,9092 Valley Way,,Austin,TX,78747,(525) 697-8383,True,In-Network,Mandarin; French; Arabic,3.6,2021-03-01
+PRV-24A3E87B,1577754781,"Kimberly Campbell, MD",Individual,Internal Medicine,32-2375290,179 Washington Ave,,Austin,TX,78792,(487) 343-9824,True,In-Network,Spanish; Tagalog; English,4.7,2015-10-01
+PRV-B9401E11,1872563942,Austin Wellness Center,Facility,Hospital,69-9407451,9584 Park Ave,,Austin,TX,78714,(722) 292-7500,True,In-Network,Mandarin,4.5,2017-08-01
+PRV-ADA1B31B,1373145303,Austin Medical Center,Facility,Lab,76-7060792,2708 Willow Dr,,Austin,TX,78771,(597) 680-8448,True,In-Network,French; Spanish; Tagalog,4.9,2019-12-01
+PRV-01436D0B,1386557790,"Eric Allen, DO",Individual,Cardiology,74-3331501,4414 Willow Dr,Apt 386,Austin,TX,78756,(650) 369-4768,False,In-Network,Mandarin,3.4,2020-10-01
+PRV-7FF80F2D,1392603029,"Debra Morris, DO",Individual,Orthopedics,85-3703298,2038 Poplar St,,Austin,TX,78724,(337) 844-9399,False,In-Network,Mandarin,3.5,2017-09-01
+PRV-6DD14169,1236929298,"Jeffrey Stewart, DO",Individual,Emergency Medicine,43-3813903,6742 Oak Ave,,Austin,TX,78720,(941) 902-6614,True,In-Network,Vietnamese,3.8,2017-02-01
+PRV-9C8910AF,1127990881,"Julie Martin, NP",Individual,Family Medicine,21-9090660,371 Sycamore Ave,Suite 980,Jacksonville,FL,32297,(875) 333-9835,True,In-Network,Arabic; Tagalog; Mandarin,4.7,2023-07-01
+PRV-9D927357,1731498643,"Jason Moore, MD",Individual,Family Medicine,10-1119354,3859 Sunset Blvd,Apt 809,Jacksonville,FL,32254,(791) 735-2930,True,In-Network,French,3.8,2016-03-01
+PRV-77C9B38E,1636887258,"Helen Scott, PA",Individual,Internal Medicine,81-9116148,7080 Cypress Rd,Suite 975,Jacksonville,FL,32264,(459) 514-6641,True,In-Network,Spanish,4.5,2022-12-01
+PRV-A0FF7097,1026012796,Jacksonville Medical Practice,Facility,Hospital,21-2075091,2750 Walnut Blvd,Apt 220,Jacksonville,FL,32253,(469) 427-7075,False,In-Network,Arabic; Korean,4.4,2024-01-01
+PRV-A310E5B1,1430988392,Jacksonville Wellness Center,Facility,Lab,96-1605005,2971 Highland Ave,,Jacksonville,FL,32294,(568) 444-1004,True,In-Network,Arabic; French,4.3,2021-10-01
+PRV-4B0FD6D3,1439376904,"Janet Hall, MD",Individual,Cardiology,32-7830585,3381 Main St,,Jacksonville,FL,32221,(718) 309-2185,True,In-Network,Tagalog,4.9,2023-10-01
+PRV-82836262,1790714163,"Dennis Baker, DO",Individual,Orthopedics,96-4857587,4198 Hill St,Suite 486,Jacksonville,FL,32271,(523) 622-6785,True,In-Network,Vietnamese; Korean,3.2,2020-02-01
+PRV-45D726C4,1333433339,"Nancy Harris, DO",Individual,Emergency Medicine,55-3617171,9185 Willow Dr,,Jacksonville,FL,32237,(997) 309-2964,True,In-Network,Hindi; English; Arabic,4.7,2015-08-01
+PRV-6BFE42C8,1639208678,"Dennis Rogers, MD",Individual,Family Medicine,14-9430135,6181 Washington Ave,,Columbus,OH,43272,(555) 603-3863,True,In-Network,Hindi; French; Tagalog,3.0,2018-07-01
+PRV-CFF08AA2,1479552763,"Stephen King, MD",Individual,Family Medicine,63-7246319,9619 Walnut Blvd,Suite 470,Columbus,OH,43243,(573) 610-5581,True,In-Network,Vietnamese; Spanish; French,3.5,2018-09-01
+PRV-324C133A,1288574489,"Daniel Turner, DO",Individual,Internal Medicine,16-7684074,7181 Madison Ln,,Columbus,OH,43270,(301) 907-3676,False,In-Network,Spanish; Hindi,4.5,2019-06-01
+PRV-FB51C210,1399824558,Mercy Hospital,Facility,Hospital,72-8498243,6003 Cypress Rd,Apt 353,Columbus,OH,43225,(280) 590-5694,True,Out-of-Network,French,3.8,2024-10-01
+PRV-CCCF6371,1496475987,Community Lab,Facility,Lab,62-3807132,6731 Elm St,,Columbus,OH,43239,(388) 223-3048,True,In-Network,Spanish; Vietnamese; Tagalog,3.8,2016-02-01
+PRV-2F936608,1216433472,"Richard King, NP",Individual,Cardiology,26-9837269,7852 Cedar Ln,Apt 27,Columbus,OH,43277,(374) 229-1575,True,In-Network,Hindi; Tagalog,4.9,2023-05-01
+PRV-2EEF1E7E,1845783174,"Samantha Parker, NP",Individual,Orthopedics,56-7915632,9087 Hill St,Suite 814,Columbus,OH,43232,(466) 359-5973,False,In-Network,French,3.6,2023-01-01
+PRV-925681D3,1536866326,"Tyler Smith, NP",Individual,Emergency Medicine,58-4700926,8159 Sunset Blvd,Apt 307,Columbus,OH,43247,(469) 281-7917,True,In-Network,Korean; Tagalog; French,4.5,2019-07-01
+PRV-B8C54D25,1973502080,"Helen Edwards, MD",Individual,Family Medicine,33-2715864,3180 Elm St,,Charlotte,NC,28224,(488) 475-3048,True,In-Network,Spanish,3.3,2022-04-01
+PRV-06F6E39B,1120461872,"Rachel Jones, MD",Individual,Family Medicine,34-5195637,5701 Lake Dr,Apt 320,Charlotte,NC,28257,(590) 212-2998,True,In-Network,Hindi; Vietnamese,4.5,2015-04-01
+PRV-C8D157D5,1208814743,"Debra Flores, MD",Individual,Internal Medicine,56-1873883,7650 Walnut Blvd,,Charlotte,NC,28270,(882) 423-2850,True,In-Network,Mandarin,4.6,2024-02-01
+PRV-110213A9,1251327195,Mercy Hospital,Facility,Hospital,90-2007511,6584 Magnolia Blvd,Suite 143,Charlotte,NC,28298,(261) 564-3521,True,In-Network,Hindi,3.5,2023-11-01
+PRV-D6A2F6D4,1407784873,Regional Lab,Facility,Lab,82-4131076,5790 Hill St,,Charlotte,NC,28298,(756) 556-6303,True,In-Network,Tagalog; Mandarin; English,4.1,2022-05-01
+PRV-D0FCF694,1593518638,"Douglas Williams, NP",Individual,Cardiology,97-9347489,4414 Franklin St,Suite 100,Charlotte,NC,28258,(984) 764-3525,True,In-Network,French; Spanish; English,4.0,2016-01-01
+PRV-EF32F971,1967899405,"Betty Gonzalez, MD",Individual,Orthopedics,38-2189067,2226 Willow Dr,,Charlotte,NC,28223,(213) 413-9051,True,In-Network,English; French,4.1,2021-06-01
+PRV-0F43423B,1138633839,"Anthony Gutierrez, MD",Individual,Emergency Medicine,90-4001408,1055 Laurel Way,,Charlotte,NC,28248,(771) 967-7802,True,In-Network,French; Hindi; Tagalog,4.3,2016-03-01
+PRV-D2B26C8F,1855665939,"Christina Rivera, MD",Individual,Family Medicine,79-4589118,3055 Park Ave,,Indianapolis,IN,46278,(584) 984-5162,True,In-Network,English; Tagalog,5.0,2024-01-01
+PRV-A311B2FA,1488899210,"Anthony Green, MD",Individual,Family Medicine,68-6966913,8580 Birch Way,,Indianapolis,IN,46248,(359) 341-5341,True,In-Network,Korean,4.6,2016-10-01
+PRV-4E5E60BB,1409610556,"Gary Gonzalez, NP",Individual,Internal Medicine,63-3022334,6650 Hickory Ln,,Indianapolis,IN,46271,(988) 432-1187,True,In-Network,Korean,4.0,2020-09-01
+PRV-E71FC6E9,1799813646,Methodist Hospital,Facility,Hospital,28-3217764,9355 Ash Pl,,Indianapolis,IN,46229,(544) 284-8796,True,In-Network,Korean; Spanish,3.8,2021-12-01
+PRV-FE611D93,1389833146,Mercy Lab,Facility,Lab,51-2503148,2236 Birch Way,,Indianapolis,IN,46272,(315) 887-7776,True,In-Network,French; English,4.5,2017-06-01
+PRV-66656F47,1039240514,"Karen Hernandez, MD",Individual,Cardiology,67-8905261,7345 Ash Pl,,Indianapolis,IN,46235,(223) 539-4424,True,In-Network,Tagalog; Korean; Hindi,4.0,2017-12-01
+PRV-CF43F9E2,1394070164,"Lisa Davis, MD",Individual,Orthopedics,94-7043474,401 Madison Ln,Suite 779,Indianapolis,IN,46215,(310) 219-5792,True,In-Network,Arabic,4.0,2016-06-01
+PRV-AF6FD314,1457620555,"John Young, NP",Individual,Emergency Medicine,90-6072192,8040 Pine Rd,Suite 303,Indianapolis,IN,46268,(441) 713-5519,True,In-Network,English; Korean,3.5,2020-07-01
+PRV-F7B9B99A,1264957823,"Edward Walker, NP",Individual,Family Medicine,93-3324928,2348 Pine Rd,Suite 491,San Francisco,CA,94196,(794) 754-4314,True,In-Network,Tagalog; Mandarin; Vietnamese,5.0,2017-11-01
+PRV-E9F1A9F5,1056647423,"Daniel Green, MD",Individual,Family Medicine,23-3206973,9354 Spruce Ter,Suite 169,San Francisco,CA,94178,(389) 226-5372,True,In-Network,Vietnamese; Tagalog; French,3.1,2016-12-01
+PRV-44B520D9,1722330604,"Nancy Roberts, DO",Individual,Internal Medicine,62-4733840,7908 Birch Way,Suite 966,San Francisco,CA,94170,(960) 887-4323,True,In-Network,Hindi; French,4.7,2018-07-01
+PRV-868D567C,1988081770,Mercy Hospital,Facility,Hospital,41-9702386,6733 Maple Dr,Apt 623,San Francisco,CA,94150,(750) 605-1643,True,In-Network,English; Vietnamese; Mandarin,3.9,2019-05-01
+PRV-E09DC9E8,1771812982,San Francisco Clinic,Facility,Lab,60-7938373,7658 Spruce Ter,Suite 401,San Francisco,CA,94116,(531) 661-1408,True,In-Network,Vietnamese; Hindi; English,3.5,2017-12-01
+PRV-E43E0936,1689268602,"Elizabeth Ortiz, PA",Individual,Cardiology,52-3518087,2124 Pine Rd,Apt 117,San Francisco,CA,94191,(366) 348-3930,True,In-Network,Korean; Hindi,3.6,2017-02-01
+PRV-9401CE19,1097339776,"Amy Murphy, NP",Individual,Orthopedics,66-2332193,2255 Sycamore Ave,,San Francisco,CA,94111,(815) 814-1107,True,In-Network,Tagalog; Vietnamese; English,3.4,2015-11-01
+PRV-956F5D23,1162249998,"Carol Lopez, MD",Individual,Emergency Medicine,32-8639301,5818 Maple Dr,,San Francisco,CA,94195,(967) 792-6901,True,In-Network,French; Tagalog,4.8,2016-07-01
+PRV-A3B278DC,1833901981,"Carol Ortiz, DO",Individual,Family Medicine,71-5818203,9118 Elm St,,Seattle,WA,98125,(637) 823-6185,True,In-Network,French; Mandarin; Korean,4.1,2023-12-01
+PRV-50125180,1071396605,"Betty Smith, MD",Individual,Family Medicine,54-4562439,8254 Highland Ave,Suite 284,Seattle,WA,98139,(211) 855-4296,True,In-Network,Korean,3.6,2023-06-01
+PRV-9638B39E,1557702727,"Nathan Thompson, MD",Individual,Internal Medicine,78-6622207,200 Cherry Ct,,Seattle,WA,98160,(673) 623-1917,True,In-Network,French; English; Spanish,4.2,2020-06-01
+PRV-54FCD80B,1299629145,Seattle Wellness Center,Facility,Hospital,14-5554970,1184 Ash Pl,,Seattle,WA,98153,(623) 288-9143,True,In-Network,Vietnamese; Korean,3.4,2020-01-01
+PRV-1C4A7A59,1357845218,Seattle Clinic,Facility,Lab,96-3226624,3411 Pine Rd,,Seattle,WA,98171,(410) 941-1598,True,In-Network,Spanish; English; Mandarin,4.9,2024-02-01
+PRV-C60C1E9E,1353344857,"Patricia Flores, PA",Individual,Cardiology,95-2973853,5560 Valley Way,,Seattle,WA,98176,(479) 352-3580,True,In-Network,Tagalog; Spanish; Hindi,4.1,2023-06-01
+PRV-C3571E7C,1958702070,"Charles Martinez, MD",Individual,Orthopedics,23-7435734,4540 Ash Pl,,Seattle,WA,98183,(255) 288-7987,True,In-Network,Hindi; French; Mandarin,3.7,2018-12-01
+PRV-E362DA9C,1747733294,"William Reyes, MD",Individual,Emergency Medicine,56-7577959,8840 Pine Rd,Apt 998,Seattle,WA,98182,(387) 916-6412,True,In-Network,Hindi; English,3.1,2016-06-01
+PRV-E9520ADF,1158148769,"Nicholas Wilson, DO",Individual,Family Medicine,62-5002629,7942 Valley Way,,Denver,CO,80254,(835) 449-9977,True,In-Network,French,3.4,2024-07-01
+PRV-4E3FFBB1,1997581724,"Jack Morales, MD",Individual,Family Medicine,61-2167822,7232 Lincoln Blvd,,Denver,CO,80232,(812) 311-7208,True,In-Network,Spanish,3.4,2017-10-01
+PRV-3286BEB7,1354946519,"Deborah Edwards, MD",Individual,Internal Medicine,11-9563491,103 Ash Pl,Apt 677,Denver,CO,80278,(613) 330-5819,False,Out-of-Network,English,4.4,2020-02-01
+PRV-55F052CB,1666832723,Denver Health Partners,Facility,Hospital,81-7452434,4723 Oak Ave,Suite 542,Denver,CO,80260,(568) 627-3527,True,In-Network,Mandarin,3.0,2015-03-01
+PRV-C9428FD0,1796927868,Denver Health Partners,Facility,Lab,67-7454441,8074 River Rd,,Denver,CO,80227,(563) 431-4044,True,In-Network,Vietnamese; Korean,3.8,2023-10-01
+PRV-D12A88A8,1128478189,"Justin Morris, PA",Individual,Cardiology,21-5114298,6112 Maple Dr,Apt 39,Denver,CO,80257,(683) 845-2279,True,In-Network,Korean; English; Mandarin,4.1,2015-08-01
+PRV-BE76A786,1209494079,"Amanda Nguyen, MD",Individual,Orthopedics,31-1866037,7538 Meadow Ln,Suite 580,Denver,CO,80252,(872) 498-1447,True,In-Network,Spanish; Korean; Mandarin,3.3,2019-05-01
+PRV-CCB959A9,1243728051,"Raymond Edwards, MD",Individual,Emergency Medicine,28-3586212,4309 Main St,Suite 214,Denver,CO,80232,(707) 970-7765,True,In-Network,Mandarin; Vietnamese,4.2,2020-01-01
+PRV-768B936A,1836674286,"Donna Stewart, PA",Individual,Family Medicine,11-5845129,4431 Cherry Ct,Apt 54,Nashville,TN,37261,(659) 591-6172,True,In-Network,Spanish,4.8,2020-07-01
+PRV-E8AA6432,1938525800,"Cynthia Walker, PA",Individual,Family Medicine,18-1200679,4566 Lincoln Blvd,,Nashville,TN,37242,(621) 300-9605,False,In-Network,Korean,3.5,2015-01-01
+PRV-25C0DF1F,1926921244,"Alexander Thomas, MD",Individual,Internal Medicine,69-2270273,1606 Cedar Ln,,Nashville,TN,37286,(854) 664-5528,True,In-Network,French; Korean; Spanish,4.6,2019-01-01
+PRV-915F6DF5,1739627128,Memorial Hospital,Facility,Hospital,65-4663917,6371 Madison Ln,,Nashville,TN,37243,(828) 858-2740,True,In-Network,English,3.1,2024-12-01
+PRV-77C2D015,1642569087,Nashville Medical Center,Facility,Lab,71-8315833,4205 Hill St,,Nashville,TN,37293,(613) 945-2148,True,In-Network,Hindi; Spanish; Korean,4.1,2020-06-01
+PRV-45250545,1328063461,"Elizabeth Collins, MD",Individual,Cardiology,90-7027401,5061 Park Ave,,Nashville,TN,37256,(698) 286-8175,True,In-Network,English,4.4,2024-04-01
+PRV-80095B0A,1005050613,"Amy Morgan, DO",Individual,Orthopedics,93-9776491,8115 Madison Ln,Suite 911,Nashville,TN,37292,(669) 894-9791,False,In-Network,English,4.5,2022-11-01
+PRV-7BC2B02B,1041792911,"James Thompson, PA",Individual,Emergency Medicine,24-9340683,412 Sunset Blvd,,Nashville,TN,37241,(809) 830-4613,False,In-Network,Arabic; French,3.2,2024-09-01
+PRV-1854CB3A,1426258273,"Kevin Rodriguez, MD",Individual,Family Medicine,84-1682814,2350 Washington Ave,,Portland,OR,97215,(336) 302-7162,True,In-Network,Spanish; English,3.0,2016-12-01
+PRV-C4B616E0,1487632909,"Anthony Jackson, PA",Individual,Family Medicine,33-9386722,9827 Dogwood Ct,Apt 427,Portland,OR,97298,(826) 290-5934,True,In-Network,Vietnamese,3.2,2023-02-01
+PRV-5D036D8F,1772200543,"Matthew Anderson, MD",Individual,Internal Medicine,65-5217486,6029 Meadow Ln,,Portland,OR,97245,(542) 831-8424,False,In-Network,Mandarin; Tagalog; Arabic,3.1,2023-02-01
+PRV-7A4300C3,1531531363,University Hospital,Facility,Hospital,58-4702106,1260 Magnolia Blvd,Suite 555,Portland,OR,97284,(275) 682-8936,False,In-Network,Hindi,3.4,2020-03-01
+PRV-647E89AD,1904217762,St. Marys Lab,Facility,Lab,53-4688530,7599 Sycamore Ave,,Portland,OR,97235,(502) 818-3568,True,In-Network,Mandarin; Vietnamese; English,3.8,2023-08-01
+PRV-51FC0265,1569392906,"Catherine Young, MD",Individual,Cardiology,15-1672073,3646 Sunset Blvd,,Portland,OR,97211,(681) 951-9261,False,In-Network,Spanish; Hindi,4.0,2016-09-01
+PRV-FBD4805D,1742799077,"Ashley Lopez, MD",Individual,Orthopedics,27-7800818,303 Lake Dr,,Portland,OR,97255,(389) 579-8607,True,In-Network,Spanish; Arabic; French,3.7,2015-05-01
+PRV-FAE23154,1508501657,"Tyler Hernandez, NP",Individual,Emergency Medicine,89-1685757,7077 Laurel Way,Suite 727,Portland,OR,97283,(574) 575-3871,True,In-Network,Vietnamese; Mandarin; Hindi,3.5,2016-11-01
+PRV-2008441E,1640155778,"Kelly Wright, NP",Individual,Family Medicine,77-3058722,7939 Hickory Ln,,Atlanta,GA,30351,(681) 926-9714,True,In-Network,Hindi; French,4.6,2016-04-01
+PRV-E9E58B45,1127238046,"Richard Perez, MD",Individual,Family Medicine,97-3215051,7601 Pine Rd,,Atlanta,GA,30346,(685) 555-7883,True,In-Network,Vietnamese; Spanish,3.0,2018-09-01
+PRV-D0815CF1,1242437540,"Cynthia Hill, NP",Individual,Internal Medicine,28-6924385,5603 Lake Dr,,Atlanta,GA,30372,(491) 666-3725,True,In-Network,Korean; Mandarin; Spanish,4.7,2017-03-01
+PRV-459FE9E0,1238055257,Baptist Hospital,Facility,Hospital,79-3727935,3997 Cherry Ct,Suite 424,Atlanta,GA,30326,(746) 508-2990,True,In-Network,Mandarin; Hindi,4.9,2017-01-01
+PRV-16B20F14,1297517028,Atlanta Medical Practice,Facility,Lab,24-6168761,9048 Meadow Ln,,Atlanta,GA,30370,(225) 611-4610,True,In-Network,Vietnamese,4.2,2018-05-01
+PRV-413BBE62,1759980562,"Nicholas Gomez, MD",Individual,Cardiology,64-7201361,3306 Oak Ave,Apt 86,Atlanta,GA,30396,(595) 581-1199,True,In-Network,Tagalog; Spanish,3.4,2022-12-01
+PRV-AADED71D,1347851961,"Nathan Lopez, MD",Individual,Orthopedics,10-7869609,6909 Hill St,Apt 296,Atlanta,GA,30363,(854) 479-7791,True,In-Network,Mandarin; Vietnamese; Spanish,4.7,2019-09-01
+PRV-E39264CC,1002447146,"Amy Reyes, MD",Individual,Emergency Medicine,32-9252486,8137 Maple Dr,,Atlanta,GA,30384,(904) 860-5009,False,In-Network,Spanish; French,4.2,2024-07-01
+PRV-3D955768,1902572520,"Henry King, MD",Individual,Family Medicine,44-7059317,4325 Sunset Blvd,,Minneapolis,MN,55457,(629) 851-6832,False,In-Network,Spanish; Vietnamese; Arabic,4.3,2016-10-01
+PRV-ACC14892,1520284576,"Susan Morgan, NP",Individual,Family Medicine,53-3735175,2838 Washington Ave,,Minneapolis,MN,55444,(304) 423-3532,True,In-Network,Tagalog; Spanish; Vietnamese,3.9,2016-02-01
+PRV-695AE561,1852401322,"Sarah Cruz, NP",Individual,Internal Medicine,98-4801288,2250 Oak Ave,,Minneapolis,MN,55498,(514) 328-4438,False,In-Network,Spanish; Tagalog; English,4.5,2021-01-01
+PRV-4614BF2D,1401401193,Memorial Hospital,Facility,Hospital,85-4355853,3317 Walnut Blvd,Suite 912,Minneapolis,MN,55485,(389) 886-6759,False,In-Network,Korean; French; Mandarin,3.3,2023-12-01
+PRV-20E5414A,1334280138,Minneapolis Wellness Center,Facility,Lab,70-7148229,4062 Meadow Ln,,Minneapolis,MN,55484,(914) 803-4033,True,Out-of-Network,French,5.0,2021-04-01
+PRV-446F1D1F,1754801571,"Jessica Gutierrez, MD",Individual,Cardiology,59-5758210,8525 Poplar St,,Minneapolis,MN,55425,(667) 814-6111,True,In-Network,Tagalog,3.8,2021-04-01
+PRV-52A86C0D,1167811266,"Gregory Morales, PA",Individual,Orthopedics,98-2706614,1240 Sunset Blvd,,Minneapolis,MN,55432,(959) 372-2060,True,In-Network,Arabic,3.2,2021-12-01
+PRV-4EB7847B,1796784271,"Maria Phillips, MD",Individual,Emergency Medicine,25-5205877,8277 Laurel Way,Suite 830,Minneapolis,MN,55485,(701) 709-4781,True,In-Network,English,4.7,2022-11-01
+PRV-6E3E45FD,1877347784,"Helen Gonzalez, MD",Individual,Family Medicine,79-6764913,538 Willow Dr,,Tampa,FL,33629,(753) 759-1289,True,In-Network,Spanish; Arabic,3.9,2021-08-01
+PRV-3DBC8BBA,1624671978,"Victoria Perez, DO",Individual,Family Medicine,97-8882244,7631 Maple Dr,Suite 281,Tampa,FL,33694,(687) 775-3560,True,In-Network,Arabic; French,4.5,2019-06-01
+PRV-7A8E87F9,1561655650,"Ruth Brown, PA",Individual,Internal Medicine,94-5097480,1106 Oak Ave,,Tampa,FL,33656,(453) 440-6113,True,Out-of-Network,Korean,3.2,2017-01-01
+PRV-F74AD7A5,1407905696,Tampa Health Partners,Facility,Hospital,51-2639564,8921 Washington Ave,Apt 39,Tampa,FL,33682,(700) 302-4373,True,In-Network,French; Mandarin; Korean,3.6,2021-04-01
+PRV-99F337D1,1496391919,St. Marys Lab,Facility,Lab,53-5586302,8242 Elm St,Suite 970,Tampa,FL,33637,(268) 780-9700,True,In-Network,Korean,4.0,2019-07-01
+PRV-CEA7D1FE,1829737489,"Christine White, MD",Individual,Cardiology,65-2004647,8946 Washington Ave,Apt 205,Tampa,FL,33642,(734) 405-6968,True,In-Network,Korean; Arabic; Vietnamese,3.6,2016-11-01
+PRV-1AE6325E,1312303477,"Steven Walker, DO",Individual,Orthopedics,81-8317096,3435 Lake Dr,,Tampa,FL,33692,(632) 862-1606,True,In-Network,Korean,4.6,2019-11-01
+PRV-DFBF7EBB,1941651623,"Michael Hernandez, MD",Individual,Emergency Medicine,24-9392777,9122 Willow Dr,,Tampa,FL,33672,(323) 734-9605,True,In-Network,Spanish,4.5,2020-06-01
+PRV-44A0480A,1347649078,"Christopher Wilson, MD",Individual,Family Medicine,57-2895176,9673 Madison Ln,,Miami,FL,33164,(524) 758-7943,True,In-Network,Mandarin; French,4.0,2020-05-01
+PRV-62861CCA,1518376064,"Steven Roberts, MD",Individual,Family Medicine,48-2514149,445 Maple Dr,,Miami,FL,33198,(974) 441-5872,True,In-Network,French; Arabic,4.6,2019-02-01
+PRV-E7B29397,1481569857,"Jose Lee, PA",Individual,Internal Medicine,98-1458871,8155 Sunset Blvd,,Miami,FL,33164,(980) 253-4010,True,In-Network,English,3.8,2019-06-01
+PRV-43134269,1965772429,Miami Clinic,Facility,Hospital,51-5727774,9534 Pine Rd,,Miami,FL,33176,(403) 286-7791,True,In-Network,Vietnamese; English,4.9,2023-11-01
+PRV-1FB35502,1069694215,Miami Clinic,Facility,Lab,31-2968815,3847 Pine Rd,,Miami,FL,33143,(214) 935-9615,True,Out-of-Network,Hindi; Spanish,3.4,2018-04-01
+PRV-0B32620D,1343626204,"Joyce Clark, NP",Individual,Cardiology,43-4950793,4461 Dogwood Ct,Apt 765,Miami,FL,33126,(832) 661-5068,True,In-Network,Spanish; English,3.9,2020-12-01
+PRV-65A54D32,1005375990,"Barbara Gonzalez, NP",Individual,Orthopedics,10-5255656,6613 Hickory Ln,Apt 731,Miami,FL,33186,(716) 834-7241,True,In-Network,Mandarin; English,4.2,2019-03-01
+PRV-19307552,1241502745,"Kenneth Ortiz, DO",Individual,Emergency Medicine,65-5746702,8353 Highland Ave,Apt 953,Miami,FL,33126,(469) 827-5321,True,In-Network,French,4.5,2022-03-01
+PRV-361F6A1B,1427617075,"Daniel Jones, DO",Individual,Family Medicine,81-9140297,9204 Hill St,,Raleigh,NC,27616,(668) 704-2843,True,In-Network,French,3.2,2019-03-01
+PRV-DBB993C3,1926137150,"Justin Smith, NP",Individual,Family Medicine,46-3046668,2857 Meadow Ln,Suite 379,Raleigh,NC,27694,(603) 582-2737,True,In-Network,Hindi,4.7,2022-08-01
+PRV-3B5773E4,1045018961,"Janet Taylor, MD",Individual,Internal Medicine,61-5280939,4512 Main St,Suite 144,Raleigh,NC,27667,(382) 445-7535,False,In-Network,Arabic,4.6,2019-11-01
+PRV-FBF0BA82,1251583776,Raleigh Medical Practice,Facility,Hospital,70-5504336,2625 Cherry Ct,Apt 306,Raleigh,NC,27649,(776) 814-7931,False,In-Network,Mandarin; Arabic,4.3,2016-01-01
+PRV-9A4B7F96,1788147617,Raleigh Clinic,Facility,Lab,48-3493203,8510 Lincoln Blvd,,Raleigh,NC,27692,(330) 900-5921,True,In-Network,English; Spanish,4.8,2023-02-01
+PRV-8707510E,1180172260,"Amanda Allen, NP",Individual,Cardiology,20-7983542,8466 River Rd,Apt 423,Raleigh,NC,27694,(921) 504-6143,True,In-Network,Hindi; Korean; Mandarin,4.9,2017-04-01
+PRV-C9E7B7CD,1061027769,"Jason Morgan, MD",Individual,Orthopedics,72-6080140,3132 Pine Rd,,Raleigh,NC,27696,(833) 831-6910,True,Out-of-Network,Arabic; Korean; English,3.3,2015-04-01
+PRV-66C36452,1368314727,"Katherine Jackson, PA",Individual,Emergency Medicine,64-1366025,1933 Oak Ave,,Raleigh,NC,27636,(319) 370-3497,True,In-Network,Hindi; English,4.7,2024-04-01
+PRV-2AF52B94,1667998407,"Mary Wilson, PA",Individual,Family Medicine,61-9155420,3398 Dogwood Ct,Apt 584,Boston,MA,02116,(725) 805-8993,True,In-Network,Arabic,4.2,2023-02-01
+PRV-E1D5FF07,1243757383,"Laura Parker, MD",Individual,Family Medicine,85-6690043,4488 Lake Dr,,Boston,MA,02173,(816) 932-8675,False,In-Network,Arabic; Tagalog; Hindi,4.9,2020-08-01
+PRV-CFDCE1F1,1297167433,"Sarah Thompson, MD",Individual,Internal Medicine,81-1789356,2754 Hickory Ln,,Boston,MA,02195,(218) 567-5273,True,In-Network,English; Spanish; Mandarin,3.9,2024-04-01
+PRV-7EEB6C5E,1428910771,Boston Wellness Center,Facility,Hospital,23-2709062,2077 Poplar St,,Boston,MA,02155,(775) 242-9311,False,In-Network,French,3.3,2019-12-01
+PRV-54FB0399,1213760375,Boston Medical Associates,Facility,Lab,46-9472875,7333 Meadow Ln,,Boston,MA,02129,(375) 287-5358,True,In-Network,Vietnamese; Mandarin,4.5,2023-07-01
+PRV-AFFCE7A5,1507208115,"Joyce Gutierrez, PA",Individual,Cardiology,50-7738583,3838 Birch Way,Apt 822,Boston,MA,02162,(990) 368-8111,False,In-Network,Mandarin; English; French,5.0,2023-05-01
+PRV-DDB30A04,1489267389,"Lauren Hall, MD",Individual,Orthopedics,89-8417942,6969 Park Ave,Suite 797,Boston,MA,02148,(914) 553-7627,True,In-Network,English,4.1,2021-12-01
+PRV-FA119042,1200894346,"Shirley Baker, PA",Individual,Emergency Medicine,74-2852907,2164 Dogwood Ct,Suite 195,Boston,MA,02180,(949) 261-7110,True,In-Network,English,4.5,2016-08-01
+PRV-4629F969,1926831589,"Brian Hill, MD",Individual,Family Medicine,34-7061063,4981 Main St,,Detroit,MI,48284,(665) 300-3401,True,In-Network,Spanish,3.1,2017-08-01
+PRV-216DF455,1767762282,"Virginia King, NP",Individual,Family Medicine,72-8679146,3619 Hill St,Suite 478,Detroit,MI,48261,(332) 921-9408,True,In-Network,Hindi,3.9,2017-09-01
+PRV-7198018F,1821545447,"George Nguyen, MD",Individual,Internal Medicine,13-3396950,6151 Cherry Ct,Apt 617,Detroit,MI,48224,(345) 803-7910,False,In-Network,Vietnamese; Mandarin,4.6,2022-01-01
+PRV-CA64A4A2,1975679228,Community Hospital,Facility,Hospital,91-8733225,2104 Jefferson Dr,,Detroit,MI,48263,(979) 660-8357,False,In-Network,Arabic,3.8,2021-06-01
+PRV-A6F71132,1094818139,Detroit Clinic,Facility,Lab,79-1887084,8963 Maple Dr,Apt 982,Detroit,MI,48245,(783) 734-4103,True,In-Network,Spanish,4.3,2023-03-01
+PRV-002C1F87,1569070562,"Elizabeth Morgan, NP",Individual,Cardiology,63-1403608,410 Laurel Way,,Detroit,MI,48284,(740) 524-7258,True,In-Network,Tagalog,3.3,2017-03-01
+PRV-78EC8D91,1004615265,"Michael Adams, MD",Individual,Orthopedics,43-7300065,4287 Pine Rd,Apt 158,Detroit,MI,48296,(323) 253-4318,True,In-Network,Hindi,4.0,2023-07-01
+PRV-EE1FF9CC,1630489138,"Barbara Morris, MD",Individual,Emergency Medicine,93-3106737,1985 Laurel Way,Apt 63,Detroit,MI,48280,(511) 781-7664,True,In-Network,Vietnamese; Mandarin; Hindi,4.1,2017-04-01
+PRV-47F68916,1074946539,"Katherine Perez, MD",Individual,Radiology,75-5719620,7501 Maple Dr,Apt 2,Indianapolis,IN,46289,(246) 365-9750,True,In-Network,Spanish; Mandarin,4.5,2019-07-01
+PRV-67FEF0C2,1537950209,Baptist Pharmacy,Facility,Pharmacy,70-1071793,5315 Lincoln Blvd,Apt 651,Denver,CO,80244,(209) 888-3843,True,In-Network,Hindi; Arabic; Korean,3.2,2016-09-01
+PRV-372B325B,1017537030,Regional Surgery Center,Facility,Surgery Center,45-7003240,2122 Jefferson Dr,Apt 996,Tampa,FL,33686,(396) 292-5967,True,In-Network,French; English,3.6,2024-04-01
+PRV-7F354A26,1992192124,Minneapolis Medical Practice,Facility,Surgery Center,82-4824620,1917 Laurel Way,Apt 583,Minneapolis,MN,55431,(735) 946-5494,True,In-Network,Tagalog; Korean; French,4.1,2022-01-01
+PRV-16468078,1758030468,"Gregory Gutierrez, DO",Individual,Plastic Surgery,67-6305659,949 Washington Ave,Apt 443,Minneapolis,MN,55445,(205) 601-4188,True,In-Network,Vietnamese,5.0,2021-02-01
+PRV-B42D577A,1543173505,"Sharon Brown, NP",Individual,Dermatology,76-4971899,5494 Juniper Pl,,San Antonio,TX,78213,(274) 994-8184,True,In-Network,Spanish; Tagalog; English,4.8,2021-06-01
+PRV-238B0F70,1108046619,"Helen Parker, MD",Individual,Pediatrics,62-4910970,2189 Cedar Ln,Apt 942,Miami,FL,33117,(813) 875-1173,True,In-Network,Spanish; French,4.3,2015-08-01
+PRV-1D99C03F,1845679723,"Zachary Taylor, PA",Individual,Gastroenterology,27-1739385,1869 Walnut Blvd,,Portland,OR,97285,(261) 330-6106,True,In-Network,French; Korean; Hindi,4.8,2017-03-01
+PRV-8EECE026,1806533315,"Michael Walker, NP",Individual,Endocrinology,34-8981342,4868 Franklin St,Suite 108,Atlanta,GA,30385,(911) 908-8657,True,In-Network,French; Korean; Vietnamese,3.7,2016-08-01
+PRV-51DBBCD2,1563620501,"Donald Morris, PA",Individual,Psychiatry,55-1503611,3694 Main St,,Los Angeles,CA,90069,(768) 317-3333,True,In-Network,French; English; Hindi,3.4,2019-03-01
+PRV-A1CC744C,1410261534,Regional Imaging Center,Facility,Imaging Center,68-5029047,2955 Lincoln Blvd,,Dallas,TX,75232,(578) 581-3807,True,Out-of-Network,Arabic; Spanish; English,3.3,2017-04-01
+PRV-D796B9AB,1384253042,Charlotte Medical Practice,Facility,Imaging Center,75-9203901,6231 Washington Ave,,Charlotte,NC,28215,(414) 944-2333,True,In-Network,Spanish; Mandarin; Korean,3.8,2023-06-01
+PRV-F387157C,1903337363,"Kimberly Phillips, PA",Individual,Dermatology,49-8130700,5372 Franklin St,Apt 539,San Francisco,CA,94173,(586) 785-3575,True,In-Network,Spanish; Mandarin; Arabic,3.2,2022-09-01
+PRV-E0495340,1754602734,"Sharon Evans, MD",Individual,Internal Medicine,92-2273196,7722 Meadow Ln,Apt 637,Portland,OR,97267,(567) 284-5825,True,In-Network,Spanish; Korean; Tagalog,3.2,2016-06-01
+PRV-C5D86141,1840445669,San Antonio Clinic,Facility,Urgent Care,93-1199493,3321 Lincoln Blvd,,San Antonio,TX,78234,(683) 869-9399,True,Out-of-Network,Vietnamese; Tagalog,4.4,2018-08-01
+PRV-F3ACDAA0,1366377805,Portland Medical Associates,Facility,Pharmacy,27-3153282,9154 Valley Way,Apt 740,Portland,OR,97253,(512) 955-1158,True,In-Network,French; Vietnamese,3.8,2021-12-01
+PRV-EC1077E1,1186371597,"Deborah Clark, DO",Individual,Anesthesiology,91-6111102,480 Maple Dr,,Jacksonville,FL,32252,(295) 375-2709,True,In-Network,Hindi; English; Spanish,3.4,2021-05-01
+PRV-2C1DFD6E,1662128671,Baptist Imaging Center,Facility,Imaging Center,59-4464154,8691 Elm St,,Austin,TX,78776,(333) 410-6075,True,In-Network,Mandarin; Korean,4.2,2023-12-01
+PRV-9E42D606,1777901475,"Eric Nelson, NP",Individual,Gastroenterology,99-5990361,221 Ash Pl,Apt 457,Dallas,TX,75287,(600) 827-3869,True,In-Network,Arabic; Hindi; Vietnamese,4.8,2017-12-01
+PRV-67C2E4DF,1376815118,"Christine Rodriguez, PA",Individual,ENT,51-7880270,815 Magnolia Blvd,,Charlotte,NC,28245,(661) 368-5141,True,In-Network,Spanish,4.3,2022-07-01
+PRV-7371A097,1711837274,"Christine Reyes, DO",Individual,Gastroenterology,30-3862010,6599 Maple Dr,,Charlotte,NC,28227,(218) 821-2646,True,In-Network,Arabic; Mandarin; English,4.3,2015-11-01
+PRV-237848B4,1816470900,"Rachel Miller, PA",Individual,Rheumatology,58-4384602,3015 Hickory Ln,Suite 135,San Francisco,CA,94137,(455) 583-4908,True,In-Network,English,3.7,2018-11-01
+PRV-DED8B499,1386613315,"Michelle Harris, NP",Individual,Cardiology,51-3912886,2850 Spruce Ter,Suite 525,San Diego,CA,92123,(215) 611-6181,False,In-Network,Spanish,4.3,2019-11-01
+PRV-173E6706,1241956252,"Alexander Morgan, NP",Individual,Pediatrics,91-6334600,3680 Lake Dr,Suite 885,Los Angeles,CA,90073,(882) 693-2106,True,In-Network,Hindi; Arabic; Korean,4.3,2018-09-01
+PRV-E76077B3,1743263039,"Michael Moore, MD",Individual,Neurology,66-6514500,447 Cherry Ct,Apt 317,New York,NY,10041,(337) 484-6202,True,In-Network,Arabic; Korean; Tagalog,3.0,2020-06-01
+PRV-15507672,1017130232,Presbyterian Hospital,Facility,Hospital,21-3913796,4168 Poplar St,Apt 623,Nashville,TN,37276,(806) 762-4348,True,In-Network,Hindi; Korean; Spanish,4.4,2018-07-01
+PRV-280BCD04,1156627768,San Diego Physicians Group,Facility,Urgent Care,88-8271756,4775 Hill St,,San Diego,CA,92144,(978) 359-8897,False,In-Network,Korean,4.2,2017-09-01
+PRV-DB6003B6,1732300857,"Barbara Nelson, MD",Individual,Urology,61-7976304,7696 Juniper Pl,Apt 465,Dallas,TX,75281,(604) 960-7113,True,In-Network,Spanish; Arabic; English,5.0,2016-07-01
+PRV-DC2005C5,1066337050,"Samantha Mitchell, PA",Individual,Gastroenterology,99-3481086,7248 Cypress Rd,,Philadelphia,PA,19175,(467) 819-8462,True,In-Network,Mandarin,3.0,2016-11-01
+PRV-C38BE211,1869461195,"Dorothy Hill, NP",Individual,Urology,28-5513429,9703 Pine Rd,Apt 531,Charlotte,NC,28231,(966) 414-7520,True,In-Network,Hindi,3.0,2016-12-01
+PRV-90EA8CBE,1817932302,"Matthew Morales, MD",Individual,General Surgery,34-5351203,4824 River Rd,,Indianapolis,IN,46233,(618) 651-2789,True,In-Network,Spanish; Arabic,3.2,2016-06-01
+PRV-57E1688D,1138069847,San Diego Medical Center,Facility,Surgery Center,70-6654424,8049 Walnut Blvd,,San Diego,CA,92110,(818) 639-6514,True,In-Network,Vietnamese; French,4.3,2021-10-01
+PRV-CA341C57,1843579786,Memorial Pharmacy,Facility,Pharmacy,94-4153025,5510 Walnut Blvd,Apt 4,Columbus,OH,43227,(203) 853-6278,False,In-Network,French,4.4,2018-10-01
+PRV-34FD9606,1289802714,"Nicole Harris, PA",Individual,Pathology,96-8831655,1433 Jefferson Dr,,Raleigh,NC,27659,(372) 656-2895,True,In-Network,Vietnamese,3.3,2016-02-01
+PRV-74D70C9F,1128715399,"Christine Stewart, PA",Individual,Family Medicine,18-6758373,2725 Washington Ave,,Miami,FL,33138,(586) 934-7252,True,In-Network,Vietnamese; Tagalog,3.5,2019-02-01
+PRV-653EA06C,1690409836,Baptist Imaging Center,Facility,Imaging Center,64-6362719,9802 Sycamore Ave,Suite 218,Jacksonville,FL,32257,(989) 573-3069,True,In-Network,Spanish,3.8,2023-08-01
+PRV-E87065D1,1548149737,"Karen Jones, NP",Individual,Pharmacy,47-7320122,3686 Highland Ave,,Austin,TX,78786,(260) 541-3501,True,In-Network,Vietnamese; English; Arabic,4.6,2022-12-01
+PRV-C507564A,1443861259,"Stephanie Martinez, NP",Individual,Dermatology,16-6101515,453 Park Ave,Apt 346,Tampa,FL,33654,(668) 870-3681,True,In-Network,Korean; Mandarin,3.4,2018-12-01
+PRV-61D78F01,1157201859,"Debra Perez, MD",Individual,Allergy & Immunology,65-3492562,9531 Walnut Blvd,,Columbus,OH,43258,(842) 939-7619,True,In-Network,Hindi; Korean,4.4,2017-11-01
+PRV-D4293794,1111783099,"Melissa Johnson, MD",Individual,ENT,83-9044647,1568 Valley Way,Apt 886,Boston,MA,02145,(480) 910-2549,True,In-Network,Arabic; Korean,4.1,2016-06-01
+PRV-EDB0B7C4,1871898131,Detroit Wellness Center,Facility,Lab,33-4018851,3129 Park Ave,,Detroit,MI,48260,(205) 768-8327,True,In-Network,Vietnamese,4.3,2016-09-01
+PRV-43BC23FF,1408487297,"Jason Smith, MD",Individual,Internal Medicine,98-6250195,1486 Cherry Ct,,Boston,MA,02179,(735) 560-9818,True,In-Network,English; Vietnamese; Tagalog,3.4,2019-04-01
+PRV-FEA1EBAD,1626714628,"Stephen Allen, MD",Individual,Radiology,36-2183767,3639 Jefferson Dr,Suite 231,Atlanta,GA,30364,(844) 950-5413,True,In-Network,French,4.1,2023-10-01
+PRV-3B22C145,1186151554,Good Samaritan Urgent Care,Facility,Urgent Care,28-4787716,7204 Madison Ln,,Phoenix,AZ,85019,(480) 210-2604,True,Out-of-Network,Spanish; Tagalog,3.4,2019-10-01
+PRV-62D59817,1256258896,"Nicole Gonzalez, MD",Individual,Cardiology,71-3140306,8766 Jefferson Dr,,Seattle,WA,98180,(465) 209-9414,True,In-Network,Arabic,4.1,2019-01-01
+PRV-25333323,1446834146,"Ruth Reyes, NP",Individual,Rheumatology,50-2512308,4181 Lake Dr,,Minneapolis,MN,55466,(849) 281-2256,True,Out-of-Network,English,3.2,2019-09-01
+PRV-960562B6,1160930685,"Angela Morgan, PA",Individual,Family Medicine,41-9860239,7046 Meadow Ln,,Detroit,MI,48271,(900) 823-1693,True,Out-of-Network,Tagalog; Vietnamese; Spanish,3.2,2017-09-01
+PRV-55B5382D,1474430963,"Nathan Thomas, MD",Individual,Ophthalmology,49-9649141,8218 Madison Ln,,Los Angeles,CA,90053,(236) 674-8999,False,In-Network,French; Korean,3.7,2015-06-01
+PRV-83422976,1617024376,"Eric Rogers, MD",Individual,Urology,57-6021168,5908 Main St,Apt 104,Philadelphia,PA,19135,(573) 638-3984,True,In-Network,Hindi; Mandarin,3.3,2021-01-01
+PRV-BEF535B9,1237416787,"Catherine Nelson, MD",Individual,Gastroenterology,97-3137987,1913 Sycamore Ave,,Miami,FL,33160,(532) 969-7551,True,Out-of-Network,Mandarin; Spanish,4.9,2015-03-01
+PRV-F8ABF270,1674471639,Denver Medical Center,Facility,Hospital,29-9577181,3974 Cedar Ln,,Denver,CO,80264,(391) 455-5606,True,In-Network,Vietnamese; Arabic; Spanish,3.9,2016-12-01
+PRV-AF6BA8D8,1609310668,"Andrew Harris, MD",Individual,Dermatology,49-4882711,3191 Ash Pl,,Atlanta,GA,30361,(427) 544-7980,True,In-Network,English; Korean; Tagalog,3.5,2019-06-01
+PRV-E81C6A64,1491624755,"Margaret Torres, DO",Individual,Endocrinology,48-2871139,879 Willow Dr,,San Diego,CA,92194,(299) 885-1223,True,In-Network,French,3.7,2020-12-01
+PRV-B8AA2306,1910933711,"Elizabeth Wilson, MD",Individual,Pathology,79-6752873,6188 Magnolia Blvd,,Denver,CO,80284,(508) 942-8769,True,In-Network,Mandarin; English; Spanish,3.4,2023-12-01
+PRV-5BEC4277,1802942409,"Jacob Turner, NP",Individual,Radiology,17-4190874,5790 Franklin St,,Boston,MA,02165,(958) 607-9110,True,In-Network,Mandarin,3.9,2023-07-01
+PRV-E18FFA23,1788443448,"Justin Johnson, NP",Individual,Urology,25-3870734,4548 Hickory Ln,,Charlotte,NC,28283,(429) 246-9741,True,In-Network,Korean,4.9,2019-01-01
+PRV-3BE0661B,1842694500,"Michelle Hernandez, PA",Individual,Pharmacy,55-4678901,3540 Cherry Ct,,San Diego,CA,92190,(948) 486-3895,True,In-Network,Spanish; Arabic; French,3.5,2024-09-01
+PRV-C85B7FBD,1527172722,Methodist Clinic,Facility,Clinic,34-9229532,5412 Laurel Way,Apt 209,San Francisco,CA,94129,(946) 384-5621,False,In-Network,Arabic,4.4,2018-02-01
+PRV-2B9D231D,1916601002,Indianapolis Medical Center,Facility,Clinic,41-2402500,7555 Park Ave,Suite 841,Indianapolis,IN,46227,(474) 346-1221,True,In-Network,Tagalog,4.5,2020-12-01
+PRV-58C7543B,1084810018,University Surgery Center,Facility,Surgery Center,47-2720773,9321 Hill St,,Phoenix,AZ,85052,(723) 625-3323,False,In-Network,Arabic,3.8,2020-11-01
+PRV-608FE93D,1515109226,"Amanda Martinez, NP",Individual,Urology,77-6617751,1941 Highland Ave,,Tampa,FL,33623,(814) 385-7967,True,In-Network,Korean; French,4.8,2019-08-01
+PRV-4F3462BD,1711964215,"Timothy Edwards, PA",Individual,Occupational Therapy,26-4051311,1351 Main St,,Dallas,TX,75250,(985) 594-6777,True,In-Network,Arabic; French; Spanish,4.6,2018-07-01
+PRV-AD423E8E,1931350305,"Justin Turner, NP",Individual,Radiology,81-8951164,8845 Highland Ave,,Seattle,WA,98159,(336) 312-1976,True,In-Network,Korean,3.9,2023-07-01
+PRV-9E63756E,1501917920,San Diego Health Partners,Facility,Hospital,28-7127781,2357 Cherry Ct,,San Diego,CA,92158,(344) 280-5014,False,In-Network,Mandarin; Tagalog,3.9,2017-12-01
+PRV-62BEEDB8,1092820667,"Christopher Davis, PA",Individual,Psychiatry,80-5329433,6842 Lincoln Blvd,,Austin,TX,78746,(785) 713-6014,True,In-Network,Korean,4.9,2023-07-01
+PRV-3F9E6D9B,1775662056,"Jose Martinez, PA",Individual,Allergy & Immunology,34-5528498,3571 Park Ave,,Phoenix,AZ,85060,(311) 306-2274,True,In-Network,English; Vietnamese,3.6,2023-02-01
+PRV-3712A534,1909700514,Mercy Hospital,Facility,Hospital,11-6983579,5164 Sycamore Ave,,Atlanta,GA,30340,(969) 489-7523,True,In-Network,French; Mandarin,4.4,2016-06-01
+PRV-4B4B0F82,1227113322,"Kathleen Jones, MD",Individual,Emergency Medicine,74-9662089,1754 Meadow Ln,,Raleigh,NC,27613,(946) 823-9573,True,In-Network,French,3.6,2024-07-01
+PRV-5C0C3574,1710248171,Miami Medical Practice,Facility,Pharmacy,68-6263326,6450 Magnolia Blvd,Suite 725,Miami,FL,33119,(373) 502-3645,False,In-Network,Spanish; Tagalog,3.4,2022-05-01
+PRV-60D2FFE6,1692758955,"George Torres, DO",Individual,Physical Therapy,20-7932248,7342 Birch Way,Suite 226,Dallas,TX,75272,(718) 660-5306,True,Out-of-Network,English,4.5,2018-12-01
+PRV-045757DD,1157787112,"Mark Roberts, DO",Individual,Orthopedics,23-7659629,1825 Dogwood Ct,Suite 262,New York,NY,10061,(986) 643-4268,True,In-Network,Hindi; Vietnamese,4.4,2022-02-01
+PRV-9B45D7DF,1567303064,"Scott Carter, MD",Individual,Radiology,42-3954562,2651 Sunset Blvd,,Los Angeles,CA,90050,(285) 345-2134,True,In-Network,Hindi; Arabic; Korean,3.4,2019-03-01
+PRV-A9AA704B,1265960893,"Kathleen Morgan, PA",Individual,Ophthalmology,19-3426274,5703 Juniper Pl,,Chicago,IL,60663,(531) 880-6185,False,In-Network,Hindi,4.7,2016-11-01
+PRV-3217021B,1336829635,"Samantha Gonzalez, MD",Individual,Allergy & Immunology,36-4207115,160 Hill St,,Denver,CO,80291,(895) 790-1235,True,In-Network,Korean; Spanish,4.4,2022-07-01
+PRV-34447750,1289286646,"Ryan Diaz, MD",Individual,Pharmacy,91-5752118,8987 River Rd,,Columbus,OH,43224,(918) 835-2625,True,In-Network,Spanish,4.3,2024-07-01
+PRV-4AB26D1D,1633786137,Raleigh Healthcare,Facility,Pharmacy,25-6882321,9024 Walnut Blvd,Suite 554,Raleigh,NC,27684,(675) 622-7484,False,In-Network,Tagalog,3.6,2019-05-01
+PRV-3A560950,1955296386,"Christopher Mitchell, NP",Individual,Ophthalmology,34-7598776,4057 Main St,,Detroit,MI,48211,(252) 791-8030,False,In-Network,Mandarin; Arabic; Tagalog,4.0,2021-04-01
+PRV-E140329E,1253110609,Detroit Wellness Center,Facility,Clinic,29-1466714,8361 Cherry Ct,Apt 647,Detroit,MI,48290,(832) 924-9907,True,In-Network,English; Mandarin,5.0,2020-03-01
+PRV-0AA0C094,1120911791,San Diego Healthcare,Facility,Urgent Care,23-3379602,3275 Magnolia Blvd,Apt 744,San Diego,CA,92143,(489) 468-3959,False,In-Network,Vietnamese; Arabic,3.2,2015-07-01
+PRV-32B9CEFB,1299015579,St. Marys Hospital,Facility,Hospital,86-1084130,3545 Lake Dr,Apt 385,Minneapolis,MN,55430,(362) 734-5169,True,In-Network,Tagalog,3.0,2023-03-01
+PRV-F8AC26EB,1447315847,Columbus Clinic,Facility,Hospital,73-8315906,3654 Oak Ave,,Columbus,OH,43220,(724) 609-4163,True,In-Network,Korean; Arabic; English,4.2,2024-05-01
+PRV-CF7FB4B5,1919663955,San Antonio Medical Associates,Facility,Imaging Center,90-2078208,8092 River Rd,Apt 905,San Antonio,TX,78286,(660) 371-1553,True,In-Network,Korean; French,3.8,2016-03-01
+PRV-CD157384,1105053795,"Melissa Jackson, MD",Individual,Occupational Therapy,39-2111241,3146 Jefferson Dr,,Indianapolis,IN,46294,(594) 490-4476,True,In-Network,Spanish; Arabic,4.4,2021-06-01
+PRV-4BE481CA,1959639040,"Joseph Edwards, MD",Individual,Gastroenterology,92-1077963,913 Highland Ave,,San Antonio,TX,78263,(672) 491-3147,True,In-Network,Tagalog; English; Mandarin,4.3,2016-08-01
+PRV-D1E29D3C,1790647715,Baptist Surgery Center,Facility,Surgery Center,89-2723751,5031 Laurel Way,,Detroit,MI,48261,(229) 429-1783,True,In-Network,Arabic; Vietnamese,3.3,2018-12-01
+PRV-ED153507,1145964229,"Joseph Miller, MD",Individual,Pharmacy,68-3011612,8907 Main St,,Columbus,OH,43243,(329) 526-3424,True,In-Network,Hindi; Spanish,4.0,2018-10-01
+PRV-8529A6E1,1311703037,"Brian Young, PA",Individual,Oncology,59-4152731,5374 Sunset Blvd,,Seattle,WA,98147,(699) 307-6577,True,In-Network,Tagalog; French; Arabic,4.9,2022-11-01
+PRV-19F1BB9E,1363146249,Denver Wellness Center,Facility,Hospital,92-2712355,2230 Poplar St,Apt 939,Denver,CO,80267,(350) 672-2755,True,In-Network,Mandarin; Korean,3.1,2023-08-01
+PRV-42CFE1A8,1745106634,"Angela Nelson, MD",Individual,Radiology,34-7756052,1477 Jefferson Dr,,Houston,TX,77060,(380) 808-5520,True,In-Network,Spanish; English,4.3,2016-04-01
+PRV-489A671F,1666134732,Mercy Lab,Facility,Lab,36-6832315,4461 Magnolia Blvd,,Los Angeles,CA,90045,(852) 494-5718,True,In-Network,Hindi; Korean; Arabic,4.8,2018-03-01
+PRV-76C23EF1,1241209579,"Sharon Nelson, MD",Individual,Dermatology,10-9192437,3169 Lincoln Blvd,,Chicago,IL,60611,(453) 683-2792,False,In-Network,Korean; Vietnamese; Tagalog,4.0,2017-02-01
+PRV-3334E6E4,1457054589,Presbyterian Imaging Center,Facility,Imaging Center,71-2891816,5599 Hill St,,Detroit,MI,48279,(476) 902-9508,True,In-Network,Vietnamese; Mandarin,3.7,2015-04-01
+PRV-34A607E4,1314829375,Dr. Anchor 07E4,Individual,Family Medicine,86-3999805,200 Medical Dr,,Dallas,TX,75201,(555) 000-0001,True,In-Network,English,4.5,2020-01-01
+PRV-9C40752C,1347242720,Dr. Anchor 752C,Individual,Family Medicine,41-3235470,200 Medical Dr,,Dallas,TX,75201,(555) 000-0001,True,In-Network,English,4.5,2020-01-01

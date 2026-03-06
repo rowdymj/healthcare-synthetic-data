@@ -1,21 +1,21 @@
 agent_id,name,department,role,hire_date,languages,avg_handle_time_seconds,satisfaction_score
-AGT-0001,Maria Garcia,Enrollment,Supervisor,2019-11-12,"['English', 'Spanish']",579,3.36
-AGT-0002,Sarah Lopez,Clinical,Clinical Reviewer,2020-03-09,['English'],600,3.42
-AGT-0003,Sarah Davis,Enrollment,Senior Agent,2015-06-13,['English'],348,3.77
-AGT-0004,Christopher Hernandez,Enrollment,Senior Agent,2016-06-04,['English'],364,3.0
-AGT-0005,Sarah Martin,Pharmacy,Senior Agent,2017-11-30,['English'],399,4.21
-AGT-0006,Anthony Jones,Pharmacy,Senior Agent,2023-04-23,['English'],510,4.21
-AGT-0007,Robert Davis,Member Services,Supervisor,2016-01-05,['English'],481,3.42
-AGT-0008,Matthew Jackson,Claims,Supervisor,2022-10-03,"['English', 'Spanish']",553,4.48
-AGT-0009,Lisa Lopez,Appeals,Senior Agent,2019-05-03,"['English', 'Spanish']",396,4.51
-AGT-0010,Michael Williams,Member Services,Supervisor,2017-05-21,['English'],452,3.83
-AGT-0011,David Miller,Enrollment,Clinical Reviewer,2022-09-29,['English'],540,4.33
-AGT-0012,Jennifer Williams,Member Services,Agent,2023-05-26,['English'],471,3.64
-AGT-0013,Katherine Hernandez,Enrollment,Agent,2016-07-22,"['English', 'Spanish']",414,3.39
-AGT-0014,Daniel Miller,Clinical,Senior Agent,2023-03-06,"['English', 'Spanish']",422,3.55
-AGT-0015,Ashley Wilson,Enrollment,Senior Agent,2019-07-20,['English'],471,4.13
-AGT-0016,Patricia Lopez,Enrollment,Senior Agent,2015-12-25,"['English', 'Spanish']",347,3.83
-AGT-0017,Sandra Moore,Clinical,Supervisor,2018-07-10,['English'],544,4.6
-AGT-0018,James Martin,Member Services,Senior Agent,2018-06-27,"['English', 'Spanish']",463,3.81
-AGT-0019,Sandra Anderson,Enrollment,Senior Agent,2021-12-08,['English'],388,3.7
-AGT-0020,Jennifer Martinez,Enrollment,Senior Agent,2018-10-06,['English'],375,3.75
+AGT-0001,Lisa Martinez,Member Services,Supervisor,2022-08-10,English,507,3.75
+AGT-0002,Robert Moore,Member Services,Agent,2022-12-02,English,478,3.71
+AGT-0003,Nancy Jackson,Claims,Supervisor,2019-04-27,English; Spanish,559,3.7
+AGT-0004,Matthew Johnson,Clinical,Senior Agent,2023-02-06,English,393,4.38
+AGT-0005,Sarah Martinez,Clinical,Agent,2022-11-08,English,426,3.66
+AGT-0006,David Williams,Appeals,Agent,2022-10-23,English; Spanish,449,3.81
+AGT-0007,Sarah Jones,Pharmacy,Agent,2022-05-29,English,401,3.0
+AGT-0008,Karen Moore,Member Services,Agent,2024-12-31,English; Spanish,426,3.46
+AGT-0009,Lisa Miller,Pharmacy,Senior Agent,2020-09-03,English,364,3.6
+AGT-0010,David Jones,Claims,Clinical Reviewer,2021-12-21,English,500,4.06
+AGT-0011,Lisa Taylor,Clinical,Senior Agent,2020-08-18,English,430,3.39
+AGT-0012,Karen Martin,Pharmacy,Supervisor,2023-01-12,English,524,4.04
+AGT-0013,James Thomas,Enrollment,Senior Agent,2019-12-08,English,362,3.72
+AGT-0014,Sarah Jones,Appeals,Supervisor,2024-09-15,English,624,3.77
+AGT-0015,Christopher Martinez,Appeals,Clinical Reviewer,2020-10-12,English,504,4.25
+AGT-0016,David Jackson,Appeals,Supervisor,2015-02-05,English,475,3.65
+AGT-0017,John Martin,Enrollment,Agent,2023-10-01,English,501,3.49
+AGT-0018,Katherine Garcia,Appeals,Senior Agent,2020-09-02,English,422,3.29
+AGT-0019,Jennifer Anderson,Appeals,Senior Agent,2023-06-06,English,475,3.64
+AGT-0020,Maria Miller,Pharmacy,Senior Agent,2017-11-23,English,422,3.62
