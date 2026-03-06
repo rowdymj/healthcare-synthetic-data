@@ -8,6 +8,7 @@ case notes, and agent profiles for a healthcare synthetic dataset.
 import json
 import csv
 import random
+from collections import defaultdict
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import List, Dict, Any
@@ -108,8 +109,8 @@ DIAGNOSES = [
 ]
 
 
-def load_existing_data() -> Dict[str, List[Dict[str, Any]]]:
-    """Load existing data from JSON files"""
+def load_existing_data() -> Dict[str, Any]:
+    """Load existing data from JSON files and build member-to-claims indexes."""
     data = {}
 
     print("Loading existing data...")
@@ -133,6 +134,17 @@ def load_existing_data() -> Dict[str, List[Dict[str, Any]]]:
     with open(JSON_DIR / "authorizations.json", "r") as f:
         data["authorizations"] = json.load(f)
     print(f"Loaded {len(data['authorizations'])} authorizations")
+
+    # Build member -> claim_ids and member -> auth_ids indexes
+    claims_by_member = defaultdict(list)
+    for c in data["medical_claims"]:
+        claims_by_member[c["member_id"]].append(c["claim_id"])
+    data["claims_by_member"] = claims_by_member
+
+    auths_by_member = defaultdict(list)
+    for a in data["authorizations"]:
+        auths_by_member[a["member_id"]].append(a["auth_id"])
+    data["auths_by_member"] = auths_by_member
 
     return data
 
@@ -180,13 +192,14 @@ def generate_random_date(start_date: datetime, end_date: datetime) -> datetime:
 
 
 def generate_call_logs(data: Dict, count: int = 3000) -> List[Dict[str, Any]]:
-    """Generate realistic call logs"""
+    """Generate realistic call logs with same-member claim/auth references."""
     print(f"\nGenerating {count} call logs...")
 
     call_logs = []
     member_ids = [m["member_id"] for m in data["members"]]
     claim_ids = [c["claim_id"] for c in data["medical_claims"]]
-    auth_ids = [a["auth_id"] for a in data["authorizations"]]
+    claims_by_member = data["claims_by_member"]
+    auths_by_member = data["auths_by_member"]
 
     agent_ids = [f"AGT-{i:04d}" for i in range(1, 21)]
 
@@ -216,9 +229,13 @@ def generate_call_logs(data: Dict, count: int = 3000) -> List[Dict[str, Any]]:
             weights=[60, 15, 15, 5, 5]
         )[0]
 
+        member_id = random.choice(member_ids)
+        member_claims = claims_by_member.get(member_id, [])
+        member_auths = auths_by_member.get(member_id, [])
+
         call_log = {
             "call_id": generate_call_id(),
-            "member_id": random.choice(member_ids),
+            "member_id": member_id,
             "agent_id": random.choice(agent_ids),
             "call_date": call_date.strftime("%Y-%m-%d"),
             "call_time": call_time,
@@ -226,8 +243,8 @@ def generate_call_logs(data: Dict, count: int = 3000) -> List[Dict[str, Any]]:
             "call_type": random.choice(CALL_TYPES),
             "call_reason": call_reason,
             "disposition": disposition,
-            "related_claim_id": random.choice([random.choice(claim_ids), None]),
-            "related_auth_id": random.choice([random.choice(auth_ids), None]),
+            "related_claim_id": random.choice(member_claims) if member_claims and random.random() > 0.5 else None,
+            "related_auth_id": random.choice(member_auths) if member_auths and random.random() > 0.5 else None,
             "sentiment": sentiment,
             "notes": notes,
             "queue_wait_seconds": random.randint(0, 900),
@@ -324,12 +341,13 @@ def generate_ivr_path() -> str:
 
 
 def generate_secure_messages(data: Dict, count: int = 2000) -> List[Dict[str, Any]]:
-    """Generate realistic secure messages"""
+    """Generate realistic secure messages with same-member claim references."""
     print(f"Generating {count} secure messages...")
 
     messages = []
     member_ids = [m["member_id"] for m in data["members"]]
     claim_ids = [c["claim_id"] for c in data["medical_claims"]]
+    claims_by_member = data["claims_by_member"]
 
     start_date = datetime(2024, 1, 1)
     end_date = datetime(2025, 2, 28)
@@ -365,17 +383,20 @@ def generate_secure_messages(data: Dict, count: int = 2000) -> List[Dict[str, An
         if status == "Replied" and direction == "Outbound":
             response_time = round(random.uniform(0.5, 48), 1)
 
+        member_id = random.choice(member_ids)
+        member_claims = claims_by_member.get(member_id, [])
+
         message = {
             "message_id": generate_message_id(),
             "thread_id": thread_id,
-            "member_id": random.choice(member_ids),
+            "member_id": member_id,
             "direction": direction,
             "sent_date": sent_date.strftime("%Y-%m-%d %H:%M:%S"),
             "subject": subject,
             "body": body,
             "category": category,
             "status": status,
-            "related_claim_id": random.choice([random.choice(claim_ids), None]),
+            "related_claim_id": random.choice(member_claims) if member_claims and random.random() > 0.5 else None,
             "priority": priority,
             "response_time_hours": response_time
         }
@@ -474,13 +495,13 @@ def generate_message_content(category: str, direction: str, claim_ids: List[str]
 
 
 def generate_case_notes(data: Dict, count: int = 1500) -> List[Dict[str, Any]]:
-    """Generate realistic case notes"""
+    """Generate realistic case notes with same-member claim/auth references."""
     print(f"Generating {count} case notes...")
 
     case_notes = []
     member_ids = [m["member_id"] for m in data["members"]]
-    claim_ids = [c["claim_id"] for c in data["medical_claims"]]
-    auth_ids = [a["auth_id"] for a in data["authorizations"]]
+    claims_by_member = data["claims_by_member"]
+    auths_by_member = data["auths_by_member"]
 
     start_date = datetime(2024, 1, 1)
     end_date = datetime(2025, 2, 28)
@@ -507,17 +528,21 @@ def generate_case_notes(data: Dict, count: int = 1500) -> List[Dict[str, Any]]:
             weights=[25, 50, 25]
         )[0]
 
+        member_id = random.choice(member_ids)
+        member_claims = claims_by_member.get(member_id, [])
+        member_auths = auths_by_member.get(member_id, [])
+
         case_note = {
             "note_id": generate_note_id(),
-            "member_id": random.choice(member_ids),
+            "member_id": member_id,
             "case_id": generate_case_id(),
             "author": generate_agent_name(),
             "created_date": created_date.strftime("%Y-%m-%d %H:%M:%S"),
             "category": category,
             "note_type": note_type,
             "content": content,
-            "related_claim_id": random.choice([random.choice(claim_ids), None]),
-            "related_auth_id": random.choice([random.choice(auth_ids), None]),
+            "related_claim_id": random.choice(member_claims) if member_claims and random.random() > 0.5 else None,
+            "related_auth_id": random.choice(member_auths) if member_auths and random.random() > 0.5 else None,
             "follow_up_required": follow_up_required,
             "follow_up_date": follow_up_date,
             "status": status

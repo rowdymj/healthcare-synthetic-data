@@ -1,7 +1,7 @@
 [
   {
-    "plan_id": "PLN-10BB3B55",
-    "employer_id": "EMP-A2B12586",
+    "plan_id": "PLN-A1F7122D",
+    "employer_id": "EMP-08EABF98",
     "plan_name": "Acme Corporation Silver HMO",
     "plan_type": "HMO",
     "tier": "Silver",
@@ -28,8 +28,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-07AA3535",
-    "employer_id": "EMP-712A6693",
+    "plan_id": "PLN-0B434B81",
+    "employer_id": "EMP-55218316",
     "plan_name": "GlobalTech Industries Gold EPO",
     "plan_type": "EPO",
     "tier": "Gold",
@@ -56,8 +56,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-BC35E484",
-    "employer_id": "EMP-712A6693",
+    "plan_id": "PLN-5B843337",
+    "employer_id": "EMP-55218316",
     "plan_name": "GlobalTech Industries Gold EPO",
     "plan_type": "EPO",
     "tier": "Gold",
@@ -84,8 +84,8 @@
     "pharmacy_benefit_manager": "CVS Caremark"
   },
   {
-    "plan_id": "PLN-A153B0E5",
-    "employer_id": "EMP-82A6A329",
+    "plan_id": "PLN-5869C497",
+    "employer_id": "EMP-132801F2",
     "plan_name": "Meridian Healthcare Systems Bronze HDHP",
     "plan_type": "HDHP",
     "tier": "Bronze",
@@ -112,8 +112,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-E6364680",
-    "employer_id": "EMP-82A6A329",
+    "plan_id": "PLN-85EB84C6",
+    "employer_id": "EMP-132801F2",
     "plan_name": "Meridian Healthcare Systems Gold PPO",
     "plan_type": "PPO",
     "tier": "Gold",
@@ -140,8 +140,8 @@
     "pharmacy_benefit_manager": "CVS Caremark"
   },
   {
-    "plan_id": "PLN-15832FFE",
-    "employer_id": "EMP-6D5C2D0C",
+    "plan_id": "PLN-3548D052",
+    "employer_id": "EMP-823D57E7",
     "plan_name": "Pinnacle Financial Group Bronze HMO",
     "plan_type": "HMO",
     "tier": "Bronze",
@@ -168,8 +168,8 @@
     "pharmacy_benefit_manager": "MedImpact"
   },
   {
-    "plan_id": "PLN-B4CC39F0",
-    "employer_id": "EMP-6D5C2D0C",
+    "plan_id": "PLN-9EE2ECF1",
+    "employer_id": "EMP-823D57E7",
     "plan_name": "Pinnacle Financial Group Platinum HDHP",
     "plan_type": "HDHP",
     "tier": "Platinum",
@@ -196,8 +196,8 @@
     "pharmacy_benefit_manager": "CVS Caremark"
   },
   {
-    "plan_id": "PLN-4A6FEBDA",
-    "employer_id": "EMP-6D5C2D0C",
+    "plan_id": "PLN-5291B1CF",
+    "employer_id": "EMP-823D57E7",
     "plan_name": "Pinnacle Financial Group Silver PPO",
     "plan_type": "PPO",
     "tier": "Silver",
@@ -224,8 +224,8 @@
     "pharmacy_benefit_manager": "OptumRx"
   },
   {
-    "plan_id": "PLN-10CA1DF3",
-    "employer_id": "EMP-F652468B",
+    "plan_id": "PLN-0021BE4C",
+    "employer_id": "EMP-DF5849C1",
     "plan_name": "Summit Manufacturing Co Silver HDHP",
     "plan_type": "HDHP",
     "tier": "Silver",
@@ -252,8 +252,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-3D7F7F70",
-    "employer_id": "EMP-F652468B",
+    "plan_id": "PLN-F31A2461",
+    "employer_id": "EMP-DF5849C1",
     "plan_name": "Summit Manufacturing Co Platinum PPO",
     "plan_type": "PPO",
     "tier": "Platinum",
@@ -280,8 +280,8 @@
     "pharmacy_benefit_manager": "OptumRx"
   },
   {
-    "plan_id": "PLN-371B77A5",
-    "employer_id": "EMP-06437E66",
+    "plan_id": "PLN-9A5DCA41",
+    "employer_id": "EMP-EC0B4754",
     "plan_name": "Horizon Media Group Bronze HMO",
     "plan_type": "HMO",
     "tier": "Bronze",
@@ -308,8 +308,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-BDBAD37E",
-    "employer_id": "EMP-C21CF936",
+    "plan_id": "PLN-37BA0BA0",
+    "employer_id": "EMP-6EDD3EEB",
     "plan_name": "Cascade Energy Solutions Platinum POS",
     "plan_type": "POS",
     "tier": "Platinum",
@@ -336,8 +336,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-B2A6EB9C",
-    "employer_id": "EMP-C21CF936",
+    "plan_id": "PLN-A7A66E77",
+    "employer_id": "EMP-6EDD3EEB",
     "plan_name": "Cascade Energy Solutions Bronze HDHP",
     "plan_type": "HDHP",
     "tier": "Bronze",
@@ -364,8 +364,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-94E60976",
-    "employer_id": "EMP-1F3D4A21",
+    "plan_id": "PLN-0524EC5B",
+    "employer_id": "EMP-2575D1BC",
     "plan_name": "Sterling Logistics Inc Platinum PPO",
     "plan_type": "PPO",
     "tier": "Platinum",
@@ -392,8 +392,8 @@
     "pharmacy_benefit_manager": "CVS Caremark"
   },
   {
-    "plan_id": "PLN-C46D85F5",
-    "employer_id": "EMP-1F3D4A21",
+    "plan_id": "PLN-09B10DCE",
+    "employer_id": "EMP-2575D1BC",
     "plan_name": "Sterling Logistics Inc Platinum HDHP",
     "plan_type": "HDHP",
     "tier": "Platinum",
@@ -420,8 +420,8 @@
     "pharmacy_benefit_manager": "MedImpact"
   },
   {
-    "plan_id": "PLN-C02BBE21",
-    "employer_id": "EMP-ADBBA4AC",
+    "plan_id": "PLN-C0F63B13",
+    "employer_id": "EMP-DA5C85E5",
     "plan_name": "Vanguard Retail Corp Gold EPO",
     "plan_type": "EPO",
     "tier": "Gold",
@@ -448,8 +448,8 @@
     "pharmacy_benefit_manager": "OptumRx"
   },
   {
-    "plan_id": "PLN-4AD0B446",
-    "employer_id": "EMP-ADBBA4AC",
+    "plan_id": "PLN-8DD0A7CF",
+    "employer_id": "EMP-DA5C85E5",
     "plan_name": "Vanguard Retail Corp Gold POS",
     "plan_type": "POS",
     "tier": "Gold",
@@ -476,8 +476,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-AC87C543",
-    "employer_id": "EMP-ADBBA4AC",
+    "plan_id": "PLN-D2306CE5",
+    "employer_id": "EMP-DA5C85E5",
     "plan_name": "Vanguard Retail Corp Platinum HDHP",
     "plan_type": "HDHP",
     "tier": "Platinum",
@@ -504,8 +504,8 @@
     "pharmacy_benefit_manager": "OptumRx"
   },
   {
-    "plan_id": "PLN-DC38D8AC",
-    "employer_id": "EMP-C562B04C",
+    "plan_id": "PLN-48B86B82",
+    "employer_id": "EMP-B48DF0E2",
     "plan_name": "Apex Construction LLC Platinum HMO",
     "plan_type": "HMO",
     "tier": "Platinum",
@@ -532,8 +532,8 @@
     "pharmacy_benefit_manager": "CVS Caremark"
   },
   {
-    "plan_id": "PLN-B25FC91D",
-    "employer_id": "EMP-7BA695B3",
+    "plan_id": "PLN-55656803",
+    "employer_id": "EMP-D4C99B0F",
     "plan_name": "Quantum Software Solutions Silver HMO",
     "plan_type": "HMO",
     "tier": "Silver",
@@ -560,8 +560,8 @@
     "pharmacy_benefit_manager": "MedImpact"
   },
   {
-    "plan_id": "PLN-1A96FD7E",
-    "employer_id": "EMP-7BA695B3",
+    "plan_id": "PLN-8FBFC4ED",
+    "employer_id": "EMP-D4C99B0F",
     "plan_name": "Quantum Software Solutions Silver PPO",
     "plan_type": "PPO",
     "tier": "Silver",
@@ -588,8 +588,8 @@
     "pharmacy_benefit_manager": "MedImpact"
   },
   {
-    "plan_id": "PLN-B7ED652F",
-    "employer_id": "EMP-7BA695B3",
+    "plan_id": "PLN-1E4602F3",
+    "employer_id": "EMP-D4C99B0F",
     "plan_name": "Quantum Software Solutions Platinum HMO",
     "plan_type": "HMO",
     "tier": "Platinum",
@@ -616,8 +616,8 @@
     "pharmacy_benefit_manager": "MedImpact"
   },
   {
-    "plan_id": "PLN-23AA4DB2",
-    "employer_id": "EMP-DBD29718",
+    "plan_id": "PLN-0A8C96D1",
+    "employer_id": "EMP-788C5CE6",
     "plan_name": "Heritage Foods International Platinum EPO",
     "plan_type": "EPO",
     "tier": "Platinum",
@@ -644,8 +644,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-674D0350",
-    "employer_id": "EMP-DBD29718",
+    "plan_id": "PLN-A79CC05F",
+    "employer_id": "EMP-788C5CE6",
     "plan_name": "Heritage Foods International Bronze HDHP",
     "plan_type": "HDHP",
     "tier": "Bronze",
@@ -672,8 +672,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-FDCC1F6F",
-    "employer_id": "EMP-4129A363",
+    "plan_id": "PLN-4EED8F61",
+    "employer_id": "EMP-2FCDCBBA",
     "plan_name": "Titan Aerospace Engineering Silver POS",
     "plan_type": "POS",
     "tier": "Silver",
@@ -700,8 +700,8 @@
     "pharmacy_benefit_manager": "MedImpact"
   },
   {
-    "plan_id": "PLN-474FB782",
-    "employer_id": "EMP-4129A363",
+    "plan_id": "PLN-D1286215",
+    "employer_id": "EMP-2FCDCBBA",
     "plan_name": "Titan Aerospace Engineering Silver HDHP",
     "plan_type": "HDHP",
     "tier": "Silver",
@@ -728,8 +728,8 @@
     "pharmacy_benefit_manager": "CVS Caremark"
   },
   {
-    "plan_id": "PLN-BB9636E7",
-    "employer_id": "EMP-4129A363",
+    "plan_id": "PLN-2771C27A",
+    "employer_id": "EMP-2FCDCBBA",
     "plan_name": "Titan Aerospace Engineering Gold HDHP",
     "plan_type": "HDHP",
     "tier": "Gold",
@@ -756,8 +756,8 @@
     "pharmacy_benefit_manager": "CVS Caremark"
   },
   {
-    "plan_id": "PLN-43D2B45F",
-    "employer_id": "EMP-8EDD567A",
+    "plan_id": "PLN-38B449E5",
+    "employer_id": "EMP-060B5767",
     "plan_name": "Coastal Hospitality Group Gold PPO",
     "plan_type": "PPO",
     "tier": "Gold",
@@ -784,8 +784,8 @@
     "pharmacy_benefit_manager": "MedImpact"
   },
   {
-    "plan_id": "PLN-52AA15AC",
-    "employer_id": "EMP-E221F7C8",
+    "plan_id": "PLN-4D23C5EF",
+    "employer_id": "EMP-FA66821C",
     "plan_name": "Redwood Consulting Partners Bronze HDHP",
     "plan_type": "HDHP",
     "tier": "Bronze",
@@ -812,8 +812,8 @@
     "pharmacy_benefit_manager": "OptumRx"
   },
   {
-    "plan_id": "PLN-384BC322",
-    "employer_id": "EMP-E221F7C8",
+    "plan_id": "PLN-64FC865A",
+    "employer_id": "EMP-FA66821C",
     "plan_name": "Redwood Consulting Partners Silver HDHP",
     "plan_type": "HDHP",
     "tier": "Silver",
@@ -840,8 +840,8 @@
     "pharmacy_benefit_manager": "OptumRx"
   },
   {
-    "plan_id": "PLN-7B510F89",
-    "employer_id": "EMP-E221F7C8",
+    "plan_id": "PLN-0FF910D0",
+    "employer_id": "EMP-FA66821C",
     "plan_name": "Redwood Consulting Partners Platinum HMO",
     "plan_type": "HMO",
     "tier": "Platinum",
@@ -868,8 +868,8 @@
     "pharmacy_benefit_manager": "OptumRx"
   },
   {
-    "plan_id": "PLN-C89F33E6",
-    "employer_id": "EMP-0D7C111A",
+    "plan_id": "PLN-8DB2C19C",
+    "employer_id": "EMP-9641BB3D",
     "plan_name": "Atlas Transportation Co Bronze EPO",
     "plan_type": "EPO",
     "tier": "Bronze",
@@ -896,8 +896,8 @@
     "pharmacy_benefit_manager": "OptumRx"
   },
   {
-    "plan_id": "PLN-D9A71DAC",
-    "employer_id": "EMP-0D7C111A",
+    "plan_id": "PLN-38850E85",
+    "employer_id": "EMP-9641BB3D",
     "plan_name": "Atlas Transportation Co Gold HMO",
     "plan_type": "HMO",
     "tier": "Gold",
@@ -924,8 +924,8 @@
     "pharmacy_benefit_manager": "OptumRx"
   },
   {
-    "plan_id": "PLN-3092BAD9",
-    "employer_id": "EMP-0D7C111A",
+    "plan_id": "PLN-79035599",
+    "employer_id": "EMP-9641BB3D",
     "plan_name": "Atlas Transportation Co Bronze EPO",
     "plan_type": "EPO",
     "tier": "Bronze",
@@ -952,8 +952,8 @@
     "pharmacy_benefit_manager": "MedImpact"
   },
   {
-    "plan_id": "PLN-1D01192A",
-    "employer_id": "EMP-029CD8A5",
+    "plan_id": "PLN-31712EB1",
+    "employer_id": "EMP-2D272DE5",
     "plan_name": "Beacon Education Foundation Silver HMO",
     "plan_type": "HMO",
     "tier": "Silver",
@@ -980,8 +980,8 @@
     "pharmacy_benefit_manager": "MedImpact"
   },
   {
-    "plan_id": "PLN-1ED1DAED",
-    "employer_id": "EMP-029CD8A5",
+    "plan_id": "PLN-E3134F3C",
+    "employer_id": "EMP-2D272DE5",
     "plan_name": "Beacon Education Foundation Silver PPO",
     "plan_type": "PPO",
     "tier": "Silver",
@@ -1008,8 +1008,8 @@
     "pharmacy_benefit_manager": "MedImpact"
   },
   {
-    "plan_id": "PLN-58CDA3AC",
-    "employer_id": "EMP-5E36E698",
+    "plan_id": "PLN-641FC14E",
+    "employer_id": "EMP-ACCD0AB9",
     "plan_name": "Ironclad Security Services Gold HMO",
     "plan_type": "HMO",
     "tier": "Gold",
@@ -1036,8 +1036,8 @@
     "pharmacy_benefit_manager": "CVS Caremark"
   },
   {
-    "plan_id": "PLN-2F016FF3",
-    "employer_id": "EMP-5E36E698",
+    "plan_id": "PLN-A3CB8A18",
+    "employer_id": "EMP-ACCD0AB9",
     "plan_name": "Ironclad Security Services Silver POS",
     "plan_type": "POS",
     "tier": "Silver",
@@ -1064,8 +1064,8 @@
     "pharmacy_benefit_manager": "CVS Caremark"
   },
   {
-    "plan_id": "PLN-70E22D3E",
-    "employer_id": "EMP-32C946FC",
+    "plan_id": "PLN-08CDDAA7",
+    "employer_id": "EMP-C6908DB9",
     "plan_name": "Sapphire Telecommunications Gold POS",
     "plan_type": "POS",
     "tier": "Gold",
@@ -1092,8 +1092,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-51BD531E",
-    "employer_id": "EMP-143C232D",
+    "plan_id": "PLN-91A68284",
+    "employer_id": "EMP-CA4D951E",
     "plan_name": "Metro Transit Authority Gold POS",
     "plan_type": "POS",
     "tier": "Gold",
@@ -1120,8 +1120,8 @@
     "pharmacy_benefit_manager": "OptumRx"
   },
   {
-    "plan_id": "PLN-A641F08A",
-    "employer_id": "EMP-143C232D",
+    "plan_id": "PLN-E90E1C28",
+    "employer_id": "EMP-CA4D951E",
     "plan_name": "Metro Transit Authority Gold POS",
     "plan_type": "POS",
     "tier": "Gold",
@@ -1148,8 +1148,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-EB2B456B",
-    "employer_id": "EMP-143C232D",
+    "plan_id": "PLN-E60FBBBC",
+    "employer_id": "EMP-CA4D951E",
     "plan_name": "Metro Transit Authority Gold EPO",
     "plan_type": "EPO",
     "tier": "Gold",
@@ -1176,8 +1176,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-FBD0E714",
-    "employer_id": "EMP-C0F92299",
+    "plan_id": "PLN-227ACF91",
+    "employer_id": "EMP-22AA0BE9",
     "plan_name": "Evergreen Environmental Services Bronze HDHP",
     "plan_type": "HDHP",
     "tier": "Bronze",
@@ -1204,8 +1204,8 @@
     "pharmacy_benefit_manager": "MedImpact"
   },
   {
-    "plan_id": "PLN-AAF39C04",
-    "employer_id": "EMP-C0F92299",
+    "plan_id": "PLN-AA1259B4",
+    "employer_id": "EMP-22AA0BE9",
     "plan_name": "Evergreen Environmental Services Bronze POS",
     "plan_type": "POS",
     "tier": "Bronze",
@@ -1232,8 +1232,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-63FB9BB0",
-    "employer_id": "EMP-C0F92299",
+    "plan_id": "PLN-F3CF54FD",
+    "employer_id": "EMP-22AA0BE9",
     "plan_name": "Evergreen Environmental Services Platinum PPO",
     "plan_type": "PPO",
     "tier": "Platinum",
@@ -1260,8 +1260,8 @@
     "pharmacy_benefit_manager": "MedImpact"
   },
   {
-    "plan_id": "PLN-5D87350B",
-    "employer_id": "EMP-FA89C4F0",
+    "plan_id": "PLN-FD9F1942",
+    "employer_id": "EMP-79CFB3CC",
     "plan_name": "Diamond Mining Operations Gold HDHP",
     "plan_type": "HDHP",
     "tier": "Gold",
@@ -1288,8 +1288,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-68243F78",
-    "employer_id": "EMP-FA89C4F0",
+    "plan_id": "PLN-F13400B5",
+    "employer_id": "EMP-79CFB3CC",
     "plan_name": "Diamond Mining Operations Silver PPO",
     "plan_type": "PPO",
     "tier": "Silver",
@@ -1316,8 +1316,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-50A07F29",
-    "employer_id": "EMP-CDAEA330",
+    "plan_id": "PLN-87646089",
+    "employer_id": "EMP-CD4BA896",
     "plan_name": "Liberty Insurance Brokers Gold HMO",
     "plan_type": "HMO",
     "tier": "Gold",
@@ -1344,8 +1344,8 @@
     "pharmacy_benefit_manager": "Express Scripts"
   },
   {
-    "plan_id": "PLN-3F0D0B89",
-    "employer_id": "EMP-CDAEA330",
+    "plan_id": "PLN-289A15AD",
+    "employer_id": "EMP-CD4BA896",
     "plan_name": "Liberty Insurance Brokers Platinum POS",
     "plan_type": "POS",
     "tier": "Platinum",
@@ -1372,8 +1372,8 @@
     "pharmacy_benefit_manager": "CVS Caremark"
   },
   {
-    "plan_id": "PLN-8E11611F",
-    "employer_id": "EMP-BEA02DE5",
+    "plan_id": "PLN-74014CFB",
+    "employer_id": "EMP-C7867AA8",
     "plan_name": "Pacific Marine Industries Silver EPO",
     "plan_type": "EPO",
     "tier": "Silver",

@@ -1,51 +1,51 @@
 plan_id,employer_id,plan_name,plan_type,tier,effective_date,termination_date,status,deductible_individual,deductible_family,out_of_pocket_max_individual,out_of_pocket_max_family,monthly_premium_individual,monthly_premium_family,coinsurance_in_network,coinsurance_out_of_network,copay_pcp,copay_specialist,copay_er,copay_urgent_care,copay_rx_generic,copay_rx_preferred_brand,copay_rx_non_preferred,copay_rx_specialty,network_name,pharmacy_benefit_manager
-PLN-10BB3B55,EMP-A2B12586,Acme Corporation Silver HMO,HMO,Silver,2018-01-01,,Active,3000,5500,6000,10500,450,1173.78,90,70,40,75,350,75,5,30,75,200,Preferred Network,Express Scripts
-PLN-07AA3535,EMP-712A6693,GlobalTech Industries Gold EPO,EPO,Gold,2020-01-01,,Active,1250,3000,5000,6500,700,2414.21,80,60,20,75,150,100,15,50,100,200,Choice Access,Express Scripts
-PLN-BC35E484,EMP-712A6693,GlobalTech Industries Gold EPO,EPO,Gold,2020-01-01,,Active,1750,1000,5500,8000,750,2336.64,90,70,35,60,300,100,10,50,60,200,Select Access,CVS Caremark
-PLN-A153B0E5,EMP-82A6A329,Meridian Healthcare Systems Bronze HDHP,HDHP,Bronze,2022-01-01,,Active,5250,10500,7500,17000,300,995.53,90,60,35,75,200,100,10,50,60,150,Choice Network,Express Scripts
-PLN-E6364680,EMP-82A6A329,Meridian Healthcare Systems Gold PPO,PPO,Gold,2022-01-01,,Active,750,1500,3500,6000,550,1456.16,80,60,40,40,300,75,15,50,60,300,Select Access,CVS Caremark
-PLN-15832FFE,EMP-6D5C2D0C,Pinnacle Financial Group Bronze HMO,HMO,Bronze,2023-01-01,,Active,6250,9500,7500,18000,275,934.23,80,70,25,40,300,50,10,50,100,250,Select Access,MedImpact
-PLN-B4CC39F0,EMP-6D5C2D0C,Pinnacle Financial Group Platinum HDHP,HDHP,Platinum,2023-01-01,,Active,250,0,3500,4000,1175,3387.57,80,60,35,40,250,50,10,40,75,150,Premier Health,CVS Caremark
-PLN-4A6FEBDA,EMP-6D5C2D0C,Pinnacle Financial Group Silver PPO,PPO,Silver,2023-01-01,,Active,1750,6000,6500,12500,525,1469.27,70,50,25,75,300,100,15,30,100,300,Select Care,OptumRx
-PLN-10CA1DF3,EMP-F652468B,Summit Manufacturing Co Silver HDHP,HDHP,Silver,2023-01-01,,Active,3250,4500,6000,13000,525,1649.94,80,60,30,75,200,75,5,50,100,150,Select Care,Express Scripts
-PLN-3D7F7F70,EMP-F652468B,Summit Manufacturing Co Platinum PPO,PPO,Platinum,2023-01-01,,Active,0,0,2000,5000,1050,2860.43,80,60,30,60,300,75,10,40,60,300,Blue Care,OptumRx
-PLN-371B77A5,EMP-06437E66,Horizon Media Group Bronze HMO,HMO,Bronze,2023-01-01,,Active,4750,9000,7000,15000,225,692.7,80,60,20,50,300,100,10,40,60,150,Premier Network,Express Scripts
-PLN-BDBAD37E,EMP-C21CF936,Cascade Energy Solutions Platinum POS,POS,Platinum,2024-01-01,,Active,250,0,1000,6500,975,3265.84,80,70,30,40,350,50,10,50,75,250,Blue Network,Express Scripts
-PLN-B2A6EB9C,EMP-C21CF936,Cascade Energy Solutions Bronze HDHP,HDHP,Bronze,2024-01-01,,Active,6250,11500,8500,15000,275,764.21,80,70,40,60,350,100,10,40,75,250,Choice Health,Express Scripts
-PLN-94E60976,EMP-1F3D4A21,Sterling Logistics Inc Platinum PPO,PPO,Platinum,2024-01-01,,Active,250,500,1000,5500,1050,2714.89,80,60,25,60,250,75,10,50,100,250,Preferred Care,CVS Caremark
-PLN-C46D85F5,EMP-1F3D4A21,Sterling Logistics Inc Platinum HDHP,HDHP,Platinum,2024-01-01,,Active,0,500,3500,7500,1175,4108.54,70,50,20,60,200,75,15,30,75,250,Select Network,MedImpact
-PLN-C02BBE21,EMP-ADBBA4AC,Vanguard Retail Corp Gold EPO,EPO,Gold,2022-01-01,,Active,1750,2500,4000,8000,650,2095.98,80,50,25,60,150,100,15,50,60,200,Premier Access,OptumRx
-PLN-4AD0B446,EMP-ADBBA4AC,Vanguard Retail Corp Gold POS,POS,Gold,2022-01-01,,Active,500,1500,4000,7500,675,2074.99,80,60,20,50,250,50,5,50,75,200,Select Care,Express Scripts
-PLN-AC87C543,EMP-ADBBA4AC,Vanguard Retail Corp Platinum HDHP,HDHP,Platinum,2022-01-01,,Active,250,500,1500,2000,1000,2585.18,70,50,20,75,300,50,15,50,100,150,Premier Health,OptumRx
-PLN-DC38D8AC,EMP-C562B04C,Apex Construction LLC Platinum HMO,HMO,Platinum,2018-01-01,,Active,0,500,2500,5500,1025,2808.36,70,60,40,40,350,100,5,30,100,200,Choice Care,CVS Caremark
-PLN-B25FC91D,EMP-7BA695B3,Quantum Software Solutions Silver HMO,HMO,Silver,2023-01-01,,Active,1500,6000,6500,15500,525,1372.76,90,50,25,60,250,100,10,30,100,200,Choice Health,MedImpact
-PLN-1A96FD7E,EMP-7BA695B3,Quantum Software Solutions Silver PPO,PPO,Silver,2023-01-01,,Active,2500,4000,5000,10000,400,1032.18,90,70,40,60,300,50,10,50,75,300,Choice Access,MedImpact
-PLN-B7ED652F,EMP-7BA695B3,Quantum Software Solutions Platinum HMO,HMO,Platinum,2023-01-01,,Active,250,500,1000,2500,975,3382.33,80,70,30,40,200,75,15,50,75,250,Premier Access,MedImpact
-PLN-23AA4DB2,EMP-DBD29718,Heritage Foods International Platinum EPO,EPO,Platinum,2023-01-01,,Active,250,500,3500,2500,925,3209.92,90,60,35,60,300,100,5,40,60,250,Choice Network,Express Scripts
-PLN-674D0350,EMP-DBD29718,Heritage Foods International Bronze HDHP,HDHP,Bronze,2023-01-01,,Active,6500,12500,7000,15500,300,758.66,90,70,35,75,150,50,10,50,60,250,Select Access,Express Scripts
-PLN-FDCC1F6F,EMP-4129A363,Titan Aerospace Engineering Silver POS,POS,Silver,2019-01-01,,Active,2000,5000,7000,10000,500,1667.36,80,50,20,75,150,100,5,40,100,250,Preferred Network,MedImpact
-PLN-474FB782,EMP-4129A363,Titan Aerospace Engineering Silver HDHP,HDHP,Silver,2019-01-01,,Active,3250,7000,5500,13000,425,1252.28,80,50,30,75,250,100,10,30,75,250,Preferred Access,CVS Caremark
-PLN-BB9636E7,EMP-4129A363,Titan Aerospace Engineering Gold HDHP,HDHP,Gold,2019-01-01,,Active,1000,3000,5000,9000,725,2171.61,90,50,25,75,200,75,5,40,100,300,Select Access,CVS Caremark
-PLN-43D2B45F,EMP-8EDD567A,Coastal Hospitality Group Gold PPO,PPO,Gold,2018-01-01,,Active,500,2500,3000,10000,725,2504.25,80,70,25,75,200,50,10,40,75,300,Blue Network,MedImpact
-PLN-52AA15AC,EMP-E221F7C8,Redwood Consulting Partners Bronze HDHP,HDHP,Bronze,2018-01-01,,Active,3500,9500,8000,15500,325,929.0,80,60,20,40,300,50,15,40,60,150,Choice Care,OptumRx
-PLN-384BC322,EMP-E221F7C8,Redwood Consulting Partners Silver HDHP,HDHP,Silver,2018-01-01,,Active,2250,7000,6500,14500,400,1183.83,80,50,20,75,350,100,5,40,100,200,Premier Access,OptumRx
-PLN-7B510F89,EMP-E221F7C8,Redwood Consulting Partners Platinum HMO,HMO,Platinum,2018-01-01,,Active,250,0,1000,5500,1075,3305.42,90,70,35,60,300,75,5,40,75,150,Premier Access,OptumRx
-PLN-C89F33E6,EMP-0D7C111A,Atlas Transportation Co Bronze EPO,EPO,Bronze,2024-01-01,,Active,6000,10000,7000,14000,300,986.58,70,60,25,60,200,100,5,50,75,200,Blue Care,OptumRx
-PLN-D9A71DAC,EMP-0D7C111A,Atlas Transportation Co Gold HMO,HMO,Gold,2024-01-01,,Active,1750,1500,3000,8000,675,2191.43,70,50,25,50,350,75,15,50,75,200,Choice Access,OptumRx
-PLN-3092BAD9,EMP-0D7C111A,Atlas Transportation Co Bronze EPO,EPO,Bronze,2024-01-01,,Active,6500,7000,7500,15500,325,1079.79,70,70,30,40,300,50,10,50,60,300,Choice Network,MedImpact
-PLN-1D01192A,EMP-029CD8A5,Beacon Education Foundation Silver HMO,HMO,Silver,2024-01-01,,Active,3250,3000,7000,14000,475,1242.66,80,70,20,75,250,100,10,30,60,150,Blue Network,MedImpact
-PLN-1ED1DAED,EMP-029CD8A5,Beacon Education Foundation Silver PPO,PPO,Silver,2024-01-01,,Active,3000,6500,6000,15000,500,1725.28,80,60,20,75,350,75,10,30,100,250,Premier Access,MedImpact
-PLN-58CDA3AC,EMP-5E36E698,Ironclad Security Services Gold HMO,HMO,Gold,2021-01-01,,Active,1500,3500,4000,6000,700,2442.17,90,50,20,75,150,100,5,50,100,150,Blue Network,CVS Caremark
-PLN-2F016FF3,EMP-5E36E698,Ironclad Security Services Silver POS,POS,Silver,2021-01-01,,Active,1750,7000,5500,14500,425,1068.82,80,60,25,40,250,50,5,50,75,200,Blue Care,CVS Caremark
-PLN-70E22D3E,EMP-32C946FC,Sapphire Telecommunications Gold POS,POS,Gold,2018-01-01,,Active,500,1500,4000,6000,600,1936.35,70,70,20,40,300,75,10,50,100,150,Select Health,Express Scripts
-PLN-51BD531E,EMP-143C232D,Metro Transit Authority Gold POS,POS,Gold,2023-01-01,,Active,1250,3500,3000,6000,725,2265.13,70,60,20,75,300,50,5,40,100,200,Blue Health,OptumRx
-PLN-A641F08A,EMP-143C232D,Metro Transit Authority Gold POS,POS,Gold,2023-01-01,,Active,1250,3000,5000,8000,725,2039.1,70,50,20,50,300,75,5,40,75,300,Select Access,Express Scripts
-PLN-EB2B456B,EMP-143C232D,Metro Transit Authority Gold EPO,EPO,Gold,2023-01-01,,Active,1000,1500,5500,9500,575,1673.71,80,50,20,75,150,100,15,40,60,150,Preferred Network,Express Scripts
-PLN-FBD0E714,EMP-C0F92299,Evergreen Environmental Services Bronze HDHP,HDHP,Bronze,2019-01-01,,Active,5250,10500,8000,14500,300,1003.55,80,50,35,50,150,75,15,40,60,250,Preferred Health,MedImpact
-PLN-AAF39C04,EMP-C0F92299,Evergreen Environmental Services Bronze POS,POS,Bronze,2019-01-01,,Active,5000,6000,7500,16000,325,1054.99,90,60,30,40,200,50,15,50,75,150,Premier Care,Express Scripts
-PLN-63FB9BB0,EMP-C0F92299,Evergreen Environmental Services Platinum PPO,PPO,Platinum,2019-01-01,,Active,250,500,2000,3000,1075,3209.59,90,70,30,40,150,50,5,50,60,150,Choice Access,MedImpact
-PLN-5D87350B,EMP-FA89C4F0,Diamond Mining Operations Gold HDHP,HDHP,Gold,2020-01-01,,Active,750,3000,3000,8500,700,1893.1,80,60,40,75,350,100,10,30,60,300,Preferred Care,Express Scripts
-PLN-68243F78,EMP-FA89C4F0,Diamond Mining Operations Silver PPO,PPO,Silver,2020-01-01,,Active,2500,5000,6000,10500,350,1027.68,70,70,35,50,200,75,15,50,60,250,Blue Access,Express Scripts
-PLN-50A07F29,EMP-CDAEA330,Liberty Insurance Brokers Gold HMO,HMO,Gold,2018-01-01,,Active,1500,2500,5000,9000,700,1920.32,90,50,35,40,250,50,15,40,100,250,Blue Access,Express Scripts
-PLN-3F0D0B89,EMP-CDAEA330,Liberty Insurance Brokers Platinum POS,POS,Platinum,2018-01-01,,Active,0,500,2000,7500,1050,2873.08,80,60,25,40,350,100,5,50,100,200,Choice Network,CVS Caremark
-PLN-8E11611F,EMP-BEA02DE5,Pacific Marine Industries Silver EPO,EPO,Silver,2020-01-01,,Active,2000,7500,5500,15000,375,963.11,80,70,35,75,350,100,10,50,100,250,Choice Health,MedImpact
+PLN-A1F7122D,EMP-08EABF98,Acme Corporation Silver HMO,HMO,Silver,2018-01-01,,Active,3000,5500,6000,10500,450,1173.78,90,70,40,75,350,75,5,30,75,200,Preferred Network,Express Scripts
+PLN-0B434B81,EMP-55218316,GlobalTech Industries Gold EPO,EPO,Gold,2020-01-01,,Active,1250,3000,5000,6500,700,2414.21,80,60,20,75,150,100,15,50,100,200,Choice Access,Express Scripts
+PLN-5B843337,EMP-55218316,GlobalTech Industries Gold EPO,EPO,Gold,2020-01-01,,Active,1750,1000,5500,8000,750,2336.64,90,70,35,60,300,100,10,50,60,200,Select Access,CVS Caremark
+PLN-5869C497,EMP-132801F2,Meridian Healthcare Systems Bronze HDHP,HDHP,Bronze,2022-01-01,,Active,5250,10500,7500,17000,300,995.53,90,60,35,75,200,100,10,50,60,150,Choice Network,Express Scripts
+PLN-85EB84C6,EMP-132801F2,Meridian Healthcare Systems Gold PPO,PPO,Gold,2022-01-01,,Active,750,1500,3500,6000,550,1456.16,80,60,40,40,300,75,15,50,60,300,Select Access,CVS Caremark
+PLN-3548D052,EMP-823D57E7,Pinnacle Financial Group Bronze HMO,HMO,Bronze,2023-01-01,,Active,6250,9500,7500,18000,275,934.23,80,70,25,40,300,50,10,50,100,250,Select Access,MedImpact
+PLN-9EE2ECF1,EMP-823D57E7,Pinnacle Financial Group Platinum HDHP,HDHP,Platinum,2023-01-01,,Active,250,0,3500,4000,1175,3387.57,80,60,35,40,250,50,10,40,75,150,Premier Health,CVS Caremark
+PLN-5291B1CF,EMP-823D57E7,Pinnacle Financial Group Silver PPO,PPO,Silver,2023-01-01,,Active,1750,6000,6500,12500,525,1469.27,70,50,25,75,300,100,15,30,100,300,Select Care,OptumRx
+PLN-0021BE4C,EMP-DF5849C1,Summit Manufacturing Co Silver HDHP,HDHP,Silver,2023-01-01,,Active,3250,4500,6000,13000,525,1649.94,80,60,30,75,200,75,5,50,100,150,Select Care,Express Scripts
+PLN-F31A2461,EMP-DF5849C1,Summit Manufacturing Co Platinum PPO,PPO,Platinum,2023-01-01,,Active,0,0,2000,5000,1050,2860.43,80,60,30,60,300,75,10,40,60,300,Blue Care,OptumRx
+PLN-9A5DCA41,EMP-EC0B4754,Horizon Media Group Bronze HMO,HMO,Bronze,2023-01-01,,Active,4750,9000,7000,15000,225,692.7,80,60,20,50,300,100,10,40,60,150,Premier Network,Express Scripts
+PLN-37BA0BA0,EMP-6EDD3EEB,Cascade Energy Solutions Platinum POS,POS,Platinum,2024-01-01,,Active,250,0,1000,6500,975,3265.84,80,70,30,40,350,50,10,50,75,250,Blue Network,Express Scripts
+PLN-A7A66E77,EMP-6EDD3EEB,Cascade Energy Solutions Bronze HDHP,HDHP,Bronze,2024-01-01,,Active,6250,11500,8500,15000,275,764.21,80,70,40,60,350,100,10,40,75,250,Choice Health,Express Scripts
+PLN-0524EC5B,EMP-2575D1BC,Sterling Logistics Inc Platinum PPO,PPO,Platinum,2024-01-01,,Active,250,500,1000,5500,1050,2714.89,80,60,25,60,250,75,10,50,100,250,Preferred Care,CVS Caremark
+PLN-09B10DCE,EMP-2575D1BC,Sterling Logistics Inc Platinum HDHP,HDHP,Platinum,2024-01-01,,Active,0,500,3500,7500,1175,4108.54,70,50,20,60,200,75,15,30,75,250,Select Network,MedImpact
+PLN-C0F63B13,EMP-DA5C85E5,Vanguard Retail Corp Gold EPO,EPO,Gold,2022-01-01,,Active,1750,2500,4000,8000,650,2095.98,80,50,25,60,150,100,15,50,60,200,Premier Access,OptumRx
+PLN-8DD0A7CF,EMP-DA5C85E5,Vanguard Retail Corp Gold POS,POS,Gold,2022-01-01,,Active,500,1500,4000,7500,675,2074.99,80,60,20,50,250,50,5,50,75,200,Select Care,Express Scripts
+PLN-D2306CE5,EMP-DA5C85E5,Vanguard Retail Corp Platinum HDHP,HDHP,Platinum,2022-01-01,,Active,250,500,1500,2000,1000,2585.18,70,50,20,75,300,50,15,50,100,150,Premier Health,OptumRx
+PLN-48B86B82,EMP-B48DF0E2,Apex Construction LLC Platinum HMO,HMO,Platinum,2018-01-01,,Active,0,500,2500,5500,1025,2808.36,70,60,40,40,350,100,5,30,100,200,Choice Care,CVS Caremark
+PLN-55656803,EMP-D4C99B0F,Quantum Software Solutions Silver HMO,HMO,Silver,2023-01-01,,Active,1500,6000,6500,15500,525,1372.76,90,50,25,60,250,100,10,30,100,200,Choice Health,MedImpact
+PLN-8FBFC4ED,EMP-D4C99B0F,Quantum Software Solutions Silver PPO,PPO,Silver,2023-01-01,,Active,2500,4000,5000,10000,400,1032.18,90,70,40,60,300,50,10,50,75,300,Choice Access,MedImpact
+PLN-1E4602F3,EMP-D4C99B0F,Quantum Software Solutions Platinum HMO,HMO,Platinum,2023-01-01,,Active,250,500,1000,2500,975,3382.33,80,70,30,40,200,75,15,50,75,250,Premier Access,MedImpact
+PLN-0A8C96D1,EMP-788C5CE6,Heritage Foods International Platinum EPO,EPO,Platinum,2023-01-01,,Active,250,500,3500,2500,925,3209.92,90,60,35,60,300,100,5,40,60,250,Choice Network,Express Scripts
+PLN-A79CC05F,EMP-788C5CE6,Heritage Foods International Bronze HDHP,HDHP,Bronze,2023-01-01,,Active,6500,12500,7000,15500,300,758.66,90,70,35,75,150,50,10,50,60,250,Select Access,Express Scripts
+PLN-4EED8F61,EMP-2FCDCBBA,Titan Aerospace Engineering Silver POS,POS,Silver,2019-01-01,,Active,2000,5000,7000,10000,500,1667.36,80,50,20,75,150,100,5,40,100,250,Preferred Network,MedImpact
+PLN-D1286215,EMP-2FCDCBBA,Titan Aerospace Engineering Silver HDHP,HDHP,Silver,2019-01-01,,Active,3250,7000,5500,13000,425,1252.28,80,50,30,75,250,100,10,30,75,250,Preferred Access,CVS Caremark
+PLN-2771C27A,EMP-2FCDCBBA,Titan Aerospace Engineering Gold HDHP,HDHP,Gold,2019-01-01,,Active,1000,3000,5000,9000,725,2171.61,90,50,25,75,200,75,5,40,100,300,Select Access,CVS Caremark
+PLN-38B449E5,EMP-060B5767,Coastal Hospitality Group Gold PPO,PPO,Gold,2018-01-01,,Active,500,2500,3000,10000,725,2504.25,80,70,25,75,200,50,10,40,75,300,Blue Network,MedImpact
+PLN-4D23C5EF,EMP-FA66821C,Redwood Consulting Partners Bronze HDHP,HDHP,Bronze,2018-01-01,,Active,3500,9500,8000,15500,325,929.0,80,60,20,40,300,50,15,40,60,150,Choice Care,OptumRx
+PLN-64FC865A,EMP-FA66821C,Redwood Consulting Partners Silver HDHP,HDHP,Silver,2018-01-01,,Active,2250,7000,6500,14500,400,1183.83,80,50,20,75,350,100,5,40,100,200,Premier Access,OptumRx
+PLN-0FF910D0,EMP-FA66821C,Redwood Consulting Partners Platinum HMO,HMO,Platinum,2018-01-01,,Active,250,0,1000,5500,1075,3305.42,90,70,35,60,300,75,5,40,75,150,Premier Access,OptumRx
+PLN-8DB2C19C,EMP-9641BB3D,Atlas Transportation Co Bronze EPO,EPO,Bronze,2024-01-01,,Active,6000,10000,7000,14000,300,986.58,70,60,25,60,200,100,5,50,75,200,Blue Care,OptumRx
+PLN-38850E85,EMP-9641BB3D,Atlas Transportation Co Gold HMO,HMO,Gold,2024-01-01,,Active,1750,1500,3000,8000,675,2191.43,70,50,25,50,350,75,15,50,75,200,Choice Access,OptumRx
+PLN-79035599,EMP-9641BB3D,Atlas Transportation Co Bronze EPO,EPO,Bronze,2024-01-01,,Active,6500,7000,7500,15500,325,1079.79,70,70,30,40,300,50,10,50,60,300,Choice Network,MedImpact
+PLN-31712EB1,EMP-2D272DE5,Beacon Education Foundation Silver HMO,HMO,Silver,2024-01-01,,Active,3250,3000,7000,14000,475,1242.66,80,70,20,75,250,100,10,30,60,150,Blue Network,MedImpact
+PLN-E3134F3C,EMP-2D272DE5,Beacon Education Foundation Silver PPO,PPO,Silver,2024-01-01,,Active,3000,6500,6000,15000,500,1725.28,80,60,20,75,350,75,10,30,100,250,Premier Access,MedImpact
+PLN-641FC14E,EMP-ACCD0AB9,Ironclad Security Services Gold HMO,HMO,Gold,2021-01-01,,Active,1500,3500,4000,6000,700,2442.17,90,50,20,75,150,100,5,50,100,150,Blue Network,CVS Caremark
+PLN-A3CB8A18,EMP-ACCD0AB9,Ironclad Security Services Silver POS,POS,Silver,2021-01-01,,Active,1750,7000,5500,14500,425,1068.82,80,60,25,40,250,50,5,50,75,200,Blue Care,CVS Caremark
+PLN-08CDDAA7,EMP-C6908DB9,Sapphire Telecommunications Gold POS,POS,Gold,2018-01-01,,Active,500,1500,4000,6000,600,1936.35,70,70,20,40,300,75,10,50,100,150,Select Health,Express Scripts
+PLN-91A68284,EMP-CA4D951E,Metro Transit Authority Gold POS,POS,Gold,2023-01-01,,Active,1250,3500,3000,6000,725,2265.13,70,60,20,75,300,50,5,40,100,200,Blue Health,OptumRx
+PLN-E90E1C28,EMP-CA4D951E,Metro Transit Authority Gold POS,POS,Gold,2023-01-01,,Active,1250,3000,5000,8000,725,2039.1,70,50,20,50,300,75,5,40,75,300,Select Access,Express Scripts
+PLN-E60FBBBC,EMP-CA4D951E,Metro Transit Authority Gold EPO,EPO,Gold,2023-01-01,,Active,1000,1500,5500,9500,575,1673.71,80,50,20,75,150,100,15,40,60,150,Preferred Network,Express Scripts
+PLN-227ACF91,EMP-22AA0BE9,Evergreen Environmental Services Bronze HDHP,HDHP,Bronze,2019-01-01,,Active,5250,10500,8000,14500,300,1003.55,80,50,35,50,150,75,15,40,60,250,Preferred Health,MedImpact
+PLN-AA1259B4,EMP-22AA0BE9,Evergreen Environmental Services Bronze POS,POS,Bronze,2019-01-01,,Active,5000,6000,7500,16000,325,1054.99,90,60,30,40,200,50,15,50,75,150,Premier Care,Express Scripts
+PLN-F3CF54FD,EMP-22AA0BE9,Evergreen Environmental Services Platinum PPO,PPO,Platinum,2019-01-01,,Active,250,500,2000,3000,1075,3209.59,90,70,30,40,150,50,5,50,60,150,Choice Access,MedImpact
+PLN-FD9F1942,EMP-79CFB3CC,Diamond Mining Operations Gold HDHP,HDHP,Gold,2020-01-01,,Active,750,3000,3000,8500,700,1893.1,80,60,40,75,350,100,10,30,60,300,Preferred Care,Express Scripts
+PLN-F13400B5,EMP-79CFB3CC,Diamond Mining Operations Silver PPO,PPO,Silver,2020-01-01,,Active,2500,5000,6000,10500,350,1027.68,70,70,35,50,200,75,15,50,60,250,Blue Access,Express Scripts
+PLN-87646089,EMP-CD4BA896,Liberty Insurance Brokers Gold HMO,HMO,Gold,2018-01-01,,Active,1500,2500,5000,9000,700,1920.32,90,50,35,40,250,50,15,40,100,250,Blue Access,Express Scripts
+PLN-289A15AD,EMP-CD4BA896,Liberty Insurance Brokers Platinum POS,POS,Platinum,2018-01-01,,Active,0,500,2000,7500,1050,2873.08,80,60,25,40,350,100,5,50,100,200,Choice Network,CVS Caremark
+PLN-74014CFB,EMP-C7867AA8,Pacific Marine Industries Silver EPO,EPO,Silver,2020-01-01,,Active,2000,7500,5500,15000,375,963.11,80,70,35,75,350,100,10,50,100,250,Choice Health,MedImpact

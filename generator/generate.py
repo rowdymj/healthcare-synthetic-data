@@ -214,6 +214,40 @@ PROCEDURE_CODES = [
     {"code": "97140", "description": "Manual therapy techniques", "category": "Therapy", "avg_cost": 85},
 ]
 
+# ─── Clinical Coherence Maps ────────────────────────────────────────────────
+
+DIAGNOSIS_PROCEDURE_MAP = {
+    "Respiratory":      ["E&M", "Lab", "Radiology", "Emergency", "Preventive"],
+    "Endocrine":        ["E&M", "Lab", "Preventive"],
+    "Cardiovascular":   ["E&M", "Lab", "Radiology", "Emergency", "Procedure", "Surgery"],
+    "Musculoskeletal":  ["E&M", "Radiology", "Therapy", "Surgery", "Procedure"],
+    "Digestive":        ["E&M", "Lab", "Procedure", "Radiology"],
+    "Mental Health":    ["E&M", "Preventive"],
+    "Neurological":     ["E&M", "Lab", "Radiology"],
+    "Genitourinary":    ["E&M", "Lab"],
+    "Dermatological":   ["E&M", "Procedure"],
+    "Symptoms":         ["E&M", "Lab", "Radiology", "Emergency"],
+    "Preventive":       ["Preventive", "Lab", "E&M", "Radiology"],
+    "Injury":           ["E&M", "Radiology", "Emergency", "Surgery", "Therapy"],
+    "Allergy":          ["E&M", "Lab", "Emergency"],
+}
+
+DIAGNOSIS_SPECIALTY_MAP = {
+    "Respiratory":      ["Family Medicine", "Internal Medicine", "Pulmonology", "Allergy & Immunology", "Emergency Medicine"],
+    "Endocrine":        ["Family Medicine", "Internal Medicine", "Endocrinology"],
+    "Cardiovascular":   ["Family Medicine", "Internal Medicine", "Cardiology", "Emergency Medicine"],
+    "Musculoskeletal":  ["Family Medicine", "Internal Medicine", "Orthopedics", "Rheumatology", "Physical Therapy"],
+    "Digestive":        ["Family Medicine", "Internal Medicine", "Gastroenterology"],
+    "Mental Health":    ["Family Medicine", "Internal Medicine", "Psychiatry"],
+    "Neurological":     ["Family Medicine", "Internal Medicine", "Neurology"],
+    "Genitourinary":    ["Family Medicine", "Internal Medicine", "Urology", "OB/GYN"],
+    "Dermatological":   ["Family Medicine", "Internal Medicine", "Dermatology"],
+    "Symptoms":         ["Family Medicine", "Internal Medicine", "Emergency Medicine"],
+    "Preventive":       ["Family Medicine", "Internal Medicine", "Pediatrics", "OB/GYN"],
+    "Injury":           ["Family Medicine", "Internal Medicine", "Orthopedics", "Emergency Medicine", "General Surgery"],
+    "Allergy":          ["Family Medicine", "Internal Medicine", "Allergy & Immunology"],
+}
+
 # NDC / pharmacy data
 MEDICATIONS = [
     {"name": "Metformin 500mg", "ndc": "00093-7212-01", "category": "Diabetes", "avg_cost": 15, "days_supply": 30},
@@ -453,42 +487,80 @@ def generate_benefits(plans):
     return benefits
 
 
+def _make_provider(specialty, is_facility, city, state, zip_prefix):
+    """Create a single provider record with a specific location."""
+    addr = {
+        "line1": f"{random.randint(100, 9999)} {random.choice(STREETS)}",
+        "line2": random.choice(["", "", "", f"Apt {random.randint(1,999)}", f"Suite {random.randint(100,999)}"]),
+        "city": city,
+        "state": state,
+        "zip": f"{zip_prefix}{random.randint(10, 99)}",
+    }
+
+    if is_facility:
+        hospital_names = ["St. Marys", "Memorial", "Regional", "University", "Community", "Baptist", "Methodist", "Presbyterian", "Good Samaritan", "Mercy"]
+        name = f"{city} {random.choice(PROVIDER_SUFFIXES)}" if random.random() > 0.5 else f"{random.choice(hospital_names)} {specialty}"
+    else:
+        gender = random.choice(["M", "F"])
+        first = random.choice(FIRST_NAMES_M if gender == "M" else FIRST_NAMES_F)
+        last = random.choice(LAST_NAMES)
+        suffix = random.choice(["MD", "MD", "MD", "DO", "NP", "PA"])
+        name = f"{first} {last}, {suffix}"
+
+    return {
+        "provider_id": gen_id("PRV-"),
+        "npi": gen_npi(),
+        "name": name,
+        "type": "Facility" if is_facility else "Individual",
+        "specialty": specialty,
+        "tax_id": f"{random.randint(10,99)}-{random.randint(1000000,9999999)}",
+        "address": addr,
+        "phone": gen_phone(),
+        "accepting_new_patients": random.random() > 0.15,
+        "network_status": random.choices(["In-Network", "In-Network", "Out-of-Network"], weights=[70, 20, 10])[0],
+        "languages": random.sample(["English", "Spanish", "Mandarin", "Vietnamese", "Korean", "French", "Arabic", "Hindi", "Tagalog"], k=random.randint(1, 3)),
+        "rating": round(random.uniform(3.0, 5.0), 1),
+        "effective_date": f"{random.randint(2015, 2024)}-{random.randint(1,12):02d}-01",
+    }
+
+
 def generate_providers(n=300):
-    """Generate healthcare providers."""
+    """Generate healthcare providers with guaranteed per-state coverage.
+
+    Seeds each state with minimum PCP, facility, and specialist coverage
+    to ensure clinical coherence constraints can be satisfied, then fills
+    the remainder randomly.
+    """
     providers = []
-    for _ in range(n):
+
+    # Guaranteed per-state: 2 Family Med, 1 Internal Med, 1 Hospital, 1 Lab,
+    # plus 3 common specialists that cover all diagnosis categories
+    common_specialists = ["Cardiology", "Orthopedics", "Emergency Medicine"]
+    seed_specs = [
+        ("Family Medicine", False),
+        ("Family Medicine", False),
+        ("Internal Medicine", False),
+        ("Hospital", True),
+        ("Lab", True),
+    ] + [(s, False) for s in common_specialists]
+
+    for city, state, zip_prefix in CITIES_STATES:
+        for specialty, is_facility in seed_specs:
+            providers.append(_make_provider(specialty, is_facility, city, state, zip_prefix))
+
+    # Fill remaining slots with random providers
+    remaining = n - len(providers)
+    for _ in range(max(0, remaining)):
         is_facility = random.random() < 0.25
-        addr = gen_address()
+        city, state, zip_prefix = random.choice(CITIES_STATES)
 
         if is_facility:
-            fac_type = random.choice(FACILITY_TYPES)
-            city = addr["city"]
-            hospital_names = ["St. Marys", "Memorial", "Regional", "University", "Community", "Baptist", "Methodist", "Presbyterian", "Good Samaritan", "Mercy"]
-            name = f"{city} {random.choice(PROVIDER_SUFFIXES)}" if random.random() > 0.5 else f"{random.choice(hospital_names)} {fac_type}"
-            specialty = fac_type
+            specialty = random.choice(FACILITY_TYPES)
         else:
-            gender = random.choice(["M", "F"])
-            first = random.choice(FIRST_NAMES_M if gender == "M" else FIRST_NAMES_F)
-            last = random.choice(LAST_NAMES)
-            suffix = random.choice(["MD", "MD", "MD", "DO", "NP", "PA"])
-            name = f"{first} {last}, {suffix}"
             specialty = random.choice(SPECIALTIES)
 
-        providers.append({
-            "provider_id": gen_id("PRV-"),
-            "npi": gen_npi(),
-            "name": name,
-            "type": "Facility" if is_facility else "Individual",
-            "specialty": specialty,
-            "tax_id": f"{random.randint(10,99)}-{random.randint(1000000,9999999)}",
-            "address": addr,
-            "phone": gen_phone(),
-            "accepting_new_patients": random.random() > 0.15,
-            "network_status": random.choices(["In-Network", "In-Network", "Out-of-Network"], weights=[70, 20, 10])[0],
-            "languages": random.sample(["English", "Spanish", "Mandarin", "Vietnamese", "Korean", "French", "Arabic", "Hindi", "Tagalog"], k=random.randint(1, 3)),
-            "rating": round(random.uniform(3.0, 5.0), 1),
-            "effective_date": f"{random.randint(2015, 2024)}-{random.randint(1,12):02d}-01",
-        })
+        providers.append(_make_provider(specialty, is_facility, city, state, zip_prefix))
+
     return providers
 
 
@@ -644,21 +716,51 @@ def generate_members(n=2000, employers=None, plans=None):
 
 
 def assign_pcps(members, providers):
-    """Assign PCP providers to members."""
-    pcp_providers = [p for p in providers if p["specialty"] in ["Family Medicine", "Internal Medicine", "Pediatrics"] and p["type"] == "Individual"]
+    """Assign PCP providers to members (same state, age-appropriate specialty)."""
+    pcp_all = [p for p in providers if p["type"] == "Individual" and
+               p["specialty"] in ("Family Medicine", "Internal Medicine", "Pediatrics")]
+
+    # Pre-index by state
+    pcp_by_state = defaultdict(list)
+    for p in pcp_all:
+        pcp_by_state[p["address"]["state"]].append(p)
+
     for member in members:
-        if pcp_providers and random.random() > 0.1:  # 90% have a PCP
-            member["pcp_provider_id"] = random.choice(pcp_providers)["provider_id"]
+        if random.random() < 0.1:  # 10% have no PCP
+            continue
+        state = member["address"]["state"]
+        pool = pcp_by_state.get(state, [])
+        if not pool:
+            continue  # No same-state PCP available; skip rather than assign wrong state
+        # Adults shouldn't have pediatrician PCP
+        if member["age"] >= 18:
+            adult_pool = [p for p in pool if p["specialty"] != "Pediatrics"]
+            if not adult_pool:
+                continue  # No adult-appropriate PCP in this state
+            pool = adult_pool
+        if pool:
+            member["pcp_provider_id"] = random.choice(pool)["provider_id"]
 
 
 def generate_medical_claims(members, dependents, providers, plans):
-    """Generate realistic medical claims based on member profiles."""
+    """Generate realistic medical claims with clinical coherence constraints.
+
+    Constraints applied:
+    - Providers are in the same state as the member
+    - Provider specialty matches the diagnosis category
+    - Procedures are compatible with the diagnosis category
+    - Place of service is consistent with the procedure type
+    """
     claims = []
     claim_lines = []
 
     plan_lookup = {p["plan_id"]: p for p in plans}
+
+    # Build subscriber address lookup for dependents (who lack their own address)
+    subscriber_addr = {m["member_id"]: m["address"] for m in members}
     all_members = members + [
-        {**d, "chronic_conditions": [], "age": 2026 - int(d["date_of_birth"][:4])}
+        {**d, "chronic_conditions": [], "age": 2026 - int(d["date_of_birth"][:4]),
+         "address": subscriber_addr.get(d.get("subscriber_member_id"), {"state": "TX"})}
         for d in dependents
     ]
 
@@ -667,6 +769,27 @@ def generate_medical_claims(members, dependents, providers, plans):
     facility_providers = [p for p in providers if p["type"] == "Facility"]
     lab_providers = [p for p in providers if p["specialty"] in ["Lab", "Pathology"] or p["type"] == "Facility"]
 
+    # Build state-indexed provider pools
+    pcp_by_state = defaultdict(list)
+    specialist_by_state = defaultdict(list)
+    facility_by_state = defaultdict(list)
+    lab_by_state = defaultdict(list)
+
+    for p in pcp_providers:
+        pcp_by_state[p["address"]["state"]].append(p)
+    for p in specialist_providers:
+        specialist_by_state[p["address"]["state"]].append(p)
+    for p in facility_providers:
+        facility_by_state[p["address"]["state"]].append(p)
+    for p in lab_providers:
+        lab_by_state[p["address"]["state"]].append(p)
+
+    # Pre-compute compatible procedure lists per diagnosis category
+    all_proc_categories = list({p["category"] for p in PROCEDURE_CODES})
+    compatible_procs_cache = {}
+    for dx_cat, proc_cats in DIAGNOSIS_PROCEDURE_MAP.items():
+        compatible_procs_cache[dx_cat] = [p for p in PROCEDURE_CODES if p["category"] in proc_cats]
+
     for member in all_members:
         if member.get("status") == "Terminated":
             continue
@@ -674,6 +797,8 @@ def generate_medical_claims(members, dependents, providers, plans):
         plan = plan_lookup.get(member["plan_id"])
         if not plan:
             continue
+
+        member_state = member["address"]["state"]
 
         # Determine number of claims based on age and chronic conditions
         base_claims = random.randint(1, 4)
@@ -685,26 +810,7 @@ def generate_medical_claims(members, dependents, providers, plans):
             claim_id = gen_id("CLM-")
             service_date = gen_date_in_range("2025-01-01", "2025-12-31")
 
-            # Determine claim type
-            claim_type_roll = random.random()
-            if claim_type_roll < 0.50:
-                claim_type = "Professional"
-                provider = random.choice(pcp_providers + specialist_providers) if (pcp_providers or specialist_providers) else random.choice(providers)
-                pos = random.choice([p for p in PLACE_OF_SERVICE if p["code"] in ["11", "20"]])
-            elif claim_type_roll < 0.80:
-                claim_type = "Professional"
-                provider = random.choice(specialist_providers) if specialist_providers else random.choice(providers)
-                pos = random.choice([p for p in PLACE_OF_SERVICE if p["code"] in ["11", "22"]])
-            elif claim_type_roll < 0.92:
-                claim_type = "Institutional"
-                provider = random.choice(facility_providers) if facility_providers else random.choice(providers)
-                pos = random.choice([p for p in PLACE_OF_SERVICE if p["code"] in ["21", "22", "23"]])
-            else:
-                claim_type = "Professional"
-                provider = random.choice(lab_providers) if lab_providers else random.choice(providers)
-                pos = random.choice([p for p in PLACE_OF_SERVICE if p["code"] == "81"])
-
-            # Select diagnosis based on chronic conditions or random
+            # 1. Select diagnosis FIRST (before provider)
             chronics = member.get("chronic_conditions", [])
             if chronics and random.random() < 0.6:
                 condition = random.choice(chronics)
@@ -722,6 +828,50 @@ def generate_medical_claims(members, dependents, providers, plans):
             else:
                 primary_dx = random.choice(DIAGNOSIS_CODES)
 
+            dx_category = primary_dx["category"]
+            compatible_specialties = DIAGNOSIS_SPECIALTY_MAP.get(dx_category, SPECIALTIES)
+
+            # 2. Select provider filtered by state + specialty compatibility
+            #    Fallback: same-state+compatible > same-state-any > compatible-any-state > global
+            claim_type_roll = random.random()
+            if claim_type_roll < 0.50:
+                # Professional — PCP or specialist
+                state_pool = pcp_by_state.get(member_state, []) + specialist_by_state.get(member_state, [])
+                pool = [p for p in state_pool if p["specialty"] in compatible_specialties]
+                if not pool:  # fallback: same state, any specialty
+                    pool = state_pool
+                if not pool:  # fallback: compatible specialty, any state
+                    pool = [p for p in pcp_providers + specialist_providers if p["specialty"] in compatible_specialties]
+                provider = random.choice(pool) if pool else random.choice(pcp_providers + specialist_providers)
+                claim_type = "Professional"
+            elif claim_type_roll < 0.80:
+                # Specialist — prefer compatible specialist in-state, fall back to PCP in-state
+                state_pool = specialist_by_state.get(member_state, [])
+                pool = [p for p in state_pool if p["specialty"] in compatible_specialties]
+                if not pool:  # fallback: same state PCP (Family Med/Internal Med handle most things)
+                    pool = [p for p in pcp_by_state.get(member_state, []) if p["specialty"] in compatible_specialties]
+                if not pool:  # fallback: same state, any specialist
+                    pool = state_pool
+                if not pool:  # fallback: compatible specialty, any state
+                    pool = [p for p in specialist_providers if p["specialty"] in compatible_specialties]
+                provider = random.choice(pool) if pool else random.choice(specialist_providers) if specialist_providers else random.choice(providers)
+                claim_type = "Professional"
+            elif claim_type_roll < 0.92:
+                # Institutional — same state facility (skip specialty filter, hospitals treat everything)
+                pool = facility_by_state.get(member_state, [])
+                provider = random.choice(pool) if pool else random.choice(facility_providers) if facility_providers else random.choice(providers)
+                claim_type = "Institutional"
+            else:
+                # Lab — same state
+                pool = lab_by_state.get(member_state, [])
+                provider = random.choice(pool) if pool else random.choice(lab_providers) if lab_providers else random.choice(providers)
+                claim_type = "Professional"
+
+            # 3. Select procedures compatible with diagnosis
+            compatible_procs = compatible_procs_cache.get(dx_category, PROCEDURE_CODES)
+            if not compatible_procs:
+                compatible_procs = PROCEDURE_CODES
+
             # Generate claim lines
             num_lines = random.choices([1, 2, 3, 4], weights=[50, 30, 15, 5])[0]
             total_billed = 0
@@ -731,7 +881,7 @@ def generate_medical_claims(members, dependents, providers, plans):
             lines = []
 
             for line_num in range(1, num_lines + 1):
-                proc = random.choice(PROCEDURE_CODES)
+                proc = random.choice(compatible_procs)
                 billed = money(proc["avg_cost"] * random.uniform(0.8, 1.5))
                 allowed = money(billed * random.uniform(0.5, 0.85))
                 coinsurance_pct = plan["coinsurance_in_network"] / 100 if provider["network_status"] == "In-Network" else plan["coinsurance_out_of_network"] / 100
@@ -759,6 +909,23 @@ def generate_medical_claims(members, dependents, providers, plans):
                     "service_date": service_date,
                 })
                 claim_lines.extend(lines[-1:])
+
+            # 4. Set place of service consistent with claim context
+            first_proc_cat = lines[0]["procedure_code"] if lines else None
+            first_proc = next((p for p in PROCEDURE_CODES if p["code"] == first_proc_cat), None) if first_proc_cat else None
+            has_emergency = any(
+                next((p for p in PROCEDURE_CODES if p["code"] == ln["procedure_code"]), {}).get("category") == "Emergency"
+                for ln in lines
+            )
+
+            if has_emergency:
+                pos = next(p for p in PLACE_OF_SERVICE if p["code"] == "23")  # ER
+            elif claim_type == "Institutional":
+                pos = random.choice([p for p in PLACE_OF_SERVICE if p["code"] in ["21", "22"]])
+            elif claim_type_roll >= 0.92:  # Lab
+                pos = next(p for p in PLACE_OF_SERVICE if p["code"] == "81")
+            else:
+                pos = next(p for p in PLACE_OF_SERVICE if p["code"] == "11")  # Office
 
             # Claim status
             status = random.choices(CLAIM_STATUSES, weights=[70, 8, 12, 7, 3])[0]

@@ -1,249 +1,245 @@
 [
   {
     "agent_id": "AGT-0001",
-    "name": "Maria Garcia",
-    "department": "Enrollment",
+    "name": "Lisa Martinez",
+    "department": "Member Services",
     "role": "Supervisor",
-    "hire_date": "2019-11-12",
+    "hire_date": "2022-08-10",
+    "languages": [
+      "English"
+    ],
+    "avg_handle_time_seconds": 507,
+    "satisfaction_score": 3.75
+  },
+  {
+    "agent_id": "AGT-0002",
+    "name": "Robert Moore",
+    "department": "Member Services",
+    "role": "Agent",
+    "hire_date": "2022-12-02",
+    "languages": [
+      "English"
+    ],
+    "avg_handle_time_seconds": 478,
+    "satisfaction_score": 3.71
+  },
+  {
+    "agent_id": "AGT-0003",
+    "name": "Nancy Jackson",
+    "department": "Claims",
+    "role": "Supervisor",
+    "hire_date": "2019-04-27",
     "languages": [
       "English",
       "Spanish"
     ],
-    "avg_handle_time_seconds": 579,
-    "satisfaction_score": 3.36
-  },
-  {
-    "agent_id": "AGT-0002",
-    "name": "Sarah Lopez",
-    "department": "Clinical",
-    "role": "Clinical Reviewer",
-    "hire_date": "2020-03-09",
-    "languages": [
-      "English"
-    ],
-    "avg_handle_time_seconds": 600,
-    "satisfaction_score": 3.42
-  },
-  {
-    "agent_id": "AGT-0003",
-    "name": "Sarah Davis",
-    "department": "Enrollment",
-    "role": "Senior Agent",
-    "hire_date": "2015-06-13",
-    "languages": [
-      "English"
-    ],
-    "avg_handle_time_seconds": 348,
-    "satisfaction_score": 3.77
+    "avg_handle_time_seconds": 559,
+    "satisfaction_score": 3.7
   },
   {
     "agent_id": "AGT-0004",
-    "name": "Christopher Hernandez",
-    "department": "Enrollment",
+    "name": "Matthew Johnson",
+    "department": "Clinical",
     "role": "Senior Agent",
-    "hire_date": "2016-06-04",
+    "hire_date": "2023-02-06",
+    "languages": [
+      "English"
+    ],
+    "avg_handle_time_seconds": 393,
+    "satisfaction_score": 4.38
+  },
+  {
+    "agent_id": "AGT-0005",
+    "name": "Sarah Martinez",
+    "department": "Clinical",
+    "role": "Agent",
+    "hire_date": "2022-11-08",
+    "languages": [
+      "English"
+    ],
+    "avg_handle_time_seconds": 426,
+    "satisfaction_score": 3.66
+  },
+  {
+    "agent_id": "AGT-0006",
+    "name": "David Williams",
+    "department": "Appeals",
+    "role": "Agent",
+    "hire_date": "2022-10-23",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "avg_handle_time_seconds": 449,
+    "satisfaction_score": 3.81
+  },
+  {
+    "agent_id": "AGT-0007",
+    "name": "Sarah Jones",
+    "department": "Pharmacy",
+    "role": "Agent",
+    "hire_date": "2022-05-29",
+    "languages": [
+      "English"
+    ],
+    "avg_handle_time_seconds": 401,
+    "satisfaction_score": 3.0
+  },
+  {
+    "agent_id": "AGT-0008",
+    "name": "Karen Moore",
+    "department": "Member Services",
+    "role": "Agent",
+    "hire_date": "2024-12-31",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "avg_handle_time_seconds": 426,
+    "satisfaction_score": 3.46
+  },
+  {
+    "agent_id": "AGT-0009",
+    "name": "Lisa Miller",
+    "department": "Pharmacy",
+    "role": "Senior Agent",
+    "hire_date": "2020-09-03",
     "languages": [
       "English"
     ],
     "avg_handle_time_seconds": 364,
-    "satisfaction_score": 3.0
-  },
-  {
-    "agent_id": "AGT-0005",
-    "name": "Sarah Martin",
-    "department": "Pharmacy",
-    "role": "Senior Agent",
-    "hire_date": "2017-11-30",
-    "languages": [
-      "English"
-    ],
-    "avg_handle_time_seconds": 399,
-    "satisfaction_score": 4.21
-  },
-  {
-    "agent_id": "AGT-0006",
-    "name": "Anthony Jones",
-    "department": "Pharmacy",
-    "role": "Senior Agent",
-    "hire_date": "2023-04-23",
-    "languages": [
-      "English"
-    ],
-    "avg_handle_time_seconds": 510,
-    "satisfaction_score": 4.21
-  },
-  {
-    "agent_id": "AGT-0007",
-    "name": "Robert Davis",
-    "department": "Member Services",
-    "role": "Supervisor",
-    "hire_date": "2016-01-05",
-    "languages": [
-      "English"
-    ],
-    "avg_handle_time_seconds": 481,
-    "satisfaction_score": 3.42
-  },
-  {
-    "agent_id": "AGT-0008",
-    "name": "Matthew Jackson",
-    "department": "Claims",
-    "role": "Supervisor",
-    "hire_date": "2022-10-03",
-    "languages": [
-      "English",
-      "Spanish"
-    ],
-    "avg_handle_time_seconds": 553,
-    "satisfaction_score": 4.48
-  },
-  {
-    "agent_id": "AGT-0009",
-    "name": "Lisa Lopez",
-    "department": "Appeals",
-    "role": "Senior Agent",
-    "hire_date": "2019-05-03",
-    "languages": [
-      "English",
-      "Spanish"
-    ],
-    "avg_handle_time_seconds": 396,
-    "satisfaction_score": 4.51
+    "satisfaction_score": 3.6
   },
   {
     "agent_id": "AGT-0010",
-    "name": "Michael Williams",
-    "department": "Member Services",
-    "role": "Supervisor",
-    "hire_date": "2017-05-21",
+    "name": "David Jones",
+    "department": "Claims",
+    "role": "Clinical Reviewer",
+    "hire_date": "2021-12-21",
     "languages": [
       "English"
     ],
-    "avg_handle_time_seconds": 452,
-    "satisfaction_score": 3.83
+    "avg_handle_time_seconds": 500,
+    "satisfaction_score": 4.06
   },
   {
     "agent_id": "AGT-0011",
-    "name": "David Miller",
-    "department": "Enrollment",
-    "role": "Clinical Reviewer",
-    "hire_date": "2022-09-29",
+    "name": "Lisa Taylor",
+    "department": "Clinical",
+    "role": "Senior Agent",
+    "hire_date": "2020-08-18",
     "languages": [
       "English"
     ],
-    "avg_handle_time_seconds": 540,
-    "satisfaction_score": 4.33
-  },
-  {
-    "agent_id": "AGT-0012",
-    "name": "Jennifer Williams",
-    "department": "Member Services",
-    "role": "Agent",
-    "hire_date": "2023-05-26",
-    "languages": [
-      "English"
-    ],
-    "avg_handle_time_seconds": 471,
-    "satisfaction_score": 3.64
-  },
-  {
-    "agent_id": "AGT-0013",
-    "name": "Katherine Hernandez",
-    "department": "Enrollment",
-    "role": "Agent",
-    "hire_date": "2016-07-22",
-    "languages": [
-      "English",
-      "Spanish"
-    ],
-    "avg_handle_time_seconds": 414,
+    "avg_handle_time_seconds": 430,
     "satisfaction_score": 3.39
   },
   {
-    "agent_id": "AGT-0014",
-    "name": "Daniel Miller",
-    "department": "Clinical",
-    "role": "Senior Agent",
-    "hire_date": "2023-03-06",
+    "agent_id": "AGT-0012",
+    "name": "Karen Martin",
+    "department": "Pharmacy",
+    "role": "Supervisor",
+    "hire_date": "2023-01-12",
     "languages": [
-      "English",
-      "Spanish"
+      "English"
     ],
-    "avg_handle_time_seconds": 422,
-    "satisfaction_score": 3.55
+    "avg_handle_time_seconds": 524,
+    "satisfaction_score": 4.04
+  },
+  {
+    "agent_id": "AGT-0013",
+    "name": "James Thomas",
+    "department": "Enrollment",
+    "role": "Senior Agent",
+    "hire_date": "2019-12-08",
+    "languages": [
+      "English"
+    ],
+    "avg_handle_time_seconds": 362,
+    "satisfaction_score": 3.72
+  },
+  {
+    "agent_id": "AGT-0014",
+    "name": "Sarah Jones",
+    "department": "Appeals",
+    "role": "Supervisor",
+    "hire_date": "2024-09-15",
+    "languages": [
+      "English"
+    ],
+    "avg_handle_time_seconds": 624,
+    "satisfaction_score": 3.77
   },
   {
     "agent_id": "AGT-0015",
-    "name": "Ashley Wilson",
-    "department": "Enrollment",
-    "role": "Senior Agent",
-    "hire_date": "2019-07-20",
+    "name": "Christopher Martinez",
+    "department": "Appeals",
+    "role": "Clinical Reviewer",
+    "hire_date": "2020-10-12",
     "languages": [
       "English"
     ],
-    "avg_handle_time_seconds": 471,
-    "satisfaction_score": 4.13
+    "avg_handle_time_seconds": 504,
+    "satisfaction_score": 4.25
   },
   {
     "agent_id": "AGT-0016",
-    "name": "Patricia Lopez",
-    "department": "Enrollment",
-    "role": "Senior Agent",
-    "hire_date": "2015-12-25",
+    "name": "David Jackson",
+    "department": "Appeals",
+    "role": "Supervisor",
+    "hire_date": "2015-02-05",
     "languages": [
-      "English",
-      "Spanish"
+      "English"
     ],
-    "avg_handle_time_seconds": 347,
-    "satisfaction_score": 3.83
+    "avg_handle_time_seconds": 475,
+    "satisfaction_score": 3.65
   },
   {
     "agent_id": "AGT-0017",
-    "name": "Sandra Moore",
-    "department": "Clinical",
-    "role": "Supervisor",
-    "hire_date": "2018-07-10",
+    "name": "John Martin",
+    "department": "Enrollment",
+    "role": "Agent",
+    "hire_date": "2023-10-01",
     "languages": [
       "English"
     ],
-    "avg_handle_time_seconds": 544,
-    "satisfaction_score": 4.6
+    "avg_handle_time_seconds": 501,
+    "satisfaction_score": 3.49
   },
   {
     "agent_id": "AGT-0018",
-    "name": "James Martin",
-    "department": "Member Services",
+    "name": "Katherine Garcia",
+    "department": "Appeals",
     "role": "Senior Agent",
-    "hire_date": "2018-06-27",
+    "hire_date": "2020-09-02",
     "languages": [
-      "English",
-      "Spanish"
+      "English"
     ],
-    "avg_handle_time_seconds": 463,
-    "satisfaction_score": 3.81
+    "avg_handle_time_seconds": 422,
+    "satisfaction_score": 3.29
   },
   {
     "agent_id": "AGT-0019",
-    "name": "Sandra Anderson",
-    "department": "Enrollment",
+    "name": "Jennifer Anderson",
+    "department": "Appeals",
     "role": "Senior Agent",
-    "hire_date": "2021-12-08",
+    "hire_date": "2023-06-06",
     "languages": [
       "English"
     ],
-    "avg_handle_time_seconds": 388,
-    "satisfaction_score": 3.7
+    "avg_handle_time_seconds": 475,
+    "satisfaction_score": 3.64
   },
   {
     "agent_id": "AGT-0020",
-    "name": "Jennifer Martinez",
-    "department": "Enrollment",
+    "name": "Maria Miller",
+    "department": "Pharmacy",
     "role": "Senior Agent",
-    "hire_date": "2018-10-06",
+    "hire_date": "2017-11-23",
     "languages": [
       "English"
     ],
-    "avg_handle_time_seconds": 375,
-    "satisfaction_score": 3.75
+    "avg_handle_time_seconds": 422,
+    "satisfaction_score": 3.62
   }
 ]
