@@ -342,7 +342,7 @@
         "search_knowledge_base",
         "check_benefits"
       ],
-      "expected_behavior": "Agent should explain the prudent layperson standard — ER is covered at in-network rates regardless of network. Reference the No Surprises Act.",
+      "expected_behavior": "Agent should explain the prudent layperson standard \u2014 ER is covered at in-network rates regardless of network. Reference the No Surprises Act.",
       "success_criteria": "Agent reassures member about in-network rates for ER, explains the copay, and mentions the No Surprises Act protections.",
       "agent_role": "Member Services",
       "expected_facts": {
@@ -427,7 +427,7 @@
         "lookup_member",
         "search_knowledge_base"
       ],
-      "expected_behavior": "Agent explains qualifying life event rules — 30 days to add newborn, coverage retroactive to birth date.",
+      "expected_behavior": "Agent explains qualifying life event rules \u2014 30 days to add newborn, coverage retroactive to birth date.",
       "success_criteria": "Agent states the 30-day window, explains retroactive coverage, and describes what documents are needed.",
       "agent_role": "Enrollment Specialist",
       "expected_facts": {
@@ -471,7 +471,8 @@
         "search_knowledge_base",
         "submit_authorization_request",
         "initiate_appeal",
-        "create_case_note"
+        "draft_case_note",
+        "submit_case_note"
       ],
       "expected_behavior": "Agent handles multiple issues: (1) explains the MRI denial, (2) submits retroactive auth request, (3) initiates appeal on the denied claim, (4) checks auth requirements for the upcoming surgery, (5) creates a case note documenting everything.",
       "success_criteria": "Agent addresses all three issues (past denial, current auth, future surgery) and creates appropriate documentation.",
@@ -495,9 +496,10 @@
           "search_claims",
           "submit_authorization_request",
           "initiate_appeal",
-          "create_case_note"
+          "draft_case_note",
+          "submit_case_note"
         ],
-        "tool_call_order": "lookup_member first, search_claims before initiate_appeal, create_case_note last"
+        "tool_call_order": "lookup_member first, search_claims before initiate_appeal, submit_case_note last"
       },
       "scoring": {
         "weights": {
@@ -520,7 +522,7 @@
         "get_member_coverage",
         "search_knowledge_base"
       ],
-      "expected_behavior": "Agent explains COBRA continuation rights — 18 months, full premium + 2% admin fee, same benefits.",
+      "expected_behavior": "Agent explains COBRA continuation rights \u2014 18 months, full premium + 2% admin fee, same benefits.",
       "success_criteria": "Agent explains COBRA timeline, cost implications, and enrollment deadline (60 days).",
       "agent_role": "Enrollment Specialist",
       "expected_facts": {
@@ -643,7 +645,7 @@
       "expected_tools": [
         "search_knowledge_base"
       ],
-      "expected_behavior": "Agent explains COB rules — birthday rule for dependents, primary/secondary payer determination.",
+      "expected_behavior": "Agent explains COB rules \u2014 birthday rule for dependents, primary/secondary payer determination.",
       "success_criteria": "Agent clearly explains the birthday rule and primary vs secondary insurance concepts.",
       "agent_role": "Member Services",
       "expected_facts": {
@@ -805,7 +807,8 @@
         "get_interaction_history",
         "search_claims",
         "search_knowledge_base",
-        "create_case_note"
+        "draft_case_note",
+        "submit_case_note"
       ],
       "expected_behavior": "Agent should de-escalate, review the interaction history to understand the issue, address the underlying claim problem, explain the grievance process, and document the complaint.",
       "success_criteria": "Agent acknowledges frustration, reviews past interactions, addresses the claim issue, explains grievance filing, and creates documentation.",
@@ -827,9 +830,10 @@
           "lookup_member",
           "get_interaction_history",
           "search_claims",
-          "create_case_note"
+          "draft_case_note",
+          "submit_case_note"
         ],
-        "tool_call_order": "lookup_member first, get_interaction_history before search_claims, create_case_note last"
+        "tool_call_order": "lookup_member first, get_interaction_history before search_claims, submit_case_note last"
       },
       "scoring": {
         "weights": {
@@ -1106,7 +1110,8 @@
         "search_claims",
         "get_claim_detail",
         "initiate_appeal",
-        "create_case_note"
+        "draft_case_note",
+        "submit_case_note"
       ],
       "expected_behavior": "Agent should look up the member, find the denied claim, explain the denial reason in detail, initiate an appeal on behalf of the member, and document the case.",
       "success_criteria": "Agent explains the denial reason, successfully initiates the appeal, provides the appeal reference, explains the timeline, and documents the interaction.",
@@ -1117,9 +1122,10 @@
           "search_claims",
           "get_claim_detail",
           "initiate_appeal",
-          "create_case_note"
+          "draft_case_note",
+          "submit_case_note"
         ],
-        "tool_call_order": "lookup_member first, search_claims before get_claim_detail, get_claim_detail before initiate_appeal, initiate_appeal before create_case_note",
+        "tool_call_order": "lookup_member first, search_claims before get_claim_detail, get_claim_detail before initiate_appeal, initiate_appeal before submit_case_note",
         "must_contain": [
           "claim",
           "appeal",
@@ -1219,7 +1225,7 @@
     {
       "id": "EVAL-030",
       "name": "Full member onboarding: coverage, benefits, ID card, and providers",
-      "description": "New member calls to understand their plan. Agent walks through coverage details, benefits, generates an ID card, and helps find a provider — a complete onboarding session.",
+      "description": "New member calls to understand their plan. Agent walks through coverage details, benefits, generates an ID card, and helps find a provider \u2014 a complete onboarding session.",
       "difficulty": "Hard",
       "category": "Member Onboarding",
       "user_prompt": "Hi, I just enrolled in your health plan and I'm completely new to this. Can you walk me through what my plan covers, what my copays are, help me get my ID card, and suggest a primary care doctor near me?",
@@ -1230,7 +1236,8 @@
         "generate_document",
         "search_providers",
         "get_member_dependents",
-        "create_case_note"
+        "draft_case_note",
+        "submit_case_note"
       ],
       "expected_behavior": "Agent should comprehensively onboard the new member by retrieving plan details, explaining coverage and benefits, generating an ID card, helping find a primary care provider, and documenting the interaction.",
       "success_criteria": "Agent provides a complete onboarding including plan name and type, key copays and deductible, generated ID card, at least one recommended PCP, and clear next steps.",
@@ -1242,9 +1249,10 @@
           "check_benefits",
           "generate_document",
           "search_providers",
-          "create_case_note"
+          "draft_case_note",
+          "submit_case_note"
         ],
-        "tool_call_order": "lookup_member first, get_member_coverage before check_benefits, create_case_note last",
+        "tool_call_order": "lookup_member first, get_member_coverage before check_benefits, submit_case_note last",
         "must_contain": [
           "coverage",
           "document",
@@ -1305,7 +1313,7 @@
     },
     {
       "id": "EVAL-032",
-      "name": "Step therapy satisfied — auth resubmission status",
+      "name": "Step therapy satisfied \u2014 auth resubmission status",
       "category": "Pharmacy/Authorization",
       "difficulty": "Medium",
       "user_prompt": "I'm Maria Santos in Miami. I completed the required step therapy for Ozempic with Jardiance. Has my new authorization been approved? What does my formulary say about coverage now?",
@@ -1519,7 +1527,7 @@
       "name": "Surprise billing identification and appeal guidance",
       "category": "Claims/Appeals",
       "difficulty": "Hard",
-      "user_prompt": "I'm Sarah Chen in Portland. I received a large bill from an anesthesiologist during my hospital delivery. The hospital was in-network but this doctor wasn't. This doesn't seem right — what are my options?",
+      "user_prompt": "I'm Sarah Chen in Portland. I received a large bill from an anesthesiologist during my hospital delivery. The hospital was in-network but this doctor wasn't. This doesn't seem right \u2014 what are my options?",
       "expected_tools": [
         "lookup_member",
         "search_claims",

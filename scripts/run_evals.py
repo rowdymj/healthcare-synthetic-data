@@ -138,12 +138,17 @@ def params_initiate_appeal(api, ctx):
     }, ctx
 
 
-def params_create_case_note(api, ctx):
+def params_draft_case_note(api, ctx):
     return {
         "member_id": ctx["member_id"],
         "category": "Eval Test",
         "content": "Automated eval scenario test — case note creation verified.",
     }, ctx
+
+
+def params_submit_case_note(api, ctx):
+    draft_id = next(iter(api.draft_notes), "DRAFT-0001")
+    return {"draft_id": draft_id}, ctx
 
 
 def params_generate_document(api, ctx):
@@ -168,7 +173,8 @@ PARAM_GENERATORS = {
     "get_interaction_history": params_get_interaction_history,
     "submit_authorization_request": params_submit_authorization_request,
     "initiate_appeal": params_initiate_appeal,
-    "create_case_note": params_create_case_note,
+    "draft_case_note": params_draft_case_note,
+    "submit_case_note": params_submit_case_note,
     "generate_document": params_generate_document,
 }
 

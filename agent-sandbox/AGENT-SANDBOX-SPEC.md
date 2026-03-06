@@ -56,7 +56,8 @@ These are defined in `tools/tool_schemas.json` in both Anthropic and OpenAI func
 | `get_authorization` | Look up prior auth status | auth_id or member_id |
 | `submit_authorization_request` | Submit new prior auth | member_id, procedure, diagnosis |
 | `get_interaction_history` | Call logs, messages, case notes | member_id, type filter |
-| `create_case_note` | Document an interaction | member_id, category, content |
+| `draft_case_note` | Draft a case note for user review | member_id, category, content |
+| `submit_case_note` | Submit a reviewed draft | draft_id |
 | `search_knowledge_base` | Search policies, FAQs, business rules, reference data | query, section filter |
 | `initiate_appeal` | File an appeal on a denial | member_id, claim_id, reason |
 | `generate_document` | Render EOB, denial letter, ID card | document_type, member_id, (claim/auth/appeal ids) |

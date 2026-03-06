@@ -418,7 +418,7 @@ export interface GetInteractionHistoryParams {
 }
 
 /** Create a new case note for a member interaction. */
-export interface CreateCaseNoteParams {
+export interface DraftCaseNoteParams {
   /** Member ID */
   member_id: string;
   /** Note category */
@@ -433,6 +433,11 @@ export interface CreateCaseNoteParams {
   follow_up_required?: boolean;
   /** Follow-up date if required (YYYY-MM-DD) */
   follow_up_date?: string;
+}
+
+export interface SubmitCaseNoteParams {
+  /** The draft_id returned by draft_case_note */
+  draft_id: string;
 }
 
 /** Search policies, FAQs, business rules, and reference data. Use this when answering member questions about how their plan works. */
@@ -586,7 +591,8 @@ export interface GetInteractionHistoryResult {
 }
 
 /** Returns the newly created case note. */
-export type CreateCaseNoteResult = CaseNote;
+export type DraftCaseNoteResult = CaseNote & { draft_id: string };
+export type SubmitCaseNoteResult = CaseNote;
 
 export interface SearchKnowledgeBaseResult {
   query: string;
@@ -624,7 +630,8 @@ export type ToolName =
   | 'get_authorization'
   | 'submit_authorization_request'
   | 'get_interaction_history'
-  | 'create_case_note'
+  | 'draft_case_note'
+  | 'submit_case_note'
   | 'search_knowledge_base'
   | 'check_eligibility'
   | 'initiate_appeal'
@@ -646,7 +653,8 @@ export interface ToolParamsMap {
   get_authorization: GetAuthorizationParams;
   submit_authorization_request: SubmitAuthorizationRequestParams;
   get_interaction_history: GetInteractionHistoryParams;
-  create_case_note: CreateCaseNoteParams;
+  draft_case_note: DraftCaseNoteParams;
+  submit_case_note: SubmitCaseNoteParams;
   search_knowledge_base: SearchKnowledgeBaseParams;
   check_eligibility: CheckEligibilityParams;
   initiate_appeal: InitiateAppealParams;
@@ -667,7 +675,8 @@ export interface ToolResultMap {
   get_authorization: GetAuthorizationResult;
   submit_authorization_request: SubmitAuthorizationRequestResult;
   get_interaction_history: GetInteractionHistoryResult;
-  create_case_note: CreateCaseNoteResult;
+  draft_case_note: DraftCaseNoteResult;
+  submit_case_note: SubmitCaseNoteResult;
   search_knowledge_base: SearchKnowledgeBaseResult;
   check_eligibility: CheckEligibilityResult;
   initiate_appeal: InitiateAppealResult;

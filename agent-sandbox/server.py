@@ -70,7 +70,7 @@ class AuthRequest(BaseModel):
     urgency: Optional[str] = "Standard"
     clinical_notes: Optional[str] = None
 
-class CaseNoteRequest(BaseModel):
+class DraftCaseNoteRequest(BaseModel):
     member_id: str
     category: str
     content: str
@@ -78,6 +78,9 @@ class CaseNoteRequest(BaseModel):
     related_auth_id: Optional[str] = None
     follow_up_required: Optional[bool] = False
     follow_up_date: Optional[str] = None
+
+class SubmitCaseNoteRequest(BaseModel):
+    draft_id: str
 
 class AppealRequest(BaseModel):
     member_id: str
@@ -328,10 +331,15 @@ def initiate_appeal(request: AppealRequest):
 
 # ── Case Notes ─────────────────────────────────────────────────────
 
-@app.post("/api/case-notes", tags=["Case Notes"], summary="Create a case note")
-def create_case_note(request: CaseNoteRequest):
-    """Create a new case note documenting a member interaction."""
-    return api.create_case_note(**request.dict())
+@app.post("/api/case-notes/draft", tags=["Case Notes"], summary="Draft a case note")
+def draft_case_note(request: DraftCaseNoteRequest):
+    """Draft a case note for user review. Returns a preview — not saved until submitted."""
+    return api.draft_case_note(**request.dict())
+
+@app.post("/api/case-notes/submit", tags=["Case Notes"], summary="Submit a drafted case note")
+def submit_case_note(request: SubmitCaseNoteRequest):
+    """Submit a previously drafted case note after user approval."""
+    return api.submit_case_note(**request.dict())
 
 
 # ── Documents ──────────────────────────────────────────────────────

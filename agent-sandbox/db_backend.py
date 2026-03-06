@@ -69,6 +69,7 @@ class HealthcareDB:
         self._sim_authorizations = []
         self._sim_appeals = []
         self._sim_case_notes = []
+        self.draft_notes = {}
 
     @staticmethod
     def _load_json(path, default=None):
@@ -508,11 +509,13 @@ class HealthcareDB:
 
         return {"member_id": member_id, **result}
 
-    def create_case_note(self, member_id, category, content,
-                          related_claim_id=None, related_auth_id=None,
-                          follow_up_required=False, follow_up_date=None):
+    def draft_case_note(self, member_id, category, content,
+                         related_claim_id=None, related_auth_id=None,
+                         follow_up_required=False, follow_up_date=None):
         existing = self._one("SELECT COUNT(*) as cnt FROM case_notes")["cnt"]
+        draft_id = f"DRAFT-{existing + len(self._sim_case_notes) + len(self.draft_notes) + 1:04d}"
         note = {
+            "draft_id": draft_id,
             "note_id": f"NOTE-SIM-{existing + len(self._sim_case_notes) + 1:04d}",
             "member_id": member_id,
             "case_id": f"CASE-SIM-{existing + len(self._sim_case_notes) + 1:04d}",
@@ -525,9 +528,19 @@ class HealthcareDB:
             "related_auth_id": related_auth_id,
             "follow_up_required": follow_up_required,
             "follow_up_date": follow_up_date,
-            "status": "Open",
-            "message": "Case note created successfully.",
+            "status": "Draft",
+            "message": "Draft created. Present this to the user for review, then call submit_case_note with the draft_id to save.",
         }
+        self.draft_notes[draft_id] = note
+        return note
+
+    def submit_case_note(self, draft_id):
+        if draft_id not in self.draft_notes:
+            return {"error": f"Draft not found: {draft_id}. Call draft_case_note first."}
+        note = self.draft_notes.pop(draft_id)
+        del note["draft_id"]
+        note["status"] = "Open"
+        note["message"] = "Case note submitted successfully."
         self._sim_case_notes.append(note)
         return note
 

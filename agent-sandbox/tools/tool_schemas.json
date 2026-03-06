@@ -170,8 +170,8 @@
       }
     },
     {
-      "name": "create_case_note",
-      "description": "Create a new case note for a member interaction. IMPORTANT: Before calling this tool, always draft the note content and present it to the user for review. Only submit after the user confirms the content is accurate.",
+      "name": "draft_case_note",
+      "description": "Draft a case note for a member interaction. Returns a preview of the note for the user to review. The note is NOT saved until submit_case_note is called. Always present the draft to the user and get their confirmation before submitting.",
       "input_schema": {
         "type": "object",
         "properties": {
@@ -184,6 +184,17 @@
           "follow_up_date": { "type": "string", "description": "Follow-up date if required (YYYY-MM-DD)" }
         },
         "required": ["member_id", "category", "content"]
+      }
+    },
+    {
+      "name": "submit_case_note",
+      "description": "Submit a previously drafted case note. Only call this after the user has reviewed and approved the draft from draft_case_note.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "draft_id": { "type": "string", "description": "The draft_id returned by draft_case_note" }
+        },
+        "required": ["draft_id"]
       }
     },
     {
@@ -464,8 +475,8 @@
     {
       "type": "function",
       "function": {
-        "name": "create_case_note",
-        "description": "Create a new case note for a member interaction. IMPORTANT: Before calling this tool, always draft the note content and present it to the user for review. Only submit after the user confirms the content is accurate.",
+        "name": "draft_case_note",
+        "description": "Draft a case note for a member interaction. Returns a preview of the note for the user to review. The note is NOT saved until submit_case_note is called. Always present the draft to the user and get their confirmation before submitting.",
         "parameters": {
           "type": "object",
           "properties": {
@@ -478,6 +489,20 @@
             "follow_up_date": { "type": "string" }
           },
           "required": ["member_id", "category", "content"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "submit_case_note",
+        "description": "Submit a previously drafted case note. Only call this after the user has reviewed and approved the draft from draft_case_note.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "draft_id": { "type": "string" }
+          },
+          "required": ["draft_id"]
         }
       }
     },
