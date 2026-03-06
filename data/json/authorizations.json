@@ -12871,5 +12871,26 @@
     "clinical_notes": "Prior authorization approved for knee arthroscopy with meniscectomy. MRI confirmed medial meniscus tear right knee. Conservative treatment (6 weeks PT, NSAIDs) failed. Surgery medically necessary.",
     "urgency": "Standard",
     "reviewer": "Dr. Samantha Baker"
+  },
+  {
+    "auth_id": "AUTH-FC-001",
+    "member_id": "MBR-B5906016",
+    "plan_id": "PLN-AAF39C04",
+    "provider_id": "PRV-78ECD681",
+    "auth_type": "Referral",
+    "service_description": "Pulmonology consultation for asthma management optimization",
+    "procedure_code": "99203",
+    "service_category": "Specialist Visit",
+    "status": "Approved",
+    "request_date": "2025-03-12",
+    "decision_date": "2025-03-14",
+    "effective_date": "2025-03-14",
+    "expiration_date": "2025-06-14",
+    "approved_units": 3,
+    "requested_units": 3,
+    "denial_reason": null,
+    "urgency": "Standard",
+    "clinical_notes": "Post-ER discharge for status asthmaticus. 23-hour observation stay 3/8. PCP requesting pulmonology referral for step-up therapy evaluation.",
+    "reviewer": "Dr. Sandra Chen"
   }
 ]

@@ -22528,5 +22528,35 @@
     "follow_up_required": false,
     "follow_up_date": null,
     "status": "Closed"
+  },
+  {
+    "note_id": "NOTE-FC-001",
+    "member_id": "MBR-B5906016",
+    "case_id": "CASE-FC-001",
+    "author": "AGT-0015",
+    "category": "Care Coordination",
+    "note_type": "Clinical Follow-Up",
+    "content": "Post-ER discharge follow-up. Member was seen at LA Healthcare ER 3/8/2025 for severe asthma exacerbation with 23-hour observation stay. Stabilized on IV methylprednisolone and nebulized albuterol. PCP submitted referral to pulmonology (AUTH-FC-001, approved 3/14). Member confirmed follow-up appointment with Karen Taylor PA at SF Pulmonology on 4/22. Reviewed inhaler technique and asthma action plan with member.",
+    "created_date": "2025-03-15",
+    "related_claim_id": "CLM-FC-002",
+    "related_auth_id": "AUTH-FC-001",
+    "follow_up_required": true,
+    "follow_up_date": "2025-04-30",
+    "status": "Closed"
+  },
+  {
+    "note_id": "NOTE-FC-002",
+    "member_id": "MBR-B5906016",
+    "case_id": "CASE-FC-002",
+    "author": "AGT-0020",
+    "category": "Billing",
+    "note_type": "Member Inquiry",
+    "content": "Member called regarding increased copay on Montelukast 10mg. Formulary change effective 12/1/2025 moved Montelukast from Preferred to Non-Preferred tier, increasing copay from $30 to $75. Explained formulary exception process. Member may discuss therapeutic alternatives with PCP at upcoming 12/12 appointment. No action required at this time.",
+    "created_date": "2025-12-08",
+    "related_claim_id": null,
+    "related_auth_id": null,
+    "follow_up_required": false,
+    "follow_up_date": null,
+    "status": "Closed"
   }
 ]

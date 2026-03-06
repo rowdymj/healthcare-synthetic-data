@@ -54016,5 +54016,41 @@
     "queue_wait_seconds": 420,
     "first_call_resolution": false,
     "ivr_path": "1 > 2 > 1 > Agent"
+  },
+  {
+    "call_id": "CALL-FC-001",
+    "member_id": "MBR-B5906016",
+    "agent_id": "AGT-0015",
+    "call_date": "2025-04-08",
+    "call_time": "14:22:00",
+    "duration_seconds": 540,
+    "call_type": "Inbound",
+    "call_reason": "Claim Question",
+    "disposition": "Resolved",
+    "related_claim_id": "CLM-FC-002",
+    "related_auth_id": null,
+    "sentiment": "Neutral",
+    "notes": "Member called to understand his ER/observation bill from March 8. Explained that the $3,640 member responsibility applied entirely to his $5,000 deductible since it had not yet been met. Reviewed current accumulator status showing $3,850 of deductible used. Member understood but expressed concern about remaining deductible exposure.",
+    "queue_wait_seconds": 180,
+    "first_call_resolution": true,
+    "ivr_path": "1 > 3 > Agent"
+  },
+  {
+    "call_id": "CALL-FC-002",
+    "member_id": "MBR-B5906016",
+    "agent_id": "AGT-0020",
+    "call_date": "2025-12-08",
+    "call_time": "10:15:00",
+    "duration_seconds": 420,
+    "call_type": "Inbound",
+    "call_reason": "Pharmacy Question",
+    "disposition": "Resolved",
+    "related_claim_id": null,
+    "related_auth_id": null,
+    "sentiment": "Negative",
+    "notes": "Member upset about Montelukast copay increase from $30 to $75. Explained 2025 formulary update moved Montelukast to Non-Preferred tier. Advised member to discuss alternatives with PCP \u2014 leukotriene alternatives or step-up to inhaled corticosteroid if clinically appropriate. Also explained formulary exception request process if PCP determines Montelukast is medically necessary.",
+    "queue_wait_seconds": 240,
+    "first_call_resolution": true,
+    "ivr_path": "1 > 2 > Agent"
   }
 ]
