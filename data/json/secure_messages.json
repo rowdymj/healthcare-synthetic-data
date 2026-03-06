@@ -28028,31 +28028,31 @@
     "response_time_hours": null
   },
   {
-    "message_id": "MSG-FC-001",
-    "thread_id": "THD-FC-001",
-    "member_id": "MBR-B5906016",
-    "direction": "Outbound",
-    "sent_date": "2025-03-12 09:00:00",
-    "subject": "Follow-Up: Your Recent Emergency Visit",
-    "body": "Dear Frank, we hope you are recovering well after your visit to LA Healthcare on March 8. Your PCP has submitted a referral to pulmonology (Karen Taylor, PA) to help optimize your asthma management. This referral has been approved. Please call (415) 555-0178 to schedule your appointment. If you have questions about your bill or benefits, please contact us. Take care.",
-    "category": "Care Coordination",
-    "status": "Read",
-    "related_claim_id": "CLM-FC-002",
-    "priority": "High",
-    "response_time_hours": null
-  },
-  {
-    "message_id": "MSG-FC-002",
-    "thread_id": "THD-FC-002",
-    "member_id": "MBR-B5906016",
+    "message_id": "MSG-MC-001",
+    "thread_id": "THD-MC-001",
+    "member_id": "MBR-ANCHOR-C",
     "direction": "Inbound",
-    "sent_date": "2025-12-06 18:30:00",
-    "subject": "Montelukast Copay Increase",
-    "body": "Hi, I just picked up my Montelukast refill and was charged $75 instead of the usual $30. Is this correct? I've been on this medication for years and the cost has never been this high. Please explain.",
-    "category": "Pharmacy",
+    "sent_date": "2025-03-06 00:00:00",
+    "subject": "Unhappy with Ozempic Denial \u2014 Step Therapy Policy",
+    "body": "I am writing to express my dissatisfaction with the denial of my Ozempic prescription (AUTH-MC-001). My endocrinologist, Dr. Reyes, specifically recommended Ozempic because my diabetes is not well-controlled on Metformin alone (A1C 7.8%). Instead, I am being forced to try Jardiance first because of a step therapy requirement. I understand there is a process, but I believe my doctor should have the final say in my treatment. I am now starting Jardiance as required, but if it doesn't work or causes problems, I expect the Ozempic approval to be processed quickly. Please document this concern.",
+    "category": "Complaint",
     "status": "Replied",
     "related_claim_id": null,
-    "priority": "Normal",
-    "response_time_hours": 18
+    "priority": "Medium",
+    "response_time_hours": 22
+  },
+  {
+    "message_id": "MSG-MC-002",
+    "thread_id": "THD-MC-002",
+    "member_id": "MBR-ANCHOR-C",
+    "direction": "Inbound",
+    "sent_date": "2025-09-15 00:00:00",
+    "subject": "Thank you \u2014 A1C improvement on Ozempic",
+    "body": "I wanted to send a quick thank you note. After the frustrating experience with the step therapy denial earlier this year, I am happy to report that my A1C has dropped from 7.8% to 6.9% since starting Ozempic in July. Dr. Reyes and my PCP Dr. Wilson are both pleased with the results. I still think the step therapy process was unnecessarily difficult, but I appreciate the team helping me navigate it. The Jardiance did not work for me (caused UTIs), but I'm grateful the Ozempic was eventually approved. Thank you for your help.",
+    "category": "General Inquiry",
+    "status": "Read",
+    "related_claim_id": null,
+    "priority": "Low",
+    "response_time_hours": null
   }
 ]

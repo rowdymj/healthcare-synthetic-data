@@ -26013,16 +26013,16 @@
     "last_updated": "2025-10-30"
   },
   {
-    "accumulator_id": "ACC-831235F6",
-    "member_id": "MBR-B5906016",
-    "plan_id": "PLN-AAF39C04",
+    "accumulator_id": "ACC-ANCHOR-C",
+    "member_id": "MBR-ANCHOR-C",
+    "plan_id": "PLN-0E79E0D2",
     "plan_year": 2025,
-    "deductible_limit": 5000,
-    "deductible_used": 5000,
-    "deductible_remaining": 0,
-    "oop_max_limit": 7500,
-    "oop_used": 5003.3,
-    "oop_remaining": 2496.7,
-    "last_updated": "2025-12-31"
+    "deductible_limit": 1500,
+    "deductible_used": 502.0,
+    "deductible_remaining": 998.0,
+    "oop_max_limit": 6500,
+    "oop_used": 2812.0,
+    "oop_remaining": 3688.0,
+    "last_updated": "2025-12-19"
   }
 ]

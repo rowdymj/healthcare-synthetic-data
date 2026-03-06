@@ -7299,5 +7299,53 @@
     ],
     "rating": 4.5,
     "effective_date": "2020-01-01"
+  },
+  {
+    "provider_id": "PRV-ENDO-MC01",
+    "npi": "1528476390",
+    "name": "Dr. Ana Reyes, MD",
+    "type": "Individual",
+    "specialty": "Endocrinology",
+    "tax_id": "65-4821073",
+    "address": {
+      "line1": "3200 Ponce de Leon Blvd",
+      "line2": "Suite 410",
+      "city": "Miami",
+      "state": "FL",
+      "zip": "33134"
+    },
+    "phone": "(305) 891-2240",
+    "accepting_new_patients": true,
+    "network_status": "In-Network",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "rating": 4.6,
+    "effective_date": "2019-03-01"
+  },
+  {
+    "provider_id": "PRV-OPHT-MC01",
+    "npi": "1639587401",
+    "name": "Dr. James Liu, MD",
+    "type": "Individual",
+    "specialty": "Ophthalmology",
+    "tax_id": "65-7392184",
+    "address": {
+      "line1": "8940 SW 72nd Ct",
+      "line2": "Suite 200",
+      "city": "Miami",
+      "state": "FL",
+      "zip": "33156"
+    },
+    "phone": "(305) 274-5510",
+    "accepting_new_patients": true,
+    "network_status": "In-Network",
+    "languages": [
+      "English",
+      "Mandarin"
+    ],
+    "rating": 4.4,
+    "effective_date": "2018-07-01"
   }
 ]
