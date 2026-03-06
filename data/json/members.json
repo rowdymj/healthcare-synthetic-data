@@ -57995,5 +57995,33 @@
       "Type 2 Diabetes",
       "Hypertension"
     ]
+  },
+  {
+    "member_id": "MBR-ANCHOR-D",
+    "subscriber_id": "SUB900400501",
+    "employer_id": "EMP-4EC4C137",
+    "plan_id": "PLN-DE4841BD",
+    "first_name": "Sarah",
+    "last_name": "Chen",
+    "date_of_birth": "1994-03-18",
+    "age": 31,
+    "gender": "F",
+    "ssn_last4": "3847",
+    "email": "sarah.chen94@gmail.com",
+    "phone": "(503) 617-4829",
+    "address": {
+      "line1": "2738 SE Hawthorne Blvd",
+      "line2": "Unit 3",
+      "city": "Portland",
+      "state": "OR",
+      "zip": "97214"
+    },
+    "coverage_type": "Family",
+    "relationship": "Self",
+    "pcp_provider_id": "PRV-1854CB3A",
+    "status": "Active",
+    "enrollment_date": "2024-01-01",
+    "termination_date": null,
+    "chronic_conditions": []
   }
 ]

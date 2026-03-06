@@ -31988,5 +31988,19 @@
     "relationship": "Child",
     "status": "Active",
     "enrollment_date": "2024-09-07"
+  },
+  {
+    "member_id": "MBR-ANCHOR-D2",
+    "subscriber_id": "SUB900400501",
+    "subscriber_member_id": "MBR-ANCHOR-D",
+    "employer_id": "EMP-4EC4C137",
+    "plan_id": "PLN-DE4841BD",
+    "first_name": "David",
+    "last_name": "Chen",
+    "date_of_birth": "1993-07-11",
+    "gender": "M",
+    "relationship": "Spouse",
+    "status": "Active",
+    "enrollment_date": "2024-01-01"
   }
 ]

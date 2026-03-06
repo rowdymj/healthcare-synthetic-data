@@ -7347,5 +7347,52 @@
     ],
     "rating": 4.4,
     "effective_date": "2018-07-01"
+  },
+  {
+    "provider_id": "PRV-OBGYN-SD01",
+    "npi": "1742589630",
+    "name": "Dr. Michelle Park, MD",
+    "type": "Individual",
+    "specialty": "OB/GYN",
+    "tax_id": "93-6182047",
+    "address": {
+      "line1": "1015 NW 22nd Ave",
+      "line2": "Suite 320",
+      "city": "Portland",
+      "state": "OR",
+      "zip": "97210"
+    },
+    "phone": "(503) 227-6800",
+    "accepting_new_patients": true,
+    "network_status": "In-Network",
+    "languages": [
+      "English",
+      "Korean"
+    ],
+    "rating": 4.8,
+    "effective_date": "2017-09-01"
+  },
+  {
+    "provider_id": "PRV-ANES-SD01",
+    "npi": "1853690741",
+    "name": "Dr. Robert Kowalski, MD",
+    "type": "Individual",
+    "specialty": "Anesthesiology",
+    "tax_id": "93-7294158",
+    "address": {
+      "line1": "3181 SW Sam Jackson Park Rd",
+      "line2": null,
+      "city": "Portland",
+      "state": "OR",
+      "zip": "97239"
+    },
+    "phone": "(503) 494-8311",
+    "accepting_new_patients": false,
+    "network_status": "Out-of-Network",
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "effective_date": "2015-01-15"
   }
 ]

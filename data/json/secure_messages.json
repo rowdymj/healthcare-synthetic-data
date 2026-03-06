@@ -28054,5 +28054,33 @@
     "related_claim_id": null,
     "priority": "Low",
     "response_time_hours": null
+  },
+  {
+    "message_id": "MSG-SD-001",
+    "thread_id": "THD-SD-001",
+    "member_id": "MBR-ANCHOR-D",
+    "direction": "Inbound",
+    "sent_date": "2025-09-20 00:00:00",
+    "subject": "What's covered for delivery at University Hospital?",
+    "body": "Hi, I'm 38 weeks pregnant and planning to deliver at University Hospital in Portland. I want to make sure I understand what's covered under my plan. Can you confirm: (1) University Hospital is in-network, (2) what my estimated out-of-pocket will be for a vaginal delivery with a 2-night stay, and (3) whether the anesthesia for an epidural is included? This is my first baby and I want to avoid any surprise bills. Thank you!",
+    "category": "Benefits Inquiry",
+    "status": "Replied",
+    "related_claim_id": null,
+    "priority": "Medium",
+    "response_time_hours": 14
+  },
+  {
+    "message_id": "MSG-SD-002",
+    "thread_id": "THD-SD-002",
+    "member_id": "MBR-ANCHOR-D",
+    "direction": "Inbound",
+    "sent_date": "2025-10-23 00:00:00",
+    "subject": "Formal Complaint: Surprise $4,200 Anesthesia Bill",
+    "body": "I am filing a formal complaint about claim CLM-SD-014. I delivered my baby at University Hospital on October 5th \u2014 an in-network facility that I verified in advance (see my message from September). Despite this, I received a $4,200 bill because the anesthesiologist assigned by the hospital was out-of-network. I had ZERO choice in this. I was in active labor. I specifically asked about coverage beforehand. This is exactly the kind of surprise billing the No Surprises Act was created to prevent. I called yesterday (reference CASE-SD-001) and was told an appeal was filed, but I want this complaint formally documented. If this is not resolved, I will file a complaint with the Oregon Division of Financial Regulation. This has been an incredibly stressful experience during what should be a happy time.",
+    "category": "Complaint",
+    "status": "Replied",
+    "related_claim_id": "CLM-SD-014",
+    "priority": "High",
+    "response_time_hours": 8
   }
 ]

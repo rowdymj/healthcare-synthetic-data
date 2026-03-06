@@ -54034,5 +54034,23 @@
     "queue_wait_seconds": 245,
     "first_call_resolution": true,
     "ivr_path": "1 > 3 > 1 > Agent"
+  },
+  {
+    "call_id": "CALL-SD-001",
+    "member_id": "MBR-ANCHOR-D",
+    "agent_id": "AGT-0003",
+    "call_date": "2025-10-22",
+    "call_time": "09:42:00",
+    "duration_seconds": 1140,
+    "call_type": "Inbound",
+    "call_reason": "Surprise Billing Dispute",
+    "disposition": "Escalated",
+    "related_claim_id": "CLM-SD-014",
+    "related_auth_id": null,
+    "sentiment": "Very Negative",
+    "notes": "Member called about a $4,200 balance bill for anesthesia during her delivery at University Hospital. She is extremely upset \u2014 she delivered at an in-network hospital and had no say in which anesthesiologist was assigned. The hospital assigned Dr. Kowalski (out-of-network) without informing her. Member states she specifically verified the hospital was in-network before delivery. Member is aware of the No Surprises Act and believes this is a clear violation. She is emotional (first baby, already dealing with new parenthood) and feels the system failed her. Agent acknowledged the situation, confirmed this appears to qualify for surprise billing protections, and initiated an appeal. Call escalated to supervisor for expedited processing. Supervisor assured member the appeal would be prioritized. Member wants written confirmation of appeal filing.",
+    "queue_wait_seconds": 180,
+    "first_call_resolution": false,
+    "ivr_path": "1 > 2 > 3 > Agent"
   }
 ]

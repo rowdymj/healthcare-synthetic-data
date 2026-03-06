@@ -22558,5 +22558,35 @@
     "follow_up_required": false,
     "follow_up_date": null,
     "status": "Closed"
+  },
+  {
+    "note_id": "NOTE-SD-001",
+    "member_id": "MBR-ANCHOR-D",
+    "case_id": "CASE-SD-001",
+    "author": "Marcus Williams",
+    "created_date": "2025-10-22 00:00:00",
+    "category": "Claim Denial Inquiry",
+    "note_type": "Manual",
+    "content": "Member called regarding denied anesthesia claim CLM-SD-014 ($4,200). Member gave birth at University Hospital on 10/5/2025 and received epidural anesthesia during labor. The anesthesiologist (Dr. Kowalski) was assigned by the hospital \u2014 member had no choice or advance notice that the provider was out-of-network. Member is extremely upset about receiving a $4,200 balance bill. Explained that the claim was denied because the anesthesiologist is not in our Blue Access network. Member referenced the No Surprises Act, which protects patients from surprise out-of-network billing at in-network facilities. Initiated appeal under surprise billing protections. Advised member that this type of appeal is typically resolved in the patient's favor. Member remains very frustrated but appreciates the escalation. Case flagged as high priority.",
+    "related_claim_id": "CLM-SD-014",
+    "related_auth_id": null,
+    "follow_up_required": true,
+    "follow_up_date": "2025-11-22",
+    "status": "Closed"
+  },
+  {
+    "note_id": "NOTE-SD-002",
+    "member_id": "MBR-ANCHOR-D",
+    "case_id": "CASE-SD-001",
+    "author": "Marcus Williams",
+    "created_date": "2025-11-20 00:00:00",
+    "category": "Appeal Resolution",
+    "note_type": "Manual",
+    "content": "Appeal for anesthesia claim CLM-SD-014 approved. No Surprises Act applies \u2014 patient received emergency/ancillary services from an out-of-network provider at an in-network facility without ability to choose an in-network alternative. Original denied claim voided. New claim CLM-SD-015 processed using qualifying payment amount (in-network median rate). Member responsibility reduced from $4,200 to $308 (standard coinsurance after deductible). Difference of $3,892 paid by plan. Member notified by mail and secure message. Case closed.",
+    "related_claim_id": "CLM-SD-015",
+    "related_auth_id": null,
+    "follow_up_required": false,
+    "follow_up_date": null,
+    "status": "Closed"
   }
 ]

@@ -42858,5 +42858,25 @@
     "termination_date": null,
     "status": "Active",
     "cobra_flag": false
+  },
+  {
+    "eligibility_id": "ELG-ANCHOR-D",
+    "member_id": "MBR-ANCHOR-D",
+    "plan_id": "PLN-DE4841BD",
+    "coverage_type": "Family",
+    "effective_date": "2024-01-01",
+    "termination_date": null,
+    "status": "Active",
+    "cobra_flag": false
+  },
+  {
+    "eligibility_id": "ELG-ANCHOR-D2",
+    "member_id": "MBR-ANCHOR-D2",
+    "plan_id": "PLN-DE4841BD",
+    "coverage_type": "Family",
+    "effective_date": "2024-01-01",
+    "termination_date": null,
+    "status": "Active",
+    "cobra_flag": false
   }
 ]
