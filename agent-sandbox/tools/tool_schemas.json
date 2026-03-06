@@ -171,7 +171,7 @@
     },
     {
       "name": "create_case_note",
-      "description": "Create a new case note for a member interaction.",
+      "description": "Create a new case note for a member interaction. IMPORTANT: Before calling this tool, always draft the note content and present it to the user for review. Only submit after the user confirms the content is accurate.",
       "input_schema": {
         "type": "object",
         "properties": {
@@ -465,7 +465,7 @@
       "type": "function",
       "function": {
         "name": "create_case_note",
-        "description": "Create a new case note for a member interaction.",
+        "description": "Create a new case note for a member interaction. IMPORTANT: Before calling this tool, always draft the note content and present it to the user for review. Only submit after the user confirms the content is accurate.",
         "parameters": {
           "type": "object",
           "properties": {
