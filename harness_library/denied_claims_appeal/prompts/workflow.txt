@@ -1,0 +1,33 @@
+DENIED CLAIMS APPEAL WORKFLOW
+
+Follow these steps in order. Do not skip steps. Log each step.
+
+STEP 1: MEMBER VERIFICATION
+- Call lookup_member with the member ID.
+- Confirm the member exists and has coverage.
+
+STEP 2: FIND DENIED CLAIM
+- Call search_claims filtered to denied claims for this member.
+- Identify the specific claim being appealed.
+
+STEP 3: CLAIM DETAIL REVIEW
+- Call get_claim_detail for the denied claim.
+- Document: denial reason, diagnosis codes, procedure codes, billed amounts.
+- Note any denial codes that indicate auth-related or medical necessity denials.
+
+STEP 4: AUTHORIZATION CHECK
+- Call get_authorization to check if prior auth was required and its status.
+- If auth was denied or missing, note this as relevant to the appeal basis.
+
+STEP 5: INTERACTION HISTORY
+- Call get_interaction_history to retrieve prior member communications.
+- Note any prior discussions about this claim or service.
+
+STEP 6: FILE APPEAL
+- Call initiate_appeal with the member ID, claim ID, and appeal reason.
+- MANDATORY ESCALATION: The appeal determination ALWAYS requires human review.
+  Do NOT communicate any determination to the member.
+
+STEP 7: GENERATE ACKNOWLEDGMENT
+- Call generate_document to produce the appeal acknowledgment letter.
+- This confirms receipt of the appeal, not the determination.
