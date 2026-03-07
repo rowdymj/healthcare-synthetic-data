@@ -58023,5 +58023,64 @@
     "enrollment_date": "2024-01-01",
     "termination_date": null,
     "chronic_conditions": []
+  },
+  {
+    "member_id": "MBR-ANCHOR-A",
+    "subscriber_id": "SUB600100201",
+    "employer_id": "EMP-8303D139",
+    "plan_id": "PLN-2DD0E7B3",
+    "first_name": "Dorothy",
+    "last_name": "Williams",
+    "date_of_birth": "1967-04-12",
+    "age": 58,
+    "gender": "F",
+    "ssn_last4": "6284",
+    "email": "dorothy.williams67@gmail.com",
+    "phone": "(212) 594-3817",
+    "address": {
+      "line1": "428 W 57th St",
+      "line2": "Apt 12C",
+      "city": "New York",
+      "state": "NY",
+      "zip": "10019"
+    },
+    "coverage_type": "Individual",
+    "relationship": "Self",
+    "pcp_provider_id": "PRV-BE948BE3",
+    "status": "Active",
+    "enrollment_date": "2021-01-01",
+    "termination_date": null,
+    "chronic_conditions": [
+      "Type 2 Diabetes",
+      "Hypertension"
+    ]
+  },
+  {
+    "member_id": "MBR-ANCHOR-E",
+    "subscriber_id": "SUB100500601",
+    "employer_id": "EMP-04696E78",
+    "plan_id": "PLN-FCADA8BD",
+    "first_name": "Ashley",
+    "last_name": "Rivera",
+    "date_of_birth": "1996-07-30",
+    "age": 29,
+    "gender": "F",
+    "ssn_last4": "5193",
+    "email": "ashley.rivera96@gmail.com",
+    "phone": "(323) 847-2193",
+    "address": {
+      "line1": "1935 Silver Lake Blvd",
+      "line2": "Unit 7",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90039"
+    },
+    "coverage_type": "Individual",
+    "relationship": "Self",
+    "pcp_provider_id": "PRV-343C1023",
+    "status": "Active",
+    "enrollment_date": "2025-08-01",
+    "termination_date": null,
+    "chronic_conditions": []
   }
 ]

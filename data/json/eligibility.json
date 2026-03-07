@@ -42878,5 +42878,45 @@
     "termination_date": null,
     "status": "Active",
     "cobra_flag": false
+  },
+  {
+    "eligibility_id": "ELG-ANCHOR-A",
+    "member_id": "MBR-ANCHOR-A",
+    "plan_id": "PLN-2DD0E7B3",
+    "coverage_type": "Individual",
+    "effective_date": "2021-01-01",
+    "termination_date": null,
+    "status": "Active",
+    "cobra_flag": false
+  },
+  {
+    "eligibility_id": "ELG-ME-001",
+    "member_id": "MBR-ANCHOR-E",
+    "plan_id": "PLN-462CF8A4",
+    "coverage_type": "Individual",
+    "effective_date": "2024-06-15",
+    "termination_date": "2025-04-30",
+    "status": "Terminated",
+    "cobra_flag": false
+  },
+  {
+    "eligibility_id": "ELG-ME-002",
+    "member_id": "MBR-ANCHOR-E",
+    "plan_id": "PLN-462CF8A4",
+    "coverage_type": "Individual",
+    "effective_date": "2025-05-01",
+    "termination_date": "2025-06-30",
+    "status": "Terminated",
+    "cobra_flag": true
+  },
+  {
+    "eligibility_id": "ELG-ME-003",
+    "member_id": "MBR-ANCHOR-E",
+    "plan_id": "PLN-FCADA8BD",
+    "coverage_type": "Individual",
+    "effective_date": "2025-08-01",
+    "termination_date": null,
+    "status": "Active",
+    "cobra_flag": false
   }
 ]
