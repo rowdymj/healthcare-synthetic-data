@@ -6,8 +6,9 @@ Synthetic data platform for prototyping AI agents against realistic health insur
 
 ```
 healthcare-synthetic-data/
-├── data/                        # 33MB of synthetic healthcare data
+├── data/                        # Synthetic healthcare data
 │   ├── json/                    # 21 JSON files (primary format)
+│   │   └── anchor_members/      # 5 detailed narrative member profiles (A–E)
 │   ├── csv/                     # CSV mirrors of all entities
 │   ├── healthcare.db            # SQLite database (built from JSON)
 │   └── schema.sql               # SQLite schema reference
@@ -18,16 +19,22 @@ healthcare-synthetic-data/
 │   ├── mcp_server.py            # MCP server (Claude Desktop / Cursor / etc.)
 │   ├── tools/tool_schemas.json  # Tool definitions (Anthropic + OpenAI formats)
 │   ├── rules/business_rules.json        # 31 healthcare business rules
-│   ├── scenarios/scenarios.json         # 20 eval test cases
+│   ├── scenarios/scenarios.json         # 48 eval scenarios (25 categories)
 │   ├── templates/document_templates.json # 7 document templates (EOB, denial letters, etc.)
 │   ├── knowledge-base/knowledge_base.json # Plan policies, FAQs, guidelines
 │   └── AGENT-SANDBOX-SPEC.md            # Detailed agent sandbox spec
+├── harness/                     # Governance primitives for agent safety
+│   ├── model_provider.py        # ClaudeProvider for LLM-driven evals
+│   ├── escalation.py            # EscalationEngine (mandatory + confidence-based)
+│   ├── audit.py                 # AuditLogger (structured audit trail)
+│   └── tests/                   # Unit tests for harness modules
 ├── docs/DATA-SPECIFICATION.md   # Data-derived data dictionary (field-level)
 ├── generator/                   # Python scripts that generated the data
 │   ├── generate.py              # Base entity generator
 │   └── generate_interactions.py # Call logs, messages, case notes
 ├── frontend/data-platform.jsx   # React + Tailwind data explorer component
 ├── scripts/                     # Dev utilities
+│   ├── run_evals.py             # Eval runner (48 scenarios, CI gate, governance output)
 │   ├── generate_data_spec.py    # Generate docs/DATA-SPECIFICATION.md
 │   └── validate_data.py         # Referential integrity checks
 └── index.html                   # Documentation site (open in browser)
@@ -183,7 +190,7 @@ Copy tool definitions from `tools/tool_schemas.json` into your agent config. Wri
 
 **6. Run eval scenarios**
 
-Load `scenarios/scenarios.json` — 20 test cases. Send each `user_prompt` to your agent, compare tool calls against `expected_tools` and `success_criteria`.
+Load `scenarios/scenarios.json` — 48 test cases. Send each `user_prompt` to your agent, compare tool calls against `expected_tools` and `success_criteria`.
 
 ---
 
@@ -202,22 +209,70 @@ Load `scenarios/scenarios.json` — 20 test cases. Send each `user_prompt` to yo
 
 | Entity | Records | Description |
 |--------|---------|-------------|
-| Employers | 25 | Companies offering health plans |
-| Plans | 50 | Insurance plans with varied coverage |
+| Employers | 27 | Companies offering health plans |
+| Plans | 52 | Insurance plans with varied coverage |
 | Benefits | 900 | 18 service categories per plan |
-| Providers | 300 | Doctors, hospitals, specialists |
-| Members | 2,000 | Primary subscribers |
-| Dependents | 2,297 | Spouses and children |
-| Eligibility | 4,297 | Coverage periods for all members/dependents |
-| Medical Claims | 13,841 | Claims with realistic status distributions |
-| Claim Lines | 24,206 | Line-item detail with CPT/ICD-10 codes |
-| Pharmacy Claims | 7,055 | Prescription fills with NDC codes |
-| Authorizations | 567 | Prior auth requests and decisions |
-| Accumulators | 2,000 | Deductible/OOP tracking |
-| Call Logs | 3,000 | Member service interactions |
-| Secure Messages | 2,000 | Portal message threads |
-| Case Notes | 1,500 | Internal case documentation |
+| Providers | 313 | Doctors, hospitals, specialists |
+| Members | 2,005 | Primary subscribers (includes 5 anchor members) |
+| Dependents | 2,287 | Spouses and children |
+| Eligibility | 4,292 | Coverage periods for all members/dependents |
+| Medical Claims | 13,956 | Claims with realistic status distributions |
+| Claim Lines | 24,481 | Line-item detail with CPT/ICD-10 codes |
+| Pharmacy Claims | 6,981 | Prescription fills with NDC codes |
+| Authorizations | 621 | Prior auth requests and decisions |
+| Accumulators | 2,005 | Deductible/OOP tracking |
+| Call Logs | 3,007 | Member service interactions |
+| Secure Messages | 2,006 | Portal message threads |
+| Case Notes | 1,511 | Internal case documentation |
 | Agents | 20 | Service agent profiles |
+
+### Anchor members
+
+Five hand-crafted member profiles in `data/json/anchor_members/` with detailed clinical narratives, multi-visit arcs, and realistic progression. Their records are also integrated into the main data files.
+
+| Member | ID | Profile | Narrative arc |
+|--------|-----|---------|--------------|
+| A | MBR-ANCHOR-A | 58F, HMO | Chronic conditions (hypertension + T2D), rising A1C, ER crisis, care management |
+| B | MBR-ANCHOR-B | 34M, PPO | Knee injury, surgery, PT, return to activity |
+| C | MBR-ANCHOR-C | 58F, HMO | T2D + step therapy, formulary navigation |
+| D | MBR-ANCHOR-D | 31F, PPO | Maternity + surprise billing, dependent add |
+| E | MBR-ANCHOR-E | 29F, PPO | COBRA/life event, coverage gap, denied claim, new employer |
+
+## Eval suite
+
+48 scenarios across 25 categories, including 18 governance-tagged scenarios that test adverse determinations and human review requirements.
+
+```bash
+# Run all evals (no LLM calls — tool-server correctness only)
+python3 scripts/run_evals.py
+
+# Verbose output
+python3 scripts/run_evals.py -v
+
+# Filter by difficulty
+python3 scripts/run_evals.py --filter Hard
+
+# CI mode (exit 1 if any governance scenario fails or overall < 80%)
+python3 scripts/run_evals.py --ci
+
+# Write JSON results
+python3 scripts/run_evals.py --output eval-results.json
+
+# Governance API adapter (requires server running)
+python3 scripts/run_evals.py --adapter governance-api
+```
+
+The eval runner produces a governance section first, then all scenarios, then a category summary.
+
+### Harness (governance primitives)
+
+The `harness/` directory provides safety primitives for agent governance:
+
+- **ClaudeProvider** (`model_provider.py`) — LLM integration for harness-eval mode (agentic tool-use loop)
+- **EscalationEngine** (`escalation.py`) — mandatory and confidence-based escalation rules
+- **AuditLogger** (`audit.py`) — structured audit trail for tool calls, determinations, and escalations
+
+These are used by `run_evals.py` when scenarios have `expected_harness_behavior` fields (LLM-driven evals).
 
 ## Key design decisions
 
@@ -235,10 +290,12 @@ Load `scenarios/scenarios.json` — 20 test cases. Send each `user_prompt` to yo
 
 ## Validation
 
-Run a quick integrity check on the dataset:
-
 ```bash
+# Referential integrity check
 python3 scripts/validate_data.py
+
+# Eval suite (48 scenarios)
+python3 scripts/run_evals.py
 ```
 
 ## Regeneration
