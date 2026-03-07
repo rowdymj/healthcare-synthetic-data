@@ -1,0 +1,19 @@
+{
+    "workflow_type": "appeal",
+    "required_event_types": [
+        "tool_call",
+        "tool_result",
+        "escalation",
+        "human_review"
+    ],
+    "required_on_escalation": [
+        "escalation",
+        "human_review"
+    ],
+    "required_tool_sequence": [
+        "lookup_member",
+        "search_claims",
+        "get_claim_detail"
+    ],
+    "notes": "All appeal determinations require escalation and human_review events. lookup_member, search_claims, and get_claim_detail must appear before initiate_appeal."
+}

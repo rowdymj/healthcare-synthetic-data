@@ -1,0 +1,17 @@
+{
+    "workflow_type": "prior_auth",
+    "required_event_types": [
+        "tool_call",
+        "tool_result",
+        "determination"
+    ],
+    "required_on_escalation": [
+        "escalation",
+        "human_review"
+    ],
+    "required_tool_sequence": [
+        "lookup_member",
+        "check_eligibility"
+    ],
+    "notes": "lookup_member and check_eligibility must appear before any determination event"
+}

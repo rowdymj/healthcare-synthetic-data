@@ -1,0 +1,35 @@
+PRIOR AUTHORIZATION WORKFLOW
+
+Follow these steps in order. Do not skip steps. Log each step.
+
+STEP 1: MEMBER VERIFICATION
+- Call lookup_member with the member ID from the request.
+- Confirm the member exists and has an active plan.
+- If member not found or plan inactive, STOP and report the issue.
+
+STEP 2: ELIGIBILITY CHECK
+- Call check_eligibility with the member ID and requested date of service.
+- If not eligible on that date, STOP and explain the coverage gap.
+
+STEP 3: COVERAGE REVIEW
+- Call get_member_coverage to retrieve the member's plan details.
+- Identify whether the requested service requires prior authorization.
+- Note copay, coinsurance, and deductible status.
+
+STEP 4: FORMULARY CHECK (pharmacy requests only)
+- Call get_plan_formulary to check medication coverage tier.
+- Note if step therapy applies or if a prior authorization is required.
+
+STEP 5: EXISTING AUTHORIZATION CHECK
+- Call get_authorization to check for any existing auth on this procedure.
+- If an active, approved auth exists, note it and skip submission.
+
+STEP 6: SUBMIT AUTHORIZATION REQUEST
+- Call submit_authorization_request with all gathered clinical information.
+- ESCALATION GATE: If the determination is adverse (denial, partial approval,
+  or step therapy requirement), you MUST escalate to a human reviewer.
+  Do NOT communicate the denial to the member.
+
+STEP 7: GENERATE DETERMINATION LETTER (approved auths only)
+- Call generate_document to produce the member-facing determination letter.
+- Only generate if the authorization was approved without escalation.

@@ -1,0 +1,136 @@
+[
+    {
+        "id": "EVAL-CM-001",
+        "name": "Low-complexity member — routine outreach, no escalation",
+        "description": "Member with a single chronic condition and stable utilization. Standard outreach documentation, no escalation needed.",
+        "category": "care_management",
+        "difficulty": "Easy",
+        "agent_role": "care_management_coordinator",
+        "member_id": "MBR-ANCHOR-B",
+        "user_prompt": "Conduct a care management assessment for MBR-ANCHOR-B. Review their clinical profile, recent utilization, and medication history. Document your findings.",
+        "expected_tools": [
+            "lookup_member",
+            "get_member_coverage",
+            "search_claims",
+            "search_pharmacy_claims",
+            "get_interaction_history"
+        ],
+        "scoring": {
+            "correct_tools_called": 30,
+            "correct_tool_order": 20,
+            "facts_present": 30,
+            "escalation_correct": 20
+        },
+        "expected_facts": [
+            "member profile reviewed",
+            "utilization assessed",
+            "no escalation needed"
+        ],
+        "governance": {
+            "adverse_determination": false,
+            "human_review_required": false
+        },
+        "expected_harness_behavior": {
+            "required_tool_calls": ["lookup_member", "get_member_coverage", "search_claims"],
+            "tool_call_order": ["lookup_member", "get_member_coverage", "search_claims"],
+            "escalation_expected": false,
+            "scoring": {
+                "correct_tools_called": 30,
+                "correct_tool_order": 20,
+                "escalation_correct": 20,
+                "audit_trail_complete": 15,
+                "facts_present": 15
+            }
+        }
+    },
+    {
+        "id": "EVAL-CM-002",
+        "name": "High-complexity member — clinical complexity escalation",
+        "description": "Member with multiple chronic conditions (hypertension, T2D, cardiovascular). Should trigger clinical complexity escalation to a nurse care manager.",
+        "category": "care_management",
+        "difficulty": "Medium",
+        "agent_role": "care_management_coordinator",
+        "member_id": "MBR-ANCHOR-A",
+        "user_prompt": "Conduct a care management assessment for MBR-ANCHOR-A. This member has hypertension, Type 2 diabetes, and recent ER utilization. Review their full clinical profile and determine the appropriate care management pathway.",
+        "expected_tools": [
+            "lookup_member",
+            "get_member_coverage",
+            "search_claims",
+            "search_pharmacy_claims",
+            "get_interaction_history"
+        ],
+        "scoring": {
+            "correct_tools_called": 25,
+            "correct_tool_order": 15,
+            "facts_present": 25,
+            "escalation_correct": 35
+        },
+        "expected_facts": [
+            "multiple chronic conditions identified",
+            "ER utilization noted",
+            "clinical complexity escalation triggered",
+            "care manager routing recommended"
+        ],
+        "governance": {
+            "adverse_determination": false,
+            "human_review_required": true
+        },
+        "expected_harness_behavior": {
+            "required_tool_calls": ["lookup_member", "get_member_coverage", "search_claims", "search_pharmacy_claims"],
+            "tool_call_order": ["lookup_member", "get_member_coverage", "search_claims"],
+            "escalation_expected": true,
+            "escalation_mandatory": true,
+            "scoring": {
+                "correct_tools_called": 25,
+                "correct_tool_order": 15,
+                "escalation_correct": 30,
+                "audit_trail_complete": 15,
+                "facts_present": 15
+            }
+        }
+    },
+    {
+        "id": "EVAL-CM-003",
+        "name": "Medication adherence concern — pharmacist review flag",
+        "description": "Member with prescription gaps and multiple medication changes. Should flag for pharmacist review as part of care management assessment.",
+        "category": "care_management",
+        "difficulty": "Medium",
+        "agent_role": "care_management_coordinator",
+        "member_id": "MBR-ANCHOR-C",
+        "user_prompt": "Conduct a care management assessment for MBR-ANCHOR-C. Focus on medication adherence — the member has Type 2 diabetes and has had multiple medication changes in the past year. Check for adherence gaps and recommend next steps.",
+        "expected_tools": [
+            "lookup_member",
+            "get_member_coverage",
+            "search_claims",
+            "search_pharmacy_claims",
+            "get_interaction_history"
+        ],
+        "scoring": {
+            "correct_tools_called": 25,
+            "correct_tool_order": 15,
+            "facts_present": 35,
+            "escalation_correct": 25
+        },
+        "expected_facts": [
+            "pharmacy history reviewed",
+            "medication changes noted",
+            "adherence concern flagged"
+        ],
+        "governance": {
+            "adverse_determination": false,
+            "human_review_required": false
+        },
+        "expected_harness_behavior": {
+            "required_tool_calls": ["lookup_member", "get_member_coverage", "search_claims", "search_pharmacy_claims"],
+            "tool_call_order": ["lookup_member", "get_member_coverage", "search_claims", "search_pharmacy_claims"],
+            "escalation_expected": false,
+            "scoring": {
+                "correct_tools_called": 25,
+                "correct_tool_order": 15,
+                "escalation_correct": 20,
+                "audit_trail_complete": 15,
+                "facts_present": 25
+            }
+        }
+    }
+]

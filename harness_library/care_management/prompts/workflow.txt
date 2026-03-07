@@ -1,0 +1,35 @@
+CARE MANAGEMENT WORKFLOW
+
+Follow these steps in order. Do not skip steps. Log each step.
+
+STEP 1: MEMBER VERIFICATION
+- Call lookup_member with the member ID.
+- Confirm the member exists and note chronic conditions.
+- If the member has 3+ chronic conditions, flag for complexity escalation.
+
+STEP 2: COVERAGE REVIEW
+- Call get_member_coverage to understand the member's plan.
+- Note any care management program eligibility.
+
+STEP 3: UTILIZATION REVIEW
+- Call search_claims to review recent medical utilization.
+- Look for: ER visits, hospitalizations, high-frequency visits, gaps in care.
+- ESCALATION CHECK: If ER + hospitalization in recent claims, escalate to
+  clinical care manager.
+
+STEP 4: MEDICATION REVIEW
+- Call search_pharmacy_claims to review medication history.
+- Look for: adherence gaps, multiple medication changes, high-cost specialty drugs.
+- Flag concerning patterns for pharmacist review.
+
+STEP 5: INTERACTION HISTORY
+- Call get_interaction_history to check for prior care management contacts.
+- Note any open care plans, prior outreach attempts, or member preferences.
+
+STEP 6: DOCUMENT FINDINGS
+- Call draft_case_note to document your assessment and recommended pathway.
+- Include: clinical complexity assessment, utilization summary, medication
+  adherence signals, and recommended next steps.
+
+STEP 7: SUBMIT DOCUMENTATION
+- Call submit_case_note after the case note draft is reviewed.

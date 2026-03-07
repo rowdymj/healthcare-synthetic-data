@@ -1,0 +1,16 @@
+{
+    "workflow_type": "care_management",
+    "required_event_types": [
+        "tool_call",
+        "tool_result",
+        "determination"
+    ],
+    "required_on_escalation": [
+        "escalation"
+    ],
+    "required_tool_sequence": [
+        "lookup_member",
+        "get_member_coverage"
+    ],
+    "notes": "Care management does not require human_review on escalation — escalation routes to a clinical care manager, not a regulatory reviewer. lookup_member and get_member_coverage must appear before any outreach documentation."
+}
