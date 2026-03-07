@@ -32002,5 +32002,19 @@
     "relationship": "Spouse",
     "status": "Active",
     "enrollment_date": "2024-01-01"
+  },
+  {
+    "member_id": "MBR-ANCHOR-E",
+    "subscriber_id": "SUB100500601",
+    "subscriber_member_id": "MBR-ANCHOR-E",
+    "employer_id": "EMP-04696E78",
+    "plan_id": "PLN-FCADA8BD",
+    "first_name": "Isabella",
+    "last_name": "Rivera",
+    "date_of_birth": "2025-10-01",
+    "gender": "F",
+    "relationship": "Child",
+    "status": "Active",
+    "enrollment_date": "2025-10-01"
   }
 ]

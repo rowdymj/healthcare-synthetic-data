@@ -26037,5 +26037,31 @@
     "oop_used": 4567.0,
     "oop_remaining": 1433.0,
     "last_updated": "2025-11-22"
+  },
+  {
+    "accumulator_id": "ACC-ANCHOR-A",
+    "member_id": "MBR-ANCHOR-A",
+    "plan_id": "PLN-2DD0E7B3",
+    "plan_year": 2025,
+    "deductible_limit": 3000,
+    "deductible_used": 3000.0,
+    "deductible_remaining": 0,
+    "oop_max_limit": 6000,
+    "oop_used": 4560.0,
+    "oop_remaining": 1440.0,
+    "last_updated": "2025-12-26"
+  },
+  {
+    "accumulator_id": "ACC-ANCHOR-E",
+    "member_id": "MBR-ANCHOR-E",
+    "plan_id": "PLN-FCADA8BD",
+    "plan_year": 2025,
+    "deductible_limit": 1750,
+    "deductible_used": 1750.0,
+    "deductible_remaining": 0,
+    "oop_max_limit": 6500,
+    "oop_used": 6130.0,
+    "oop_remaining": 370.0,
+    "last_updated": "2025-11-07"
   }
 ]

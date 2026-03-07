@@ -7394,5 +7394,128 @@
     ],
     "rating": 4.1,
     "effective_date": "2015-01-15"
+  },
+  {
+    "provider_id": "PRV-ENDO-MA01",
+    "npi": "1629483750",
+    "name": "Dr. Karen Patel, MD",
+    "type": "Individual",
+    "specialty": "Endocrinology",
+    "tax_id": "13-6742195",
+    "address": {
+      "line1": "635 Madison Ave",
+      "line2": "Suite 1200",
+      "city": "New York",
+      "state": "NY",
+      "zip": "10022"
+    },
+    "phone": "(212) 832-4190",
+    "accepting_new_patients": true,
+    "network_status": "In-Network",
+    "languages": [
+      "English",
+      "Hindi"
+    ],
+    "rating": 4.7,
+    "effective_date": "2017-09-01"
+  },
+  {
+    "provider_id": "PRV-HOSP-MA01",
+    "npi": "1194826753",
+    "name": "NYU Langone Medical Center \u2014 Emergency Department",
+    "type": "Facility",
+    "specialty": "Emergency Medicine",
+    "tax_id": "13-5562309",
+    "address": {
+      "line1": "550 First Ave",
+      "line2": null,
+      "city": "New York",
+      "state": "NY",
+      "zip": "10016"
+    },
+    "phone": "(212) 263-5550",
+    "accepting_new_patients": true,
+    "network_status": "In-Network",
+    "languages": [
+      "English",
+      "Spanish",
+      "Mandarin"
+    ],
+    "rating": 4.5,
+    "effective_date": "2015-01-01"
+  },
+  {
+    "provider_id": "PRV-OBGYN-ME01",
+    "npi": "1738294510",
+    "name": "Dr. Lisa Chang, MD",
+    "type": "Individual",
+    "specialty": "OB/GYN",
+    "tax_id": "95-4821763",
+    "address": {
+      "line1": "4650 Sunset Blvd",
+      "line2": "Suite 320",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90027"
+    },
+    "phone": "(323) 913-4500",
+    "accepting_new_patients": true,
+    "network_status": "In-Network",
+    "languages": [
+      "English",
+      "Mandarin"
+    ],
+    "rating": 4.8,
+    "effective_date": "2016-01-01"
+  },
+  {
+    "provider_id": "PRV-HOSP-ME01",
+    "npi": "1184937625",
+    "name": "Cedars-Sinai Medical Center \u2014 Labor & Delivery",
+    "type": "Facility",
+    "specialty": "Hospital",
+    "tax_id": "95-1644600",
+    "address": {
+      "line1": "8700 Beverly Blvd",
+      "line2": null,
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90048"
+    },
+    "phone": "(310) 423-3277",
+    "accepting_new_patients": true,
+    "network_status": "In-Network",
+    "languages": [
+      "English",
+      "Spanish",
+      "Mandarin",
+      "Korean"
+    ],
+    "rating": 4.7,
+    "effective_date": "2010-01-01"
+  },
+  {
+    "provider_id": "PRV-LAB-ME01",
+    "npi": "1295847361",
+    "name": "Quest Diagnostics \u2014 Los Angeles",
+    "type": "Facility",
+    "specialty": "Lab",
+    "tax_id": "95-3826140",
+    "address": {
+      "line1": "8500 Wilshire Blvd",
+      "line2": "Suite 200",
+      "city": "Beverly Hills",
+      "state": "CA",
+      "zip": "90211"
+    },
+    "phone": "(323) 297-4100",
+    "accepting_new_patients": true,
+    "network_status": "In-Network",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "rating": 4.1,
+    "effective_date": "2012-03-01"
   }
 ]
